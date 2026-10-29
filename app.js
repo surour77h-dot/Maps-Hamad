@@ -16,15 +16,24 @@ const acc=c=>c._a||(c._a=new Set([c.en,c.ar,...c.alt,...(AL[c.a]||'').split(',')
 const strip=s=>s.split(' ')[0],shuf=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
 const flag=(c,cl='')=>`<img class="${cl}" src="flags/${c.a}.svg" alt="">`;
 function pick(pool,n,w){const r=[],p=[...pool];while(r.length<n&&p.length){let x=Math.random()*p.reduce((s,c)=>s+w(c),0),i=0;for(;i<p.length-1;i++){x-=w(p[i]);if(x<0)break}r.push(p.splice(i,1)[0])}return r}
+const PAL=['#f6efd9','#e3efd2','#f3dfe0','#dde7f5','#efe3f4','#fbe9d2'];
 function mapSvg(c,kind){const p=d3.geoNaturalEarth1();
  if(kind==='shape')p.fitExtent([[14,14],[W-14,H-14]],{type:'FeatureCollection',features:[c.main]});
- else{let l=c.nb.map(i=>byId[i]).filter(x=>x&&x.f);
-  if(l.length<2)l=D.filter(x=>x.f&&x!==c).sort((a,b)=>d3.geoDistance(c.ct,a.ct)-d3.geoDistance(c.ct,b.ct)).slice(0,3);
-  p.fitExtent([[14,14],[W-14,H-14]],{type:'FeatureCollection',features:[c.main,...l.map(x=>x.main),{type:'Feature',geometry:d3.geoCircle().center(c.ct).radius(7)()}]})}
- p.clipExtent([[0,0],[W,H]]);const g=d3.geoPath(p);let s=`<svg viewBox="0 0 ${W} ${H}" class="map">`;
- if(kind==='shape')s+=`<path class="t" d="${g(c.f)}"/>`;else F.forEach(f=>{const d=g(f);if(d)s+=`<path class="${f.id===c.n?'t':'o'}" d="${d}"/>`});
- return s+'</svg>'}
-const thumbs={};function thumb(c){if(!c.f)return flag(c);return thumbs[c.id]||(thumbs[c.id]=(()=>{const p=d3.geoNaturalEarth1().fitExtent([[4,4],[96,96]],{type:'FeatureCollection',features:[c.main]});return`<svg viewBox="0 0 100 100"><path class="t" d="${d3.geoPath(p)(c.f)}"/></svg>`})())}
+ else if(kind==='world')p.fitExtent([[4,4],[W-4,H-4]],{type:'FeatureCollection',features:F});
+ else{const b=d3.geoBounds(c.main),rr=Math.max(...[[b[0][0],b[0][1]],[b[1][0],b[0][1]],[b[0][0],b[1][1]],[b[1][0],b[1][1]]].map(q=>d3.geoDistance(c.ct,q)))*180/Math.PI;
+  p.fitExtent([[24,24],[W-24,H-24]],{type:'FeatureCollection',features:[c.main,{type:'Feature',geometry:d3.geoCircle().center(c.ct).radius(Math.max(3.5,rr*1.45))()}]})}
+ p.clipExtent([[0,0],[W,H]]);const g=d3.geoPath(p);
+ if(kind==='shape')return`<svg viewBox="0 0 ${W} ${H}" class="map shp"><path class="t2" d="${g(c.f)}"/></svg>`;
+ let s=`<svg viewBox="0 0 ${W} ${H}" class="map"><g class="z">`,t='';
+ F.forEach(f=>{const d=g(f);if(!d)return;if(f.id===c.n)t=`<path class="t" d="${d}"/>`;else s+=`<path class="o" style="fill:${PAL[(parseInt(f.id)||0)%6]}" d="${d}"/>`});
+ const bb=g.bounds(c.main);if(bb[1][0]-bb[0][0]<16&&bb[1][1]-bb[0][1]<16){const q=p(c.ct);if(q)t+=`<circle cx="${q[0]}" cy="${q[1]}" r="15" class="ring"/>`}
+ return s+t+'</g></svg>'}
+function initMap(box,c){let w=false,s,z;const mount=()=>{box.querySelector('.svgw').innerHTML=mapSvg(c,w?'world':'ctx');s=d3.select(box.querySelector('svg'));const g=s.select('g.z');z=d3.zoom().scaleExtent([1,60]).on('zoom',e=>g.attr('transform',e.transform));s.call(z)};mount();
+ box.querySelector('#mz').onclick=e=>{w=!w;e.target.textContent=w?'🔍':'🌍';mount()};
+ box.querySelector('#zi').onclick=()=>s.transition().call(z.scaleBy,1.7);box.querySelector('#zo').onclick=()=>s.transition().call(z.scaleBy,1/1.7);
+ box.querySelector('#zr').onclick=()=>s.transition().call(z.transform,d3.zoomIdentity)}
+const thumbs={};function thumb(c){if(!c.f)return flag(c);return thumbs[c.id]||(thumbs[c.id]=(()=>{const p=d3.geoNaturalEarth1().fitExtent([[4,4],[96,96]],{type:'FeatureCollection',features:[c.main]});return`<svg viewBox="0 0 100 100" class="th"><path class="t2" d="${d3.geoPath(p)(c.f)}"/></svg>`})())}
+const LBL={cap:'العاصمة',cur:'العملة'},ansOf=(c,m)=>m==='en'?c.en:m==='ar'?c.ar:m==='cap'?c.cap:m==='cur'?c.cur.map(x=>x.ar).join('، '):c.ar+' — '+c.en;
 /* ---------- home ---------- */
 function home(){clearInterval(G.tm);const chip=(k,v,on)=>`<button data-k="${k}" data-v="${v}" class="${on?'on':''}">${k==='conts'?CN[v]:v+(k==='time'?' ث':'')}</button>`;
  A.innerHTML=`<h1>🌍 لعبة خرائط العالم</h1><div class="home"><aside>
@@ -39,31 +48,32 @@ function home(){clearInterval(G.tm);const chip=(k,v,on)=>`<button data-k="${k}" 
 /* ---------- game ---------- */
 let G={};
 function start(m){const mp=['en','ar','shape'].includes(m);let pool=D.filter(c=>S.conts.includes(c.co)&&(!mp||c.f));
- G={mode:m,qs:pick(pool,Math.min(S.count,pool.length),mp?c=>Math.min(1,Math.max(.1,Math.sqrt(c.sr)/.02)):()=>1),i:0,score:0,miss:[]};ask()}
-function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();const c=G.c=G.qs[G.i],m=G.mode;G.lock=false;G.sel=null;
+ G={mode:m,qs:pick(pool,Math.min(S.count,pool.length),mp?c=>Math.min(1,Math.max(.1,Math.sqrt(c.sr)/.02)):()=>1),i:0,score:0,miss:[],log:[]};ask()}
+function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();const c=G.c=G.qs[G.i],m=G.mode;G.lock=false;G.sel=null;G.last='';
  const inp=(ph,d)=>`<input dir="${d}" placeholder="${ph}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">`;
  let b='';
  if(m==='en'||m==='ar'||m==='shape'||m==='flag'){
-  b=(m==='flag'?flag(c,'flagbig'):`<div class="mapbox">${mapSvg(c,m==='shape'?'shape':'ctx')}</div>`)+
+  b=(m==='flag'?flag(c,'flagbig'):m==='shape'?`<div class="mapbox"><div class="svgw">${mapSvg(c,'shape')}</div></div>`:`<div class="mapbox" id="mb"><div class="svgw"></div><div class="mt"><button id="mz">🌍</button><button id="zi">＋</button><button id="zo">－</button><button id="zr">⟲</button></div></div>`)+
    `<div class="in">${m==='en'?inp('Country name in English','ltr'):m==='ar'?inp('اسم الدولة بالعربية','rtl'):inp('English','ltr')+inp('عربي','rtl')}<button id="sk">تخطي</button></div>`}
  else{let o;if(m==='cap'){const t=shuf(D).filter(x=>x.cap&&x.cap!==c.cap);o=[{t:c.cap,ok:1},...[...new Map(t.map(x=>[x.cap,x])).values()].slice(0,5).map(x=>({t:x.cap}))]}
   else{const ok=new Set(c.cur.map(x=>strip(x.ar))),seen=new Set(ok);o=[{t:strip(c.cur[0].ar),ok:1}];shuf(D).forEach(x=>{const t=strip(x.cur[0].ar);if(o.length<6&&!seen.has(t)){seen.add(t);o.push({t})}})}
   G.o=shuf(o);b=`<h1 class="big">${c.ar}</h1><p class="sub">${c.en}</p><div class="opts">${G.o.map((x,i)=>`<button data-i="${i}">${x.t}</button>`).join('')}</div><button class="go" id="go" disabled>تأكيد</button>`}
  A.innerHTML=`<div class="qh"><b>${G.i+1} / ${G.qs.length}</b><button class="x" id="qx">✕</button><span id="tm">${S.time}</span></div><div class="pb"><i id="pb"></i></div><div class="stage">${b}</div>`;
- $('#qx').onclick=()=>confirm('إنهاء اللعبة؟')&&home();
- A.querySelectorAll('.in input').forEach(e=>{e.oninput=()=>{const v=norm(e.value);if(v&&acc(c).has(v))done(true)};e.onkeydown=k=>{if(k.key==='Enter'){e.blur();if(!acc(c).has(norm(e.value))){e.classList.remove('shake');void e.offsetWidth;e.classList.add('shake')}}}});
+ $('#qx').onclick=()=>confirm('إنهاء اللعبة؟')&&home();if($('#mb'))initMap($('#mb'),c);
+ A.querySelectorAll('.in input').forEach(e=>{e.oninput=()=>{G.last=e.value;const v=norm(e.value);if(v&&acc(c).has(v))done(true)};e.onkeydown=k=>{if(k.key==='Enter'){e.blur();if(!acc(c).has(norm(e.value))){e.classList.remove('shake');void e.offsetWidth;e.classList.add('shake')}}}});
  if($('#sk'))$('#sk').onclick=()=>done(false,'skip');
  A.querySelectorAll('.opts button').forEach(e=>e.onclick=()=>{if(G.lock)return;A.querySelectorAll('.opts button').forEach(x=>x.classList.remove('sel'));e.classList.add('sel');G.sel=+e.dataset.i;$('#go').disabled=false});
  if($('#go'))$('#go').onclick=()=>{if(G.sel!=null)done(!!G.o[G.sel].ok)};
  G.end=Date.now()+S.time*1000;G.tm=setInterval(()=>{const l=Math.max(0,(G.end-Date.now())/1000);$('#tm').textContent=Math.ceil(l);$('#tm').classList.toggle('low',l<=5);$('#pb').style.width=l/S.time*100+'%';if(l<=0)done(false,'time')},100)}
-function done(ok,why){if(G.lock)return;G.lock=true;clearInterval(G.tm);const c=G.c;ok?G.score++:G.miss.push(c);
+function done(ok,why){if(G.lock)return;G.lock=true;clearInterval(G.tm);const c=G.c,m=G.mode;ok?G.score++:G.miss.push(c);
+ const mine=G.sel!=null&&G.o?G.o[G.sel].t:(G.last||'');G.log.push({c,ok,mine,why});
  if(G.o)A.querySelectorAll('.opts button').forEach((e,i)=>{if(G.o[i].ok)e.classList.add('good');else if(i===G.sel)e.classList.add('bad')});
  const d=document.createElement('div');d.className='fb '+(ok?'ok':'no');
- d.innerHTML=`<div>${ok?'✅ إجابة صحيحة':why==='time'?'⏰ انتهى الوقت':why==='skip'?'⏭️ تم التخطي':'❌ إجابة خاطئة'}</div>${flag(c)}<div>${c.ar} — ${c.en}</div><div style="font-size:22px">${c.cap}</div>`;A.appendChild(d);
- setTimeout(()=>{G.i++;ask()},ok?1200:2600)}
-function result(){const n=G.qs.length,p=Math.round(G.score/n*100);
- A.innerHTML=`<div class="res"><h1>${p>=80?'🏆':p>=50?'👏':'💪'} النتيجة: ${G.score} / ${n} (${p}%)</h1>
- ${G.miss.length?`<h2>الأخطاء</h2><table>${G.miss.map(c=>`<tr><td>${flag(c)}</td><td>${c.ar}</td><td dir="ltr">${c.en}</td><td>${c.cap}</td></tr>`).join('')}</table>`:'<h2>بدون أخطاء! 🎉</h2>'}
+ d.innerHTML=`<div class="card"><div class="st">${ok?'✅ إجابة صحيحة':why==='time'?'⏰ انتهى الوقت':why==='skip'?'⏭️ تم التخطي':'❌ إجابة خاطئة'}</div>${flag(c)}<div class="nm">${c.ar}</div><div class="nm2" dir="ltr">${c.en}</div>${LBL[m]?`<div class="an">${LBL[m]} الصحيحة: <b>${ansOf(c,m)}</b></div>`:''}${!ok&&mine?`<div class="my">إجابتك: ${mine}</div>`:''}<small>اضغط للمتابعة</small></div>`;A.appendChild(d);
+ const nx=()=>{if(G.nx){clearTimeout(G.nx);G.nx=0;G.i++;ask()}};G.nx=setTimeout(nx,ok?2000:3800);d.onclick=nx}
+function result(){const n=G.qs.length,p=Math.round(G.score/n*100),m=G.mode;
+ A.innerHTML=`<div class="res"><h1>${p>=80?'🏆':p>=50?'👏':'💪'} النتيجة: ${G.score} / ${n} (${p}%)</h1><p>✅ صحيحة: ${G.score} &nbsp; ❌ خاطئة: ${n-G.score}</p>
+ <table><tr><th>#</th><th></th><th></th><th>الدولة</th><th>الإجابة الصحيحة</th><th>إجابتك</th></tr>${G.log.map((r,i)=>`<tr class="${r.ok?'g':'b'}"><td>${i+1}</td><td>${r.ok?'✅':'❌'}</td><td>${flag(r.c)}</td><td>${r.c.ar}<br><small dir="ltr">${r.c.en}</small></td><td>${ansOf(r.c,m)}</td><td>${r.ok?'':r.mine||'لم تُجب'}</td></tr>`).join('')}</table>
  <div class="chips" style="justify-content:center"><button class="go" id="ag">إعادة اللعب</button><button id="hm" style="font-size:22px">الرئيسية</button></div></div>`;
  $('#ag').onclick=()=>start(G.mode);$('#hm').onclick=home}
 /* ---------- guide ---------- */
@@ -73,6 +83,9 @@ function dir(v='n',q=''){const L=D.filter(c=>!q||acc(c).has(norm(q))||norm(c.ar)
  G.dv=v;A.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
  $('#g').innerHTML=L.map(c=>`<button class="tile" data-id="${c.id}">${v==='n'?flag(c)+`<b>${c.ar}</b><small>${c.en}</small>`:thumb(c)}</button>`).join('');
  $('#g').querySelectorAll('.tile').forEach(b=>b.onclick=()=>detail(byId[b.dataset.id]))}
+const FX={};
+async function showFx(c){const el=$('#fx');if(!el)return;const k=c.co;FX[k]=FX[k]||fetch(`facts/${k}.json`).then(r=>r.ok?r.json():{}).catch(()=>({}));const d=(await FX[k])[c.id];if($('#fx')!==el)return;
+ el.innerHTML=d?`<h3>⭐ أشهر ما في ${c.ar}</h3><ul>${d.info.map(x=>`<li>${x}</li>`).join('')}</ul><p><b>سبب التسمية:</b> ${d.name}</p><p><b>الاستقلال:</b> ${d.ind}</p>`:'<p style="color:#9db4cc">المعلومات المختصرة وسبب التسمية وتاريخ الاستقلال: قيد الإضافة.</p>'}
 function detail(c){let e=$('#dt');if(!e){e=document.createElement('div');e.id='dt';document.body.appendChild(e)}
  const nb=c.nb.map(i=>byId[i]);
  e.innerHTML=`<div class="bar2"><button id="cl">✕ إغلاق</button><h2 style="margin:0">${c.ar} — <span dir="ltr">${c.en}</span></h2></div><div class="dg">
@@ -82,8 +95,8 @@ function detail(c){let e=$('#dt');if(!e){e=document.createElement('div');e.id='d
  <b>اللغات</b><span dir="ltr">${c.lang.join(', ')}</span><b>رمز الاتصال</b><span dir="ltr">${c.idd}</span><b>الموقع</b><span>${c.ll?'دولة غير ساحلية':'لها منفذ بحري'}</span></div>
  <div style="grid-column:1/-1"><b>الدول المجاورة:</b> ${nb.length?nb.map(x=>`<button class="nb" data-id="${x.id}">${x.ar}</button>`).join(''):'لا توجد حدود برية'}</div>
  ${c.f?`<div>${mapSvg(c,'ctx')}</div><div>${mapSvg(c,'shape')}</div>`:''}
- <div style="grid-column:1/-1;color:#9db4cc">المعلومات المختصرة وسبب التسمية: تُضاف في المرحلة التالية.</div></div>`;
- $('#cl').onclick=()=>e.remove();e.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{detail(byId[b.dataset.id]);e.scrollTop=0})}
+ <div id="fx" style="grid-column:1/-1"></div></div>`;
+ $('#cl').onclick=()=>e.remove();showFx(c);e.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{detail(byId[b.dataset.id]);e.scrollTop=0})}
 const vv=window.visualViewport,fit=()=>{document.documentElement.style.setProperty('--h',(vv?vv.height:innerHeight)+'px');scrollTo(0,0)};
 if(vv){vv.addEventListener('resize',fit);vv.addEventListener('scroll',fit)}addEventListener('orientationchange',()=>setTimeout(fit,300));fit();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
