@@ -1,5 +1,5 @@
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v7';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v9';
 const [D,T,T5,T1]=await Promise.all([fetch('data.json').then(r=>r.json()),fetch('world.json').then(r=>r.json()),fetch('world50.json').then(r=>r.json()),fetch('world110.json').then(r=>r.json())]);
 /* ---------- map data: Natural Earth 1:10m (detail) + 1:50m (settled world views) + 1:110m (light copy while dragging) ---------- */
 const all=topojson.feature(T,T.objects.countries).features,nbs=topojson.neighbors(T.objects.countries.geometries).map(a=>a.slice());
@@ -13,6 +13,8 @@ const LM={},MM={},f1=topojson.feature(T1,T1.objects.countries).features,f5=topoj
 mergeWS(T1,f1);mergeWS(T5,f5);
 f1.forEach(f=>{if(!f.hide)LM[keyOf(f)]=f});f5.forEach(f=>{if(!f.hide&&f.properties.p)MM[keyOf(f)]=f});
 all.forEach(f=>{f.pri=!f.hide&&f.id!=null&&!!f.properties.p;const u=!f.hide&&(f.id==null||f.pri);f.lite=u?(LM[keyOf(f)]||null):null;f.mid=u?(MM[keyOf(f)]||null):null});
+/* the 1:10m Vatican polygon is degenerate (zero width): use the 1:50m outline */
+all.forEach(f=>{if(f.id==='336'&&f.mid&&f.mid.geometry)f.geometry=f.mid.geometry});
 /* random graph colouring: neighbours never share a colour; new arrangement on every call */
 function recolor(){const n=all.length,col=new Array(n).fill(-1);
  [...Array(n).keys()].filter(i=>!all[i].hide).map(i=>[nbs[i].length+Math.random()*4,i]).sort((a,b)=>b[0]-a[0]).forEach(([,i])=>{const u=new Set(nbs[i].map(j=>col[j])),av=[0,1,2,3,4,5,6].filter(k=>!u.has(k));col[i]=av.length?av[Math.floor(Math.random()*av.length)]:Math.floor(Math.random()*7)});
@@ -63,31 +65,40 @@ function projFor(c,kind,W=900,H=560){
 function near(c,f,R){const b=f.gb||(f.gb=d3.geoBounds(f.mid||f)),w=b[0][0],s=b[0][1],e=b[1][0],n=b[1][1],x=c.ct[0],y=c.ct[1];if(w>e)return true;
  let lx=x;if(x<w||x>e){const dw=Math.abs(((x-w+540)%360)-180),de=Math.abs(((x-e+540)%360)-180);lx=dw<de?w:e}
  return d3.geoDistance(c.ct,[lx,Math.max(s,Math.min(n,y))])*deg<=R*1.9+3}
+function frameHtml(c,p,W,H,cls){const g=d3.geoPath(p),b=g.bounds(c.f);if(!isFinite(b[0][0]))return'';const x0=b[0][0],y0=b[0][1],x1=b[1][0],y1=b[1][1];
+ if(x1<-40||x0>W+40||y1<-40||y0>H+40)return'';
+ const R=(x,y,w,h)=>`<rect class="fr ${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="9"/>`;
+ if(x1-x0>W*.9||y1-y0>H*.9)return(c.cl||[]).map(cl=>{const q=p(cl.ct);if(!q)return'';const r=Math.max(13,p.scale()*cl.rr*rad+7);return R(q[0]-r,q[1]-r,2*r,2*r)}).join('');
+ const w=x1-x0,h=y1-y0,cx=(x0+x1)/2,cy=(y0+y1)/2;
+ if(Math.max(w,h)<10)return`<circle class="fr ${cls}" cx="${cx}" cy="${cy}" r="17"/>`;
+ const ww=Math.max(w+20,32),hh=Math.max(h+20,32);return R(cx-ww/2,cy-hh/2,ww,hh)}
 function staticSvg(c,kind,minR=MINR){const p=projFor(c,kind).clipExtent([[0,0],[W,H]]),g=d3.geoPath(p);
  if(kind==='shape')return`<svg viewBox="0 0 ${W} ${H}" class="map shp"><path class="t2" d="${g(c.keepF)}"/></svg>`;
  const R=p._R||60;let s='',t='';const co=[];
- F.forEach(f=>{const tg=f.pri&&f.id===c.n;if(!tg&&!near(c,f,R))return;const d=g(f);if(!d)return;co.push(d);if(tg)t=`<path class="l t" d="${d}"/>`;else s+=`<path class="l c${f.col%7}" d="${d}"/>`});
- return`<svg viewBox="0 0 ${W} ${H}" class="map"><path class="grat" d="${g(GR)}"/><path class="coast" d="${co.join('')}"/><g class="land">${s}${t}</g>${minR&&c.mk?`<path class="ring" d="${g(c.f)}"/>`:''}</svg>`}
+ F.forEach(f=>{const tg=f.pri&&f.id===c.n;if(!tg&&!near(c,f,R))return;const d=g(f);if(!d)return;co.push(d);if(tg)t=`<path class="l ${minR&&c.mk?'sel':'t'}" d="${d}"/>`;else s+=`<path class="l c${f.col%7}" d="${d}"/>`});
+ return`<svg viewBox="0 0 ${W} ${H}" class="map"><path class="grat" d="${g(GR)}"/><path class="coast" d="${co.join('')}"/><g class="land">${s}${t}</g>${minR&&c.mk?frameHtml(c,p,W,H,'t'):''}</svg>`}
 const thumbs={};const thumb=c=>thumbs[c.id]||(thumbs[c.id]=c.f?(SMALL.has(c.id)?staticSvg(c,'ctx',30):staticSvg(c,'shape',0)):flag(c));
 let MW=null;/* tiny world for the locator inset */
 function miniWorld(c){if(!MW){const p=worldMerc(120,70).clipExtent([[0,0],[120,70]]),g=d3.geoPath(p);MW={p,d:F.map(f=>f.lite?g(f.lite):'').join('')}}
  const q=MW.p(c.ct)||[60,35];return`<svg viewBox="0 0 120 70" class="mw"><path d="${MW.d}"/><circle cx="${q[0]}" cy="${q[1]}" r="9" class="mwr"/><circle cx="${q[0]}" cy="${q[1]}" r="3.2" class="mwd"/></svg>`}
 const LOC={};const locator=c=>LOC[c.id]||(LOC[c.id]=c.f?`<div class="loc">${staticSvg(c,'ctx',MINR)}${miniWorld(c)}</div>`:'');
 function mkMap(host,o){recolor();
- const W=Math.max(200,host.clientWidth||900),H=Math.max(200,host.clientHeight||560),gR=Math.min(W,H)/2*.94;
- let mode=o.kind==='world'?(S.flat?'flat':'globe'):'ctx',tr=d3.zoomIdentity,p0,s0,t0,r0,gv={r:GL0.slice(),k:1},anim=0,lastC=o.c||null,inset=0;const selSet=new Map();
+ let W=Math.max(200,host.clientWidth||900),H=Math.max(200,host.clientHeight||560),gR=Math.min(W,H)/2*.94;
+ let mode=o.kind==='world'?(S.flat?'flat':'globe'):'ctx',tr=d3.zoomIdentity,p0,s0,t0,r0,gv={r:GL0.slice(),k:1},anim=0,lastC=o.c||null,inset=0;const selSet=new Map();let ready=false,wb=null,kmin=1,sRef=1;const foundN=new Set((o.found||[]).map(c=>c.n));
  host.innerHTML=`<svg viewBox="0 0 ${W} ${H}" class="map live${mode==='globe'?' globe':''}"><defs><radialGradient id="sph" cx="38%" cy="34%" r="75%"><stop offset="0" stop-color="var(--sea1)"/><stop offset=".7" stop-color="var(--sea2)"/><stop offset="1" stop-color="var(--sea3)"/></radialGradient></defs><g class="z"><path class="sphere"></path><path class="grat"></path><path class="coast"></path><g class="land"></g><g class="mhs"></g><g class="mks"></g><g class="mrs"></g><g class="rg"></g><g class="mds"></g><g class="lb"></g></g></svg>`;
  const svg=d3.select(host.querySelector('svg')),gz=svg.select('g.z'),land=gz.select('g.land'),el=svg.node();
  const paths=land.selectAll('path').data(F).join('path').attr('class',f=>'l c'+(f.col%7)).attr('data-n',f=>f.pri?f.id:null);
- function base(){p0=mode==='ctx'?projFor(o.c,'ctx',W,H):projFor(null,'world',W,H);s0=p0.scale();t0=p0.translate();r0=p0.rotate();tr=d3.zoomIdentity}
+ function base(){p0=mode==='ctx'?projFor(o.c,'ctx',W,H):projFor(null,'world',W,H);s0=p0.scale();t0=p0.translate();r0=p0.rotate();tr=d3.zoomIdentity;sRef=worldMerc(W,H).scale();
+  if(mode==='ctx'){const l0=-r0[0],a=p0([l0-179.9,80]),b=p0([l0+179.9,-80]);wb=[[Math.min(a[0],b[0]),Math.min(a[1],b[1])],[Math.max(a[0],b[0]),Math.max(a[1],b[1])]];kmin=Math.max(.01,Math.min(W/(wb[1][0]-wb[0][0]),H/(wb[1][1]-wb[0][1])))}else{wb=null;kmin=1}
+  zoom.scaleExtent([kmin,5000])}
  const kNow=()=>mode==='globe'?gv.k:tr.k;
  const proj=()=>mode==='globe'?d3.geoOrthographic().rotate([gv.r[0],gv.r[1],0]).scale(gR*gv.k).translate([W/2,H/2]).clipAngle(90).clipExtent([[-40,-40],[W+40,H+40]])
   :d3.geoMercator().rotate(r0).scale(s0*tr.k).translate([t0[0]*tr.k+tr.x,t0[1]*tr.k+tr.y]).clipExtent([[-40,-40],[W+40,H+40]]);
  const st=n=>selSet.has(n)?' '+selSet.get(n):'';
- const mcls=d=>'mk'+(d.c.sr<2e-6?' thin':'')+st(d.c.n),dcls=d=>'md'+st(d.c.n);
- function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];
+ function drawFr(p){gz.select('.rg').html([...selSet].map(([n,cls])=>{const c=byNc[n];return c&&c.mk&&c.f&&!foundN.has(n)?frameHtml(c,p,W,H,cls):''}).join(''))}
+ function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];ready=true;
   gz.select('.sphere').attr('d',mode==='globe'?g({type:'Sphere'}):null);gz.select('.grat').attr('d',g(GR));
-  const mid=lite==='mid'||(!lite&&mode!=='ctx'&&kNow()<2.5);
+  const mid=lite==='mid'||(!lite&&(mode==='globe'?gv.k:s0*tr.k/sRef)<2.5);
   paths.attr('d',f=>{const l=f.mid||f.lite;let d;
    if(lite===true)d=f.lite?g(f.lite):null;
    else if(mid)d=f.mid?g(f.mid):null;
@@ -95,22 +106,23 @@ function mkMap(host,o){recolor();
    if(d)ds.push(d);return d||null});
   gz.select('.coast').attr('d',mode==='globe'?null:ds.join(''));
   const full=lite!==true&&lite!=='mid',k=kNow();
-  /* small countries: a dot when tiny, an outline hugging the real shape when large enough; never circles */
+  /* small countries: no visible markers (invisible hit areas keep them tappable); a selected one gets a red frame */
   const hs=[];if(o.marks&&full)MK.forEach(c=>{const d=g(c.f);if(!d)return;const b=g.bounds(c.f);hs.push({c,d,sz:Math.max(b[1][0]-b[0][0],b[1][1]-b[0][1]),cx:(b[0][0]+b[1][0])/2,cy:(b[0][1]+b[1][1])/2})});
   const dots=hs.filter(d=>d.sz<10),outs=hs.filter(d=>d.sz>=10&&k>=2.2).sort((a,b)=>b.sz-a.sz);
   gz.select('.mhs').selectAll('path').data(outs).join('path').attr('d',d=>d.d).attr('data-n',d=>d.c.n).style('stroke-width',d=>(d.sz<34?30:12)+'px');
-  gz.select('.mks').selectAll('path').data(outs).join('path').attr('class',mcls).attr('d',d=>d.d);
-  gz.select('.mrs').selectAll('circle').data(k>=2.2?dots:[]).join('circle').attr('class',dcls).attr('cx',d=>d.cx).attr('cy',d=>d.cy).attr('r',14);
-  gz.select('.mds').selectAll('g').data(dots).join(e=>{const n=e.append('g');n.append('circle').attr('class','hd').attr('r',17);n.append('circle').attr('class','dt').attr('r',5);return n})
-   .attr('transform',d=>`translate(${d.cx},${d.cy})`).attr('data-n',d=>d.c.n).attr('class',dcls);
-  const rg=o.ring&&o.c&&o.c.mk&&full?[g(o.c.f)].filter(Boolean):[];
-  gz.select('.rg').selectAll('path').data(rg).join('path').attr('class','ring').attr('d',d=>d);
+  gz.select('.mrs').selectAll('*').remove();gz.select('.mks').selectAll('*').remove();
+  gz.select('.mds').selectAll('g').data(dots).join(e=>{const n=e.append('g');n.append('circle').attr('class','hd').attr('r',17);return n}).attr('transform',d=>`translate(${d.cx},${d.cy})`).attr('data-n',d=>d.c.n).attr('class','md');
+  drawFr(p);
   /* name chips for countries already found */
   const fl=full?(o.found||[]).map(c=>{const q=p(c.ct);return q&&q[0]>-30&&q[0]<W+30&&q[1]>-30&&q[1]<H+30?{c,x:q[0],y:q[1],w:34+c.ar.length*8.5}:null}).filter(Boolean):[];
   gz.select('.lb').selectAll('g').data(fl,d=>d.c.id).join(e=>{const n=e.append('g');n.append('rect').attr('rx',8).attr('height',22).attr('y',-11);n.append('image').attr('width',20).attr('height',14).attr('y',-7);n.append('text').attr('y',5);return n})
    .attr('transform',d=>`translate(${d.x},${d.y})`).each(function(d){const g2=d3.select(this);g2.select('rect').attr('x',-d.w/2).attr('width',d.w);g2.select('image').attr('href','flags/'+d.c.a+'.svg').attr('x',-d.w/2+6);g2.select('text').attr('x',-d.w/2+30).text(d.c.ar)})}
  /* ---- flat / context maps: d3 zoom with exact re-render on gesture end ---- */
- const zoom=d3.zoom().scaleExtent([1,5000]).translateExtent([[-W,-H],[2*W,2*H]])
+ const cl2=(lo,hi,v)=>lo>hi?(lo+hi)/2:Math.max(lo,Math.min(hi,v));
+ const zoom=d3.zoom().scaleExtent([1,5000]).translateExtent([[-W,-H],[2*W,2*H]]).constrain((t,ext,te)=>{
+  if(mode==='ctx'&&wb){const cx=cl2(wb[0][0]+W/(2*t.k),wb[1][0]-W/(2*t.k),(W/2-t.x)/t.k),cy=cl2(wb[0][1]+H/(2*t.k),wb[1][1]-H/(2*t.k),(H/2-t.y)/t.k);return d3.zoomIdentity.translate(W/2-cx*t.k,H/2-cy*t.k).scale(t.k)}
+  const dx0=t.invertX(ext[0][0])-te[0][0],dx1=t.invertX(ext[1][0])-te[1][0],dy0=t.invertY(ext[0][1])-te[0][1],dy1=t.invertY(ext[1][1])-te[1][1];
+  return t.translate(dx1>dx0?(dx0+dx1)/2:Math.min(0,dx0)||Math.max(0,dx1),dy1>dy0?(dy0+dy1)/2:Math.min(0,dy0)||Math.max(0,dy1))})
   .on('zoom',e=>{const t=e.transform,r=t.k/tr.k;gz.attr('transform',`translate(${t.x-tr.x*r},${t.y-tr.y*r}) scale(${r})`)})
   .on('end',e=>{const t=e.transform;if(t.k===tr.k&&t.x===tr.x&&t.y===tr.y)return;tr=t;gz.attr('transform',null);render()});
  const useZoom=()=>svg.call(zoom).on('dblclick.zoom',null);
@@ -145,7 +157,7 @@ function mkMap(host,o){recolor();
  /* ---- selection / focus ---- */
  function setSel(n,cls,keep){if(!keep){selSet.clear();paths.classed('sel good bad t',false)}
   if(n!=null){selSet.set(n,cls);paths.filter(f=>f.pri&&f.id===n).classed(cls,true).raise();if(byNc[n])lastC=byNc[n]}
-  gz.select('.mks').selectAll('path').attr('class',mcls);gz.select('.mrs').selectAll('circle').attr('class',dcls);gz.select('.mds').selectAll('g').attr('class',dcls)}
+  if(ready)drawFr(proj())}
  (o.found||[]).forEach(c=>setSel(c.n,'good',true));
  function bbox(c){if(c.mk){const q=p0(c.cl[0].ct),s=p0.scale()*Math.max(...c.cl.map(x=>x.rr))*rad+2;return[[q[0]-s,q[1]-s],[q[0]+s,q[1]+s]]}return d3.geoPath(p0).bounds(c.keepF)}
  function focusGlobe(L,dur){let ctr,th;
@@ -163,7 +175,12 @@ function mkMap(host,o){recolor();
   if(m==='globe'){gv.k=1;gv.r=lastC&&lastC.ct?[-lastC.ct[0],-lastC.ct[1]]:GL0.slice();render(false)}
   else{useZoom();base();svg.call(zoom.transform,d3.zoomIdentity);render(false);if(m==='flat'&&lastC&&lastC.f&&mode==='flat')focus(lastC,0)}
   api.onmode&&api.onmode(mode)}
- const api={setSel,focus,onmode:null,mode:()=>mode,inset:v=>{inset=v},
+ function resize(){const nw=Math.max(200,host.clientWidth||W),nh=Math.max(200,host.clientHeight||H);if(Math.abs(nw-W)<2&&Math.abs(nh-H)<2)return;
+  stopAnim();W=nw;H=nh;gR=Math.min(W,H)/2*.94;svg.attr('viewBox',`0 0 ${W} ${H}`);zoom.translateExtent([[-W,-H],[2*W,2*H]]);gz.attr('transform',null);
+  if(mode==='globe'){render(false)}else{base();svg.call(zoom.transform,d3.zoomIdentity);render(false)}
+  o.onresize&&o.onresize()}
+ let rt=0;if(window.ResizeObserver)new ResizeObserver(()=>{clearTimeout(rt);rt=setTimeout(resize,120)}).observe(host);
+ const api={setSel,focus,onmode:null,resize,mode:()=>mode,inset:v=>{inset=v},
   by:f=>mode==='globe'?animTo(gv.r,Math.max(1,Math.min(3000,gv.k*f)),250):svg.transition().duration(250).call(zoom.scaleBy,f),
   reset:()=>mode==='globe'?animTo(GL0,1,600):svg.transition().duration(300).call(zoom.transform,d3.zoomIdentity),
   world(on){setMode(on?(S.flat?'flat':'globe'):'ctx')},
@@ -182,47 +199,57 @@ const LN=(()=>{const m={},en=new Intl.DisplayNames('en',{type:'language'}),ar=ne
  for(const x of L)for(const y of L){const k=x+y;try{const e=en.of(k);if(e&&e!==k&&!m[e])m[e]=ar.of(k)}catch(_){}}return m})(),arLang=n=>LN[n]||n;
 const statCards=c=>{const k=(l,v,sub='',cls='')=>v==null||v===''?'':`<div class="stat ${cls}"><span>${l}</span><b>${v}</b>${sub?`<small>${sub}</small>`:''}</div>`;
  return [k('العاصمة',c.cap),k('العملة',c.cur.map(x=>x.ar).join('، '),c.cur.map(x=>x.k).join(' · ')),
-  k('عدد السكان',c.pop?fmtPop(c.pop):'—',c.pop?`المرتبة ${c.r_pop} من ${195} · ${c.popY}`:''),
+  k('عدد السكان',c.pop?`${fmtPop(c.pop)}<em>(تحديث ${c.popY})</em>`:'—',c.pop?`المرتبة ${c.r_pop} من 195`:''),
   k('الكثافة السكانية',c.pop&&c.area?nf.format(Math.round(c.pop/c.area))+' نسمة/كم²':'—'),
   k('المساحة',nf.format(c.area)+' كم²',`المرتبة ${c.r_area}`),
-  k('الناتج المحلي',c.gdp?fmtUSD(c.gdp):'—',c.gdp?`المرتبة ${c.r_gdp} · ${c.gdpY}`:''),
+  k('الناتج المحلي',c.gdp?`${fmtUSD(c.gdp)}<em>(تحديث ${c.gdpY})</em>`:'—',c.gdp?`المرتبة ${c.r_gdp}`:''),
   k('نصيب الفرد من الناتج',c.gpc?'$'+nf.format(Math.round(c.gpc)):'—',c.gpc?`المرتبة ${c.r_gpc}`:''),
   k('اللغات',c.lang.map(arLang).join('، ')),k('رمز الاتصال',c.idd,c.tld?'النطاق '+c.tld:''),
   k('الموقع',c.ll?'دولة غير ساحلية':'لها منفذ بحري',c.nb.length?c.nb.length+' دولة مجاورة':'لا حدود برية'),
   k('الاسم الرسمي',c.offA,c.off,'wide'),k('المنطقة',c.sub?c.sub+' — '+CN[c.co]:CN[c.co],c.dem?'الجنسية: '+c.dem:'')].join('')};
-function closePanel(){const e=$('#pn');if(e)e.remove();if(closePanel.cb)closePanel.cb();closePanel.cb=null}
+function closePanel(){const e=$('#pn');if(e)e.remove();A.classList.remove('dk');if(closePanel.cb)closePanel.cb();closePanel.cb=null}
+const pk=()=>innerWidth>innerHeight?'pnL':'pnP';
+function placePanel(e){if(e.dataset.dk&&innerWidth>innerHeight){e.classList.add('dock');A.classList.add('dk');['width','height','left','top'].forEach(k=>e.style[k]='');return}
+ e.classList.remove('dock');A.classList.remove('dk');const vw=innerWidth,vh=window.visualViewport?visualViewport.height:innerHeight,R=S[pk()]||{};
+ const w=Math.min(R.w||(vw>900?560:vw-16),vw-12),h=Math.min(R.h||Math.round(vh*(vw>900?.52:.5)),vh-20);
+ Object.assign(e.style,{width:w+'px',height:h+'px',left:Math.max(6,Math.min(R.x!=null?R.x:(vw-w)/2,vw-w-6))+'px',top:Math.max(6,Math.min(R.y!=null?R.y:vh-h-10,vh-h-6))+'px'})}
+function fitPanel(){const e=$('#pn');if(e)placePanel(e)}
 function openPanel(c,o={}){let e=$('#pn');const fresh=!e;
- if(fresh){e=document.createElement('div');e.id='pn';document.body.appendChild(e)}
- const vw=innerWidth,vh=window.visualViewport?visualViewport.height:innerHeight,R=S.pn||{};
- if(fresh){const w=Math.min(R.w||(vw>900?560:vw-16),vw-12),h=Math.min(R.h||Math.round(vh*(vw>900?.52:.5)),vh-20);
-  Object.assign(e.style,{width:w+'px',height:h+'px',left:Math.max(6,Math.min(R.x!=null?R.x:(vw-w)/2,vw-w-6))+'px',top:Math.max(6,Math.min(R.y!=null?R.y:vh-h-10,vh-h-6))+'px'})}
+ if(fresh){e=document.createElement('div');e.id='pn';if(o.dock)e.dataset.dk='1';document.body.appendChild(e)}
+ if(fresh)placePanel(e);
  e.innerHTML=`<div class="ph"><i class="grip">⠿</i>${flag(c)}<div class="pt2"><b>${c.ar}</b><span dir="ltr">${c.en}</span></div><button class="pclose" aria-label="إغلاق">✕</button></div>
  <div class="pbody"><div class="reg">${c.sub?c.sub+' · ':''}${CN[c.co]}</div>${locator(c)}<div class="stats">${statCards(c)}</div>
  <div class="nbs"><b>الدول المجاورة</b> ${c.nb.length?c.nb.map(i=>byId[i]).filter(Boolean).map(x=>`<button class="nb" data-id="${x.id}">${x.ar}</button>`).join(''):'<span class="mut">لا توجد حدود برية</span>'}</div>
- <div id="pfx" class="pfx"></div><div class="src">السكان والناتج المحلي: بيانات البنك الدولي (سنة كل رقم بجانبه).</div></div><div class="rz" aria-label="تغيير الحجم"></div>`;
+ <div id="pfx" class="pfx"></div></div><div class="rz" aria-label="تغيير الحجم"></div>`;
  e.querySelector('.pclose').onclick=closePanel;
  e.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{const n=byId[b.dataset.id];if(o.go)o.go(n);else openPanel(n,o)});
  getFx(c).then(d=>{const x=$('#pfx');if(!x||$('#pn')!==e)return;x.innerHTML=d?`<div class="fxc"><h4>🗓️ الاستقلال</h4><p>${d.ind}</p></div><div class="fxc"><h4>🏷️ سبب التسمية</h4><p>${d.name}</p></div><div class="fxc"><h4>⭐ أشهر ما فيها</h4><ul>${d.info.map(i=>`<li>${i}</li>`).join('')}</ul></div>`:''});
- const sv=()=>{S.pn={x:parseFloat(e.style.left),y:parseFloat(e.style.top),w:parseFloat(e.style.width),h:parseFloat(e.style.height)};save()};
- const drag=(h,fn)=>{h.onpointerdown=ev=>{if(ev.target.closest('button'))return;ev.preventDefault();h.setPointerCapture(ev.pointerId);const sx=ev.clientX,sy=ev.clientY,r=e.getBoundingClientRect();
+ const sv=()=>{S[pk()]={x:parseFloat(e.style.left),y:parseFloat(e.style.top),w:parseFloat(e.style.width),h:parseFloat(e.style.height)};save()};
+ const drag=(h,fn)=>{h.onpointerdown=ev=>{if(e.classList.contains('dock')||ev.target.closest('button'))return;ev.preventDefault();h.setPointerCapture(ev.pointerId);const sx=ev.clientX,sy=ev.clientY,r=e.getBoundingClientRect();
   h.onpointermove=m=>fn(r,m.clientX-sx,m.clientY-sy);h.onpointerup=h.onpointercancel=()=>{h.onpointermove=null;sv()}}};
  drag(e.querySelector('.ph'),(r,dx,dy)=>{e.style.left=Math.max(4,Math.min(innerWidth-r.width-4,r.left+dx))+'px';e.style.top=Math.max(4,Math.min(innerHeight-60,r.top+dy))+'px'});
  drag(e.querySelector('.rz'),(r,dx,dy)=>{e.style.width=Math.max(260,Math.min(innerWidth-r.left-4,r.width+dx))+'px';e.style.height=Math.max(190,Math.min(innerHeight-r.top-4,r.height+dy))+'px'});
  e.querySelector('.pbody').scrollTop=0;closePanel.cb=o.onclose||null}
 /* ---------- home ---------- */
 let G={};
-function home(){clearInterval(G.tm);clearTimeout(G.nx);closePanel();const chip=(k,v,on)=>`<button data-k="${k}" data-v="${v}" class="${on?'on':''}">${k==='conts'?CN[v]:v+(k==='time'?' ث':'')}</button>`;
- A.innerHTML=`<header class="hd"><svg class="rose" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M32 4 38 32 32 60 26 32Z"/><path d="M4 32 32 26 60 32 32 38Z" class="b"/><circle cx="32" cy="32" r="4"/></svg><div><h1>لعبة خرائط العالم</h1><p>اعرف الدول بشكلها وموقعها وعلمها وعاصمتها</p></div></header><div class="home"><aside>
+function home(){clearInterval(G.tm);clearTimeout(G.nx);closePanel();
+ A.innerHTML=`<header class="hd"><svg class="rose" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M32 4 38 32 32 60 26 32Z"/><path d="M4 32 32 26 60 32 32 38Z" class="b"/><circle cx="32" cy="32" r="4"/></svg><div><h1>لعبة خرائط العالم</h1><p>اعرف الدول بشكلها وموقعها وعلمها وعاصمتها</p></div></header>
+ <div class="hub"><div class="infos"><button class="hb h1" id="gd"><i>📖</i><b>دليل الدول</b><small>معلومات كل دولة وخرائطها</small></button><button class="hb h2" id="wm"><i>🌐</i><b>خريطة العالم</b><small>الكرة الأرضية والخريطة المسطحة</small></button><button class="hb h3" id="tb"><i>📊</i><b>جدول الدول</b><small>كل الدول في جدول قابل للترتيب</small></button></div>
+ <button class="qbig" id="qz"><i>🎯</i><span><b>الأسئلة</b><small>اختبر معلوماتك بسبعة أنواع من الأسئلة</small></span></button><div class="ver">النسخة ${VER}</div></div>`;
+ $('#gd').onclick=()=>dir();$('#wm').onclick=explore;$('#qz').onclick=quizPage;$('#tb').onclick=()=>{location.href='countries.html'}}
+function quizPage(){clearInterval(G.tm);clearTimeout(G.nx);closePanel();const chip=(k,v,on)=>`<button data-k="${k}" data-v="${v}" class="${on?'on':''}">${k==='conts'?CN[v]:v+(k==='time'?' ث':'')}</button>`;
+ A.innerHTML=`<div class="bar2"><button id="bk">› رجوع</button><h2 class="qt">🎯 الأسئلة</h2></div><div class="home"><aside>
  <h3>⏱️ وقت كل سؤال</h3><div class="chips">${[10,15,20,30,45,60].map(v=>chip('time',v,S.time==v)).join('')}</div>
- <h3>🔢 عدد الأسئلة</h3><div class="chips">${[10,20,30,50,100].map(v=>chip('count',v,S.count==v)).join('')}</div>
- <h3>🧭 القارات</h3><div class="chips">${Object.keys(CN).map(v=>chip('conts',v,S.conts.includes(v))).join('')}</div><div class="ver">النسخة ${VER}</div></aside>
+ <h3>🔢 عدد الأسئلة</h3><div class="chips">${[10,20,30,50,100,150,195].map(v=>chip('count',v,S.count==v)).join('')}</div>
+ <h3>🧭 القارات</h3><div class="chips">${Object.keys(CN).map(v=>chip('conts',v,S.conts.includes(v))).join('')}</div></aside>
  <div class="main"><details class="how" ${innerWidth>820?'open':''}><summary>طريقة اللعب</summary> اختر الوقت وعدد الأسئلة والقارات، ثم نوع الأسئلة. الإجابة الأسرع تكسب نقاطًا أكثر، والإجابات المتتالية الصحيحة تضيف مكافأة سلسلة. الكتابة تقبل الأسماء البديلة والإجابة المقاربة. في «حدّد الدولة» أدِر الكرة الأرضية بإصبعك، كبّر واضغط الدولة ثم «تأكيد».</details>
- <div class="modes">${MODES.map((m,i)=>`<button data-m="${m[0]}"><em>${i+1}</em><i>${m[2]}</i>${m[1]}</button>`).join('')}<button class="guide" id="wm"><i>🌐</i>خريطة العالم</button><button class="guide" id="gd"><i>📖</i>دليل الدول</button></div></div></div>`;
+ <div class="modes">${MODES.map((m,i)=>`<button data-m="${m[0]}"><em>${i+1}</em><i>${m[2]}</i>${m[1]}</button>`).join('')}</div></div></div>`;
+ $('#bk').onclick=home;
  A.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>{const k=b.dataset.k,v=k==='conts'?b.dataset.v:+b.dataset.v;
-  if(k==='conts'){S.conts=S.conts.includes(v)?S.conts.filter(x=>x!==v):[...S.conts,v];if(!S.conts.length)S.conts=[v]}else S[k]=v;save();home()});
- A.querySelectorAll('.modes [data-m]').forEach(b=>b.onclick=()=>start(b.dataset.m));$('#gd').onclick=()=>dir();$('#wm').onclick=explore}
+  if(k==='conts'){S.conts=S.conts.includes(v)?S.conts.filter(x=>x!==v):[...S.conts,v];if(!S.conts.length)S.conts=[v]}else S[k]=v;save();quizPage()});
+ A.querySelectorAll('.modes [data-m]').forEach(b=>b.onclick=()=>start(b.dataset.m))}
 /* ---------- game ---------- */
-function start(m){const mp=['en','ar','shape'].includes(m);let pool=D.filter(c=>S.conts.includes(c.co)&&c.f&&!(m==='shape'&&SMALL.has(c.id)));
+function start(m){const mp=['en','ar','shape'].includes(m);let pool=D.filter(c=>S.conts.includes(c.co)&&c.f);
  G={mode:m,qs:pick(pool,Math.min(S.count,pool.length),mp?c=>Math.min(1,Math.max(.1,Math.sqrt(c.sr)/.02)):()=>1),i:0,score:0,miss:[],log:[],pts:0,streak:0,best:0,found:[]};ask()}
 function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();const c=G.c=G.qs[G.i],m=G.mode;G.lock=false;G.sel=null;G.last='';G.pick=null;G.mv=null;
  const inp=(ph,d)=>`<input dir="${d}" placeholder="${ph}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">`;
@@ -235,7 +262,7 @@ function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();const c=G
   else{const ok=new Set(c.cur.map(x=>strip(x.ar))),seen=new Set(ok);o=[{t:strip(c.cur[0].ar),ok:1}];shuf(D).forEach(x=>{const t=strip(x.cur[0].ar);if(o.length<6&&!seen.has(t)){seen.add(t);o.push({t})}})}
   G.o=shuf(o);b=`<h1 class="big">${c.ar}</h1><p class="sub">${c.en}</p><div class="opts">${G.o.map((x,i)=>`<button data-i="${i}">${x.t}</button>`).join('')}</div><button class="go" id="go" disabled>تأكيد</button>`}
  A.innerHTML=`<div class="qh"><b>${G.i+1} / ${G.qs.length}</b><span class="sc">⭐ ${G.pts}<i></i>🔥 ${G.streak}</span><button class="x" id="qx">✕</button><span id="tm">${S.time}</span></div><div class="pb"><i id="pb"></i></div><div class="stage">${b}</div>`;
- $('#qx').onclick=()=>confirm('إنهاء اللعبة؟')&&home();
+ $('#qx').onclick=()=>confirm('إنهاء اللعبة؟')&&quizPage();
  if(m==='tap'){const mv=G.mv=mkMap($('#mb .svgw'),{kind:'world',marks:true,found:G.found,pick:cc=>{if(G.lock)return;G.pick=cc;mv.setSel(cc.n,'sel');$('#go').disabled=false}});wireBtns(A,mv,false);
   if(S.conts.length<6)mv.focus(D.filter(x=>S.conts.includes(x.co)&&x.f),0)}
  else if($('#mb')){const mv=G.mv=mkMap($('#mb .svgw'),{kind:'ctx',c,ring:true});mv.setSel(c.n,'t');wireBtns(A,mv,true)}
@@ -260,8 +287,8 @@ function done(ok,why,typed){if(G.lock)return;G.lock=true;clearInterval(G.tm);con
 function result(){const n=G.qs.length,p=Math.round(G.score/n*100),m=G.mode;S.best=S.best||{};const old=S.best[m]||0,rec=G.pts>old;if(rec){S.best[m]=G.pts;save()}
  A.innerHTML=`<div class="res"><h1>${p>=80?'🏆':p>=50?'👏':'💪'} النتيجة: ${G.score} / ${n} (${p}%)</h1><div class="sums"><div><b>⭐ ${G.pts}</b><span>النقاط${rec?' — رقم قياسي جديد 🎉':old?` (أفضل سابق ${old})`:''}</span></div><div><b>🔥 ${G.best}</b><span>أطول سلسلة</span></div><div><b>✅ ${G.score}</b><span>صحيحة</span></div><div><b>❌ ${n-G.score}</b><span>خاطئة</span></div></div>
  <table><tr><th>#</th><th></th><th></th><th>الدولة</th><th>الإجابة الصحيحة</th><th>إجابتك</th><th>نقاط</th></tr>${G.log.map((r,i)=>`<tr class="${r.ok?'g':'b'}"><td>${i+1}</td><td>${r.ok?'✅':'❌'}</td><td>${flag(r.c)}</td><td>${r.c.ar}<br><small dir="ltr">${r.c.en}</small></td><td>${ansOf(r.c,m)}</td><td>${r.ok?(r.why==='fuzzy'?r.mine+' (≈)':''):r.mine||'لم تُجب'}</td><td>${r.pts||''}</td></tr>`).join('')}</table>
- <div class="chips" style="justify-content:center"><button class="go" id="ag">إعادة اللعب</button><button id="hm" style="font-size:22px">الرئيسية</button></div></div>`;
- $('#ag').onclick=()=>start(G.mode);$('#hm').onclick=home}
+ <div class="chips" style="justify-content:center"><button class="go" id="ag">إعادة اللعب</button><button id="qp" style="font-size:22px">صفحة الأسئلة</button><button id="hm" style="font-size:22px">الرئيسية</button></div></div>`;
+ $('#ag').onclick=()=>start(G.mode);$('#qp').onclick=quizPage;$('#hm').onclick=home}
 /* ---------- guide ---------- */
 function dir(v='n',q=''){closePanel();const L=D.filter(c=>!q||acc(c).has(norm(q))||norm(c.ar).includes(norm(q))||norm(c.en).includes(norm(q))).sort((a,b)=>a.ar.localeCompare(b.ar,'ar'));
  if(!$('#g')){A.innerHTML=`<div class="bar2"><button id="bk">› رجوع</button><input id="q" placeholder="بحث..." value="${q}"><div class="seg"><button data-v="n">أسماء</button><button data-v="m">خرائط</button></div></div><div class="grid" id="g"></div>`;
@@ -278,20 +305,23 @@ function detail(c){let e=$('#dt');if(!e){e=document.createElement('div');e.id='d
  <div class="stats">${statCards(c)}</div>
  <div style="grid-column:1/-1"><b>الدول المجاورة:</b> ${nb.length?nb.map(x=>`<button class="nb" data-id="${x.id}">${x.ar}</button>`).join(''):'لا توجد حدود برية'}</div>
  ${c.f?`<div class="dmap" style="${SMALL.has(c.id)?'grid-column:1/-1':''}">${mapBox()}</div>${SMALL.has(c.id)?'':`<div class="dshape">${staticSvg(c,'shape',0)}</div>`}`:''}
- <div id="fx" style="grid-column:1/-1"></div><div class="src" style="grid-column:1/-1">السكان والناتج المحلي: بيانات البنك الدولي (سنة كل رقم بجانبه).</div></div>`;
+ <div id="fx" style="grid-column:1/-1"></div></div>`;
  $('#cl').onclick=()=>e.remove();showFx(c);e.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{detail(byId[b.dataset.id]);e.scrollTop=0});
  if(c.f){const mv=mkMap(e.querySelector('#mb .svgw'),{kind:'ctx',c,ring:true});mv.setSel(c.n,'t');wireBtns(e,mv,true)}}
 /* ---------- world explorer ---------- */
 function explore(){clearInterval(G.tm);closePanel();A.innerHTML=`<div class="bar2"><button id="bk">› رجوع</button><input id="q" placeholder="ابحث عن دولة واضغط Enter"><div class="seg"><button id="mf" style="display:none">🗺️</button><button id="zi">＋</button><button id="zo">－</button><button id="zr">⟲</button></div></div><div class="mapbox ex" id="mb"><div class="svgw"></div></div>`;
  $('#bk').onclick=()=>{closePanel();home()};let mv;
- const show=(c,fcs)=>{mv.setSel(c.n,'sel');openPanel(c,{go:n=>show(n,true),onclose:()=>{mv.inset(0);mv.setSel(null)}});const r=$('#pn').getBoundingClientRect(),h=$('#mb').getBoundingClientRect();mv.inset(Math.max(0,Math.min(h.height*.7,h.bottom-r.top)));if(fcs)mv.focus(c)};
- mv=mkMap($('#mb .svgw'),{kind:'world',marks:true,pick:c=>show(c,false)});
+ let cur=null;const insetOf=()=>{const p=$('#pn');if(!p||p.classList.contains('dock'))return 0;const r=p.getBoundingClientRect(),h=$('#mb').getBoundingClientRect();return Math.max(0,Math.min(h.height*.7,h.bottom-r.top))};
+ const show=(c,fcs)=>{cur=c;mv.setSel(c.n,'sel');openPanel(c,{dock:true,go:n=>show(n,true),onclose:()=>{cur=null;mv.inset(0);mv.setSel(null)}});mv.inset(insetOf());if(fcs)mv.focus(c)};
+ mv=mkMap($('#mb .svgw'),{kind:'world',marks:true,pick:c=>show(c,false),onresize:()=>{if($('#pn')&&cur){mv.inset(insetOf());mv.focus(cur,0)}}});
  wireBtns(A,mv,false);
  $('#q').onkeydown=k=>{if(k.key!=='Enter')return;const v=norm(k.target.value);if(!v)return;k.target.blur();
   const c=D.find(x=>acc(x).has(v))||D.find(x=>[...acc(x)].some(y=>y.startsWith(v)))||D.find(x=>[...acc(x)].some(y=>y.includes(v)))||D.find(x=>fuzzy(x,k.target.value));
   if(c&&c.f)show(c,true);else k.target.classList.add('shake')}}
-const vv=window.visualViewport,fit=()=>{document.documentElement.style.setProperty('--h',(vv?vv.height:innerHeight)+'px');scrollTo(0,0)};
-if(vv){vv.addEventListener('resize',fit);vv.addEventListener('scroll',fit)}addEventListener('orientationchange',()=>setTimeout(fit,300));fit();
+const vv=window.visualViewport,rs=document.documentElement.style;
+let fT=0;const fit=()=>{const w=Math.round(vv?vv.width:innerWidth),h=Math.round(vv?vv.height:innerHeight);rs.setProperty('--w',w+'px');rs.setProperty('--h',h+'px');scrollTo(0,0);clearTimeout(fT);fT=setTimeout(()=>{fitPanel();const m=window.__onfit;m&&m()},60)};
+if(vv){vv.addEventListener('resize',fit)}addEventListener('resize',fit);
+addEventListener('orientationchange',()=>[50,250,600,1200].forEach(t=>setTimeout(fit,t)));fit();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 window.__wm={D,F,byId,SMALL,MK,openPanel,closePanel,get G(){return G},fuzzy,norm,acc,go(m,id){start(m);G.qs[0]=byId[id];ask()},detail,explore,dir};
 home()})();
