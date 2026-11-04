@@ -1,9 +1,9 @@
 (async()=>{
 const A=document.getElementById('app'),H=document.documentElement;
 const CO={AF:['أفريقيا','Africa'],AS:['آسيا','Asia'],EU:['أوروبا','Europe'],NA:['أمريكا الشمالية','North America'],SA:['أمريكا الجنوبية','South America'],OC:['أوقيانوسيا','Oceania']};
-const T={ar:{title:'جدول الدول',back:'› رجوع',search:'ابحث بالاسم أو العاصمة أو الكود أو العملة...',lang:'English',cnt:n=>n+' دولة',none:'لا توجد نتائج',
+const T={ar:{title:'جدول الدول',back:'› رجوع',search:'ابحث بالاسم أو العاصمة أو الكود أو العملة...',cnt:n=>n+' دولة',none:'لا توجد نتائج',
  h:{name:'الدولة',flag:'العلم',cap:'العاصمة',code:'كود الدولة',cur:'العملة',co:'القارة',area:'المساحة (كم²)',pop:'عدد السكان'}},
- en:{title:'Countries Table',back:'‹ Back',search:'Search by name, capital, code or currency...',lang:'العربية',cnt:n=>n+' countries',none:'No results',
+ en:{title:'Countries Table',back:'‹ Back',search:'Search by name, capital, code or currency...',cnt:n=>n+' countries',none:'No results',
  h:{name:'Country',flag:'Flag',cap:'Capital',code:'Country code',cur:'Currency',co:'Continent',area:'Area (km²)',pop:'Population'}}};
 let lang='ar';try{lang=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 let D;try{D=await(await fetch('data.json')).json()}catch(e){A.textContent='تعذّر تحميل البيانات / Could not load data';return}
@@ -19,7 +19,7 @@ const V={ // sort/display value per column, per language
 const COLS=['name','flag','cap','code','cur','co','area','pop'];
 let q='',sk=null,sd=1;
 const cell={
- name:(c,l)=>`<b>${V.name(c,l)}</b>`,
+ name:(c,l)=>{const a=l==='ar'?c.ar:c.en,b=l==='ar'?c.en:c.ar;return`<b>${a}</b><small dir="${l==='ar'?'ltr':'rtl'}">${b}</small>`},
  flag:c=>`<img src="flags/${c.a}.svg" alt="" loading="lazy">`,
  cap:(c,l)=>{const a=l==='ar'?c.capAr:c.cap,b=l==='ar'?c.cap:c.capAr;return`<b>${a}</b><small>${b}</small>`},
  code:c=>`<span class="cd">${c.a.toUpperCase()} · ${c.id}</span>`,
@@ -32,19 +32,23 @@ function sorted(rows){const col=new Intl.Collator(lang==='ar'?'ar':'en',{numeric
   if(!sk)return col.compare(V.name(a.c,lang),V.name(b.c,lang));
   if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return-1;
   const r=typeof x==='number'?x-y:col.compare(String(x),String(y));return r*sd||col.compare(V.name(a.c,lang),V.name(b.c,lang))})}
+function lockScroll(w){const adj=()=>{const mh=w.scrollHeight-w.clientHeight,mw=w.scrollWidth-w.clientWidth,rtl=getComputedStyle(w).direction==='rtl';
+  if(mh>2){if(w.scrollTop<=0)w.scrollTop=1;else if(w.scrollTop>=mh)w.scrollTop=mh-1}
+  if(mw>2){const lo=rtl?-mw:0,hi=rtl?0:mw;if(w.scrollLeft<=lo)w.scrollLeft=lo+1;else if(w.scrollLeft>=hi)w.scrollLeft=hi-1}};
+ w.addEventListener('touchstart',adj,{passive:true})}
 function draw(){const t=T[lang];H.lang=lang;H.dir=lang==='ar'?'rtl':'ltr';document.title=t.title;
  const nq=norm(q),rows=sorted(R.filter(r=>!nq||r.hay.includes(nq)));
- if(!A.querySelector('.tbar')){A.innerHTML=`<div class="bar2 tbar"><button id="bk"></button><h2 class="qt" id="tt"></h2><input id="q" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><button id="lg"></button></div><div class="tinfo" id="ti"></div><div class="tbw"><table class="ct"><thead><tr id="hr"></tr></thead><tbody id="tb"></tbody></table><p class="mut none" id="nn"></p></div>`;
+ if(!A.querySelector('.tbar')){A.innerHTML=`<div class="bar2 tbar"><button id="bk"></button><h2 class="qt" id="tt"></h2><input id="q" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div><div class="tinfo" id="ti"></div><div class="tbw"><table class="ct"><thead><tr id="hr"></tr></thead><tbody id="tb"></tbody></table><p class="mut none" id="nn"></p></div>`;
   A.querySelector('#bk').onclick=()=>{location.href='index.html'};
   A.querySelector('#q').oninput=e=>{q=e.target.value;draw()};
-  A.querySelector('#lg').onclick=()=>{lang=lang==='ar'?'en':'ar';try{localStorage.wmLang=lang}catch(_){}draw()}}
- A.querySelector('#bk').textContent=t.back;A.querySelector('#tt').textContent='📊 '+t.title;A.querySelector('#q').placeholder=t.search;A.querySelector('#lg').textContent=t.lang;
+  lockScroll(A.querySelector('.tbw'))}
+ A.querySelector('#bk').textContent=t.back;A.querySelector('#tt').textContent='📊 '+t.title;A.querySelector('#q').placeholder=t.search;
  A.querySelector('#ti').textContent=t.cnt(rows.length);A.querySelector('#nn').textContent=rows.length?'':t.none;
  A.querySelector('#hr').innerHTML=COLS.map(k=>`<th data-k="${k}" class="${sk===k?'on':''}">${t.h[k]}<i>${sk===k?(sd>0?'▲':'▼'):'↕'}</i></th>`).join('');
  A.querySelectorAll('#hr th').forEach(h=>h.onclick=()=>{const k=h.dataset.k;if(sk!==k){sk=k;sd=1}else if(sd>0)sd=-1;else{sk=null;sd=1}draw()});
  A.querySelector('#tb').innerHTML=rows.map(r=>`<tr>${COLS.map(k=>`<td class="c-${k}">${cell[k](r.c,lang)}</td>`).join('')}</tr>`).join('')}
 draw();
-const vv=window.visualViewport,fit=()=>{H.style.setProperty('--w',Math.round(vv?vv.width:innerWidth)+'px');H.style.setProperty('--h',Math.round(vv?vv.height:innerHeight)+'px');scrollTo(0,0)};
+const vv=window.visualViewport,fit=()=>{H.style.setProperty('--h',Math.round(vv?vv.height:innerHeight)+'px');scrollTo(0,0)};
 if(vv)vv.addEventListener('resize',fit);addEventListener('resize',fit);addEventListener('orientationchange',()=>[50,300,800].forEach(t=>setTimeout(fit,t)));fit();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 })();
