@@ -22,7 +22,7 @@ const cell={
  name:(c,l)=>{const a=l==='ar'?c.ar:c.en,b=l==='ar'?c.en:c.ar;return`<b>${a}</b><small dir="${l==='ar'?'ltr':'rtl'}">${b}</small>`},
  flag:c=>`<img src="flags/${c.a}.svg" alt="" loading="lazy">`,
  cap:(c,l)=>{const a=l==='ar'?c.capAr:c.cap,b=l==='ar'?c.cap:c.capAr;return`<b>${a}</b><small>${b}</small>`},
- code:c=>`<span class="cd">${c.a.toUpperCase()} · ${c.id}</span>`,
+ code:c=>`<span class="cd">${c.a.toUpperCase()}<small>${c.id}</small></span>`,
  cur:(c,l)=>`<b>${V.cur(c,l)}</b><small>${c.cur.map(x=>x.k).join(' · ')}</small>`,
  co:(c,l)=>V.co(c,l),
  area:c=>c.area?nf.format(c.area):'—', pop:c=>c.pop?nf.format(c.pop):'—'};

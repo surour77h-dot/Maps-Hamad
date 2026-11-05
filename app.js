@@ -1,5 +1,5 @@
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v10';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v11';
 /* ---------- language (whole app) ---------- */
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
@@ -13,7 +13,7 @@ ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكله
  fzNote:x=>`قُبلت إجابتك «${x}» رغم اختلاف بسيط عن الاسم الصحيح`,yours:'إجابتك',picked:'اخترت',cont:'اضغط للمتابعة',capL:'العاصمة',curL:'العملة',corr:l=>`${l} الصحيحة:`,
  res:'النتيجة',points:'النقاط',newRec:'رقم قياسي جديد',bestPrev:'أفضل سابق',bestStreak:'أطول سلسلة',correct:'صحيحة',wrongS:'خاطئة',thCountry:'الدولة',thCorr:'الإجابة الصحيحة',thYours:'إجابتك',thPts:'نقاط',noAns:'لم تُجب',again:'إعادة اللعب',qPage:'صفحة الأسئلة',homeB:'الرئيسية',
  search:'بحث...',segN:'أسماء',segM:'خرائط',close:'✕ إغلاق',nbs:'الدول المجاورة:',noBorders:'لا توجد حدود برية',
- exPh:'ابحث عن دولة واضغط Enter',namesTip:'أسماء وأعلام الدول',zoomIn:'تكبير',zoomOut:'تصغير',reset:'إعادة الضبط',flatTip:'خريطة مسطحة',globeTip:'الكرة الأرضية',
+ exPh:'ابحث عن دولة واضغط Enter',namesTip:'أسماء البحار والدول',zoomIn:'تكبير',zoomOut:'تصغير',reset:'إعادة الضبط',flatTip:'خريطة مسطحة',globeTip:'الكرة الأرضية',
  fxInd:'🗓️ الاستقلال',fxName:'🏷️ سبب التسمية',fxFam:'⭐ أشهر ما فيها',
  sCap:'العاصمة',sCur:'العملة',sPop:'عدد السكان',sDen:'الكثافة السكانية',denU:' نسمة/كم²',sArea:'المساحة',sGdp:'الناتج المحلي',sGpc:'نصيب الفرد من الناتج',sLang:'اللغات',sIdd:'رمز الاتصال',sTld:'النطاق ',sLoc:'الموقع',landl:'دولة غير ساحلية',coast:'لها منفذ بحري',nbN:n=>n+' دولة مجاورة',noLB:'لا حدود برية',sOff:'الاسم الرسمي',sReg:'المنطقة',dem:'الجنسية: ',rank:(r,n)=>`المرتبة ${r}`+(n?` من ${n}`:''),upd:y=>`(تحديث ${y})`,
  kmU:' كم²',mill:' مليون',bill:' مليار',tril:' تريليون',
@@ -29,7 +29,7 @@ en:{title:'World Maps Game',tag:'Learn countries by shape, location, flag and ca
  fzNote:x=>`Your answer “${x}” was accepted despite a small spelling difference`,yours:'Your answer',picked:'You picked',cont:'Tap to continue',capL:'capital',curL:'currency',corr:l=>`Correct ${l}:`,
  res:'Score',points:'Points',newRec:'New record',bestPrev:'previous best',bestStreak:'Longest streak',correct:'Correct',wrongS:'Wrong',thCountry:'Country',thCorr:'Correct answer',thYours:'Your answer',thPts:'Points',noAns:'No answer',again:'Play again',qPage:'Quiz page',homeB:'Home',
  search:'Search...',segN:'Names',segM:'Maps',close:'✕ Close',nbs:'Neighbors:',noBorders:'No land borders',
- exPh:'Search a country and press Enter',namesTip:'Country names and flags',zoomIn:'Zoom in',zoomOut:'Zoom out',reset:'Reset',flatTip:'Flat map',globeTip:'Globe',
+ exPh:'Search a country and press Enter',namesTip:'Seas and country names',zoomIn:'Zoom in',zoomOut:'Zoom out',reset:'Reset',flatTip:'Flat map',globeTip:'Globe',
  fxInd:'🗓️ Independence',fxName:'🏷️ Name origin',fxFam:'⭐ Famous for',
  sCap:'Capital',sCur:'Currency',sPop:'Population',sDen:'Population density',denU:' /km²',sArea:'Area',sGdp:'GDP',sGpc:'GDP per capita',sLang:'Languages',sIdd:'Calling code',sTld:'Domain ',sLoc:'Location',landl:'Landlocked country',coast:'Has a coastline',nbN:n=>n+(n===1?' neighboring country':' neighboring countries'),noLB:'No land borders',sOff:'Official name',sReg:'Region',dem:'Demonym: ',rank:(r,n)=>`Rank ${r}`+(n?` of ${n}`:''),upd:y=>`(updated ${y})`,
  kmU:' km²',mill:' million',bill:' billion',tril:' trillion',
@@ -54,9 +54,9 @@ function seaHtml(p,W,H,z,ctr){const boxes=[],out=[];
  for(const s of SEAS){const [lo,hi]=SLV[s[4]];if(z<lo||z>hi)continue;
   if(ctr&&d3.geoDistance(ctr,[s[3],s[2]])>1.3)continue;
   const q=p([s[3],s[2]]);if(!q||q[0]<30||q[0]>W-30||q[1]<16||q[1]>H-16)continue;
-  const txt=AR()?s[0]:s[1],fs=SFS[s[4]]+(s[4]===1&&AR()?2:0),w=txt.length*fs*(s[4]===1?(AR()?.62:1.02):.58),h=fs*1.4,bx=[q[0]-w/2,q[1]-h/2,q[0]+w/2,q[1]+h/2];
+  const fz=Math.min(2,Math.max(.9,Math.pow(z/Math.max(lo,1),.6))),txt=AR()?s[0]:s[1],fs=Math.round((SFS[s[4]]+(s[4]===1&&AR()?3:0))*fz*10)/10,w=txt.length*fs*(s[4]===1?(AR()?.62:1.02):.58),h=fs*1.4,bx=[q[0]-w/2,q[1]-h/2,q[0]+w/2,q[1]+h/2];
   if(boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1]))continue;
-  boxes.push(bx);out.push(`<text class="sn sn${s[4]}" x="${q[0].toFixed(1)}" y="${q[1].toFixed(1)}">${txt}</text>`)}
+  boxes.push(bx);out.push(`<text class="sn sn${s[4]}" style="font-size:${fs}px" x="${q[0].toFixed(1)}" y="${q[1].toFixed(1)}">${txt}</text>`)}
  return out.join('')}
 /* ---------- extra accepted spellings / names (by ISO3) ---------- */
 const XA={AFG:'افغانستان',ARE:'الامارات,اتحاد الامارات,الإمارات العربية المتحدة',ARM:'ارمينيا',AUT:'اوستريا,النمسا',AZE:'اذربيجان',BIH:'البوسنه,بوسنيا,البوسنة والهرسك',BLR:'روسيا البيضاء,بيلاروس,بيلاروسيا,Belorussia',BRN:'بروناي,بروناي دار السلام',CAF:'افريقيا الوسطى,جمهورية افريقيا الوسطى,Central African Rep',CIV:'ساحل العاج,كوت ديفوار,Cote dIvoire,Ivory Coast',COD:'الكونغو الديمقراطية,الكونغو كينشاسا,زائير,DR Congo,Congo Kinshasa,Democratic Republic of Congo',COG:'الكونغو,الكونغو برازافيل,Congo Brazzaville,Republic of the Congo',CZE:'التشيك,تشيكيا,جمهورية التشيك,Czechia,Czech Republic',DEU:'المانيا,Deutschland',DNK:'الدانمارك,الدنمارك',DOM:'الدومينيكان,جمهورية الدومينيكان,Dominican Rep',ESP:'اسبانيا,Espana',EST:'استونيا',SWZ:'سوازيلاند,اسواتيني,إسواتيني,Eswatini,Swaziland',GBR:'بريطانيا,المملكة المتحدة,UK,Britain,Great Britain,United Kingdom',GEO:'جيورجيا,جورجيا',GNB:'غينيا بيساو,غينيا-بيساو,Guinea Bissau',GNQ:'غينيا الاستوائية,Equatorial Guinea',GUY:'غيانا',IRN:'ايران',KAZ:'قازاخستان,قازاقستان,كازاقستان,كازاخستان,Kazakstan',KGZ:'قرغيزستان,كيرغيزستان,قيرقيزستان,قرقيزستان,كرغيزستان,قرقستان,قيرقستان,Kirgizstan,Kirghizia,Kyrgyz Republic',KNA:'سانت كيتس,سانت كيتس ونيفيس,St Kitts,Saint Kitts and Nevis',LIE:'ليشتنشتاين,ليختنشتاين',LKA:'سريلانكا,سيرلانكا',LUX:'لوكسمبرغ,لوكسمبورغ',MKD:'مقدونيا الشمالية,مقدونيا,North Macedonia,Macedonia',MMR:'بورما,ميانمار,Burma,Myanmar',MNE:'مونتينيغرو,مونتنيغرو,مونتينجرو,مونتنجرو,Montenegro,Crna Gora',NLD:'هولندا,Holland,The Netherlands',OMN:'سلطنة عمان,عمان,Oman',PNG:'بابوا,بابوا غينيا الجديدة,Papua New Guinea',PRK:'كوريا الشمالية,North Korea',KOR:'كوريا الجنوبية,South Korea,Korea',PSE:'فلسطين,Palestine,State of Palestine',PRY:'باراجواي,باراغواي',RUS:'الاتحاد الروسي,Russian Federation',SAU:'المملكة العربية السعودية,السعودية',STP:'ساو تومي,ساو تومي وبرينسيبي,Sao Tome',SSD:'جنوب السودان,South Sudan',SVK:'سلوفاكيا,Slovak Republic',TLS:'تيمور الشرقية,تيمور ليشتي,East Timor,Timor Leste',TTO:'ترينيداد وتوباغو,ترينيداد وتوباجو,Trinidad',TUR:'تركيا,Turkiye,Türkiye',URY:'اوروجواي,اوروغواي',USA:'امريكا,الولايات المتحدة الامريكية,United States of America,America,USA,US',VAT:'الفاتيكان,Vatican City,Holy See',VCT:'سانت فنسنت,سانت فنسنت والغرينادين,St Vincent',LCA:'سانت لوسيا,St Lucia',ATG:'انتيغوا وبربودا,أنتيغوا وباربودا,Antigua',BHS:'جزر البهاما,الباهاما,Bahamas',CPV:'الرأس الاخضر,كابو فيردي,Cape Verde,Cabo Verde',COM:'جزر القمر,القمر',MDV:'المالديف,جزر المالديف,جزر مالديف',MHL:'جزر مارشال',SLB:'جزر سليمان',SYC:'سيشل,سيشيل',TJK:'طاجيكستان,طاجكستان',TKM:'تركمانستان',UZB:'اوزبكستان,أوزبكستان',VNM:'فيتنام,فيتنام',YEM:'اليمن',ZAF:'جنوب افريقيا,South Africa',ZWE:'زيمبابوي,زمبابوي',MRT:'موريتانيا',BFA:'بوركينا فاسو,بوركينافاسو',NER:'النيجر',NGA:'نيجيريا',CHE:'سويسرا,Switzerland',SWE:'السويد',NOR:'النرويج',IRL:'ايرلندا,أيرلندا,ايرلندا',ISL:'ايسلندا,آيسلندا,أيسلندا',PHL:'الفلبين,الفيليبين',IDN:'اندونيسيا,إندونيسيا',MYS:'ماليزيا',MNG:'منغوليا,منغوليا',KHM:'كمبوديا,Cambodia',LAO:'لاوس,Laos',BGD:'بنغلاديش,بنجلاديش',NPL:'نيبال',BTN:'بوتان',IND:'الهند',PAK:'باكستان',TWN:'تايوان',UKR:'اوكرانيا,أوكرانيا',MDA:'مولدوفا',ROU:'رومانيا',BGR:'بلغاريا',SRB:'صربيا',HRV:'كرواتيا',SVN:'سلوفينيا',LVA:'لاتفيا',LTU:'ليتوانيا',MLT:'مالطا',CYP:'قبرص',ETH:'اثيوبيا,إثيوبيا',ERI:'اريتريا,إريتريا',DJI:'جيبوتي',SOM:'الصومال',UGA:'اوغندا,أوغندا',TZA:'تنزانيا',MOZ:'موزمبيق',MDG:'مدغشقر',MWI:'ملاوي',ZMB:'زامبيا',BWA:'بوتسوانا',NAM:'ناميبيا',AGO:'انغولا,أنغولا,أنجولا',GAB:'الغابون,غابون',CMR:'الكاميرون',TCD:'تشاد',GHA:'غانا',TGO:'توغو,توجو',BEN:'بنين',SLE:'سيراليون',LBR:'ليبيريا',GIN:'غينيا',GMB:'غامبيا',SEN:'السنغال',MLI:'مالي',DZA:'الجزائر',TUN:'تونس',LBY:'ليبيا',EGY:'مصر',SDN:'السودان',MAR:'المغرب',HTI:'هايتي',CUB:'كوبا',JAM:'جامايكا',BRB:'بربادوس',GRD:'غرينادا',DMA:'دومينيكا',NIC:'نيكاراغوا,نيكاراجوا',HND:'هندوراس',SLV:'السلفادور',GTM:'غواتيمالا,جواتيمالا',CRI:'كوستاريكا',PAN:'بنما',COL:'كولومبيا',VEN:'فنزويلا',ECU:'الاكوادور,الإكوادور',PER:'بيرو',BOL:'بوليفيا',CHL:'تشيلي,شيلي',ARG:'الارجنتين,الأرجنتين',BRA:'البرازيل',SUR:'سورينام,سورينام',NZL:'نيوزيلندا,نيوزيلاند',FJI:'فيجي,فيجي',WSM:'ساموا',TON:'تونغا,تونجا',VUT:'فانواتو',KIR:'كيريباتي,كريباتي',FSM:'ميكرونيزيا',PLW:'بالاو,بلاو',NRU:'ناورو',TUV:'توفالو'};
@@ -97,7 +97,7 @@ const MK=D.filter(c=>c.mk&&c.f),SMALL=new Set(['VAT','MCO','NRU','MDV','SMR','LI
 const CN={AF:'أفريقيا',AS:'آسيا',EU:'أوروبا',NA:'أمريكا الشمالية',SA:'أمريكا الجنوبية',OC:'أوقيانوسيا'};
 const MODES=[['en','🌍'],['ar','🗺️'],['shape','🔷'],['cap','🏛️'],['flag','🏳️'],['cur','💰'],['tap','📍']];
 const cn=k=>AR()?CN[k]:CNe[k],cEn=new Intl.DisplayNames('en',{type:'currency'}),curName=x=>AR()?x.ar:(()=>{try{return cEn.of(x.k)}catch(_){return x.k}})();
-let S=Object.assign({time:20,count:10,conts:Object.keys(CN),names:0},JSON.parse(localStorage.wm||'{}'));
+let S=Object.assign({time:20,count:10,conts:Object.keys(CN),nl:1},JSON.parse(localStorage.wm||'{}'));
 const save=()=>localStorage.wm=JSON.stringify(S);
 /* ---------- text matching ---------- */
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ًͯ-ٰٟ]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').replace(/[^\p{L}\p{N}]/gu,'').replace(/^the(?=.{4})/,'').replace(/^ال(?=.{3})/,'');
@@ -164,17 +164,17 @@ function mkMap(host,o){recolor();
  const st=n=>selSet.has(n)?' '+selSet.get(n):'';
  let dAll={};function drawSo(){gz.select('.sog').selectAll('path').data([...selSet.keys()].filter(n=>dAll[n]),n=>n).join('path').attr('d',n=>dAll[n]).attr('class',n=>'so '+(selSet.get(n)||''))}
  function drawFr(p){gz.select('.rg').html([...selSet].map(([n,cls])=>{const c=byNc[n];return c&&c.mk&&c.f&&!foundN.has(n)?frameHtml(c,p,W,H,cls):''}).join(''))}
- const bwOf=z=>Math.min(2,.5+.32*Math.log2(Math.max(z,1))),cwOf=z=>Math.min(4,1.5+.6*Math.log2(Math.max(z,1)));
- let namesOn=!!o.names&&!!S.names;const mctx=document.createElement('canvas').getContext('2d');mctx.font='600 11px -apple-system,"Geeza Pro","Segoe UI",sans-serif';
+ const bwOf=z=>Math.min(1.6,.4+.26*Math.log2(Math.max(z,1))),cwOf=z=>Math.min(4,1.5+.6*Math.log2(Math.max(z,1)));
+ let nlv=o.lvl!=null?o.lvl:(o.seas?1:0);const mctx=document.createElement('canvas').getContext('2d');mctx.font='600 11px -apple-system,"Geeza Pro","Segoe UI",sans-serif';
  const lbW=c=>{const k=LG+c.id;return lbW.c[k]||(lbW.c[k]=Math.ceil(mctx.measureText(nm(c)).width)+32)};lbW.c={};
  const sLn=la=>({type:'LineString',coordinates:d3.range(-180,181,3).map(x=>[x,la])});
  const SL=[['tr',sLn(23.4366)],['tr',sLn(-23.4366)],['eq',sLn(0)],['gw',{type:'LineString',coordinates:d3.range(-86,87,3).map(y=>[0,y])}]];
  function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];ready=true;const z=kz();dAll={};
   el.style.setProperty('--bw',bwOf(z).toFixed(2)+'px');el.style.setProperty('--cw',cwOf(z).toFixed(2)+'px');
   gz.select('.sphere').attr('d',mode==='globe'?g({type:'Sphere'}):null);
-  const mid=lite==='mid'||(!lite&&z<2.5);
+  const mid=lite==='mid'||(!lite&&mode==='flat'&&z<1.8);
   paths.attr('d',f=>{const l=f.mid||f.lite;let d;
-   if(lite===true)d=f.lite?g(f.lite):null;
+   if(lite===true){const l2=(gv.k>=2&&f.mid)||f.lite;d=l2?g(l2):null}
    else if(mid)d=f.mid?g(f.mid):null;
    else{if(l){const b=g.bounds(l);if(!isFinite(b[0][0])||b[1][0]<-40||b[0][0]>W+40||b[1][1]<-40||b[0][1]>H+40)return null}d=g(f)}
    if(d)ds.push(d);if(f.pri)dAll[f.id]=d||null;return d||null});
@@ -185,7 +185,7 @@ function mkMap(host,o){recolor();
   /* equator, tropics and the Greenwich meridian: world explorer + globe only */
   gz.select('.sl').html(o.lines&&mode!=='ctx'&&full?SL.map(([c,ln])=>{const d=g(ln);return d?`<path class="${c}" d="${d}"/>`:''}).join(''):'');
   const ctr=mode==='globe'?[-gv.r[0],-gv.r[1]]:null;
-  if(full)gz.select('.sn').html(o.seas?seaHtml(p,W,H,z,ctr):'');
+  if(full)gz.select('.sn').html(nlv>=1?seaHtml(p,W,H,z,ctr):'');
   /* small countries: no visible markers (invisible hit areas keep them tappable); a selected one gets a red frame */
   const hs=[];if(o.marks&&full)MK.forEach(c=>{const d=g(c.f);if(!d)return;const b=g.bounds(c.f);hs.push({c,d,sz:Math.max(b[1][0]-b[0][0],b[1][1]-b[0][1]),cx:(b[0][0]+b[1][0])/2,cy:(b[0][1]+b[1][1])/2})});
   const dots=hs.filter(d=>d.sz<10),outs=hs.filter(d=>d.sz>=10&&k>=2.2).sort((a,b)=>b.sz-a.sz);
@@ -194,7 +194,7 @@ function mkMap(host,o){recolor();
   gz.select('.mds').selectAll('g').data(dots).join(e=>{const n=e.append('g');n.append('circle').attr('class','hd').attr('r',17);return n}).attr('transform',d=>`translate(${d.cx},${d.cy})`).attr('data-n',d=>d.c.n).attr('class','md');
   drawFr(p);
   /* country names + flags (explorer button): biggest first, never overlapping, appear gradually while zooming in */
-  if(full){let h='';if(namesOn){const boxes=[],px=mode==='globe'?gR*gv.k:p.scale();
+  if(full){let h='';if(nlv>=2&&o.names){const boxes=[],px=mode==='globe'?gR*gv.k:p.scale();
    [...D].sort((a,b)=>(b.area||0)-(a.area||0)).forEach(c=>{if(!c.f||h.length>2e5)return;const q=p(c.ct);if(!q||q[0]<16||q[0]>W-16||q[1]<12||q[1]>H-12)return;if(ctr&&d3.geoDistance(ctr,c.ct)>1.3)return;
     const w=lbW(c),sz=2*Math.max(c.rr,.15)*rad*px;if(sz<w*.3)return;const bx=[q[0]-w/2-2,q[1]-11,q[0]+w/2+2,q[1]+11];
     if(boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1]))return;boxes.push(bx);
@@ -263,14 +263,16 @@ function mkMap(host,o){recolor();
   if(mode==='globe'){render(false)}else{base();svg.call(zoom.transform,d3.zoomIdentity);render(false)}
   o.onresize&&o.onresize()}
  let rt=0;if(window.ResizeObserver)new ResizeObserver(()=>{clearTimeout(rt);rt=setTimeout(resize,120)}).observe(host);
- const api={setSel,focus,onmode:null,resize,mode:()=>mode,inset:v=>{inset=v},setNames(on){namesOn=!!on;render(false)},redraw:()=>render(false),
+ const api={setSel,focus,onmode:null,resize,mode:()=>mode,inset:v=>{inset=v},setLevel(n){nlv=n;render(false)},redraw:()=>render(false),
   by:f=>mode==='globe'?animTo(gv.r,Math.max(1,Math.min(3000,gv.k*f)),250):svg.transition().duration(250).call(zoom.scaleBy,f),
   reset:()=>mode==='globe'?animTo(GL0,1,600):svg.transition().duration(300).call(zoom.transform,d3.zoomIdentity),
   world(on){setMode(on?(S.flat?'flat':'globe'):'ctx')},
   toggleFlat(){S.flat=mode==='globe';save();setMode(S.flat?'flat':'globe')}};
  if(mode==='globe'){if(lastC&&o.c)gv.r=[-lastC.ct[0],-lastC.ct[1]];render(false)}else{useZoom();base();render('mid');setTimeout(()=>render(false),30)}
  return api}
-const mapBox=(lines)=>`<div class="mapbox" id="mb"><div class="svgw"></div><div class="mt"><button id="mz">🌍</button><button id="mf" style="display:none">🗺️</button><button id="zi">＋</button><button id="zo">－</button><button id="zr">⟲</button></div></div>`;
+const mapBox=nb=>`<div class="mapbox" id="mb"><div class="svgw"></div><div class="mt">${nb?'<button id="nmb" title="'+t('namesTip')+'">🏷️</button>':''}<button id="mz">🌍</button><button id="mf" style="display:none">🗺️</button><button id="zi">＋</button><button id="zo">－</button><button id="zr">⟲</button></div></div>`;
+function nmCycle(b,mv,v,save){if(!b)return;const paint=()=>{b.classList.toggle('on',v>0);let i=b.querySelector('.nlv');if(!i){i=document.createElement('i');i.className='nlv';b.appendChild(i)}i.textContent='•'.repeat(v)};paint();
+ b.onclick=()=>{v=(v+1)%3;paint();mv.setLevel(v);save&&save(v)}}
 function wireBtns(root,mv,world){const q=s=>root.querySelector(s),mz=q('#mz'),mf=q('#mf');let w=false;
  if(mz){if(world)mz.onclick=()=>{w=!w;mz.textContent=w?'🔍':'🌍';mv.world(w)};else mz.style.display='none'}
  if(mf){mf.onclick=()=>mv.toggleFlat();mv.onmode=m=>{mf.style.display=m==='ctx'?'none':'';mf.textContent=m==='globe'?'🗺️':'🌐';mf.title=m==='globe'?t('flatTip'):t('globeTip')};mv.onmode(mv.mode())}
@@ -303,13 +305,13 @@ function openPanel(c,o={}){let e=$('#pn');const fresh=!e;
  if(fresh){e=document.createElement('div');e.id='pn';if(o.dock)e.dataset.dk='1';document.body.appendChild(e)}
  if(fresh)placePanel(e);
  e.innerHTML=`<div class="ph"><i class="grip">⠿</i>${flag(c)}<div class="pt2"><b>${nm(c)}</b><span dir="${d2()}">${nm2(c)}</span></div><button class="pclose" aria-label="${t('close')}">✕</button></div>
- <div class="pbody"><div class="reg">${c.sub?(AR()?c.sub:(SUBe[c.sub]||c.sub))+' · ':''}${cn(c.co)}</div>${c.f?`<div class="loc"><div class="svgw"></div><div class="mt sm"><button class="pzi">＋</button><button class="pzo">－</button><button class="pzr">⟲</button></div>${miniWorld(c)}</div>`:''}<div class="stats">${statCards(c)}</div>
+ <div class="pbody"><div class="reg">${c.sub?(AR()?c.sub:(SUBe[c.sub]||c.sub))+' · ':''}${cn(c.co)}</div>${c.f?`<div class="loc"><div class="svgw"></div><div class="mt sm"><button class="pzi">＋</button><button class="pzo">－</button><button class="pzr">⟲</button><button class="pzn" title="${t('namesTip')}">🏷️</button></div>${miniWorld(c)}</div>`:''}<div class="stats">${statCards(c)}</div>
  <div class="nbs"><b>${t('nbs')}</b> ${c.nb.length?c.nb.map(i=>byId[i]).filter(Boolean).map(x=>`<button class="nb" data-id="${x.id}">${nm(x)}</button>`).join(''):`<span class="mut">${t('noBorders')}</span>`}</div>
  <div id="pfx" class="pfx"></div></div><div class="rz" aria-label=""></div>`;
  e.querySelector('.pclose').onclick=closePanel;
  e.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{const n=byId[b.dataset.id];if(o.go)o.go(n);else openPanel(n,o)});
  /* country location map: one finger scrolls the panel, two fingers move / zoom the map */
- const lh=e.querySelector('.loc .svgw');if(lh&&c.f){const pm=mkMap(lh,{kind:'ctx',c,seas:true,touch2:true});pm.setSel(c.n,'t');e.querySelector('.pzi').onclick=()=>pm.by(1.7);e.querySelector('.pzo').onclick=()=>pm.by(1/1.7);e.querySelector('.pzr').onclick=()=>pm.reset()}
+ const lh=e.querySelector('.loc .svgw');if(lh&&c.f){const pm=mkMap(lh,{kind:'ctx',c,names:true,lvl:0,touch2:true});nmCycle(e.querySelector('.pzn'),pm,0);pm.setSel(c.n,'t');e.querySelector('.pzi').onclick=()=>pm.by(1.7);e.querySelector('.pzo').onclick=()=>pm.by(1/1.7);e.querySelector('.pzr').onclick=()=>pm.reset()}
  getFx(c).then(d=>{const x=$('#pfx');if(!x||$('#pn')!==e)return;x.innerHTML=d?`<div class="fxc"><h4>${t('fxInd')}</h4><p>${d.ind}</p></div><div class="fxc"><h4>${t('fxName')}</h4><p>${d.name}</p></div><div class="fxc"><h4>${t('fxFam')}</h4><ul>${d.info.map(i=>`<li>${i}</li>`).join('')}</ul></div>`:''});
  const sv=()=>{S[pk()]={x:parseFloat(e.style.left),y:parseFloat(e.style.top),w:parseFloat(e.style.width),h:parseFloat(e.style.height)};save()};
  const drag=(h,fn)=>{h.onpointerdown=ev=>{if(e.classList.contains('dock')||ev.target.closest('button'))return;ev.preventDefault();h.setPointerCapture(ev.pointerId);const sx=ev.clientX,sy=ev.clientY,r=e.getBoundingClientRect();
@@ -364,8 +366,7 @@ function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();const c=G
  /* typed answers are only judged when the player confirms (button / Enter) or when time runs out */
  const typed=()=>[...A.querySelectorAll('.in input')].map(e=>e.value).filter(x=>x.trim());
  const judge=()=>{const vs=typed();if(!vs.length)return null;const hit=vs.find(v=>acc(c).has(norm(v)));if(hit)return{why:'',v:hit};const fz=vs.find(v=>fuzzy(c,v));return fz?{why:'fuzzy',v:fz}:null};
- const chk=()=>{const r=judge();if(r)return done(true,r.why,r.v);if(!typed().length)return;
-  A.querySelectorAll('.in input').forEach(e=>{e.classList.remove('shake');void e.offsetWidth;e.classList.add('shake')})};
+ const chk=()=>{const r=judge();if(r)return done(true,r.why,r.v);const tv=typed();if(!tv.length)return;done(false,'wrong',tv.join(' / '))};
  A.querySelectorAll('.in input').forEach(e=>{e.oninput=()=>{G.last=e.value};e.onkeydown=k=>{if(k.key==='Enter'){e.blur();chk()}}});
  if($('#okb'))$('#okb').onclick=chk;
  if($('#sk'))$('#sk').onclick=()=>done(false,'skip');
@@ -384,7 +385,7 @@ function done(ok,why,typed,late){if(G.lock)return;G.lock=true;clearInterval(G.tm
  const nx=()=>{if(G.nx){clearTimeout(G.nx);G.nx=0;G.i++;ask()}};G.nx=setTimeout(nx,m==='tap'?(ok?3500:6000):ok?(why==='fuzzy'?3200:2000):3800);d.onclick=nx}
 function result(){const n=G.qs.length,p=Math.round(G.score/n*100),m=G.mode;S.best=S.best||{};const old=S.best[m]||0,rec=G.pts>old;if(rec){S.best[m]=G.pts;save()}
  A.innerHTML=`<div class="res"><h1>${p>=80?'🏆':p>=50?'👏':'💪'} ${t('res')}: ${G.score} / ${n} (${p}%)</h1><div class="sums"><div><b>⭐ ${G.pts}</b><span>${t('points')}${rec?' — '+t('newRec')+' 🎉':old?` (${t('bestPrev')} ${old})`:''}</span></div><div><b>🔥 ${G.best}</b><span>${t('bestStreak')}</span></div><div><b>✅ ${G.score}</b><span>${t('correct')}</span></div><div><b>❌ ${n-G.score}</b><span>${t('wrongS')}</span></div></div>
- <table><tr><th>#</th><th></th><th></th><th>${t('thCountry')}</th><th>${t('thCorr')}</th><th>${t('thYours')}</th><th>${t('thPts')}</th></tr>${G.log.map((r,i)=>`<tr class="${r.ok?'g':'b'}"><td>${i+1}</td><td>${r.ok?'✅':'❌'}</td><td>${flag(r.c)}</td><td>${nm(r.c)}<br><small dir="${d2()}">${nm2(r.c)}</small></td><td>${ansOf(r.c,m)}</td><td>${r.ok?(r.why==='fuzzy'?r.mine+' (≈)':''):r.mine||t('noAns')}</td><td>${r.pts||''}</td></tr>`).join('')}</table>
+ <table class="rt"><colgroup><col class="c1"><col class="c2"><col class="c3"><col><col></colgroup><tr><th>#</th><th></th><th></th><th>${t(m==='cap'||m==='cur'?'thCorr':'thCountry')}</th><th>${t('thYours')}</th></tr>${G.log.map((r,i)=>`<tr class="${r.ok?'g':'b'}"><td>${i+1}</td><td>${r.ok?'✅':'❌'}${r.pts?`<small class="pt">+${r.pts}</small>`:''}</td><td>${flag(r.c)}</td><td><b>${nm(r.c)}</b><small dir="${d2()}">${nm2(r.c)}</small>${m==='cap'||m==='cur'?`<span class="ca">${ansOf(r.c,m)}</span>`:''}</td><td class="yr ${r.ok?'ok':'no'}">${r.mine?r.mine+(r.why==='fuzzy'?' (≈)':''):'—'}</td></tr>`).join('')}</table>
  <div class="chips" style="justify-content:center"><button class="go" id="ag">${t('again')}</button><button id="qp" style="font-size:22px">${t('qPage')}</button><button id="hm" style="font-size:22px">${t('homeB')}</button></div></div>`;
  $('#ag').onclick=()=>start(G.mode);$('#qp').onclick=quizPage;$('#hm').onclick=home}
 /* ---------- guide ---------- */
@@ -402,18 +403,18 @@ function detail(c){let e=$('#dt');if(!e){e=document.createElement('div');e.id='d
  <div style="text-align:center">${flag(c,'flagbig')}</div>
  <div class="stats">${statCards(c)}</div>
  <div style="grid-column:1/-1"><b>${t('nbs')}</b> ${nb.length?nb.map(x=>`<button class="nb" data-id="${x.id}">${nm(x)}</button>`).join(''):t('noBorders')}</div>
- ${c.f?`<div class="dmap" style="${SMALL.has(c.id)?'grid-column:1/-1':''}">${mapBox()}</div>${SMALL.has(c.id)?'':`<div class="dshape">${staticSvg(c,'shape',0)}</div>`}`:''}
+ ${c.f?`<div class="dmap" style="${SMALL.has(c.id)?'grid-column:1/-1':''}">${mapBox(1)}</div>${SMALL.has(c.id)?'':`<div class="dshape">${staticSvg(c,'shape',0)}</div>`}`:''}
  <div id="fx" style="grid-column:1/-1"></div></div>`;
  $('#cl').onclick=()=>e.remove();showFx(c);e.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{detail(byId[b.dataset.id]);e.scrollTop=0});
- if(c.f){const mv=mkMap(e.querySelector('#mb .svgw'),{kind:'ctx',c,ring:true,seas:true});mv.setSel(c.n,'t');wireBtns(e,mv,true)}}
+ if(c.f){const mv=mkMap(e.querySelector('#mb .svgw'),{kind:'ctx',c,ring:true,names:true,lvl:0});mv.setSel(c.n,'t');wireBtns(e,mv,true);nmCycle(e.querySelector('#nmb'),mv,0)}}
 /* ---------- world explorer ---------- */
-function explore(){clearInterval(G.tm);closePanel();A.innerHTML=`<div class="bar2"><button id="bk">${t('back')}</button><input id="q" placeholder="${t('exPh')}"><div class="seg"><button id="nmb" class="${S.names?'on':''}" title="${t('namesTip')}">🏷️</button><button id="mf" style="display:none">🗺️</button><button id="zi">＋</button><button id="zo">－</button><button id="zr">⟲</button></div></div><div class="mapbox ex" id="mb"><div class="svgw"></div></div>`;
+function explore(){clearInterval(G.tm);closePanel();A.innerHTML=`<div class="bar2"><button id="bk">${t('back')}</button><input id="q" placeholder="${t('exPh')}"><div class="seg"><button id="nmb" class="${S.nl?'on':''}" title="${t('namesTip')}">🏷️<i class="nlv">${'•'.repeat(S.nl)}</i></button><button id="mf" style="display:none">🗺️</button><button id="zi">＋</button><button id="zo">－</button><button id="zr">⟲</button></div></div><div class="mapbox ex" id="mb"><div class="svgw"></div></div>`;
  $('#bk').onclick=()=>{closePanel();home()};let mv;
  let cur=null;const insetOf=()=>{const p=$('#pn');if(!p||p.classList.contains('dock'))return 0;const r=p.getBoundingClientRect(),h=$('#mb').getBoundingClientRect();return Math.max(0,Math.min(h.height*.7,h.bottom-r.top))};
  const show=(c,fcs)=>{cur=c;mv.setSel(c.n,'sel');openPanel(c,{dock:true,go:n=>show(n,true),onclose:()=>{cur=null;mv.inset(0);mv.setSel(null)}});mv.inset(insetOf());if(fcs)mv.focus(c)};
- mv=mkMap($('#mb .svgw'),{kind:'world',marks:true,names:true,seas:true,lines:true,pick:c=>show(c,false),onresize:()=>{if($('#pn')&&cur){mv.inset(insetOf());mv.focus(cur,0)}}});
+ mv=mkMap($('#mb .svgw'),{kind:'world',marks:true,names:true,lvl:S.nl,lines:true,pick:c=>show(c,false),onresize:()=>{if($('#pn')&&cur){mv.inset(insetOf());mv.focus(cur,0)}}});
  wireBtns(A,mv,false);
- $('#nmb').onclick=()=>{S.names=S.names?0:1;save();$('#nmb').classList.toggle('on',!!S.names);mv.setNames(S.names)};
+ nmCycle($('#nmb'),mv,S.nl,v=>{S.nl=v;save()});
  $('#q').onkeydown=k=>{if(k.key!=='Enter')return;const v=norm(k.target.value);if(!v)return;k.target.blur();
   const c=D.find(x=>acc(x).has(v))||D.find(x=>[...acc(x)].some(y=>y.startsWith(v)))||D.find(x=>[...acc(x)].some(y=>y.includes(v)))||D.find(x=>fuzzy(x,k.target.value));
   if(c&&c.f)show(c,true);else k.target.classList.add('shake')}}
