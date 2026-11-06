@@ -1,5 +1,5 @@
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v11';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v13';
 /* ---------- language (whole app) ---------- */
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
@@ -50,13 +50,31 @@ const SEAS=[
 ['مضيق هرمز','Strait of Hormuz',26.5,56.5,4],['باب المندب','Bab-el-Mandeb',12.6,43.3,4],['مضيق جبل طارق','Strait of Gibraltar',35.97,-5.6,4],['مضيق البوسفور','Bosphorus',41.1,29.05,4],['مضيق الدردنيل','Dardanelles',40.2,26.4,4],['مضيق ملقا','Strait of Malacca',3,100.5,4],['مضيق سوندا','Sunda Strait',-6,105.8,4],['مضيق تايوان','Taiwan Strait',24.5,119.5,4],['مضيق بيرينغ','Bering Strait',65.7,-168.9,4],['مضيق دوفر','Strait of Dover',51,1.4,4],['مضيق كوريا','Korea Strait',34.3,129,4],['مضيق ديفيس','Davis Strait',66,-58,4],['مضيق الدنمارك','Denmark Strait',66,-27,4],['ممر دريك','Drake Passage',-58,-65,4],['مضيق ماجلان','Strait of Magellan',-53,-70.5,4],['مضيق فلوريدا','Straits of Florida',24.5,-80,4],['مضيق يوكاتان','Yucatán Channel',21.5,-85.5,4],['مضيق لومبوك','Lombok Strait',-8.5,115.7,4],['مضيق مكاسر','Makassar Strait',-2,118,4],['مضيق باس','Bass Strait',-39.5,146,4],['مضيق كوك','Cook Strait',-41,174.5,4],['مضيق صقلية','Strait of Sicily',37,12,4],['مضيق كيرتش','Kerch Strait',45.3,36.6,4],['مضيق تيران','Strait of Tiran',27.95,34.45,4],['قناة السويس','Suez Canal',30.5,32.34,4],['قناة بنما','Panama Canal',9.1,-79.7,4],['مضيق سكاجراك','Skagerrak',57.7,9,4],['مضيق هدسون','Hudson Strait',62,-72,4]
 ].sort((a,b)=>a[4]-b[4]);
 const SLV={1:[0,10],2:[1.5,70],3:[4,1e9],4:[8,1e9]},SFS={1:15,2:12,3:10.5,4:10};
-function seaHtml(p,W,H,z,ctr){const boxes=[],out=[];
+const SMC=document.createElement('canvas').getContext('2d'),SMW={};
+function sMeasure(txt,bold,ar){const k=(ar?'a':'l')+bold+txt;if(SMW[k]!=null)return SMW[k];SMC.font=(ar?'':'italic ')+(bold?'700 ':'400 ')+'100px '+(ar?'AtlasAr,"Geeza Pro",serif':'AtlasLa,Georgia,serif');return SMW[k]=SMC.measureText(txt).width/100}
+/* water names: atlas style - tilted to follow the water, as large as the water allows, never over land */
+function seaHtml(p,W,H,z,ctr,M,fast,R){const boxes=[],out=[],ar=AR(),mw=M.w,mh=M.h,sc=M.sc;
+ const land=(x,y)=>{const xi=Math.round(x*sc),yi=Math.round(y*sc);if(xi<0||yi<0||xi>=mw||yi>=mh)return true;return M.d[(yi*mw+xi)*4+3]>30};
+ const SZ={1:[1.9,1.5,1.2,1],2:[1.6,1.3,1.1,1],3:[1.35,1.15,1],4:[1.15,1]},AN=fast?[0,-26,26]:[0,-12,12,-24,24,-36,36,-48,48],DIRS=[[1,0],[-1,0],[0,1],[0,-1],[.7,.7],[-.7,.7],[.7,-.7],[-.7,-.7]];
  for(const s of SEAS){const [lo,hi]=SLV[s[4]];if(z<lo||z>hi)continue;
-  if(ctr&&d3.geoDistance(ctr,[s[3],s[2]])>1.3)continue;
-  const q=p([s[3],s[2]]);if(!q||q[0]<30||q[0]>W-30||q[1]<16||q[1]>H-16)continue;
-  const fz=Math.min(2,Math.max(.9,Math.pow(z/Math.max(lo,1),.6))),txt=AR()?s[0]:s[1],fs=Math.round((SFS[s[4]]+(s[4]===1&&AR()?3:0))*fz*10)/10,w=txt.length*fs*(s[4]===1?(AR()?.62:1.02):.58),h=fs*1.4,bx=[q[0]-w/2,q[1]-h/2,q[0]+w/2,q[1]+h/2];
-  if(boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1]))continue;
-  boxes.push(bx);out.push(`<text class="sn sn${s[4]}" style="font-size:${fs}px" x="${q[0].toFixed(1)}" y="${q[1].toFixed(1)}">${txt}</text>`)}
+  if(ctr&&d3.geoDistance(ctr,[s[3],s[2]])>1.25)continue;
+  const q=p([s[3],s[2]]);if(!q||q[0]<10||q[0]>W-10||q[1]<10||q[1]>H-10)continue;
+  const txt=ar?s[0]:s[1],bold=s[4]<=2,fz=Math.min(2,Math.max(.9,Math.pow(z/Math.max(lo,1),.6))),base=(SFS[s[4]]+(s[4]===1&&ar?3:0))*fz,
+   w100=sMeasure(ar?txt:txt,bold,ar)*(!ar&&s[4]===1?1.0:1)+(!ar&&s[4]===1?txt.length*.35:0);
+  let done=false;
+  for(const m of (fast?[SZ[s[4]][SZ[s[4]].length-1]]:SZ[s[4]])){const fs=Math.round(base*m*10)/10,w=w100*fs*1.12,h=fs*1.15,rmax=(s[4]<=2?3.2:2.2)*h;
+   const offs=[[0,0]];for(const r of [.6,1.2,2,3.2]){if(r*h>rmax)break;DIRS.forEach(d=>offs.push([d[0]*r*h*1.6,d[1]*r*h]))}
+   for(const [ox,oy] of offs){const cx=q[0]+ox,cy=q[1]+oy;
+    for(const a of AN){const ca=Math.cos(a*rad),sa=Math.sin(a*rad),hw=w/2,hh=h/2,ex=Math.abs(hw*ca)+Math.abs(hh*sa),ey=Math.abs(hw*sa)+Math.abs(hh*ca);
+     if(cx-ex<6||cx+ex>W-6||cy-ey<6||cy+ey>H-6)continue;
+     const bx=[cx-ex,cy-ey,cx+ex,cy+ey];if(boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1]))continue;
+     let ok=true;const n=Math.max(6,Math.ceil(w/12));
+     for(let i=0;i<=n&&ok;i++){const u=(i/n*2-1)*hw;for(const v of [-hh,0,hh]){const x=cx+u*ca-v*sa,y=cy+u*sa+v*ca;if(land(x,y)||(R&&Math.hypot(x-W/2,y-H/2)>R*.97)){ok=false;break}}}
+     if(!ok)continue;
+     boxes.push(bx);done=true;
+     out.push(`<text class="sn sn${s[4]}" style="font-size:${fs}px" dominant-baseline="central" x="${cx.toFixed(1)}" y="${cy.toFixed(1)}"${a?` transform="rotate(${a} ${cx.toFixed(1)} ${cy.toFixed(1)})"`:''}>${txt}</text>`);break}
+    if(done)break}
+   if(done)break}}
  return out.join('')}
 /* ---------- extra accepted spellings / names (by ISO3) ---------- */
 const XA={AFG:'افغانستان',ARE:'الامارات,اتحاد الامارات,الإمارات العربية المتحدة',ARM:'ارمينيا',AUT:'اوستريا,النمسا',AZE:'اذربيجان',BIH:'البوسنه,بوسنيا,البوسنة والهرسك',BLR:'روسيا البيضاء,بيلاروس,بيلاروسيا,Belorussia',BRN:'بروناي,بروناي دار السلام',CAF:'افريقيا الوسطى,جمهورية افريقيا الوسطى,Central African Rep',CIV:'ساحل العاج,كوت ديفوار,Cote dIvoire,Ivory Coast',COD:'الكونغو الديمقراطية,الكونغو كينشاسا,زائير,DR Congo,Congo Kinshasa,Democratic Republic of Congo',COG:'الكونغو,الكونغو برازافيل,Congo Brazzaville,Republic of the Congo',CZE:'التشيك,تشيكيا,جمهورية التشيك,Czechia,Czech Republic',DEU:'المانيا,Deutschland',DNK:'الدانمارك,الدنمارك',DOM:'الدومينيكان,جمهورية الدومينيكان,Dominican Rep',ESP:'اسبانيا,Espana',EST:'استونيا',SWZ:'سوازيلاند,اسواتيني,إسواتيني,Eswatini,Swaziland',GBR:'بريطانيا,المملكة المتحدة,UK,Britain,Great Britain,United Kingdom',GEO:'جيورجيا,جورجيا',GNB:'غينيا بيساو,غينيا-بيساو,Guinea Bissau',GNQ:'غينيا الاستوائية,Equatorial Guinea',GUY:'غيانا',IRN:'ايران',KAZ:'قازاخستان,قازاقستان,كازاقستان,كازاخستان,Kazakstan',KGZ:'قرغيزستان,كيرغيزستان,قيرقيزستان,قرقيزستان,كرغيزستان,قرقستان,قيرقستان,Kirgizstan,Kirghizia,Kyrgyz Republic',KNA:'سانت كيتس,سانت كيتس ونيفيس,St Kitts,Saint Kitts and Nevis',LIE:'ليشتنشتاين,ليختنشتاين',LKA:'سريلانكا,سيرلانكا',LUX:'لوكسمبرغ,لوكسمبورغ',MKD:'مقدونيا الشمالية,مقدونيا,North Macedonia,Macedonia',MMR:'بورما,ميانمار,Burma,Myanmar',MNE:'مونتينيغرو,مونتنيغرو,مونتينجرو,مونتنجرو,Montenegro,Crna Gora',NLD:'هولندا,Holland,The Netherlands',OMN:'سلطنة عمان,عمان,Oman',PNG:'بابوا,بابوا غينيا الجديدة,Papua New Guinea',PRK:'كوريا الشمالية,North Korea',KOR:'كوريا الجنوبية,South Korea,Korea',PSE:'فلسطين,Palestine,State of Palestine',PRY:'باراجواي,باراغواي',RUS:'الاتحاد الروسي,Russian Federation',SAU:'المملكة العربية السعودية,السعودية',STP:'ساو تومي,ساو تومي وبرينسيبي,Sao Tome',SSD:'جنوب السودان,South Sudan',SVK:'سلوفاكيا,Slovak Republic',TLS:'تيمور الشرقية,تيمور ليشتي,East Timor,Timor Leste',TTO:'ترينيداد وتوباغو,ترينيداد وتوباجو,Trinidad',TUR:'تركيا,Turkiye,Türkiye',URY:'اوروجواي,اوروغواي',USA:'امريكا,الولايات المتحدة الامريكية,United States of America,America,USA,US',VAT:'الفاتيكان,Vatican City,Holy See',VCT:'سانت فنسنت,سانت فنسنت والغرينادين,St Vincent',LCA:'سانت لوسيا,St Lucia',ATG:'انتيغوا وبربودا,أنتيغوا وباربودا,Antigua',BHS:'جزر البهاما,الباهاما,Bahamas',CPV:'الرأس الاخضر,كابو فيردي,Cape Verde,Cabo Verde',COM:'جزر القمر,القمر',MDV:'المالديف,جزر المالديف,جزر مالديف',MHL:'جزر مارشال',SLB:'جزر سليمان',SYC:'سيشل,سيشيل',TJK:'طاجيكستان,طاجكستان',TKM:'تركمانستان',UZB:'اوزبكستان,أوزبكستان',VNM:'فيتنام,فيتنام',YEM:'اليمن',ZAF:'جنوب افريقيا,South Africa',ZWE:'زيمبابوي,زمبابوي',MRT:'موريتانيا',BFA:'بوركينا فاسو,بوركينافاسو',NER:'النيجر',NGA:'نيجيريا',CHE:'سويسرا,Switzerland',SWE:'السويد',NOR:'النرويج',IRL:'ايرلندا,أيرلندا,ايرلندا',ISL:'ايسلندا,آيسلندا,أيسلندا',PHL:'الفلبين,الفيليبين',IDN:'اندونيسيا,إندونيسيا',MYS:'ماليزيا',MNG:'منغوليا,منغوليا',KHM:'كمبوديا,Cambodia',LAO:'لاوس,Laos',BGD:'بنغلاديش,بنجلاديش',NPL:'نيبال',BTN:'بوتان',IND:'الهند',PAK:'باكستان',TWN:'تايوان',UKR:'اوكرانيا,أوكرانيا',MDA:'مولدوفا',ROU:'رومانيا',BGR:'بلغاريا',SRB:'صربيا',HRV:'كرواتيا',SVN:'سلوفينيا',LVA:'لاتفيا',LTU:'ليتوانيا',MLT:'مالطا',CYP:'قبرص',ETH:'اثيوبيا,إثيوبيا',ERI:'اريتريا,إريتريا',DJI:'جيبوتي',SOM:'الصومال',UGA:'اوغندا,أوغندا',TZA:'تنزانيا',MOZ:'موزمبيق',MDG:'مدغشقر',MWI:'ملاوي',ZMB:'زامبيا',BWA:'بوتسوانا',NAM:'ناميبيا',AGO:'انغولا,أنغولا,أنجولا',GAB:'الغابون,غابون',CMR:'الكاميرون',TCD:'تشاد',GHA:'غانا',TGO:'توغو,توجو',BEN:'بنين',SLE:'سيراليون',LBR:'ليبيريا',GIN:'غينيا',GMB:'غامبيا',SEN:'السنغال',MLI:'مالي',DZA:'الجزائر',TUN:'تونس',LBY:'ليبيا',EGY:'مصر',SDN:'السودان',MAR:'المغرب',HTI:'هايتي',CUB:'كوبا',JAM:'جامايكا',BRB:'بربادوس',GRD:'غرينادا',DMA:'دومينيكا',NIC:'نيكاراغوا,نيكاراجوا',HND:'هندوراس',SLV:'السلفادور',GTM:'غواتيمالا,جواتيمالا',CRI:'كوستاريكا',PAN:'بنما',COL:'كولومبيا',VEN:'فنزويلا',ECU:'الاكوادور,الإكوادور',PER:'بيرو',BOL:'بوليفيا',CHL:'تشيلي,شيلي',ARG:'الارجنتين,الأرجنتين',BRA:'البرازيل',SUR:'سورينام,سورينام',NZL:'نيوزيلندا,نيوزيلاند',FJI:'فيجي,فيجي',WSM:'ساموا',TON:'تونغا,تونجا',VUT:'فانواتو',KIR:'كيريباتي,كريباتي',FSM:'ميكرونيزيا',PLW:'بالاو,بلاو',NRU:'ناورو',TUV:'توفالو'};
@@ -164,11 +182,13 @@ function mkMap(host,o){recolor();
  const st=n=>selSet.has(n)?' '+selSet.get(n):'';
  let dAll={};function drawSo(){gz.select('.sog').selectAll('path').data([...selSet.keys()].filter(n=>dAll[n]),n=>n).join('path').attr('d',n=>dAll[n]).attr('class',n=>'so '+(selSet.get(n)||''))}
  function drawFr(p){gz.select('.rg').html([...selSet].map(([n,cls])=>{const c=byNc[n];return c&&c.mk&&c.f&&!foundN.has(n)?frameHtml(c,p,W,H,cls):''}).join(''))}
- const bwOf=z=>Math.min(1.6,.4+.26*Math.log2(Math.max(z,1))),cwOf=z=>Math.min(4,1.5+.6*Math.log2(Math.max(z,1)));
- let nlv=o.lvl!=null?o.lvl:(o.seas?1:0);const mctx=document.createElement('canvas').getContext('2d');mctx.font='600 11px -apple-system,"Geeza Pro","Segoe UI",sans-serif';
- const lbW=c=>{const k=LG+c.id;return lbW.c[k]||(lbW.c[k]=Math.ceil(mctx.measureText(nm(c)).width)+32)};lbW.c={};
+ const bwOf=z=>Math.min(.8,.3+.13*Math.log2(Math.max(z,1))),cwOf=z=>Math.min(2.4,1+.35*Math.log2(Math.max(z,1)));
+ let nlv=o.lvl!=null?o.lvl:(o.seas?1:0);const mctx=document.createElement('canvas').getContext('2d');mctx.font='700 13px -apple-system,"Geeza Pro","Segoe UI",sans-serif';
+ const lbW=c=>{const k=LG+c.id;return lbW.c[k]||(lbW.c[k]=Math.ceil(mctx.measureText(nm(c)).width)+46)};lbW.c={};
  const sLn=la=>({type:'LineString',coordinates:d3.range(-180,181,3).map(x=>[x,la])});
  const SL=[['tr',sLn(23.4366)],['tr',sLn(-23.4366)],['eq',sLn(0)],['gw',{type:'LineString',coordinates:d3.range(-86,87,3).map(y=>[0,y])}]];
+ const DS=[...D].sort((a,b)=>(b.area||0)-(a.area||0));let mcv=null;
+ function buildMask(p,fast){const sc=.5,w=Math.round(W*sc),h=Math.round(H*sc);if(!mcv)mcv=document.createElement('canvas');mcv.width=w;mcv.height=h;const c=mcv.getContext('2d',{willReadFrequently:true});c.setTransform(sc,0,0,sc,0,0);const gp=d3.geoPath(p,c);c.beginPath();paths.each(f=>{if(f.hide)return;const l=fast?(f.lite||f.mid):(f.mid||f.lite);if(l)gp(l)});c.fillStyle='#000';c.fill();return{d:c.getImageData(0,0,w,h).data,w,h,sc}}
  function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];ready=true;const z=kz();dAll={};
   el.style.setProperty('--bw',bwOf(z).toFixed(2)+'px');el.style.setProperty('--cw',cwOf(z).toFixed(2)+'px');
   gz.select('.sphere').attr('d',mode==='globe'?g({type:'Sphere'}):null);
@@ -183,9 +203,8 @@ function mkMap(host,o){recolor();
   drawSo();
   const full=lite!==true&&lite!=='mid',k=kNow();
   /* equator, tropics and the Greenwich meridian: world explorer + globe only */
-  gz.select('.sl').html(o.lines&&mode!=='ctx'&&full?SL.map(([c,ln])=>{const d=g(ln);return d?`<path class="${c}" d="${d}"/>`:''}).join(''):'');
+  gz.select('.sl').html(o.lines&&mode!=='ctx'&&(full||mode==='globe')?SL.map(([c,ln])=>{const d=g(ln);return d?`<path class="${c}" d="${d}"/>`:''}).join(''):'');
   const ctr=mode==='globe'?[-gv.r[0],-gv.r[1]]:null;
-  if(full)gz.select('.sn').html(nlv>=1?seaHtml(p,W,H,z,ctr):'');
   /* small countries: no visible markers (invisible hit areas keep them tappable); a selected one gets a red frame */
   const hs=[];if(o.marks&&full)MK.forEach(c=>{const d=g(c.f);if(!d)return;const b=g.bounds(c.f);hs.push({c,d,sz:Math.max(b[1][0]-b[0][0],b[1][1]-b[0][1]),cx:(b[0][0]+b[1][0])/2,cy:(b[0][1]+b[1][1])/2})});
   const dots=hs.filter(d=>d.sz<10),outs=hs.filter(d=>d.sz>=10&&k>=2.2).sort((a,b)=>b.sz-a.sz);
@@ -194,11 +213,15 @@ function mkMap(host,o){recolor();
   gz.select('.mds').selectAll('g').data(dots).join(e=>{const n=e.append('g');n.append('circle').attr('class','hd').attr('r',17);return n}).attr('transform',d=>`translate(${d.cx},${d.cy})`).attr('data-n',d=>d.c.n).attr('class','md');
   drawFr(p);
   /* country names + flags (explorer button): biggest first, never overlapping, appear gradually while zooming in */
-  if(full){let h='';if(nlv>=2&&o.names){const boxes=[],px=mode==='globe'?gR*gv.k:p.scale();
-   [...D].sort((a,b)=>(b.area||0)-(a.area||0)).forEach(c=>{if(!c.f||h.length>2e5)return;const q=p(c.ct);if(!q||q[0]<16||q[0]>W-16||q[1]<12||q[1]>H-12)return;if(ctr&&d3.geoDistance(ctr,c.ct)>1.3)return;
-    const w=lbW(c),sz=2*Math.max(c.rr,.15)*rad*px;if(sz<w*.3)return;const bx=[q[0]-w/2-2,q[1]-11,q[0]+w/2+2,q[1]+11];
+  /* labels: re-projected on every frame (also while a globe spins) so they stay glued to the map */
+  if(full||mode==='globe'){const fast=lite===true;
+   if(nlv>=1){const M=buildMask(p,fast);gz.select('.sn').html(seaHtml(p,W,H,z,ctr,M,fast,mode==='globe'?gR*gv.k:0))}else gz.select('.sn').html('');
+   let h='';if(nlv>=2&&o.names){const boxes=[],px=mode==='globe'?gR*gv.k:p.scale();
+   DS.forEach(c=>{if(!c.f||h.length>2e5)return;const q=p(c.ct);if(!q||q[0]<24||q[0]>W-24||q[1]<14||q[1]>H-14)return;if(ctr&&d3.geoDistance(ctr,c.ct)>1.2)return;
+    if(mode==='globe'&&Math.hypot(q[0]-W/2,q[1]-H/2)>px*.93)return;
+    const w=lbW(c),sz=2*Math.max(c.rr,.15)*rad*px;if(sz<w*.3)return;const bx=[q[0]-w/2-2,q[1]-14,q[0]+w/2+2,q[1]+14];
     if(boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1]))return;boxes.push(bx);
-    h+=`<g class="cl" data-n="${c.n}" transform="translate(${q[0].toFixed(1)},${q[1].toFixed(1)})"><rect x="${-w/2}" y="-9" width="${w}" height="18" rx="6"/><image href="flags/${c.a}.svg" x="${-w/2+5}" y="-5" width="15" height="10"/><text x="${-w/2+24}" y="4">${nm(c)}</text></g>`})}
+    h+=`<g class="cl" data-n="${c.n}" transform="translate(${q[0].toFixed(1)},${q[1].toFixed(1)})"><rect x="${-w/2}" y="-12" width="${w}" height="24" rx="7"/><rect x="${-w/2+4}" y="-9" width="27" height="18" fill="#fff" stroke="none"/><image href="flags/${c.a}.svg" x="${-w/2+4}" y="-9" width="27" height="18" preserveAspectRatio="xMidYMid meet"/><text x="${-w/2+36}" y="5">${nm(c)}</text></g>`})}
    gz.select('.cn').html(h)}}
  /* ---- flat / context maps: d3 zoom with exact re-render on gesture end ---- */
  const cl2=(lo,hi,v)=>lo>hi?(lo+hi)/2:Math.max(lo,Math.min(hi,v));
@@ -374,25 +397,31 @@ function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();const c=G
  if($('#go'))$('#go').onclick=()=>{if(m==='tap'){if(G.pick)done(G.pick.id===c.id)}else if(G.sel!=null)done(!!G.o[G.sel].ok)};
  G.end=Date.now()+S.time*1000;G.tm=setInterval(()=>{if(!$('#tm'))return clearInterval(G.tm);const l=Math.max(0,(G.end-Date.now())/1000);$('#tm').textContent=Math.ceil(l);$('#tm').classList.toggle('low',l<=5);$('#pb').style.width=l/S.time*100+'%';
   if(l<=0){const r=judge();if(r)done(true,r.why,r.v,true);else done(false,'time')}},100)}
+function whoIs(txt){if(!txt)return null;for(const part of String(txt).split(' / ')){const n=norm(part);if(!n)continue;const x=D.find(x=>acc(x).has(n));if(x)return x}
+ for(const part of String(txt).split(' / ')){const f=D.filter(x=>fuzzy(x,part));if(f.length===1)return f[0]}return null}
 function done(ok,why,typed,late){if(G.lock)return;G.lock=true;clearInterval(G.tm);const c=G.c,m=G.mode;ok?G.score++:G.miss.push(c);
  let pts=0;if(ok){const left=late?0:Math.max(0,(G.end-Date.now())/1000),base=why==='fuzzy'?80:100;pts=late?base:base+Math.round(left/S.time*100)+Math.min(G.streak,5)*20;G.streak++;G.best=Math.max(G.best,G.streak);G.pts+=pts;if(m==='tap')G.found.push(c)}else G.streak=0;
- const mine=m==='tap'?(G.pick?nm(G.pick):''):G.sel!=null&&G.o?G.o[G.sel].t:(typed||G.last||'');G.log.push({c,ok,mine,why,pts});
+ const mine=m==='tap'?(G.pick?nm(G.pick):''):G.sel!=null&&G.o?G.o[G.sel].t:(typed||G.last||'');const wc=ok?null:(m==='tap'?G.pick:whoIs(mine));G.log.push({c,ok,mine,why,pts,w:wc&&wc.id!==c.id?wc:null});
  if(G.o)A.querySelectorAll('.opts button').forEach((e,i)=>{if(G.o[i].ok)e.classList.add('good');else if(i===G.sel)e.classList.add('bad')});
  if(m==='tap'&&G.mv){if(!ok&&G.pick)G.mv.setSel(G.pick.n,'bad');G.mv.setSel(c.n,'good',!ok&&!!G.pick);G.mv.focus(c,600)}
  const sc=$('.qh .sc');if(sc)sc.innerHTML=`⭐ ${G.pts}<i></i>🔥 ${G.streak}`;
  const d=document.createElement('div');d.className='fb '+(ok?'ok':'no')+(m==='tap'?' sheet':'');
- d.innerHTML=`<div class="card"><div class="st">${ok?(why==='fuzzy'?t('okFz'):late?t('okLate'):t('ok')):why==='time'?t('timeUp'):why==='skip'?t('skipped'):t('wrong')}</div>${ok?`<div class="ptx">+${pts} ${t('pts')}${G.streak>1?` · 🔥 ${t('streak')} ${G.streak}`:''}</div>`:''}${flag(c)}<div class="nm">${nm(c)}</div><div class="nm2" dir="${d2()}">${nm2(c)}</div>${m==='cap'||m==='cur'?`<div class="an">${t('corr',lblOf(m))} <b>${ansOf(c,m)}</b></div>`:''}${why==='fuzzy'?`<div class="my" style="color:#9a6700">${t('fzNote',typed)}</div>`:''}${!ok&&mine?`<div class="my">${m==='tap'?t('picked'):t('yours')}: ${mine}</div>`:''}<small>${t('cont')}</small></div>`;A.appendChild(d);
+ d.innerHTML=`<div class="card"><div class="st">${ok?(why==='fuzzy'?t('okFz'):late?t('okLate'):t('ok')):why==='time'?t('timeUp'):why==='skip'?t('skipped'):t('wrong')}</div>${ok?`<div class="ptx">+${pts} ${t('pts')}${G.streak>1?` · 🔥 ${t('streak')} ${G.streak}`:''}</div>`:''}${flag(c)}<div class="nm">${nm(c)}</div><div class="nm2" dir="${d2()}">${nm2(c)}</div>${m==='cap'||m==='cur'?`<div class="an">${t('corr',lblOf(m))} <b>${ansOf(c,m)}</b></div>`:''}${why==='fuzzy'?`<div class="my" style="color:#9a6700">${t('fzNote',typed)}</div>`:''}${!ok&&mine?`<div class="my">${m==='tap'?t('picked'):t('yours')}: ${mine}</div>`:''}${(()=>{const w=G.log[G.log.length-1].w;return w?`<div class="wrg">${flag(w,'wf')}<b>${nm(w)}</b><small dir="${d2()}">${nm2(w)} · ${capOf(w)}</small></div>`:''})()}<small>${t('cont')}</small></div>`;A.appendChild(d);
  const nx=()=>{if(G.nx){clearTimeout(G.nx);G.nx=0;G.i++;ask()}};G.nx=setTimeout(nx,m==='tap'?(ok?3500:6000):ok?(why==='fuzzy'?3200:2000):3800);d.onclick=nx}
 function result(){const n=G.qs.length,p=Math.round(G.score/n*100),m=G.mode;S.best=S.best||{};const old=S.best[m]||0,rec=G.pts>old;if(rec){S.best[m]=G.pts;save()}
  A.innerHTML=`<div class="res"><h1>${p>=80?'🏆':p>=50?'👏':'💪'} ${t('res')}: ${G.score} / ${n} (${p}%)</h1><div class="sums"><div><b>⭐ ${G.pts}</b><span>${t('points')}${rec?' — '+t('newRec')+' 🎉':old?` (${t('bestPrev')} ${old})`:''}</span></div><div><b>🔥 ${G.best}</b><span>${t('bestStreak')}</span></div><div><b>✅ ${G.score}</b><span>${t('correct')}</span></div><div><b>❌ ${n-G.score}</b><span>${t('wrongS')}</span></div></div>
- <table class="rt"><colgroup><col class="c1"><col class="c2"><col class="c3"><col><col></colgroup><tr><th>#</th><th></th><th></th><th>${t(m==='cap'||m==='cur'?'thCorr':'thCountry')}</th><th>${t('thYours')}</th></tr>${G.log.map((r,i)=>`<tr class="${r.ok?'g':'b'}"><td>${i+1}</td><td>${r.ok?'✅':'❌'}${r.pts?`<small class="pt">+${r.pts}</small>`:''}</td><td>${flag(r.c)}</td><td><b>${nm(r.c)}</b><small dir="${d2()}">${nm2(r.c)}</small>${m==='cap'||m==='cur'?`<span class="ca">${ansOf(r.c,m)}</span>`:''}</td><td class="yr ${r.ok?'ok':'no'}">${r.mine?r.mine+(r.why==='fuzzy'?' (≈)':''):'—'}</td></tr>`).join('')}</table>
+ <table class="rt"><colgroup><col class="c1"><col class="c2"><col class="c3"><col><col></colgroup><tr><th>#</th><th></th><th></th><th>${t(m==='cap'||m==='cur'?'thCorr':'thCountry')}</th><th>${t('thYours')}</th></tr>${G.log.map((r,i)=>`<tr class="${r.ok?'g':'b'}"><td>${i+1}</td><td>${r.ok?'✅':'❌'}${r.pts?`<small class="pt">+${r.pts}</small>`:''}</td><td>${flag(r.c)}</td><td><b>${nm(r.c)}</b><small dir="${d2()}">${nm2(r.c)}</small>${m==='cap'||m==='cur'?`<span class="ca">${ansOf(r.c,m)}</span>`:''}</td><td class="yr ${r.ok?'ok':'no'}">${r.w?`<img class="fs" src="flags/${r.w.a}.svg" alt="">`:''}${r.mine?r.mine+(r.why==='fuzzy'?' (≈)':''):'—'}${r.w?`<small>${capOf(r.w)}</small>`:''}</td></tr>`).join('')}</table>
  <div class="chips" style="justify-content:center"><button class="go" id="ag">${t('again')}</button><button id="qp" style="font-size:22px">${t('qPage')}</button><button id="hm" style="font-size:22px">${t('homeB')}</button></div></div>`;
  $('#ag').onclick=()=>start(G.mode);$('#qp').onclick=quizPage;$('#hm').onclick=home}
 /* ---------- guide ---------- */
-function dir(v='n',q=''){closePanel();const cmp=(a,b)=>AR()?a.ar.localeCompare(b.ar,'ar'):a.en.localeCompare(b.en,'en'),L=D.filter(c=>!q||acc(c).has(norm(q))||norm(c.ar).includes(norm(q))||norm(c.en).includes(norm(q))).sort(cmp);
- if(!$('#g')){A.innerHTML=`<div class="bar2"><button id="bk">${t('back')}</button><input id="q" placeholder="${t('search')}" value="${q}"><div class="seg"><button data-v="n">${t('segN')}</button><button data-v="m">${t('segM')}</button></div></div><div class="grid" id="g"></div>`;
+function contOf(q){const n=norm(q);if(n.length<3)return null;const ks=Object.keys(CN),nm=k=>[norm(CN[k]),norm(CNe[k])];
+ for(const k of ks)if(nm(k).includes(n))return k;
+ if(D.some(c=>norm(c.ar).startsWith(n)||norm(c.en).startsWith(n)))return null;
+ return ks.find(k=>nm(k).some(x=>x.startsWith(n)))||null}
+function dir(v='n',q=''){closePanel();const ck=contOf(q),cmp=(a,b)=>AR()?a.ar.localeCompare(b.ar,'ar'):a.en.localeCompare(b.en,'en'),L=(ck?D.filter(c=>c.co===ck):D.filter(c=>!q||acc(c).has(norm(q))||norm(c.ar).includes(norm(q))||norm(c.en).includes(norm(q)))).sort(cmp);
+ if(!$('#g')){A.innerHTML=`<div class="bar2"><button id="bk">${t('back')}</button><input id="q" placeholder="${t('search')}" value="${q}"><div class="seg"><button data-v="n">${t('segN')}</button><button data-v="m">${t('segM')}</button></div></div><div class="tinfo cc" id="cc"></div><div class="grid" id="g"></div>`;
   $('#bk').onclick=home;$('#q').oninput=e=>dir(G.dv,e.target.value);A.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>dir(b.dataset.v,$('#q').value))}
- G.dv=v;A.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+ G.dv=v;A.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));$('#cc').textContent=ck?cn(ck)+' — '+L.length+(AR()?' دولة':' countries'):'';
  $('#g').innerHTML=L.map(c=>`<button class="tile" data-id="${c.id}">${v==='n'?flag(c):thumb(c)}<b>${nm(c)}</b><small dir="${d2()}">${nm2(c)}</small></button>`).join('');
  $('#g').querySelectorAll('.tile').forEach(b=>b.onclick=()=>detail(byId[b.dataset.id]))}
 async function showFx(c){const el=$('#fx');if(!el)return;const d=await getFx(c);if($('#fx')!==el)return;
@@ -425,11 +454,12 @@ const osLand=()=>typeof window.orientation==='number'?Math.abs(window.orientatio
 let fix=0,fixT=0;
 function chkOrient(){const wide=innerWidth>innerHeight;if(osLand()===wide){fix=0;clearTimeout(fixT);return}
  /* the OS says landscape (or portrait) but the page still has the old size: nudge the viewport, finally reload once */
- const mv=document.querySelector('meta[name=viewport]');if(mv&&fix<4){fix++;const c0=mv.content;mv.content='width=device-width,initial-scale=1.001,viewport-fit=cover';setTimeout(()=>{mv.content=c0;fit()},90)}
+ const mv=document.querySelector('meta[name=viewport]');if(mv&&fix<4){fix++;const c0=mv.content;mv.content='width=device-width,initial-scale=1.001,minimum-scale=1,viewport-fit=cover';setTimeout(()=>{mv.content=c0;fit()},90)}
  clearTimeout(fixT);fixT=setTimeout(()=>{if(osLand()!==(innerWidth>innerHeight)){let last=0;try{last=+sessionStorage.wmRl||0}catch(_){}if(Date.now()-last>20000){try{sessionStorage.wmRl=Date.now()}catch(_){}location.reload()}}},2200)}
 const fit=()=>{const h=Math.round(vv?vv.height:innerHeight);rs.setProperty('--h',h+'px');scrollTo(0,0);clearTimeout(fT);fT=setTimeout(()=>{fitPanel();const m=window.__onfit;m&&m();chkOrient()},60)};
 if(vv){vv.addEventListener('resize',fit)}addEventListener('resize',fit);
 addEventListener('orientationchange',()=>[50,250,600,1200,2000].forEach(x=>setTimeout(fit,x)));fit();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
+['gesturestart','gesturechange','gestureend'].forEach(e=>document.addEventListener(e,ev=>ev.preventDefault(),{passive:false}));
 window.__wm={D,F,byId,SMALL,MK,openPanel,closePanel,get G(){return G},fuzzy,norm,acc,go(m,id){start(m);G.qs[0]=byId[id];ask()},detail,explore,dir,setLang,home,SK};
 applyLang();home()})();

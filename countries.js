@@ -2,9 +2,9 @@
 const A=document.getElementById('app'),H=document.documentElement;
 const CO={AF:['أفريقيا','Africa'],AS:['آسيا','Asia'],EU:['أوروبا','Europe'],NA:['أمريكا الشمالية','North America'],SA:['أمريكا الجنوبية','South America'],OC:['أوقيانوسيا','Oceania']};
 const T={ar:{title:'جدول الدول',back:'› رجوع',search:'ابحث بالاسم أو العاصمة أو الكود أو العملة...',cnt:n=>n+' دولة',none:'لا توجد نتائج',
- h:{name:'الدولة',flag:'العلم',cap:'العاصمة',code:'كود الدولة',cur:'العملة',co:'القارة',area:'المساحة (كم²)',pop:'عدد السكان'}},
+ h:{name:'الدولة',flag:'العلم',cap:'العاصمة',code:'الكود',cur:'العملة',co:'القارة',area:'المساحة',pop:'السكان'},u:{area:'كم²'}},
  en:{title:'Countries Table',back:'‹ Back',search:'Search by name, capital, code or currency...',cnt:n=>n+' countries',none:'No results',
- h:{name:'Country',flag:'Flag',cap:'Capital',code:'Country code',cur:'Currency',co:'Continent',area:'Area (km²)',pop:'Population'}}};
+ h:{name:'Country',flag:'Flag',cap:'Capital',code:'Code',cur:'Currency',co:'Continent',area:'Area',pop:'Pop.'},u:{area:'km²'}}};
 let lang='ar';try{lang=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 let D;try{D=await(await fetch('data.json')).json()}catch(e){A.textContent='تعذّر تحميل البيانات / Could not load data';return}
 const cEn=new Intl.DisplayNames('en',{type:'currency'}),nf=new Intl.NumberFormat('en');
@@ -44,11 +44,12 @@ function draw(){const t=T[lang];H.lang=lang;H.dir=lang==='ar'?'rtl':'ltr';docume
   lockScroll(A.querySelector('.tbw'))}
  A.querySelector('#bk').textContent=t.back;A.querySelector('#tt').textContent='📊 '+t.title;A.querySelector('#q').placeholder=t.search;
  A.querySelector('#ti').textContent=t.cnt(rows.length);A.querySelector('#nn').textContent=rows.length?'':t.none;
- A.querySelector('#hr').innerHTML=COLS.map(k=>`<th data-k="${k}" class="${sk===k?'on':''}">${t.h[k]}<i>${sk===k?(sd>0?'▲':'▼'):'↕'}</i></th>`).join('');
+ A.querySelector('#hr').innerHTML=COLS.map(k=>`<th data-k="${k}" class="${sk===k?'on':''}">${t.h[k]}${t.u[k]?`<small>${t.u[k]}</small>`:''}</th>`).join('');
  A.querySelectorAll('#hr th').forEach(h=>h.onclick=()=>{const k=h.dataset.k;if(sk!==k){sk=k;sd=1}else if(sd>0)sd=-1;else{sk=null;sd=1}draw()});
  A.querySelector('#tb').innerHTML=rows.map(r=>`<tr>${COLS.map(k=>`<td class="c-${k}">${cell[k](r.c,lang)}</td>`).join('')}</tr>`).join('')}
 draw();
 const vv=window.visualViewport,fit=()=>{H.style.setProperty('--h',Math.round(vv?vv.height:innerHeight)+'px');scrollTo(0,0)};
 if(vv)vv.addEventListener('resize',fit);addEventListener('resize',fit);addEventListener('orientationchange',()=>[50,300,800].forEach(t=>setTimeout(fit,t)));fit();
+['gesturestart','gesturechange','gestureend'].forEach(e=>document.addEventListener(e,ev=>ev.preventDefault(),{passive:false}));
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 })();

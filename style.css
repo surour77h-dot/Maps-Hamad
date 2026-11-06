@@ -108,16 +108,16 @@ img[src^="flags/"]{border:1.5px solid rgba(0,0,0,.4);box-sizing:border-box}
 .map{width:100%;height:100%;flex:1;touch-action:none;border:2px solid var(--ink);border-radius:18px;background:linear-gradient(var(--sea1),var(--sea2) 60%,var(--sea3))}
 .map.shp{background:var(--paper2)}
 .c0{fill:#f8e6c6}.c1{fill:#efe4b4}.c2{fill:#d9e7c6}.c3{fill:#f4d9b9}.c4{fill:#f1d6cc}.c5{fill:#e7ddc7}.c6{fill:#e3d9ea}
-.map .l{stroke:#4a4636;stroke-width:var(--bw,.8px);stroke-linejoin:round;vector-effect:non-scaling-stroke}
-.map .l.t,.map .l.sel,.map .l.good,.map .l.bad{stroke:#fff;stroke-width:1.5px;paint-order:stroke;stroke-linejoin:round}
+.map .l{stroke:#4a4636;stroke-opacity:.62;stroke-width:var(--bw,.6px);stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.map .l.t,.map .l.sel,.map .l.good,.map .l.bad{stroke:#fff;stroke-opacity:1;stroke-width:1px;paint-order:stroke;stroke-linejoin:round}
 .map .l.t{fill:var(--red)}.map .l.sel{fill:var(--blue)}.map .l.good{fill:var(--ok)}.map .l.bad{fill:var(--bad)}
-.map .so{fill:none;stroke:#2a2415;stroke-width:.9px;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+.map .so{fill:none;stroke:#2a2415;stroke-width:.7px;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
 .map .sog{pointer-events:none}
 .map .t2{fill:#2f6f57;stroke:#1c3d31;stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linejoin:round}
-.map .coast{fill:none;stroke:#fff;stroke-width:var(--cw,5px);stroke-opacity:.5;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+.map .coast{fill:none;stroke:#fff;stroke-width:var(--cw,2px);stroke-opacity:.4;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
 .map .sl{pointer-events:none}.map .sl path{fill:none;vector-effect:non-scaling-stroke;stroke-dasharray:7 5;stroke-linecap:round}
 .map .sl .eq{stroke:#d2452c;stroke-width:1.5px;stroke-opacity:.7}.map .sl .tr{stroke:#e6906f;stroke-width:1.1px;stroke-opacity:.7}.map .sl .gw{stroke:#1f4f8a;stroke-width:1.5px;stroke-opacity:.65}
-.map .cn .cl{cursor:pointer}.map .cl rect{fill:rgba(251,245,228,.9);stroke:var(--ink2);stroke-width:1px;vector-effect:non-scaling-stroke}.map .cl text{fill:var(--ink);font-size:11px;font-weight:600;direction:ltr;unicode-bidi:plaintext;text-anchor:start;font-family:-apple-system,"Geeza Pro","Segoe UI",sans-serif}.map .cl image{pointer-events:none}
+.map .cn .cl{cursor:pointer}.map .cl rect{fill:rgba(251,245,228,.9);stroke:var(--ink2);stroke-width:1px;vector-effect:non-scaling-stroke}.map .cl text{fill:var(--ink);font-size:13px;font-weight:600;direction:ltr;unicode-bidi:plaintext;text-anchor:start;font-family:-apple-system,"Geeza Pro","Segoe UI",sans-serif}.map .cl image{pointer-events:none}
 .map .ring{fill:none;stroke:var(--red);stroke-width:7px;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
 .map .fr{fill:none;stroke:var(--red);stroke-width:3.5px;vector-effect:non-scaling-stroke;pointer-events:none}.map .fr.good{stroke:var(--ok)}.map .fr.bad{stroke:var(--bad)}
 .map .mk{fill:none;stroke:#d2691e;stroke-width:6px;stroke-dasharray:11 6;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
@@ -132,7 +132,7 @@ img[src^="flags/"]{border:1.5px solid rgba(0,0,0,.4);box-sizing:border-box}
 .map .sphere{display:none;pointer-events:none}
 .map.globe{background:radial-gradient(circle at 50% 45%,var(--paper2),var(--paper3))}
 .map.globe .sphere{display:block;fill:url(#sph);stroke:var(--ink);stroke-width:1.5px;vector-effect:non-scaling-stroke}
-.map.globe .l{stroke-width:calc(var(--bw,.8px)*.9)}.map.globe .coast{display:none}
+.map.globe .l{stroke-width:calc(var(--bw,.6px)*.9)}.map.globe .coast{display:none}
 .map.live{cursor:grab}
 .mt{position:absolute;top:8px;inset-inline-start:8px;display:flex;flex-direction:column;gap:6px}.mt button{padding:2px 11px;font-size:22px;border-radius:12px;box-shadow:2px 2px 0 var(--ink)}
 .dg .dmap{min-height:46vh;display:flex}.dg .dmap .mapbox{flex:1;min-height:46vh}.dg .dshape{display:flex;min-height:46vh}.dg .dshape svg{width:100%;height:100%}
@@ -234,3 +234,19 @@ table.ct{border-collapse:separate;border-spacing:0;width:100%;min-width:700px}
 .rt .ca{display:block;font-weight:700;color:var(--ink);font-size:inherit}.rt .yr.ok{color:#2c6a2c;font-weight:600}.rt .yr.no{color:#a3281a;font-weight:600}
 .res img{width:100%;max-width:48px}
 @media(max-width:500px){.sums{grid-template-columns:1fr 1fr;padding:0 6px}.res h1{font-size:22px}}
+
+.map .cl rect{fill:rgba(251,245,228,.94)}.map .cl image{filter:drop-shadow(0 0 .6px rgba(0,0,0,.5))}
+
+/* wrong answer: show the country that was typed */
+.fb .wrg{display:flex;flex-direction:column;align-items:center;gap:2px;margin-top:8px;padding:8px 12px;border:2px dashed var(--bad);border-radius:12px;background:rgba(196,70,50,.07)}
+.fb .wrg .wf{width:min(92px,24vw);border:1.5px solid var(--ink);border-radius:4px}.fb .wrg b{font-size:18px}.fb .wrg small{font-size:13px;color:var(--ink2)}
+.rt img.fs{display:block;width:34px;max-width:34px;margin:0 0 3px;border:1px solid var(--ink2);border-radius:2px}
+
+svg{overflow:hidden}
+
+/* ---- v13: table headers (no arrows; sorted column coloured), tighter spacing, transparent flags ---- */
+.ct th{padding:8px 6px;line-height:1.15}.ct th small{display:block;font-size:10px;font-weight:400;opacity:.7}
+.ct th.on{color:#ffd27a}.ct td{padding-inline:6px}
+@media(max-width:600px){.ct th:nth-child(3){background:var(--ink)}}
+img[src$="/np.svg"]{background:#fff}
+.tinfo.cc{margin:2px 4px 8px;font-weight:700;color:var(--ink2)}
