@@ -1,5 +1,5 @@
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v13';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v14';
 /* ---------- language (whole app) ---------- */
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
@@ -53,6 +53,7 @@ const SLV={1:[0,10],2:[1.5,70],3:[4,1e9],4:[8,1e9]},SFS={1:15,2:12,3:10.5,4:10};
 const SMC=document.createElement('canvas').getContext('2d'),SMW={};
 function sMeasure(txt,bold,ar){const k=(ar?'a':'l')+bold+txt;if(SMW[k]!=null)return SMW[k];SMC.font=(ar?'':'italic ')+(bold?'700 ':'400 ')+'100px '+(ar?'AtlasAr,"Geeza Pro",serif':'AtlasLa,Georgia,serif');return SMW[k]=SMC.measureText(txt).width/100}
 /* water names: atlas style - tilted to follow the water, as large as the water allows, never over land */
+let SBX=[];
 function seaHtml(p,W,H,z,ctr,M,fast,R){const boxes=[],out=[],ar=AR(),mw=M.w,mh=M.h,sc=M.sc;
  const land=(x,y)=>{const xi=Math.round(x*sc),yi=Math.round(y*sc);if(xi<0||yi<0||xi>=mw||yi>=mh)return true;return M.d[(yi*mw+xi)*4+3]>30};
  const SZ={1:[1.9,1.5,1.2,1],2:[1.6,1.3,1.1,1],3:[1.35,1.15,1],4:[1.15,1]},AN=fast?[0,-26,26]:[0,-12,12,-24,24,-36,36,-48,48],DIRS=[[1,0],[-1,0],[0,1],[0,-1],[.7,.7],[-.7,.7],[.7,-.7],[-.7,-.7]];
@@ -75,7 +76,7 @@ function seaHtml(p,W,H,z,ctr,M,fast,R){const boxes=[],out=[],ar=AR(),mw=M.w,mh=M
      out.push(`<text class="sn sn${s[4]}" style="font-size:${fs}px" dominant-baseline="central" x="${cx.toFixed(1)}" y="${cy.toFixed(1)}"${a?` transform="rotate(${a} ${cx.toFixed(1)} ${cy.toFixed(1)})"`:''}>${txt}</text>`);break}
     if(done)break}
    if(done)break}}
- return out.join('')}
+ SBX=boxes;return out.join('')}
 /* ---------- extra accepted spellings / names (by ISO3) ---------- */
 const XA={AFG:'افغانستان',ARE:'الامارات,اتحاد الامارات,الإمارات العربية المتحدة',ARM:'ارمينيا',AUT:'اوستريا,النمسا',AZE:'اذربيجان',BIH:'البوسنه,بوسنيا,البوسنة والهرسك',BLR:'روسيا البيضاء,بيلاروس,بيلاروسيا,Belorussia',BRN:'بروناي,بروناي دار السلام',CAF:'افريقيا الوسطى,جمهورية افريقيا الوسطى,Central African Rep',CIV:'ساحل العاج,كوت ديفوار,Cote dIvoire,Ivory Coast',COD:'الكونغو الديمقراطية,الكونغو كينشاسا,زائير,DR Congo,Congo Kinshasa,Democratic Republic of Congo',COG:'الكونغو,الكونغو برازافيل,Congo Brazzaville,Republic of the Congo',CZE:'التشيك,تشيكيا,جمهورية التشيك,Czechia,Czech Republic',DEU:'المانيا,Deutschland',DNK:'الدانمارك,الدنمارك',DOM:'الدومينيكان,جمهورية الدومينيكان,Dominican Rep',ESP:'اسبانيا,Espana',EST:'استونيا',SWZ:'سوازيلاند,اسواتيني,إسواتيني,Eswatini,Swaziland',GBR:'بريطانيا,المملكة المتحدة,UK,Britain,Great Britain,United Kingdom',GEO:'جيورجيا,جورجيا',GNB:'غينيا بيساو,غينيا-بيساو,Guinea Bissau',GNQ:'غينيا الاستوائية,Equatorial Guinea',GUY:'غيانا',IRN:'ايران',KAZ:'قازاخستان,قازاقستان,كازاقستان,كازاخستان,Kazakstan',KGZ:'قرغيزستان,كيرغيزستان,قيرقيزستان,قرقيزستان,كرغيزستان,قرقستان,قيرقستان,Kirgizstan,Kirghizia,Kyrgyz Republic',KNA:'سانت كيتس,سانت كيتس ونيفيس,St Kitts,Saint Kitts and Nevis',LIE:'ليشتنشتاين,ليختنشتاين',LKA:'سريلانكا,سيرلانكا',LUX:'لوكسمبرغ,لوكسمبورغ',MKD:'مقدونيا الشمالية,مقدونيا,North Macedonia,Macedonia',MMR:'بورما,ميانمار,Burma,Myanmar',MNE:'مونتينيغرو,مونتنيغرو,مونتينجرو,مونتنجرو,Montenegro,Crna Gora',NLD:'هولندا,Holland,The Netherlands',OMN:'سلطنة عمان,عمان,Oman',PNG:'بابوا,بابوا غينيا الجديدة,Papua New Guinea',PRK:'كوريا الشمالية,North Korea',KOR:'كوريا الجنوبية,South Korea,Korea',PSE:'فلسطين,Palestine,State of Palestine',PRY:'باراجواي,باراغواي',RUS:'الاتحاد الروسي,Russian Federation',SAU:'المملكة العربية السعودية,السعودية',STP:'ساو تومي,ساو تومي وبرينسيبي,Sao Tome',SSD:'جنوب السودان,South Sudan',SVK:'سلوفاكيا,Slovak Republic',TLS:'تيمور الشرقية,تيمور ليشتي,East Timor,Timor Leste',TTO:'ترينيداد وتوباغو,ترينيداد وتوباجو,Trinidad',TUR:'تركيا,Turkiye,Türkiye',URY:'اوروجواي,اوروغواي',USA:'امريكا,الولايات المتحدة الامريكية,United States of America,America,USA,US',VAT:'الفاتيكان,Vatican City,Holy See',VCT:'سانت فنسنت,سانت فنسنت والغرينادين,St Vincent',LCA:'سانت لوسيا,St Lucia',ATG:'انتيغوا وبربودا,أنتيغوا وباربودا,Antigua',BHS:'جزر البهاما,الباهاما,Bahamas',CPV:'الرأس الاخضر,كابو فيردي,Cape Verde,Cabo Verde',COM:'جزر القمر,القمر',MDV:'المالديف,جزر المالديف,جزر مالديف',MHL:'جزر مارشال',SLB:'جزر سليمان',SYC:'سيشل,سيشيل',TJK:'طاجيكستان,طاجكستان',TKM:'تركمانستان',UZB:'اوزبكستان,أوزبكستان',VNM:'فيتنام,فيتنام',YEM:'اليمن',ZAF:'جنوب افريقيا,South Africa',ZWE:'زيمبابوي,زمبابوي',MRT:'موريتانيا',BFA:'بوركينا فاسو,بوركينافاسو',NER:'النيجر',NGA:'نيجيريا',CHE:'سويسرا,Switzerland',SWE:'السويد',NOR:'النرويج',IRL:'ايرلندا,أيرلندا,ايرلندا',ISL:'ايسلندا,آيسلندا,أيسلندا',PHL:'الفلبين,الفيليبين',IDN:'اندونيسيا,إندونيسيا',MYS:'ماليزيا',MNG:'منغوليا,منغوليا',KHM:'كمبوديا,Cambodia',LAO:'لاوس,Laos',BGD:'بنغلاديش,بنجلاديش',NPL:'نيبال',BTN:'بوتان',IND:'الهند',PAK:'باكستان',TWN:'تايوان',UKR:'اوكرانيا,أوكرانيا',MDA:'مولدوفا',ROU:'رومانيا',BGR:'بلغاريا',SRB:'صربيا',HRV:'كرواتيا',SVN:'سلوفينيا',LVA:'لاتفيا',LTU:'ليتوانيا',MLT:'مالطا',CYP:'قبرص',ETH:'اثيوبيا,إثيوبيا',ERI:'اريتريا,إريتريا',DJI:'جيبوتي',SOM:'الصومال',UGA:'اوغندا,أوغندا',TZA:'تنزانيا',MOZ:'موزمبيق',MDG:'مدغشقر',MWI:'ملاوي',ZMB:'زامبيا',BWA:'بوتسوانا',NAM:'ناميبيا',AGO:'انغولا,أنغولا,أنجولا',GAB:'الغابون,غابون',CMR:'الكاميرون',TCD:'تشاد',GHA:'غانا',TGO:'توغو,توجو',BEN:'بنين',SLE:'سيراليون',LBR:'ليبيريا',GIN:'غينيا',GMB:'غامبيا',SEN:'السنغال',MLI:'مالي',DZA:'الجزائر',TUN:'تونس',LBY:'ليبيا',EGY:'مصر',SDN:'السودان',MAR:'المغرب',HTI:'هايتي',CUB:'كوبا',JAM:'جامايكا',BRB:'بربادوس',GRD:'غرينادا',DMA:'دومينيكا',NIC:'نيكاراغوا,نيكاراجوا',HND:'هندوراس',SLV:'السلفادور',GTM:'غواتيمالا,جواتيمالا',CRI:'كوستاريكا',PAN:'بنما',COL:'كولومبيا',VEN:'فنزويلا',ECU:'الاكوادور,الإكوادور',PER:'بيرو',BOL:'بوليفيا',CHL:'تشيلي,شيلي',ARG:'الارجنتين,الأرجنتين',BRA:'البرازيل',SUR:'سورينام,سورينام',NZL:'نيوزيلندا,نيوزيلاند',FJI:'فيجي,فيجي',WSM:'ساموا',TON:'تونغا,تونجا',VUT:'فانواتو',KIR:'كيريباتي,كريباتي',FSM:'ميكرونيزيا',PLW:'بالاو,بلاو',NRU:'ناورو',TUV:'توفالو'};
 const [D,T,T5,T1]=await Promise.all([fetch('data.json').then(r=>r.json()),fetch('world.json').then(r=>r.json()),fetch('world50.json').then(r=>r.json()),fetch('world110.json').then(r=>r.json())]);
@@ -189,6 +190,57 @@ function mkMap(host,o){recolor();
  const SL=[['tr',sLn(23.4366)],['tr',sLn(-23.4366)],['eq',sLn(0)],['gw',{type:'LineString',coordinates:d3.range(-86,87,3).map(y=>[0,y])}]];
  const DS=[...D].sort((a,b)=>(b.area||0)-(a.area||0));let mcv=null;
  function buildMask(p,fast){const sc=.5,w=Math.round(W*sc),h=Math.round(H*sc);if(!mcv)mcv=document.createElement('canvas');mcv.width=w;mcv.height=h;const c=mcv.getContext('2d',{willReadFrequently:true});c.setTransform(sc,0,0,sc,0,0);const gp=d3.geoPath(p,c);c.beginPath();paths.each(f=>{if(f.hide)return;const l=fast?(f.lite||f.mid):(f.mid||f.lite);if(l)gp(l)});c.fillStyle='#000';c.fill();return{d:c.getImageData(0,0,w,h).data,w,h,sc}}
+
+ /* ---- atlas-style country names: printed on the land along each country's main axis, flag underneath ---- */
+ const CONN=new Set('بتثجحخسشصضطظعغفقكلمنهيىئ'.split(''));
+ function kash(s,n){if(n<=0)return s;const ch=[...s],gp=[];for(let i=0;i<ch.length-1;i++){const b=ch[i+1];if(CONN.has(ch[i])&&b>='ء'&&b<='ي')gp.push(i)}
+  if(!gp.length)return s;n=Math.min(n,gp.length*3);const add=new Array(ch.length).fill(0);for(let k=0;k<n;k++)add[gp[Math.floor((k+.5)*gp.length/n)%gp.length]]++;return ch.map((x,i)=>x+'ـ'.repeat(add[i])).join('')}
+ function spOf(c){if(c.sp)return c.sp;const gs=c.keepF?c.keepF.geometry.geometries:[],ps=gs.map(g=>({g,a:d3.geoArea(g)})).sort((a,b)=>b.a-a.a).slice(0,3),out=[];
+  ps.forEach((q,i)=>{if(i&&q.a<ps[0].a*.1)return;const r=q.g.coordinates[0],st=Math.max(1,Math.ceil(r.length/45));for(let j=0;j<r.length;j+=st)out.push(r[j])});return c.sp=out}
+ function ctryHtml(p,ctr,M,px,z){const boxes=SBX.slice(),ar=AR(),globe=px>0,rd=Math.PI/180,
+  land=(x,y)=>{const xi=Math.round(x*M.sc),yi=Math.round(y*M.sc);if(xi<0||yi<0||xi>=M.w||yi>=M.h)return true;return M.d[(yi*M.w+xi)*4+3]>30},
+  hit=b=>boxes.some(o=>b[0]<o[2]+2&&b[2]>o[0]-2&&b[1]<o[3]+2&&b[3]>o[1]-2),
+  tw=sMeasure('ـ',true,true);let h='';
+  for(const c of DS){if(!c.f||h.length>3e5)continue;
+   const q0=p(c.ct);if(!q0)continue;if(globe&&(d3.geoDistance(ctr,c.ct)>1.3||Math.hypot(q0[0]-W/2,q0[1]-H/2)>px*.9))continue;
+   const P=[];for(const s of spOf(c)){const a=p(s);if(a)P.push(a)}if(P.length<6)continue;
+   let mx=0,my=0;P.forEach(a=>{mx+=a[0];my+=a[1]});mx/=P.length;my/=P.length;
+   let sxx=0,syy=0,sxy=0;P.forEach(a=>{const dx=a[0]-mx,dy=a[1]-my;sxx+=dx*dx;syy+=dy*dy;sxy+=dx*dy});
+   let th=.5*Math.atan2(2*sxy,sxx-syy),ux=Math.cos(th),uy=Math.sin(th),t0=1e9,t1=-1e9,s0=1e9,s1=-1e9;
+   P.forEach(a=>{const dx=a[0]-mx,dy=a[1]-my,t=dx*ux+dy*uy,s=-dx*uy+dy*ux;if(t<t0)t0=t;if(t>t1)t1=t;if(s<s0)s0=s;if(s>s1)s1=s});
+   let L=t1-t0,T=s1-s0,cx=mx+ux*(t0+t1)/2-uy*(s0+s1)/2,cy=my+uy*(t0+t1)/2+ux*(s0+s1)/2,deg=th/rd;
+   if(L<T*1.3){let x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;P.forEach(a=>{if(a[0]<x0)x0=a[0];if(a[0]>x1)x1=a[0];if(a[1]<y0)y0=a[1];if(a[1]>y1)y1=a[1]});L=x1-x0;T=y1-y0;deg=0;cx=(x0+x1)/2;cy=(y0+y1)/2}
+   deg=Math.max(-75,Math.min(75,deg));
+   if(!land(cx,cy)){if(land(q0[0],q0[1])){cx=q0[0];cy=q0[1]}else if(land(mx,my)){cx=mx;cy=my}}
+   const txt=nm(c),nw=sMeasure(txt,true,ar),cs=Math.cos(deg*rd),sn=Math.sin(deg*rd),ac=Math.abs(cs),as=Math.abs(sn);
+   let placed=false;
+   for(const cc of [[cx,cy],[q0[0],q0[1]]]){if(placed)break;cx=cc[0];cy=cc[1];
+   if(cx>=20&&cx<=W-20&&cy>=12&&cy<=H-12&&land(cx,cy)){
+    const fs0=Math.min(.84*L/nw,T*.55,46),wt0=Math.min(.84*L,nw*fs0*3);
+    if(fs0>=9)for(const f of [1,.9,.8,.7,.6,.5,.4]){const fs=fs0*f,w=wt0*f;if(fs<9)break;const hx=(w/2+2)*ac+fs*.6*as,hy=(w/2+2)*as+fs*.45*ac;cx=Math.min(Math.max(cx,hx+4),W-hx-4);cy=Math.min(Math.max(cy,hy+4),H-hy-4);let miss=0;
+     for(const tt of [-.5,-.25,0,.25,.5])for(const ss of [-.5,0,.5]){const dx=tt*w,dy=ss*fs*.7;if(!land(cx+cs*dx-sn*dy,cy+sn*dx+cs*dy))miss++}
+     if(miss>3)continue;
+     let ncy=cy,fl='',fb=null;
+     let fw=Math.min(fs*1.6,T*.4,80);
+     for(let tries=0;tries<2&&fw>=15;tries++,fw*=.75){const fh=fw*2/3,gap=Math.max(2,fs*.1),sh=(gap+fh)/2,fy0=cy-sh+hy+gap,fcy=fy0+fh/2;
+      let m2=0;for(const [a,b] of [[0,0],[-.5,-.5],[.5,-.5],[-.5,.5],[.5,.5]])if(!land(cx+a*fw,fcy+b*fh))m2++;
+      if(m2>1||fcy+fh/2>H-4)continue;
+      const nb=[cx-hx,cy-sh-hy,cx+hx,cy-sh+hy],fbx=[cx-fw/2-1,fy0-1,cx+fw/2+1,fy0+fh+1];
+      if(hit(nb)||hit(fbx))continue;
+      ncy=cy-sh;fb=[nb,fbx];fl=`<rect x="${(cx-fw/2).toFixed(1)}" y="${fy0.toFixed(1)}" width="${fw.toFixed(1)}" height="${fh.toFixed(1)}" fill="#fff" stroke="rgba(0,0,0,.55)" stroke-width=".8"/><image href="flags/${c.a}.svg" x="${(cx-fw/2).toFixed(1)}" y="${fy0.toFixed(1)}" width="${fw.toFixed(1)}" height="${fh.toFixed(1)}" preserveAspectRatio="xMidYMid meet"/>`;break}
+     if(!fb){const nb=[cx-hx,cy-hy,cx+hx,cy+hy];if(hit(nb))continue;fb=[nb]}
+     fb.forEach(b=>boxes.push(b));
+     let tx=txt,st='';const extra=w-nw*fs;
+     if(extra>0){if(ar)tx=kash(txt,Math.round(extra/(tw*fs)));else st=` letter-spacing="${Math.min(extra/Math.max(1,txt.length),fs*.6).toFixed(2)}"`}
+     h+=`<g class="cl" data-n="${c.n}"><text transform="translate(${cx.toFixed(1)},${(ncy+fs*.32).toFixed(1)}) rotate(${deg.toFixed(1)} 0 ${(-fs*.32).toFixed(1)})" style="font-size:${fs.toFixed(1)}px"${st}>${tx}</text>${fl}</g>`;placed=true;break}}}
+   if(placed)continue;
+   /* small countries: readable name beside them with a leader dot */
+   if(z>=2.2&&Math.max(L,T)>=3&&q0[0]>20&&q0[0]<W-20&&q0[1]>12&&q0[1]<H-12){const fs=13,w2=nw*fs+6,r=Math.min(Math.max(L,T)/2,40)+5;let best=null;
+    for(const d of [[1,0],[-1,0],[0,-1],[0,1],[.75,-.75],[-.75,-.75],[.75,.75],[-.75,.75]]){const bx=q0[0]+d[0]*(r+(d[0]?w2/2:0)),by=q0[1]+d[1]*(r+9),b=[bx-w2/2,by-9,bx+w2/2,by+9];
+     if(b[0]<2||b[2]>W-2||b[1]<2||b[3]>H-2||hit(b))continue;let sc=0;for(const a of [.2,.5,.8])for(const e of [.3,.7])if(land(b[0]+a*w2,b[1]+e*18))sc++;
+     if(!best||sc<best.sc)best={sc,b,bx,by}}
+    if(best&&best.sc<=3){boxes.push(best.b);h+=`<g class="cl" data-n="${c.n}"><line x1="${q0[0].toFixed(1)}" y1="${q0[1].toFixed(1)}" x2="${best.bx.toFixed(1)}" y2="${best.by.toFixed(1)}" class="ld"/><circle cx="${q0[0].toFixed(1)}" cy="${q0[1].toFixed(1)}" r="2.2" class="ld"/><text transform="translate(${best.bx.toFixed(1)},${(best.by+3.8).toFixed(1)})" style="font-size:13px">${txt}</text></g>`}}}
+  return h}
  function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];ready=true;const z=kz();dAll={};
   el.style.setProperty('--bw',bwOf(z).toFixed(2)+'px');el.style.setProperty('--cw',cwOf(z).toFixed(2)+'px');
   gz.select('.sphere').attr('d',mode==='globe'?g({type:'Sphere'}):null);
@@ -214,15 +266,9 @@ function mkMap(host,o){recolor();
   drawFr(p);
   /* country names + flags (explorer button): biggest first, never overlapping, appear gradually while zooming in */
   /* labels: re-projected on every frame (also while a globe spins) so they stay glued to the map */
-  if(full||mode==='globe'){const fast=lite===true;
-   if(nlv>=1){const M=buildMask(p,fast);gz.select('.sn').html(seaHtml(p,W,H,z,ctr,M,fast,mode==='globe'?gR*gv.k:0))}else gz.select('.sn').html('');
-   let h='';if(nlv>=2&&o.names){const boxes=[],px=mode==='globe'?gR*gv.k:p.scale();
-   DS.forEach(c=>{if(!c.f||h.length>2e5)return;const q=p(c.ct);if(!q||q[0]<24||q[0]>W-24||q[1]<14||q[1]>H-14)return;if(ctr&&d3.geoDistance(ctr,c.ct)>1.2)return;
-    if(mode==='globe'&&Math.hypot(q[0]-W/2,q[1]-H/2)>px*.93)return;
-    const w=lbW(c),sz=2*Math.max(c.rr,.15)*rad*px;if(sz<w*.3)return;const bx=[q[0]-w/2-2,q[1]-14,q[0]+w/2+2,q[1]+14];
-    if(boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1]))return;boxes.push(bx);
-    h+=`<g class="cl" data-n="${c.n}" transform="translate(${q[0].toFixed(1)},${q[1].toFixed(1)})"><rect x="${-w/2}" y="-12" width="${w}" height="24" rx="7"/><rect x="${-w/2+4}" y="-9" width="27" height="18" fill="#fff" stroke="none"/><image href="flags/${c.a}.svg" x="${-w/2+4}" y="-9" width="27" height="18" preserveAspectRatio="xMidYMid meet"/><text x="${-w/2+36}" y="5">${nm(c)}</text></g>`})}
-   gz.select('.cn').html(h)}}
+  if(full||mode==='globe'){const fast=lite===true;let M=null;
+   if(nlv>=1){M=buildMask(p,fast);gz.select('.sn').html(seaHtml(p,W,H,z,ctr,M,fast,mode==='globe'?gR*gv.k:0))}else gz.select('.sn').html('');
+   gz.select('.cn').html(nlv>=2&&o.names&&M?ctryHtml(p,ctr,M,mode==='globe'?gR*gv.k:0,z):'')}}
  /* ---- flat / context maps: d3 zoom with exact re-render on gesture end ---- */
  const cl2=(lo,hi,v)=>lo>hi?(lo+hi)/2:Math.max(lo,Math.min(hi,v));
  const zoom=d3.zoom().scaleExtent([1,5000]).translateExtent([[-W,-H],[2*W,2*H]]).filter(ev=>(!ev.ctrlKey||ev.type==='wheel')&&!ev.button&&(!o.touch2||!ev.touches||ev.touches.length>=2)).constrain((t,ext,te)=>{

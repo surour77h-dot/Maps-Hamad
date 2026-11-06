@@ -250,3 +250,12 @@ svg{overflow:hidden}
 @media(max-width:600px){.ct th:nth-child(3){background:var(--ink)}}
 img[src$="/np.svg"]{background:#fff}
 .tinfo.cc{margin:2px 4px 8px;font-weight:700;color:var(--ink2)}
+/* v14: atlas-style names printed on the map */
+.map .cl{pointer-events:none}
+.map .cl text{fill:#000;font-family:AtlasLa,Georgia,serif;font-weight:700;font-style:normal;text-anchor:middle;direction:ltr;unicode-bidi:plaintext;paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:2px;stroke-linejoin:round;pointer-events:none}
+[lang=ar] .map .cl text{font-family:AtlasAr,"Geeza Pro",serif}
+.map .cl image{filter:none}
+.map .cl line.ld{stroke:#16100a;stroke-width:.9px;vector-effect:non-scaling-stroke}
+.map .cl circle.ld{fill:#16100a}
+.map text.sn{fill:#0a2646;fill-opacity:1;stroke-opacity:.35}
+[lang=ar] .map text.sn,.map text.sn1,.map text.sn2{font-weight:700}
