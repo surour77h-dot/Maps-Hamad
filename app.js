@@ -1,5 +1,6 @@
+const CAPLL={AFG:[69.2,34.5],AGO:[13.2,-8.8],ALB:[19.8,41.3],AND:[1.5,42.5],ARE:[54.4,24.5],ARG:[-58.4,-34.6],ARM:[44.5,40.2],ATG:[-61.8,17.1],AUS:[149.1,-35.3],AUT:[16.4,48.2],AZE:[49.9,40.4],BDI:[29.9,-3.4],BEL:[4.35,50.85],BEN:[2.6,6.5],BFA:[-1.5,12.4],BGD:[90.4,23.8],BGR:[23.3,42.7],BHR:[50.6,26.2],BHS:[-77.35,25.05],BIH:[18.4,43.85],BLR:[27.6,53.9],BLZ:[-88.8,17.25],BOL:[-65.26,-19.04],BRA:[-47.9,-15.8],BRB:[-59.6,13.1],BRN:[114.9,4.9],BTN:[89.6,27.5],BWA:[25.9,-24.65],CAF:[18.6,4.4],CAN:[-75.7,45.4],CHE:[7.45,46.95],CHL:[-70.65,-33.45],CHN:[116.4,39.9],CIV:[-5.3,6.8],CMR:[11.5,3.85],COD:[15.3,-4.3],COG:[15.3,-4.25],COL:[-74.1,4.7],COM:[43.25,-11.7],CPV:[-23.5,14.9],CRI:[-84.1,9.9],CUB:[-82.4,23.1],CYP:[33.4,35.2],CZE:[14.4,50.1],DEU:[13.4,52.5],DJI:[43.15,11.6],DMA:[-61.4,15.3],DNK:[12.6,55.7],DOM:[-69.9,18.5],DZA:[3.05,36.75],ECU:[-78.5,-0.2],EGY:[31.2,30.05],ERI:[38.9,15.3],ESP:[-3.7,40.4],EST:[24.75,59.4],ETH:[38.75,9.0],FIN:[24.9,60.2],FJI:[178.4,-18.1],FRA:[2.35,48.85],FSM:[158.15,6.9],GAB:[9.45,0.4],GBR:[-0.1,51.5],GEO:[44.8,41.7],GHA:[-0.2,5.6],GIN:[-13.7,9.5],GMB:[-16.6,13.45],GNB:[-15.6,11.85],GNQ:[8.8,3.75],GRC:[23.7,38.0],GRD:[-61.75,12.05],GTM:[-90.5,14.6],GUY:[-58.15,6.8],HND:[-87.2,14.1],HRV:[16.0,45.8],HTI:[-72.3,18.55],HUN:[19.05,47.5],IDN:[106.8,-6.2],IND:[77.2,28.6],IRL:[-6.25,53.35],IRN:[51.4,35.7],IRQ:[44.4,33.3],ISL:[-21.9,64.15],ISR:[35.2,31.8],ITA:[12.5,41.9],JAM:[-76.8,18.0],JOR:[35.9,31.95],JPN:[139.7,35.7],KAZ:[71.4,51.15],KEN:[36.8,-1.3],KGZ:[74.6,42.9],KHM:[104.9,11.55],KIR:[173.0,1.35],KNA:[-62.7,17.3],KOR:[127.0,37.55],KWT:[47.98,29.37],LAO:[102.6,17.95],LBN:[35.5,33.9],LBR:[-10.8,6.3],LBY:[13.2,32.9],LCA:[-61.0,14.0],LIE:[9.5,47.15],LKA:[79.9,6.9],LSO:[27.5,-29.3],LTU:[25.3,54.7],LUX:[6.13,49.6],LVA:[24.1,56.95],MAR:[-6.85,34.0],MCO:[7.4,43.73],MDA:[28.85,47.0],MDG:[47.5,-18.9],MDV:[73.5,4.2],MEX:[-99.1,19.45],MHL:[171.4,7.1],MKD:[21.45,42.0],MLI:[-8.0,12.65],MLT:[14.5,35.9],MMR:[96.1,19.75],MNE:[19.25,42.45],MNG:[106.9,47.9],MOZ:[32.6,-25.95],MRT:[-15.95,18.1],MUS:[57.5,-20.15],MWI:[33.8,-13.95],MYS:[101.7,3.15],NAM:[17.1,-22.55],NER:[2.1,13.5],NGA:[7.5,9.05],NIC:[-86.25,12.15],NLD:[4.9,52.4],NOR:[10.75,59.9],NPL:[85.3,27.7],NRU:[166.9,-0.55],NZL:[174.8,-41.3],OMN:[58.4,23.6],PAK:[73.05,33.7],PAN:[-79.5,9.0],PER:[-77.05,-12.05],PHL:[121.0,14.6],PLW:[134.6,7.5],PNG:[147.2,-9.45],POL:[21.0,52.25],PRK:[125.75,39.0],PRT:[-9.15,38.7],PRY:[-57.6,-25.3],PSE:[35.2,31.9],QAT:[51.5,25.3],ROU:[26.1,44.4],RUS:[37.6,55.75],RWA:[30.05,-1.95],SAU:[46.7,24.65],SDN:[32.55,15.6],SEN:[-17.45,14.7],SGP:[103.85,1.3],SLB:[159.95,-9.4],SLE:[-13.25,8.5],SLV:[-89.2,13.7],SMR:[12.45,43.93],SOM:[45.35,2.05],SRB:[20.45,44.8],SSD:[31.6,4.85],STP:[6.7,0.3],SUR:[-55.2,5.85],SVK:[17.1,48.15],SVN:[14.5,46.05],SWE:[18.05,59.3],SWZ:[31.2,-26.4],SYC:[55.45,-4.6],SYR:[36.3,33.5],TCD:[15.05,12.1],TGO:[1.2,6.15],THA:[100.5,13.75],TJK:[68.8,38.55],TKM:[58.4,37.95],TLS:[125.6,-8.55],TON:[-175.2,-21.15],TTO:[-61.5,10.65],TUN:[10.2,36.8],TUR:[32.85,39.9],TUV:[179.2,-8.5],TZA:[35.75,-6.15],UGA:[32.6,0.3],UKR:[30.5,50.45],URY:[-56.2,-34.9],USA:[-77.0,38.9],UZB:[69.25,41.3],VAT:[12.45,41.9],VCT:[-61.2,13.15],VEN:[-66.9,10.5],VNM:[105.85,21.0],VUT:[168.3,-17.75],WSM:[-171.75,-13.85],YEM:[44.2,15.35],ZAF:[28.2,-25.75],ZMB:[28.3,-15.4],ZWE:[31.05,-17.8]};
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v15';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v16';
 /* ---------- language (whole app) ---------- */
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
@@ -55,7 +56,7 @@ function sMeasure(txt,bold,ar){const k=(ar?'a':'l')+bold+txt;if(SMW[k]!=null)ret
 /* water names: atlas style. Each name gets ONE fixed place on the map (geographic anchor + tilt + size proportional to the map),
    computed once at a reference scale against the land; afterwards it is only re-projected, so it never jumps, resizes or vanishes while panning/zooming */
 let SBX=[];
-const S1=141.3,AN_ALL=[0,-12,12,-24,24,-36,36,-48,48],DIRS8=[[1,0],[-1,0],[0,1],[0,-1],[.7,.7],[-.7,.7],[.7,-.7],[-.7,-.7]];
+const FSN={1:17,2:13,3:11.5,4:10.5},S1=141.3,AN_ALL=[0,-12,12,-24,24,-36,36,-48,48],DIRS8=[[1,0],[-1,0],[0,1],[0,-1],[.7,.7],[-.7,.7],[.7,-.7],[-.7,-.7]];
 function seaPlace(s,ar){const key=ar?'a':'e';s.pl=s.pl||{};if(s.pl[key]!==undefined)return s.pl[key];s.pl[key]=null;
  const lvl=s[4],lo=SLV[lvl][0],zr=Math.max(lo,1),Sr=S1*zr,Wm=900,Hm=560,sc=.5,mw=Math.round(Wm*sc),mh=Math.round(Hm*sc);
  const pr=d3.geoMercator().rotate([-s[3],0]).center([0,s[2]]).scale(Sr).translate([Wm/2,Hm/2]).clipExtent([[-20,-20],[Wm+20,Hm+20]]);
@@ -82,15 +83,15 @@ function seaHtml(p,W,H,z,ctr,R){const boxes=[],out=[],ar=AR(),U=p.scale()/z;
   const pl=seaPlace(s,ar);if(!pl)continue;
   const c1=p(pl.c),c2=p(pl.a2);if(!c1||!c2)continue;
   const dx=c2[0]-c1[0],dy=c2[1]-c1[1],ratio=Math.hypot(dx,dy)/12*S1/U,ze=ratio*pl.zr;
-  if(ze<Math.max(lo,.6)||ze>hi)continue;
-  const fs=pl.fs*ratio;if(fs<7||fs>170)continue;
+  const fs=FSN[lvl],ls=ar?0:(lvl<=2?fs*.18:fs*.08),wtx=sMeasure(pl.txt,lvl<=2,ar)*fs*1.1+ls*pl.txt.length,lo2=Math.max(lo,.6);
+  const vis=Math.min(1,(ze-lo2)/(lo2*.3+.15),(hi-ze)/(hi*.15));if(vis<=.02)continue;
   if(R&&Math.hypot(c1[0]-W/2,c1[1]-H/2)>R*.93)continue;
   let a=Math.atan2(dy,dx)/rad;if(a>90)a-=180;if(a<-90)a+=180;
-  const ca=Math.cos(a*rad),sa=Math.sin(a*rad),hw=pl.wr*ratio/2,hh=pl.hr*ratio/2,ex=Math.abs(hw*ca)+Math.abs(hh*sa),ey=Math.abs(hw*sa)+Math.abs(hh*ca),
+  const ca=Math.cos(a*rad),sa=Math.sin(a*rad),hw=wtx/2,hh=fs*.65,ex=Math.abs(hw*ca)+Math.abs(hh*sa),ey=Math.abs(hw*sa)+Math.abs(hh*ca),
    bx=[c1[0]-ex,c1[1]-ey,c1[0]+ex,c1[1]+ey];
   if(boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1]))continue;boxes.push(bx);
   if(bx[2]<0||bx[0]>W||bx[3]<0||bx[1]>H)continue;
-  out.push(`<text class="sn sn${lvl}" style="font-size:${fs.toFixed(1)}px" dominant-baseline="central" x="${c1[0].toFixed(1)}" y="${c1[1].toFixed(1)}" transform="rotate(${a.toFixed(2)} ${c1[0].toFixed(1)} ${c1[1].toFixed(1)})">${pl.txt}</text>`)}
+  out.push(`<text class="sn sn${lvl}" style="font-size:${fs}px;opacity:${vis.toFixed(2)}${ls?`;letter-spacing:${ls.toFixed(1)}px`:''}" dominant-baseline="central" x="${c1[0].toFixed(1)}" y="${c1[1].toFixed(1)}" transform="rotate(${a.toFixed(2)} ${c1[0].toFixed(1)} ${c1[1].toFixed(1)})">${pl.txt}</text>`)}
  SBX=boxes;return out.join('')}
 /* ---------- extra accepted spellings / names (by ISO3) ---------- */
 const XA={AFG:'افغانستان',ARE:'الامارات,اتحاد الامارات,الإمارات العربية المتحدة',ARM:'ارمينيا',AUT:'اوستريا,النمسا',AZE:'اذربيجان',BIH:'البوسنه,بوسنيا,البوسنة والهرسك',BLR:'روسيا البيضاء,بيلاروس,بيلاروسيا,Belorussia',BRN:'بروناي,بروناي دار السلام',CAF:'افريقيا الوسطى,جمهورية افريقيا الوسطى,Central African Rep',CIV:'ساحل العاج,كوت ديفوار,Cote dIvoire,Ivory Coast',COD:'الكونغو الديمقراطية,الكونغو كينشاسا,زائير,DR Congo,Congo Kinshasa,Democratic Republic of Congo',COG:'الكونغو,الكونغو برازافيل,Congo Brazzaville,Republic of the Congo',CZE:'التشيك,تشيكيا,جمهورية التشيك,Czechia,Czech Republic',DEU:'المانيا,Deutschland',DNK:'الدانمارك,الدنمارك',DOM:'الدومينيكان,جمهورية الدومينيكان,Dominican Rep',ESP:'اسبانيا,Espana',EST:'استونيا',SWZ:'سوازيلاند,اسواتيني,إسواتيني,Eswatini,Swaziland',GBR:'بريطانيا,المملكة المتحدة,UK,Britain,Great Britain,United Kingdom',GEO:'جيورجيا,جورجيا',GNB:'غينيا بيساو,غينيا-بيساو,Guinea Bissau',GNQ:'غينيا الاستوائية,Equatorial Guinea',GUY:'غيانا',IRN:'ايران',KAZ:'قازاخستان,قازاقستان,كازاقستان,كازاخستان,Kazakstan',KGZ:'قرغيزستان,كيرغيزستان,قيرقيزستان,قرقيزستان,كرغيزستان,قرقستان,قيرقستان,Kirgizstan,Kirghizia,Kyrgyz Republic',KNA:'سانت كيتس,سانت كيتس ونيفيس,St Kitts,Saint Kitts and Nevis',LIE:'ليشتنشتاين,ليختنشتاين',LKA:'سريلانكا,سيرلانكا',LUX:'لوكسمبرغ,لوكسمبورغ',MKD:'مقدونيا الشمالية,مقدونيا,North Macedonia,Macedonia',MMR:'بورما,ميانمار,Burma,Myanmar',MNE:'مونتينيغرو,مونتنيغرو,مونتينجرو,مونتنجرو,Montenegro,Crna Gora',NLD:'هولندا,Holland,The Netherlands',OMN:'سلطنة عمان,عمان,Oman',PNG:'بابوا,بابوا غينيا الجديدة,Papua New Guinea',PRK:'كوريا الشمالية,North Korea',KOR:'كوريا الجنوبية,South Korea,Korea',PSE:'فلسطين,Palestine,State of Palestine',PRY:'باراجواي,باراغواي',RUS:'الاتحاد الروسي,Russian Federation',SAU:'المملكة العربية السعودية,السعودية',STP:'ساو تومي,ساو تومي وبرينسيبي,Sao Tome',SSD:'جنوب السودان,South Sudan',SVK:'سلوفاكيا,Slovak Republic',TLS:'تيمور الشرقية,تيمور ليشتي,East Timor,Timor Leste',TTO:'ترينيداد وتوباغو,ترينيداد وتوباجو,Trinidad',TUR:'تركيا,Turkiye,Türkiye',URY:'اوروجواي,اوروغواي',USA:'امريكا,الولايات المتحدة الامريكية,United States of America,America,USA,US',VAT:'الفاتيكان,Vatican City,Holy See',VCT:'سانت فنسنت,سانت فنسنت والغرينادين,St Vincent',LCA:'سانت لوسيا,St Lucia',ATG:'انتيغوا وبربودا,أنتيغوا وباربودا,Antigua',BHS:'جزر البهاما,الباهاما,Bahamas',CPV:'الرأس الاخضر,كابو فيردي,Cape Verde,Cabo Verde',COM:'جزر القمر,القمر',MDV:'المالديف,جزر المالديف,جزر مالديف',MHL:'جزر مارشال',SLB:'جزر سليمان',SYC:'سيشل,سيشيل',TJK:'طاجيكستان,طاجكستان',TKM:'تركمانستان',UZB:'اوزبكستان,أوزبكستان',VNM:'فيتنام,فيتنام',YEM:'اليمن',ZAF:'جنوب افريقيا,South Africa',ZWE:'زيمبابوي,زمبابوي',MRT:'موريتانيا',BFA:'بوركينا فاسو,بوركينافاسو',NER:'النيجر',NGA:'نيجيريا',CHE:'سويسرا,Switzerland',SWE:'السويد',NOR:'النرويج',IRL:'ايرلندا,أيرلندا,ايرلندا',ISL:'ايسلندا,آيسلندا,أيسلندا',PHL:'الفلبين,الفيليبين',IDN:'اندونيسيا,إندونيسيا',MYS:'ماليزيا',MNG:'منغوليا,منغوليا',KHM:'كمبوديا,Cambodia',LAO:'لاوس,Laos',BGD:'بنغلاديش,بنجلاديش',NPL:'نيبال',BTN:'بوتان',IND:'الهند',PAK:'باكستان',TWN:'تايوان',UKR:'اوكرانيا,أوكرانيا',MDA:'مولدوفا',ROU:'رومانيا',BGR:'بلغاريا',SRB:'صربيا',HRV:'كرواتيا',SVN:'سلوفينيا',LVA:'لاتفيا',LTU:'ليتوانيا',MLT:'مالطا',CYP:'قبرص',ETH:'اثيوبيا,إثيوبيا',ERI:'اريتريا,إريتريا',DJI:'جيبوتي',SOM:'الصومال',UGA:'اوغندا,أوغندا',TZA:'تنزانيا',MOZ:'موزمبيق',MDG:'مدغشقر',MWI:'ملاوي',ZMB:'زامبيا',BWA:'بوتسوانا',NAM:'ناميبيا',AGO:'انغولا,أنغولا,أنجولا',GAB:'الغابون,غابون',CMR:'الكاميرون',TCD:'تشاد',GHA:'غانا',TGO:'توغو,توجو',BEN:'بنين',SLE:'سيراليون',LBR:'ليبيريا',GIN:'غينيا',GMB:'غامبيا',SEN:'السنغال',MLI:'مالي',DZA:'الجزائر',TUN:'تونس',LBY:'ليبيا',EGY:'مصر',SDN:'السودان',MAR:'المغرب',HTI:'هايتي',CUB:'كوبا',JAM:'جامايكا',BRB:'بربادوس',GRD:'غرينادا',DMA:'دومينيكا',NIC:'نيكاراغوا,نيكاراجوا',HND:'هندوراس',SLV:'السلفادور',GTM:'غواتيمالا,جواتيمالا',CRI:'كوستاريكا',PAN:'بنما',COL:'كولومبيا',VEN:'فنزويلا',ECU:'الاكوادور,الإكوادور',PER:'بيرو',BOL:'بوليفيا',CHL:'تشيلي,شيلي',ARG:'الارجنتين,الأرجنتين',BRA:'البرازيل',SUR:'سورينام,سورينام',NZL:'نيوزيلندا,نيوزيلاند',FJI:'فيجي,فيجي',WSM:'ساموا',TON:'تونغا,تونجا',VUT:'فانواتو',KIR:'كيريباتي,كريباتي',FSM:'ميكرونيزيا',PLW:'بالاو,بلاو',NRU:'ناورو',TUV:'توفالو'};
@@ -237,36 +238,24 @@ function mkMap(host,o){recolor();
    if(miss<=4){lb.f[key]=f;break}}
   if(!lb.f[key]&&Math.min(lb.L,lb.T*1.6)/4.37>=14)lb.f[key]=.3;
   return lb.f[key]}
- function ctryHtml(p,ctr,px,z){const boxes=SBX.slice(),ar=AR(),globe=px>0,rd=Math.PI/180,tw=sMeasure('ـ',true,true),key=ar?'a':'e';let h='';
-  const hit=b=>boxes.some(o=>b[0]<o[2]+2&&b[2]>o[0]-2&&b[1]<o[3]+2&&b[3]>o[1]-2);
-  for(const c of DS){if(!c.f||h.length>3e5)continue;const lb=ctLayout(c);if(!lb)continue;
-   if(globe&&d3.geoDistance(ctr,lb.C)>1.3)continue;
-   const q0=p(lb.C),P1=p(lb.A1),P2=p(lb.A2);if(!q0||!P1||!P2)continue;
-   if(globe&&Math.hypot(q0[0]-W/2,q0[1]-H/2)>px*.9)continue;
-   if(q0[0]<-W||q0[0]>2*W||q0[1]<-H||q0[1]>2*H)continue;
-   const L=Math.hypot(P2[0]-P1[0],P2[1]-P1[1]);if(L<2)continue;const T=L*lb.T/lb.L;
-   let deg=Math.atan2(P2[1]-P1[1],P2[0]-P1[0])/rd;if(deg>90)deg-=180;if(deg<-90)deg+=180;
-   const cs=Math.cos(deg*rd),sn=Math.sin(deg*rd),ac=Math.abs(cs),as=Math.abs(sn),cx=q0[0],cy=q0[1],txt=nm(c),nw=sMeasure(txt,true,ar),f=lbFac(lb,nw,key);
-   let placed=false;
-   if(f>0){const fs0=Math.min(.84*L/nw,T*.55,220)*f,wt0=Math.min(.84*L,nw*fs0*3/f)*f;
-    for(const g of [1,.85,.7,.55]){const fs=fs0*g,w=wt0*g;if(fs<9)break;
-     const hx=(w/2+2)*ac+fs*.6*as,hy=(w/2+2)*as+fs*.45*ac;
-     let fl='',ncy=cy,fb=null,fw=Math.min(fs*1.6,T*.4,220);
-     if(fw>=15&&Math.abs(deg)<=30){const fh=fw*2/3,gap=Math.max(2,fs*.1),sh=(gap+fh)/2,fy0=cy-sh+hy+gap,Vh=T*ac+L*as;
-      if(2*hy+gap+fh<=Vh*.95){const nb=[cx-hx,cy-sh-hy,cx+hx,cy-sh+hy],fbx=[cx-fw/2-1,fy0-1,cx+fw/2+1,fy0+fh+1];
-       if(!hit(nb)&&!hit(fbx)){ncy=cy-sh;fb=[nb,fbx];fl=`<rect x="${(cx-fw/2).toFixed(1)}" y="${fy0.toFixed(1)}" width="${fw.toFixed(1)}" height="${fh.toFixed(1)}" fill="#fff" stroke="rgba(0,0,0,.55)" stroke-width=".8"/><image href="flags/${c.a}.svg" x="${(cx-fw/2).toFixed(1)}" y="${fy0.toFixed(1)}" width="${fw.toFixed(1)}" height="${fh.toFixed(1)}" preserveAspectRatio="xMidYMid meet"/>`}}}
-     if(!fb){const nb=[cx-hx,cy-hy,cx+hx,cy+hy];if(hit(nb))continue;fb=[nb]}
-     fb.forEach(b=>boxes.push(b));
-     let tx=txt,st='';const extra=w-nw*fs;
-     if(extra>0){if(ar)tx=kash(txt,Math.round(extra/(tw*fs)));else st=` letter-spacing="${Math.min(extra/Math.max(1,txt.length),fs*.6).toFixed(2)}"`}
-     if(cx>-W&&cx<2*W)h+=`<g class="cl" data-n="${c.n}"><text transform="translate(${cx.toFixed(1)},${(ncy+fs*.32).toFixed(1)}) rotate(${deg.toFixed(1)} 0 ${(-fs*.32).toFixed(1)})" style="font-size:${fs.toFixed(1)}px"${st}>${tx}</text>${fl}</g>`;
-     placed=true;break}}
-   if(placed)continue;
-   /* small countries: readable name beside them with a leader dot (side chosen once) */
-   if(z>=2.2&&Math.max(L,T)>=3&&q0[0]>20&&q0[0]<W-20&&q0[1]>12&&q0[1]<H-12){const fs=13,w2=nw*fs+6,r=Math.min(Math.max(L,T)/2,40)+5,d=lb.od,
-     bx=q0[0]+d[0]*(r+(d[0]?w2/2:0)),by=q0[1]+d[1]*(r+9),b=[bx-w2/2,by-9,bx+w2/2,by+9];
-    if(b[0]>=2&&b[2]<=W-2&&b[1]>=2&&b[3]<=H-2&&!hit(b)){boxes.push(b);h+=`<g class="cl" data-n="${c.n}"><line x1="${q0[0].toFixed(1)}" y1="${q0[1].toFixed(1)}" x2="${bx.toFixed(1)}" y2="${by.toFixed(1)}" class="ld"/><circle cx="${q0[0].toFixed(1)}" cy="${q0[1].toFixed(1)}" r="2.2" class="ld"/><text transform="translate(${bx.toFixed(1)},${(by+3.8).toFixed(1)})" style="font-size:13px">${txt}</text></g>`}}}
-  return h}
+ function ctryHtml(p,ctr,px,z){const boxes=SBX.slice(),ar=AR(),globe=px>0;let h='',ch='';const pend=[];
+  const hit=b=>boxes.some(o=>b[0]<o[2]+2&&b[2]>o[0]-2&&b[1]<o[3]+2&&b[3]>o[1]-2),clamp=v=>Math.max(0,Math.min(1,v));
+  DS.forEach((c,rank)=>{if(!c.f)return;const lb=ctLayout(c);if(!lb)return;
+   if(globe&&d3.geoDistance(ctr,lb.C)>1.3)return;
+   const q0=p(lb.C),P1=p(lb.A1),P2=p(lb.A2);if(!q0||!P1||!P2)return;
+   if(globe&&Math.hypot(q0[0]-W/2,q0[1]-H/2)>px*.92)return;
+   const L=Math.hypot(P2[0]-P1[0],P2[1]-P1[1]),Lm=Math.max(L,L*lb.T/lb.L),fs=rank<20?16:rank<60?14:12.5,txt=nm(c),w=sMeasure(txt,true,ar)*fs*1.08+4,r=Lm/w,vis=clamp((r-.55)/.4);
+   if(vis<=.02||q0[0]<-w||q0[0]>W+w||q0[1]<-20||q0[1]>H+20)return;
+   const b=[q0[0]-w/2,q0[1]-fs*.7,q0[0]+w/2,q0[1]+fs*.7];if(hit(b))return;boxes.push(b);
+   h+=`<text class="cnm" data-n="${c.n}" style="font-size:${fs}px;opacity:${vis.toFixed(2)}" x="${q0[0].toFixed(1)}" y="${q0[1].toFixed(1)}">${txt}</text>`;
+   if(r>1.5&&CAPLL[c.id])pend.push([c,clamp((r-1.5)/.8)])});
+  /* capitals: small dot + small name, only when the country is large enough on screen */
+  for(const [c,vis] of pend){const q=p(CAPLL[c.id]);if(!q||(globe&&(d3.geoDistance(ctr,CAPLL[c.id])>1.3||Math.hypot(q[0]-W/2,q[1]-H/2)>px*.92)))continue;
+   if(q[0]<8||q[0]>W-8||q[1]<8||q[1]>H-8)continue;const tx=ar?c.capAr:c.cap;if(!tx)continue;const fs=11.5,w=sMeasure(tx,false,ar)*fs*1.08+4;
+   let put=null;for(const [dx,anc] of [[6,'start'],[-6,'end']]){const bx=anc==='start'?[q[0]+dx-1,q[1]-fs*.65,q[0]+dx+w,q[1]+fs*.65]:[q[0]+dx-w,q[1]-fs*.65,q[0]+dx+1,q[1]+fs*.65];if(!hit(bx)){put=[dx,anc,bx];break}}
+   if(!put)continue;boxes.push(put[2]);
+   ch+=`<g style="opacity:${vis.toFixed(2)}"><circle class="cpd" cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="2.6"/><text class="cpt" x="${(q[0]+put[0]).toFixed(1)}" y="${q[1].toFixed(1)}" text-anchor="${put[1]}">${tx}</text></g>`}
+  return h+ch}
  function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];ready=true;const z=kz();dAll={};
   el.style.setProperty('--bw',bwOf(z).toFixed(2)+'px');el.style.setProperty('--cw',cwOf(z).toFixed(2)+'px');
   gz.select('.sphere').attr('d',mode==='globe'?g({type:'Sphere'}):null);

@@ -1,5 +1,5 @@
 /* ============ لعبة خرائط العالم — هوية «حبر وورق» ============ */
-:root{--paper:#f3ead3;--paper2:#fbf5e4;--paper3:#ebdfc0;--ink:#2b2619;--ink2:#5a513c;--mut:#8a7f66;--red:#c8402a;--blue:#1f6fb2;--teal:#2d6a73;--gold:#b9893a;--ok:#3f8f55;--bad:#b3261e;--sea1:#eef6f4;--sea2:#cfe3e2;--sea3:#abc8cb;--sh:3px 3px 0 var(--ink)}
+:root{--paper:#f3ead3;--paper2:#fbf5e4;--paper3:#ebdfc0;--ink:#2b2619;--ink2:#5a513c;--mut:#8a7f66;--red:#c8402a;--blue:#1f6fb2;--teal:#2d6a73;--gold:#b9893a;--ok:#3f8f55;--bad:#b3261e;--sea1:#1f5a96;--sea2:#14407a;--sea3:#0c2c5a;--sh:3px 3px 0 var(--ink)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%;color:var(--ink);font-family:-apple-system,"Geeza Pro","Segoe UI",sans-serif;touch-action:manipulation;-webkit-user-select:none;user-select:none;
  background:var(--paper) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .13 0 0 0 .1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
@@ -107,7 +107,7 @@ img[src^="flags/"]{border:1.5px solid rgba(0,0,0,.4);box-sizing:border-box}
 .svgw{width:100%;height:100%;display:flex;min-height:0}
 .map{width:100%;height:100%;flex:1;touch-action:none;border:2px solid var(--ink);border-radius:18px;background:linear-gradient(var(--sea1),var(--sea2) 60%,var(--sea3))}
 .map.shp{background:var(--paper2)}
-.c0{fill:#f8e6c6}.c1{fill:#efe4b4}.c2{fill:#d9e7c6}.c3{fill:#f4d9b9}.c4{fill:#f1d6cc}.c5{fill:#e7ddc7}.c6{fill:#e3d9ea}
+.c0{fill:#6f9a5b}.c1{fill:#86a35f}.c2{fill:#5a8f6b}.c3{fill:#a0a468}.c4{fill:#b3a272}.c5{fill:#75967a}.c6{fill:#8aa56d}
 .map .l{stroke:#4a4636;stroke-opacity:.62;stroke-width:var(--bw,.6px);stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .map .l.t,.map .l.sel,.map .l.good,.map .l.bad{stroke:#fff;stroke-opacity:1;stroke-width:1px;paint-order:stroke;stroke-linejoin:round}
 .map .l.t{fill:var(--red)}.map .l.sel{fill:var(--blue)}.map .l.good{fill:var(--ok)}.map .l.bad{fill:var(--bad)}
@@ -259,3 +259,16 @@ img[src$="/np.svg"]{background:#fff}
 .map .cl circle.ld{fill:#16100a}
 .map text.sn{fill:#0a2646;fill-opacity:1;stroke-opacity:.35}
 [lang=ar] .map text.sn,.map text.sn1,.map text.sn2{font-weight:700}
+
+/* v16: Apple-maps style palette + fixed-size names */
+.map .l{stroke:#f3efd8;stroke-opacity:.42}
+.map .l.t,.map .l.sel,.map .l.good,.map .l.bad{stroke:#fff;stroke-opacity:1}
+.map .l.t{fill:#ff6a3d}.map .l.sel{fill:#3aa0ff}.map .l.good{fill:#3ddc84}.map .l.bad{fill:#ff4d4d}
+.map .coast{stroke:#9cc8ff;stroke-opacity:.35}
+.map.globe{background:radial-gradient(circle at 50% 45%,#0b1226,#03050c)}
+.map.globe .sphere{stroke:rgba(130,180,255,.55)}
+.map text.sn{fill:#8fc1ff;fill-opacity:1;stroke:rgba(4,16,44,.85);stroke-opacity:1;stroke-width:2.6px;font-weight:600;font-family:inherit}
+.map text.sn1,.map text.sn2{font-weight:700}
+.map .cnm{fill:#fff;stroke:rgba(0,0,0,.7);stroke-width:2.6px;paint-order:stroke;stroke-linejoin:round;font-weight:700;text-anchor:middle;dominant-baseline:central;direction:ltr;unicode-bidi:plaintext;font-family:inherit;pointer-events:none}
+.map .cpd{fill:#fff;stroke:rgba(0,0,0,.75);stroke-width:1.2px;pointer-events:none}
+.map .cpt{fill:#e6efff;stroke:rgba(0,0,0,.7);stroke-width:2.2px;paint-order:stroke;stroke-linejoin:round;font-size:11.5px;font-weight:600;dominant-baseline:central;direction:ltr;unicode-bidi:plaintext;font-family:inherit;pointer-events:none}
