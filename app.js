@@ -1,6 +1,6 @@
 const CAPLL={AFG:[69.2,34.5],AGO:[13.2,-8.8],ALB:[19.8,41.3],AND:[1.5,42.5],ARE:[54.4,24.5],ARG:[-58.4,-34.6],ARM:[44.5,40.2],ATG:[-61.8,17.1],AUS:[149.1,-35.3],AUT:[16.4,48.2],AZE:[49.9,40.4],BDI:[29.9,-3.4],BEL:[4.35,50.85],BEN:[2.6,6.5],BFA:[-1.5,12.4],BGD:[90.4,23.8],BGR:[23.3,42.7],BHR:[50.6,26.2],BHS:[-77.35,25.05],BIH:[18.4,43.85],BLR:[27.6,53.9],BLZ:[-88.8,17.25],BOL:[-65.26,-19.04],BRA:[-47.9,-15.8],BRB:[-59.6,13.1],BRN:[114.9,4.9],BTN:[89.6,27.5],BWA:[25.9,-24.65],CAF:[18.6,4.4],CAN:[-75.7,45.4],CHE:[7.45,46.95],CHL:[-70.65,-33.45],CHN:[116.4,39.9],CIV:[-5.3,6.8],CMR:[11.5,3.85],COD:[15.3,-4.3],COG:[15.3,-4.25],COL:[-74.1,4.7],COM:[43.25,-11.7],CPV:[-23.5,14.9],CRI:[-84.1,9.9],CUB:[-82.4,23.1],CYP:[33.4,35.2],CZE:[14.4,50.1],DEU:[13.4,52.5],DJI:[43.15,11.6],DMA:[-61.4,15.3],DNK:[12.6,55.7],DOM:[-69.9,18.5],DZA:[3.05,36.75],ECU:[-78.5,-0.2],EGY:[31.2,30.05],ERI:[38.9,15.3],ESP:[-3.7,40.4],EST:[24.75,59.4],ETH:[38.75,9.0],FIN:[24.9,60.2],FJI:[178.4,-18.1],FRA:[2.35,48.85],FSM:[158.15,6.9],GAB:[9.45,0.4],GBR:[-0.1,51.5],GEO:[44.8,41.7],GHA:[-0.2,5.6],GIN:[-13.7,9.5],GMB:[-16.6,13.45],GNB:[-15.6,11.85],GNQ:[8.8,3.75],GRC:[23.7,38.0],GRD:[-61.75,12.05],GTM:[-90.5,14.6],GUY:[-58.15,6.8],HND:[-87.2,14.1],HRV:[16.0,45.8],HTI:[-72.3,18.55],HUN:[19.05,47.5],IDN:[106.8,-6.2],IND:[77.2,28.6],IRL:[-6.25,53.35],IRN:[51.4,35.7],IRQ:[44.4,33.3],ISL:[-21.9,64.15],ISR:[35.2,31.8],ITA:[12.5,41.9],JAM:[-76.8,18.0],JOR:[35.9,31.95],JPN:[139.7,35.7],KAZ:[71.4,51.15],KEN:[36.8,-1.3],KGZ:[74.6,42.9],KHM:[104.9,11.55],KIR:[173.0,1.35],KNA:[-62.7,17.3],KOR:[127.0,37.55],KWT:[47.98,29.37],LAO:[102.6,17.95],LBN:[35.5,33.9],LBR:[-10.8,6.3],LBY:[13.2,32.9],LCA:[-61.0,14.0],LIE:[9.5,47.15],LKA:[79.9,6.9],LSO:[27.5,-29.3],LTU:[25.3,54.7],LUX:[6.13,49.6],LVA:[24.1,56.95],MAR:[-6.85,34.0],MCO:[7.4,43.73],MDA:[28.85,47.0],MDG:[47.5,-18.9],MDV:[73.5,4.2],MEX:[-99.1,19.45],MHL:[171.4,7.1],MKD:[21.45,42.0],MLI:[-8.0,12.65],MLT:[14.5,35.9],MMR:[96.1,19.75],MNE:[19.25,42.45],MNG:[106.9,47.9],MOZ:[32.6,-25.95],MRT:[-15.95,18.1],MUS:[57.5,-20.15],MWI:[33.8,-13.95],MYS:[101.7,3.15],NAM:[17.1,-22.55],NER:[2.1,13.5],NGA:[7.5,9.05],NIC:[-86.25,12.15],NLD:[4.9,52.4],NOR:[10.75,59.9],NPL:[85.3,27.7],NRU:[166.9,-0.55],NZL:[174.8,-41.3],OMN:[58.4,23.6],PAK:[73.05,33.7],PAN:[-79.5,9.0],PER:[-77.05,-12.05],PHL:[121.0,14.6],PLW:[134.6,7.5],PNG:[147.2,-9.45],POL:[21.0,52.25],PRK:[125.75,39.0],PRT:[-9.15,38.7],PRY:[-57.6,-25.3],PSE:[35.2,31.9],QAT:[51.5,25.3],ROU:[26.1,44.4],RUS:[37.6,55.75],RWA:[30.05,-1.95],SAU:[46.7,24.65],SDN:[32.55,15.6],SEN:[-17.45,14.7],SGP:[103.85,1.3],SLB:[159.95,-9.4],SLE:[-13.25,8.5],SLV:[-89.2,13.7],SMR:[12.45,43.93],SOM:[45.35,2.05],SRB:[20.45,44.8],SSD:[31.6,4.85],STP:[6.7,0.3],SUR:[-55.2,5.85],SVK:[17.1,48.15],SVN:[14.5,46.05],SWE:[18.05,59.3],SWZ:[31.2,-26.4],SYC:[55.45,-4.6],SYR:[36.3,33.5],TCD:[15.05,12.1],TGO:[1.2,6.15],THA:[100.5,13.75],TJK:[68.8,38.55],TKM:[58.4,37.95],TLS:[125.6,-8.55],TON:[-175.2,-21.15],TTO:[-61.5,10.65],TUN:[10.2,36.8],TUR:[32.85,39.9],TUV:[179.2,-8.5],TZA:[35.75,-6.15],UGA:[32.6,0.3],UKR:[30.5,50.45],URY:[-56.2,-34.9],USA:[-77.0,38.9],UZB:[69.25,41.3],VAT:[12.45,41.9],VCT:[-61.2,13.15],VEN:[-66.9,10.5],VNM:[105.85,21.0],VUT:[168.3,-17.75],WSM:[-171.75,-13.85],YEM:[44.2,15.35],ZAF:[28.2,-25.75],ZMB:[28.3,-15.4],ZWE:[31.05,-17.8]};
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v16';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v17';
 /* ---------- language (whole app) ---------- */
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
@@ -57,9 +57,9 @@ function sMeasure(txt,bold,ar){const k=(ar?'a':'l')+bold+txt;if(SMW[k]!=null)ret
    computed once at a reference scale against the land; afterwards it is only re-projected, so it never jumps, resizes or vanishes while panning/zooming */
 let SBX=[];
 const FSN={1:17,2:13,3:11.5,4:10.5},S1=141.3,AN_ALL=[0,-12,12,-24,24,-36,36,-48,48],DIRS8=[[1,0],[-1,0],[0,1],[0,-1],[.7,.7],[-.7,.7],[.7,-.7],[-.7,-.7]];
-function seaPlace(s,ar){const key=ar?'a':'e';s.pl=s.pl||{};if(s.pl[key]!==undefined)return s.pl[key];s.pl[key]=null;
- const lvl=s[4],lo=SLV[lvl][0],zr=Math.max(lo,1),Sr=S1*zr,Wm=900,Hm=560,sc=.5,mw=Math.round(Wm*sc),mh=Math.round(Hm*sc);
- const pr=d3.geoMercator().rotate([-s[3],0]).center([0,s[2]]).scale(Sr).translate([Wm/2,Hm/2]).clipExtent([[-20,-20],[Wm+20,Hm+20]]);
+function seaPlace(s,ar,U){const key=(ar?'a':'e')+Math.round(U/12);s.pl=s.pl||{};if(s.pl[key]!==undefined)return s.pl[key];s.pl[key]=null;
+ const lvl=s[4],lo=SLV[lvl][0],zr=Math.max(lo,1),Sr=U*zr,Wm=900,Hm=560,sc=.5,mw=Math.round(Wm*sc),mh=Math.round(Hm*sc);
+ const pr=d3.geoEqualEarth().rotate([-s[3],0]).center([0,s[2]]).scale(Sr).translate([Wm/2,Hm/2]).clipExtent([[-20,-20],[Wm+20,Hm+20]]);
  const cv=document.createElement('canvas');cv.width=mw;cv.height=mh;const cx2=cv.getContext('2d',{willReadFrequently:true});cx2.setTransform(sc,0,0,sc,0,0);
  const gp=d3.geoPath(pr,cx2);cx2.beginPath();F.forEach(f=>{const l=zr>=8?f:(zr>=4?(f.mid||f.lite):(f.lite||f.mid));if(l)gp(l)});cx2.fillStyle='#000';cx2.fill();
  const d=cx2.getImageData(0,0,mw,mh).data,land=(x,y)=>{const xi=Math.round(x*sc),yi=Math.round(y*sc);if(xi<0||yi<0||xi>=mw||yi>=mh)return true;return d[(yi*mw+xi)*4+3]>30};
@@ -74,15 +74,15 @@ function seaPlace(s,ar){const key=ar?'a':'e';s.pl=s.pl||{};if(s.pl[key]!==undefi
     for(let i=0;i<=n&&ok;i++){const u=(i/n*2-1)*hw;for(const v of [-hh,0,hh]){if(land(cx+u*ca-v*sa,cy+u*sa+v*ca)){ok=false;break}}}
     if(!ok)continue;
     const c=pr.invert([cx,cy]),a2=pr.invert([cx+12*ca,cy+12*sa]);if(!c||!a2)continue;
-    return s.pl[key]={c,a2,fs,wr:w,hr:h,zr,txt}}}}
+    return s.pl[key]={c,a2,fs,wr:w,hr:h,zr,txt,U}}}}
  return null}
 function seaHtml(p,W,H,z,ctr,R){const boxes=[],out=[],ar=AR(),U=p.scale()/z;
  for(const s of SEAS){const lvl=s[4],[lo,hi]=SLV[lvl];if(z<lo*.4||z>hi*2.5)continue;
   if(ctr&&d3.geoDistance(ctr,[s[3],s[2]])>1.25)continue;
   const q=p([s[3],s[2]]);if(!q||q[0]<-W*.6||q[0]>W*1.6||q[1]<-H*.6||q[1]>H*1.6)continue;
-  const pl=seaPlace(s,ar);if(!pl)continue;
+  const pl=seaPlace(s,ar,U);if(!pl)continue;
   const c1=p(pl.c),c2=p(pl.a2);if(!c1||!c2)continue;
-  const dx=c2[0]-c1[0],dy=c2[1]-c1[1],ratio=Math.hypot(dx,dy)/12*S1/U,ze=ratio*pl.zr;
+  const dx=c2[0]-c1[0],dy=c2[1]-c1[1],ratio=Math.hypot(dx,dy)/12*pl.U/U,ze=ratio*pl.zr;
   const fs=FSN[lvl],ls=ar?0:(lvl<=2?fs*.18:fs*.08),wtx=sMeasure(pl.txt,lvl<=2,ar)*fs*1.1+ls*pl.txt.length,lo2=Math.max(lo,.6);
   const vis=Math.min(1,(ze-lo2)/(lo2*.3+.15),(hi-ze)/(hi*.15));if(vis<=.02)continue;
   if(R&&Math.hypot(c1[0]-W/2,c1[1]-H/2)>R*.93)continue;
@@ -154,10 +154,10 @@ const flag=(c,cl='')=>`<img class="${cl}" src="flags/${c.a}.svg" alt="">`;
 function pick(pool,n,w){const r=[],p=[...pool];while(r.length<n&&p.length){let x=Math.random()*p.reduce((s,c)=>s+w(c),0),i=0;for(;i<p.length-1;i++){x-=w(p[i]);if(x<0)break}r.push(p.splice(i,1)[0])}return r}
 /* ---------- maps (Mercator for flat/regional/shape views, orthographic globe) ---------- */
 const MINR=18,GR=d3.geoGraticule10(),GL0=[-40,-25],my=l=>Math.log(Math.tan(Math.PI/4+l*rad/2));
-function worldMerc(W,H){const span=my(82)-my(-58),k=Math.min((W-12)/(2*Math.PI),(H-12)/span);return d3.geoMercator().scale(k).translate([W/2,H/2+k*(my(82)+my(-58))/2])}
+function worldEE(W,H){return d3.geoEqualEarth().fitExtent([[6,6],[W-6,H-6]],{type:'Sphere'})}
 function projFor(c,kind,W=900,H=560){
- if(kind==='world')return worldMerc(W,H);
- const p=d3.geoMercator().rotate([-c.ct[0],0]);
+ if(kind==='world')return worldEE(W,H);
+ const p=d3.geoAzimuthalEqualArea().rotate([-c.ct[0],-c.ct[1]]);
  if(kind==='shape')return p.fitExtent([[18,18],[W-18,H-18]],c.keepF);
  p.fitExtent([[W*.12,H*.12],[W*.88,H*.88]],c.keepF);
  const cap=Math.min(W,H)/(12*rad),sc=p.scale();
@@ -181,7 +181,7 @@ function staticSvg(c,kind,minR=MINR){const p=projFor(c,kind).clipExtent([[0,0],[
  return`<svg viewBox="0 0 ${W} ${H}" class="map"><path class="coast" d="${co.join('')}"/><g class="land">${s}${t}</g>${tO}${minR&&c.mk?frameHtml(c,p,W,H,'t'):''}</svg>`}
 const thumbs={};const thumb=c=>thumbs[c.id]||(thumbs[c.id]=c.f?(SMALL.has(c.id)?staticSvg(c,'ctx',30):staticSvg(c,'shape',0)):flag(c));
 let MW=null;/* tiny world for the locator inset */
-function miniWorld(c){if(!MW){const p=worldMerc(120,70).clipExtent([[0,0],[120,70]]),g=d3.geoPath(p);MW={p,d:F.map(f=>f.lite?g(f.lite):'').join('')}}
+function miniWorld(c){if(!MW){const p=worldEE(120,70).clipExtent([[0,0],[120,70]]),g=d3.geoPath(p);MW={p,d:F.map(f=>f.lite?g(f.lite):'').join('')}}
  const q=MW.p(c.ct)||[60,35];return`<svg viewBox="0 0 120 70" class="mw"><path d="${MW.d}"/><circle cx="${q[0]}" cy="${q[1]}" r="9" class="mwr"/><circle cx="${q[0]}" cy="${q[1]}" r="3.2" class="mwd"/></svg>`}
 const LOC={};const locator=c=>LOC[c.id]||(LOC[c.id]=c.f?`<div class="loc">${staticSvg(c,'ctx',MINR)}${miniWorld(c)}</div>`:'');
 function mkMap(host,o){recolor();
@@ -190,12 +190,12 @@ function mkMap(host,o){recolor();
  host.innerHTML=`<svg viewBox="0 0 ${W} ${H}" class="map live${mode==='globe'?' globe':''}"><defs><radialGradient id="sph" cx="38%" cy="34%" r="75%"><stop offset="0" stop-color="var(--sea1)"/><stop offset=".7" stop-color="var(--sea2)"/><stop offset="1" stop-color="var(--sea3)"/></radialGradient></defs><g class="z"><path class="sphere"></path><path class="coast"></path><g class="land"></g><g class="sog"></g><g class="sl"></g><g class="sn"></g><g class="mhs"></g><g class="mks"></g><g class="mrs"></g><g class="rg"></g><g class="mds"></g><g class="cn"></g></g></svg>`;
  const svg=d3.select(host.querySelector('svg')),gz=svg.select('g.z'),land=gz.select('g.land'),el=svg.node();
  const paths=land.selectAll('path').data(F).join('path').attr('class',f=>'l c'+(f.col%7)).attr('data-n',f=>f.pri?f.id:null);
- function base(){p0=mode==='ctx'?projFor(o.c,'ctx',W,H):projFor(null,'world',W,H);s0=p0.scale();t0=p0.translate();r0=p0.rotate();tr=d3.zoomIdentity;sRef=worldMerc(W,H).scale();
-  if(mode==='ctx'){const l0=-r0[0],a=p0([l0-179.9,80]),b=p0([l0+179.9,-80]);wb=[[Math.min(a[0],b[0]),Math.min(a[1],b[1])],[Math.max(a[0],b[0]),Math.max(a[1],b[1])]];kmin=Math.max(.01,Math.min(W/(wb[1][0]-wb[0][0]),H/(wb[1][1]-wb[0][1])))}else{wb=null;kmin=1}
+ function base(){p0=mode==='ctx'?projFor(o.c,'ctx',W,H):projFor(null,'world',W,H);s0=p0.scale();t0=p0.translate();r0=p0.rotate();tr=d3.zoomIdentity;sRef=worldEE(W,H).scale();
+  if(mode==='ctx'){const R2=1.9*s0;wb=[[t0[0]-R2,t0[1]-R2],[t0[0]+R2,t0[1]+R2]];kmin=Math.max(.01,Math.min(W/(wb[1][0]-wb[0][0]),H/(wb[1][1]-wb[0][1])))}else{wb=null;kmin=1}
   zoom.scaleExtent([kmin,5000])}
  const kNow=()=>mode==='globe'?gv.k:tr.k,kz=()=>mode==='globe'?gv.k:s0*tr.k/sRef;
  const proj=()=>mode==='globe'?d3.geoOrthographic().rotate([gv.r[0],gv.r[1],0]).scale(gR*gv.k).translate([W/2,H/2]).clipAngle(90).clipExtent([[-40,-40],[W+40,H+40]])
-  :d3.geoMercator().rotate(r0).scale(s0*tr.k).translate([t0[0]*tr.k+tr.x,t0[1]*tr.k+tr.y]).clipExtent([[-40,-40],[W+40,H+40]]);
+  :(mode==='ctx'?d3.geoAzimuthalEqualArea():d3.geoEqualEarth()).rotate(r0).scale(s0*tr.k).translate([t0[0]*tr.k+tr.x,t0[1]*tr.k+tr.y]).clipExtent([[-40,-40],[W+40,H+40]]);
  const st=n=>selSet.has(n)?' '+selSet.get(n):'';
  let dAll={};function drawSo(){gz.select('.sog').selectAll('path').data([...selSet.keys()].filter(n=>dAll[n]),n=>n).join('path').attr('d',n=>dAll[n]).attr('class',n=>'so '+(selSet.get(n)||''))}
  function drawFr(p){gz.select('.rg').html([...selSet].map(([n,cls])=>{const c=byNc[n];return c&&c.mk&&c.f&&!foundN.has(n)?frameHtml(c,p,W,H,cls):''}).join(''))}
@@ -258,7 +258,7 @@ function mkMap(host,o){recolor();
   return h+ch}
  function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];ready=true;const z=kz();dAll={};
   el.style.setProperty('--bw',bwOf(z).toFixed(2)+'px');el.style.setProperty('--cw',cwOf(z).toFixed(2)+'px');
-  gz.select('.sphere').attr('d',mode==='globe'?g({type:'Sphere'}):null);
+  gz.select('.sphere').attr('d',mode!=='ctx'?g({type:'Sphere'}):null);svg.classed('ee',mode==='flat');
   const mid=lite==='mid'||(!lite&&mode==='flat'&&z<1.8);
   paths.attr('d',f=>{const l=f.mid||f.lite;let d;
    if(lite===true){const l2=(gv.k>=2&&f.mid)||f.lite;d=l2?g(l2):null}

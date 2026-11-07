@@ -16,7 +16,7 @@ const V={ // sort/display value per column, per language
  cap:(c,l)=>l==='ar'?c.capAr:c.cap, code:c=>c.a.toUpperCase(),
  cur:(c,l)=>l==='ar'?c.cur.map(x=>x.ar).join('، '):curEn(c), co:(c,l)=>CO[c.co][l==='ar'?0:1],
  area:c=>c.area||null, pop:c=>c.pop||null};
-const COLS=['name','flag','cap','code','cur','co','area','pop'];
+const COLS=['name','flag','cap','cur','area','co','pop','code'];
 let q='',sk=null,sd=1;
 const cell={
  name:(c,l)=>{const a=l==='ar'?c.ar:c.en,b=l==='ar'?c.en:c.ar;return`<b>${a}</b><small dir="${l==='ar'?'ltr':'rtl'}">${b}</small>`},
