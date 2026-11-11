@@ -275,3 +275,5 @@ img[src$="/np.svg"]{background:#fff}
 /* v17: equal-area world (Equal Earth) */
 .map .sphere{display:block;fill:url(#sph);stroke:rgba(130,180,255,.5);stroke-width:1.2px;vector-effect:non-scaling-stroke;pointer-events:none}
 .map.ee{background:radial-gradient(circle at 50% 45%,#0b1a36,#050b18)}
+
+.qbig.cl{background:#0f3b46;color:#fff}.qbig.cl small{opacity:.85}
