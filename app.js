@@ -1,6 +1,6 @@
 const CAPLL={AFG:[69.2,34.5],AGO:[13.2,-8.8],ALB:[19.8,41.3],AND:[1.5,42.5],ARE:[54.4,24.5],ARG:[-58.4,-34.6],ARM:[44.5,40.2],ATG:[-61.8,17.1],AUS:[149.1,-35.3],AUT:[16.4,48.2],AZE:[49.9,40.4],BDI:[29.9,-3.4],BEL:[4.35,50.85],BEN:[2.6,6.5],BFA:[-1.5,12.4],BGD:[90.4,23.8],BGR:[23.3,42.7],BHR:[50.6,26.2],BHS:[-77.35,25.05],BIH:[18.4,43.85],BLR:[27.6,53.9],BLZ:[-88.8,17.25],BOL:[-65.26,-19.04],BRA:[-47.9,-15.8],BRB:[-59.6,13.1],BRN:[114.9,4.9],BTN:[89.6,27.5],BWA:[25.9,-24.65],CAF:[18.6,4.4],CAN:[-75.7,45.4],CHE:[7.45,46.95],CHL:[-70.65,-33.45],CHN:[116.4,39.9],CIV:[-5.3,6.8],CMR:[11.5,3.85],COD:[15.3,-4.3],COG:[15.3,-4.25],COL:[-74.1,4.7],COM:[43.25,-11.7],CPV:[-23.5,14.9],CRI:[-84.1,9.9],CUB:[-82.4,23.1],CYP:[33.4,35.2],CZE:[14.4,50.1],DEU:[13.4,52.5],DJI:[43.15,11.6],DMA:[-61.4,15.3],DNK:[12.6,55.7],DOM:[-69.9,18.5],DZA:[3.05,36.75],ECU:[-78.5,-0.2],EGY:[31.2,30.05],ERI:[38.9,15.3],ESP:[-3.7,40.4],EST:[24.75,59.4],ETH:[38.75,9.0],FIN:[24.9,60.2],FJI:[178.4,-18.1],FRA:[2.35,48.85],FSM:[158.15,6.9],GAB:[9.45,0.4],GBR:[-0.1,51.5],GEO:[44.8,41.7],GHA:[-0.2,5.6],GIN:[-13.7,9.5],GMB:[-16.6,13.45],GNB:[-15.6,11.85],GNQ:[8.8,3.75],GRC:[23.7,38.0],GRD:[-61.75,12.05],GTM:[-90.5,14.6],GUY:[-58.15,6.8],HND:[-87.2,14.1],HRV:[16.0,45.8],HTI:[-72.3,18.55],HUN:[19.05,47.5],IDN:[106.8,-6.2],IND:[77.2,28.6],IRL:[-6.25,53.35],IRN:[51.4,35.7],IRQ:[44.4,33.3],ISL:[-21.9,64.15],ISR:[35.2,31.8],ITA:[12.5,41.9],JAM:[-76.8,18.0],JOR:[35.9,31.95],JPN:[139.7,35.7],KAZ:[71.4,51.15],KEN:[36.8,-1.3],KGZ:[74.6,42.9],KHM:[104.9,11.55],KIR:[173.0,1.35],KNA:[-62.7,17.3],KOR:[127.0,37.55],KWT:[47.98,29.37],LAO:[102.6,17.95],LBN:[35.5,33.9],LBR:[-10.8,6.3],LBY:[13.2,32.9],LCA:[-61.0,14.0],LIE:[9.5,47.15],LKA:[79.9,6.9],LSO:[27.5,-29.3],LTU:[25.3,54.7],LUX:[6.13,49.6],LVA:[24.1,56.95],MAR:[-6.85,34.0],MCO:[7.4,43.73],MDA:[28.85,47.0],MDG:[47.5,-18.9],MDV:[73.5,4.2],MEX:[-99.1,19.45],MHL:[171.4,7.1],MKD:[21.45,42.0],MLI:[-8.0,12.65],MLT:[14.5,35.9],MMR:[96.1,19.75],MNE:[19.25,42.45],MNG:[106.9,47.9],MOZ:[32.6,-25.95],MRT:[-15.95,18.1],MUS:[57.5,-20.15],MWI:[33.8,-13.95],MYS:[101.7,3.15],NAM:[17.1,-22.55],NER:[2.1,13.5],NGA:[7.5,9.05],NIC:[-86.25,12.15],NLD:[4.9,52.4],NOR:[10.75,59.9],NPL:[85.3,27.7],NRU:[166.9,-0.55],NZL:[174.8,-41.3],OMN:[58.4,23.6],PAK:[73.05,33.7],PAN:[-79.5,9.0],PER:[-77.05,-12.05],PHL:[121.0,14.6],PLW:[134.6,7.5],PNG:[147.2,-9.45],POL:[21.0,52.25],PRK:[125.75,39.0],PRT:[-9.15,38.7],PRY:[-57.6,-25.3],PSE:[35.2,31.9],QAT:[51.5,25.3],ROU:[26.1,44.4],RUS:[37.6,55.75],RWA:[30.05,-1.95],SAU:[46.7,24.65],SDN:[32.55,15.6],SEN:[-17.45,14.7],SGP:[103.85,1.3],SLB:[159.95,-9.4],SLE:[-13.25,8.5],SLV:[-89.2,13.7],SMR:[12.45,43.93],SOM:[45.35,2.05],SRB:[20.45,44.8],SSD:[31.6,4.85],STP:[6.7,0.3],SUR:[-55.2,5.85],SVK:[17.1,48.15],SVN:[14.5,46.05],SWE:[18.05,59.3],SWZ:[31.2,-26.4],SYC:[55.45,-4.6],SYR:[36.3,33.5],TCD:[15.05,12.1],TGO:[1.2,6.15],THA:[100.5,13.75],TJK:[68.8,38.55],TKM:[58.4,37.95],TLS:[125.6,-8.55],TON:[-175.2,-21.15],TTO:[-61.5,10.65],TUN:[10.2,36.8],TUR:[32.85,39.9],TUV:[179.2,-8.5],TZA:[35.75,-6.15],UGA:[32.6,0.3],UKR:[30.5,50.45],URY:[-56.2,-34.9],USA:[-77.0,38.9],UZB:[69.25,41.3],VAT:[12.45,41.9],VCT:[-61.2,13.15],VEN:[-66.9,10.5],VNM:[105.85,21.0],VUT:[168.3,-17.75],WSM:[-171.75,-13.85],YEM:[44.2,15.35],ZAF:[28.2,-25.75],ZMB:[28.3,-15.4],ZWE:[31.05,-17.8]};
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v19';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v20';
 /* ---------- language (whole app) ---------- */
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
@@ -8,7 +8,7 @@ const I={
 ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكلها وموقعها وعلمها وعاصمتها',clash:'المعركة',clashS:'ارمِ النرد وشاهد الدول تتصارع على العالم',guide:'دليل الدول',guideS:'معلومات كل دولة وخرائطها',world:'خريطة العالم',worldS:'الكرة الأرضية والخريطة المسطحة',table:'جدول الدول',tableS:'كل الدول في جدول قابل للترتيب',quiz:'الأسئلة',quizS:'اختبر معلوماتك بسبعة أنواع من الأسئلة',ver:'النسخة',langBtn:'English',
  back:'› رجوع',qTitle:'🎯 الأسئلة',tTime:'⏱️ وقت كل سؤال',sec:' ث',tCount:'🔢 عدد الأسئلة',tConts:'🧭 القارات',how:'طريقة اللعب',
  howT:'اختر الوقت وعدد الأسئلة والقارات، ثم نوع الأسئلة. الإجابة الأسرع تكسب نقاطًا أكثر، والإجابات المتتالية الصحيحة تضيف مكافأة سلسلة. اكتب الإجابة ثم اضغط «تأكيد» (أو Enter)؛ تُقبل الأسماء البديلة والإجابة المقاربة. في «حدّد الدولة» أدِر الكرة الأرضية بإصبعك، كبّر واضغط الدولة ثم «تأكيد».',
- m_en:'الدولة بالإنجليزية',m_ar:'الدولة بالعربية',m_shape:'شكل الخريطة',m_cap:'عاصمة الدولة',m_flag:'علم الدولة',m_cur:'عملة الدولة',m_tap:'حدّد الدولة على الخريطة',
+ m_mix:'تحدي المزيج',m_en:'الدولة بالإنجليزية',m_ar:'الدولة بالعربية',m_shape:'شكل الخريطة',m_cap:'عاصمة الدولة',m_flag:'علم الدولة',m_cur:'عملة الدولة',m_tap:'حدّد الدولة على الخريطة',
  locate:'حدّد على الخريطة',phEn:'Country name in English',phAr:'اسم الدولة بالعربية',phEn2:'English',phAr2:'عربي',confirm:'تأكيد',skip:'تخطي',quitQ:'إنهاء اللعبة؟',
  ok:'✅ إجابة صحيحة',okFz:'✅ إجابة مقبولة',okLate:'✅ إجابة صحيحة عند انتهاء الوقت',timeUp:'⏰ انتهى الوقت',skipped:'⏭️ تم التخطي',wrong:'❌ إجابة خاطئة',pts:'نقطة',streak:'سلسلة',
  fzNote:x=>`قُبلت إجابتك «${x}» رغم اختلاف بسيط عن الاسم الصحيح`,yours:'إجابتك',picked:'اخترت',cont:'اضغط للمتابعة',capL:'العاصمة',curL:'العملة',corr:l=>`${l} الصحيحة:`,
@@ -24,7 +24,7 @@ ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكله
 en:{title:'World Maps Game',tag:'Learn countries by shape, location, flag and capital',clash:'Clash',clashS:'Roll the dice and watch countries fight for the world',guide:'Country Guide',guideS:'Facts and maps for every country',world:'World Map',worldS:'Globe and flat map',table:'Countries Table',tableS:'All countries in a sortable table',quiz:'Quiz',quizS:'Test yourself with seven question types',ver:'Version',langBtn:'العربية',
  back:'‹ Back',qTitle:'🎯 Quiz',tTime:'⏱️ Time per question',sec:' s',tCount:'🔢 Number of questions',tConts:'🧭 Continents',how:'How to play',
  howT:'Choose the time, the number of questions and the continents, then a question type. Faster answers earn more points and consecutive correct answers add a streak bonus. Type your answer, then press “Confirm” (or Enter); alternative names and close spellings are accepted. In “Locate the country” spin the globe with your finger, zoom in, tap the country, then “Confirm”.',
- m_en:'Country (English)',m_ar:'Country (Arabic)',m_shape:'Map shape',m_cap:'Capital city',m_flag:'Country flag',m_cur:'Currency',m_tap:'Locate the country on the map',
+ m_mix:'Mixed challenge',m_en:'Country (English)',m_ar:'Country (Arabic)',m_shape:'Map shape',m_cap:'Capital city',m_flag:'Country flag',m_cur:'Currency',m_tap:'Locate the country on the map',
  locate:'Locate on the map',phEn:'Country name in English',phAr:'Country name in Arabic',phEn2:'English',phAr2:'Arabic',confirm:'Confirm',skip:'Skip',quitQ:'End the game?',
  ok:'✅ Correct',okFz:'✅ Accepted answer',okLate:'✅ Correct when time ran out',timeUp:'⏰ Time is up',skipped:'⏭️ Skipped',wrong:'❌ Wrong answer',pts:'pts',streak:'streak',
  fzNote:x=>`Your answer “${x}” was accepted despite a small spelling difference`,yours:'Your answer',picked:'You picked',cont:'Tap to continue',capL:'capital',curL:'currency',corr:l=>`Correct ${l}:`,
@@ -130,7 +130,7 @@ const nf=new Intl.NumberFormat('en'),fmtPop=n=>n>=1e9?(n/1e9).toFixed(2)+t('bill
 const fmtUSD=n=>n>=1e12?'$'+(n/1e12).toFixed(2)+t('tril'):n>=1e9?'$'+(n/1e9).toFixed(1)+t('bill'):'$'+(n/1e6).toFixed(0)+t('mill');
 const MK=D.filter(c=>c.mk&&c.f),SMALL=new Set(['VAT','MCO','NRU','MDV','SMR','LIE','SYC','KNA','MHL','MLT','GRD','VCT','TUV']);
 const CN={AF:'أفريقيا',AS:'آسيا',EU:'أوروبا',NA:'أمريكا الشمالية',SA:'أمريكا الجنوبية',OC:'أوقيانوسيا'};
-const MODES=[['en','🌍'],['ar','🗺️'],['shape','🔷'],['cap','🏛️'],['flag','🏳️'],['cur','💰'],['tap','📍']];
+const MODES=[['en','🌍'],['ar','🗺️'],['shape','🔷'],['cap','🏛️'],['flag','🏳️'],['cur','💰'],['tap','📍'],['mix','🎲']];
 const cn=k=>AR()?CN[k]:CNe[k],cEn=new Intl.DisplayNames('en',{type:'currency'}),curName=x=>AR()?x.ar:(()=>{try{return cEn.of(x.k)}catch(_){return x.k}})();
 let S=Object.assign({time:20,count:10,conts:Object.keys(CN),nl:1},JSON.parse(localStorage.wm||'{}'));
 const save=()=>localStorage.wm=JSON.stringify(S);
@@ -277,6 +277,7 @@ function mkMap(host,o){recolor();
   const dots=hs.filter(d=>d.sz<10),outs=hs.filter(d=>d.sz>=10&&k>=2.2).sort((a,b)=>b.sz-a.sz);
   gz.select('.mhs').selectAll('path').data(outs).join('path').attr('d',d=>d.d).attr('data-n',d=>d.c.n).style('stroke-width',d=>(d.sz<34?30:12)+'px');
   gz.select('.mrs').selectAll('*').remove();gz.select('.mks').selectAll('*').remove();
+  if(o.rings)gz.select('.mrs').selectAll('circle').data(hs.filter(d=>d.sz<70)).join('circle').attr('cx',d=>d.cx).attr('cy',d=>d.cy).attr('r',d=>Math.min(34,Math.max(11,d.sz/2+7))).attr('class',d=>foundN.has(d.c.n)?'good':null);
   gz.select('.mds').selectAll('g').data(dots).join(e=>{const n=e.append('g');n.append('circle').attr('class','hd').attr('r',17);return n}).attr('transform',d=>`translate(${d.cx},${d.cy})`).attr('data-n',d=>d.c.n).attr('class','md');
   drawFr(p);
   /* country names + flags (explorer button): biggest first, never overlapping, appear gradually while zooming in */
@@ -322,7 +323,7 @@ function mkMap(host,o){recolor();
  el.addEventListener('pointerup',up);el.addEventListener('pointercancel',up);
  el.addEventListener('wheel',e=>{if(mode!=='globe')return;e.preventDefault();stopAnim();zoomBy(Math.exp(-e.deltaY*.0015));frame()},{passive:false});
  /* ---- selection / focus ---- */
- function setSel(n,cls,keep){if(!keep){selSet.clear();paths.classed('sel good bad t',false)}
+ function setSel(n,cls,keep){if(!keep){selSet.clear();paths.classed('sel good bad t',false);foundN.forEach(fn=>{selSet.set(fn,'good');paths.filter(f=>f.pri&&f.id===fn).classed('good',true)})}
   if(n!=null){selSet.set(n,cls);paths.filter(f=>f.pri&&f.id===n).classed(cls,true).raise();if(byNc[n])lastC=byNc[n]}
   if(ready){drawFr(proj());drawSo()}}
  (o.found||[]).forEach(c=>setSel(c.n,'good',true));
@@ -411,14 +412,14 @@ function showDbg(){let d=$('#dbg');if(d){d.remove();return}d=document.createElem
 let G={};
 function setLang(l){LG=l;try{localStorage.wmLang=l}catch(_){}applyLang()}
 function applyLang(){const h=document.documentElement;h.lang=LG;h.dir=AR()?'rtl':'ltr';document.title=t('title')}
-function home(){clearInterval(G.tm);clearTimeout(G.nx);closePanel();applyLang();
+function home(){clearQ();clearInterval(G.tm);clearTimeout(G.nx);closePanel();applyLang();
  A.innerHTML=`<header class="hd"><svg class="rose" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M32 4 38 32 32 60 26 32Z"/><path d="M4 32 32 26 60 32 32 38Z" class="b"/><circle cx="32" cy="32" r="4"/></svg><div><h1 id="ttl">${t('title')}</h1><p>${t('tag')}</p></div><button class="lgb" id="lg">${t('langBtn')}</button></header>
  <div class="hub"><div class="infos"><button class="hb h1" id="gd"><i>📖</i><b>${t('guide')}</b><small>${t('guideS')}</small></button><button class="hb h2" id="wm"><i>🌐</i><b>${t('world')}</b><small>${t('worldS')}</small></button><button class="hb h3" id="tb"><i>📊</i><b>${t('table')}</b><small>${t('tableS')}</small></button></div>
  <button class="qbig" id="qz"><i>🎯</i><span><b>${t('quiz')}</b><small>${t('quizS')}</small></span></button><button class="qbig cl" id="cl"><i>⚔️</i><span><b>${t('clash')}</b><small>${t('clashS')}</small></span></button><div class="ver">${t('ver')} ${VER}</div></div>`;
  $('#gd').onclick=()=>dir();$('#wm').onclick=explore;$('#qz').onclick=quizPage;$('#cl').onclick=()=>{location.href='clash.html'};$('#tb').onclick=()=>{location.href='countries.html'};
  $('#lg').onclick=()=>{setLang(AR()?'en':'ar');home()};
  const ti=$('#ttl');let lp=0;ti.onpointerdown=()=>{lp=setTimeout(showDbg,800)};ti.onpointerup=ti.onpointerleave=ti.onpointercancel=()=>clearTimeout(lp)}
-function quizPage(){clearInterval(G.tm);clearTimeout(G.nx);closePanel();const chip=(k,v,on)=>`<button data-k="${k}" data-v="${v}" class="${on?'on':''}">${k==='conts'?cn(v):v+(k==='time'?t('sec'):'')}</button>`;
+function quizPage(){clearQ();clearInterval(G.tm);clearTimeout(G.nx);closePanel();const chip=(k,v,on)=>`<button data-k="${k}" data-v="${v}" class="${on?'on':''}">${k==='conts'?cn(v):v+(k==='time'?t('sec'):'')}</button>`;
  A.innerHTML=`<div class="bar2"><button id="bk">${t('back')}</button><h2 class="qt">${t('qTitle')}</h2></div><div class="home"><aside>
  <h3>${t('tTime')}</h3><div class="chips">${[10,15,20,30,45,60].map(v=>chip('time',v,S.time==v)).join('')}</div>
  <h3>${t('tCount')}</h3><div class="chips">${[10,20,30,50,100,150,195].map(v=>chip('count',v,S.count==v)).join('')}</div>
@@ -430,21 +431,24 @@ function quizPage(){clearInterval(G.tm);clearTimeout(G.nx);closePanel();const ch
   if(k==='conts'){S.conts=S.conts.includes(v)?S.conts.filter(x=>x!==v):[...S.conts,v];if(!S.conts.length)S.conts=[v]}else S[k]=v;save();quizPage()});
  A.querySelectorAll('.modes [data-m]').forEach(b=>b.onclick=()=>start(b.dataset.m))}
 /* ---------- game ---------- */
-function start(m){const mp=['en','ar','shape'].includes(m);let pool=D.filter(c=>S.conts.includes(c.co)&&c.f);
- G={mode:m,qs:pick(pool,Math.min(S.count,pool.length),mp?c=>Math.min(1,Math.max(.1,Math.sqrt(c.sr)/.02)):()=>1),i:0,score:0,miss:[],log:[],pts:0,streak:0,best:0,found:[]};ask()}
-function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();const c=G.c=G.qs[G.i],m=G.mode;G.lock=false;G.sel=null;G.last='';G.pick=null;G.mv=null;
+function start(m){const mix=m==='mix';const mp=!mix&&['en','ar','shape'].includes(m);let pool=D.filter(c=>S.conts.includes(c.co)&&c.f);
+ G={base:mix?'mix':null,mode:m,qs:pick(pool,Math.min(S.count,pool.length),mp?c=>Math.min(1,Math.max(.1,Math.sqrt(c.sr)/.02)):()=>1),i:0,score:0,miss:[],log:[],pts:0,streak:0,best:0,found:[]};if(mix){const T=['en','ar','shape','cap','flag','cur','tap'],ty=[];for(let i=0;i<G.qs.length;i++){let x;do{x=T[Math.floor(Math.random()*T.length)]}while(ty.length>1&&ty[ty.length-1]===x&&ty[ty.length-2]===x||ty.length&&ty[ty.length-1]===x&&Math.random()<.6);ty.push(x)}G.types=ty;G.mode=ty[0]}ask()}
+function saveQ(){try{sessionStorage.wmQ=JSON.stringify({base:G.base,mode:G.mode,types:G.types,qs:G.qs.map(c=>c.id),i:G.i,score:G.score,pts:G.pts,streak:G.streak,best:G.best,found:G.found.map(c=>c.id),miss:G.miss.map(c=>c.id),log:G.log.map(r=>({m:r.m,c:r.c.id,ok:r.ok,mine:r.mine,why:r.why,pts:r.pts,w:r.w?r.w.id:null}))})}catch(_){}}
+function clearQ(){try{sessionStorage.removeItem('wmQ')}catch(_){}}
+function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();saveQ();if(G.base==='mix')G.mode=G.types[G.i];const c=G.c=G.qs[G.i],m=G.mode;G.lock=false;G.sel=null;G.last='';G.pick=null;G.mv=null;
  const inp=(ph,d)=>`<input dir="${d}" placeholder="${ph}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">`;
  let b='';
- if(m==='tap'){b=`<div class="tq"><span>${t('locate')}</span><b>${nm(c)}</b></div>${mapBox()}<div class="in"><button class="go" id="go" disabled>${t('confirm')}</button><button id="sk">${t('skip')}</button></div>`}
+ if(m==='tap'){b=`<div class="tq"><span class="tql">${t('locate')}</span>${flag(c,'tqf')}<div class="tqn"><b>${nm(c)}</b><i dir="${d2()}">${nm2(c)}</i></div></div>${mapBox()}<div class="in"><button class="go" id="go" disabled>${t('confirm')}</button><button id="sk">${t('skip')}</button></div>`}
  else if(m==='en'||m==='ar'||m==='shape'||m==='flag'){
   b=(m==='flag'?flag(c,'flagbig'):m==='shape'?`<div class="mapbox"><div class="svgw">${staticSvg(c,'shape',0)}</div></div>`:mapBox())+
    `<div class="in">${m==='en'?inp(t('phEn'),'ltr'):m==='ar'?inp(t('phAr'),'rtl'):inp(t('phEn2'),'ltr')+inp(t('phAr2'),'rtl')}<button id="okb" class="okb">${t('confirm')}</button><button id="sk">${t('skip')}</button></div>`}
  else{let o;if(m==='cap'){const tt=shuf(D).filter(x=>x.cap&&capOf(x)!==capOf(c));o=[{t:capOf(c),ok:1},...[...new Map(tt.map(x=>[capOf(x),x])).values()].slice(0,5).map(x=>({t:capOf(x)}))]}
   else{const one=x=>AR()?strip(x.cur[0].ar):curName(x.cur[0]),ok=new Set(c.cur.map(x=>AR()?strip(x.ar):curName(x))),seen=new Set(ok);o=[{t:one(c),ok:1}];shuf(D).forEach(x=>{const tt=one(x);if(o.length<6&&!seen.has(tt)){seen.add(tt);o.push({t:tt})}})}
   G.o=shuf(o);b=`<h1 class="big">${nm(c)}</h1><p class="sub" dir="${d2()}">${nm2(c)}</p><div class="opts">${G.o.map((x,i)=>`<button data-i="${i}">${x.t}</button>`).join('')}</div><button class="go" id="go" disabled>${t('confirm')}</button>`}
- A.innerHTML=`<div class="qh"><b>${G.i+1} / ${G.qs.length}</b><span class="sc">⭐ ${G.pts}<i></i>🔥 ${G.streak}</span><button class="x" id="qx">✕</button><span id="tm">${S.time}</span></div><div class="pb"><i id="pb"></i></div><div class="stage">${b}</div>`;
+ A.innerHTML=`<div class="qh"><b>${G.i+1} / ${G.qs.length}</b><span class="sc">⭐ ${G.pts}<i></i>🔥 ${G.streak}</span><button class="x" id="qx">✕</button><span id="tm">${S.time}</span></div><div class="pb"><i id="pb"></i></div><div class="stage">${G.base==='mix'?`<div class="qbd">${MODES.find(x=>x[0]===m)[1]} ${t('m_'+m)}</div>`:''}${b}</div>`;
  $('#qx').onclick=()=>confirm(t('quitQ'))&&quizPage();
- if(m==='tap'){const mv=G.mv=mkMap($('#mb .svgw'),{kind:'world',marks:true,found:G.found,pick:cc=>{if(G.lock)return;G.pick=cc;mv.setSel(cc.n,'sel');$('#go').disabled=false}});wireBtns(A,mv,false);
+ if($('.tqf')){$('.tqf').onclick=()=>{const o=document.createElement('div');o.className='flz';o.innerHTML=`<img src="flags/${c.a}.svg" alt=""><b>${nm(c)} · ${nm2(c)}</b>`;o.onclick=()=>o.remove();document.body.appendChild(o)}}
+ if(m==='tap'){const mv=G.mv=mkMap($('#mb .svgw'),{kind:'world',marks:true,rings:true,found:G.found,pick:cc=>{if(G.lock)return;G.pick=cc;mv.setSel(cc.n,'sel');$('#go').disabled=false}});wireBtns(A,mv,false);
   if(S.conts.length<6)mv.focus(D.filter(x=>S.conts.includes(x.co)&&x.f),0)}
  else if($('#mb')){const mv=G.mv=mkMap($('#mb .svgw'),{kind:'ctx',c,ring:true});mv.setSel(c.n,'t');wireBtns(A,mv,true)}
  /* typed answers are only judged when the player confirms (button / Enter) or when time runs out */
@@ -462,18 +466,18 @@ function whoIs(txt){if(!txt)return null;for(const part of String(txt).split(' / 
  for(const part of String(txt).split(' / ')){const f=D.filter(x=>fuzzy(x,part));if(f.length===1)return f[0]}return null}
 function done(ok,why,typed,late){if(G.lock)return;G.lock=true;clearInterval(G.tm);const c=G.c,m=G.mode;ok?G.score++:G.miss.push(c);
  let pts=0;if(ok){const left=late?0:Math.max(0,(G.end-Date.now())/1000),base=why==='fuzzy'?80:100;pts=late?base:base+Math.round(left/S.time*100)+Math.min(G.streak,5)*20;G.streak++;G.best=Math.max(G.best,G.streak);G.pts+=pts;if(m==='tap')G.found.push(c)}else G.streak=0;
- const mine=m==='tap'?(G.pick?nm(G.pick):''):G.sel!=null&&G.o?G.o[G.sel].t:(typed||G.last||'');const wc=ok?null:(m==='tap'?G.pick:whoIs(mine));G.log.push({c,ok,mine,why,pts,w:wc&&wc.id!==c.id?wc:null});
+ const mine=m==='tap'?(G.pick?nm(G.pick):''):G.sel!=null&&G.o?G.o[G.sel].t:(typed||G.last||'');const wc=ok?null:(m==='tap'?G.pick:whoIs(mine));G.log.push({m,c,ok,mine,why,pts,w:wc&&wc.id!==c.id?wc:null});
  if(G.o)A.querySelectorAll('.opts button').forEach((e,i)=>{if(G.o[i].ok)e.classList.add('good');else if(i===G.sel)e.classList.add('bad')});
  if(m==='tap'&&G.mv){if(!ok&&G.pick)G.mv.setSel(G.pick.n,'bad');G.mv.setSel(c.n,'good',!ok&&!!G.pick);G.mv.focus(c,600)}
  const sc=$('.qh .sc');if(sc)sc.innerHTML=`⭐ ${G.pts}<i></i>🔥 ${G.streak}`;
  const d=document.createElement('div');d.className='fb '+(ok?'ok':'no')+(m==='tap'?' sheet':'');
- d.innerHTML=`<div class="card"><div class="st">${ok?(why==='fuzzy'?t('okFz'):late?t('okLate'):t('ok')):why==='time'?t('timeUp'):why==='skip'?t('skipped'):t('wrong')}</div>${ok?`<div class="ptx">+${pts} ${t('pts')}${G.streak>1?` · 🔥 ${t('streak')} ${G.streak}`:''}</div>`:''}${flag(c)}<div class="nm">${nm(c)}</div><div class="nm2" dir="${d2()}">${nm2(c)}</div>${m==='cap'||m==='cur'?`<div class="an">${t('corr',lblOf(m))} <b>${ansOf(c,m)}</b></div>`:''}${why==='fuzzy'?`<div class="my" style="color:#9a6700">${t('fzNote',typed)}</div>`:''}${!ok&&mine?`<div class="my">${m==='tap'?t('picked'):t('yours')}: ${mine}</div>`:''}${(()=>{const w=G.log[G.log.length-1].w;return w?`<div class="wrg">${flag(w,'wf')}<b>${nm(w)}</b><small dir="${d2()}">${nm2(w)} · ${capOf(w)}</small></div>`:''})()}<small>${t('cont')}</small></div>`;A.appendChild(d);
+ d.innerHTML=`<div class="card"><div class="st">${ok?(why==='fuzzy'?t('okFz'):late?t('okLate'):t('ok')):why==='time'?t('timeUp'):why==='skip'?t('skipped'):t('wrong')}</div>${ok?`<div class="ptx">+${pts} ${t('pts')}${G.streak>1?` · 🔥 ${t('streak')} ${G.streak}`:''}</div>`:''}${flag(c)}<div class="nm">${nm(c)}</div><div class="nm2" dir="${d2()}">${nm2(c)}</div>${m==='cap'||m==='cur'?`<div class="an">${t('corr',lblOf(m))} <b>${ansOf(c,m)}</b></div>`:''}${why==='fuzzy'?`<div class="my" style="color:#9a6700">${t('fzNote',typed)}</div>`:''}${!ok&&mine?`<div class="my">${m==='tap'?t('picked'):t('yours')}: ${m==='tap'&&G.pick?`${flag(G.pick,'wf')} ${nm(G.pick)} · ${nm2(G.pick)}`:mine}</div>`:''}${(()=>{const w=G.log[G.log.length-1].w;return w?`<div class="wrg">${flag(w,'wf')}<b>${nm(w)}</b><small dir="${d2()}">${nm2(w)} · ${capOf(w)}</small></div>`:''})()}<small>${t('cont')}</small></div>`;A.appendChild(d);
  const nx=()=>{if(G.nx){clearTimeout(G.nx);G.nx=0;G.i++;ask()}};G.nx=setTimeout(nx,m==='tap'?(ok?3500:6000):ok?(why==='fuzzy'?3200:2000):3800);d.onclick=nx}
-function result(){const n=G.qs.length,p=Math.round(G.score/n*100),m=G.mode;S.best=S.best||{};const old=S.best[m]||0,rec=G.pts>old;if(rec){S.best[m]=G.pts;save()}
+function result(){clearQ();const n=G.qs.length,p=Math.round(G.score/n*100),m=G.base||G.mode,mx=G.base==='mix';S.best=S.best||{};const old=S.best[m]||0,rec=G.pts>old;if(rec){S.best[m]=G.pts;save()}
  A.innerHTML=`<div class="res"><h1>${p>=80?'🏆':p>=50?'👏':'💪'} ${t('res')}: ${G.score} / ${n} (${p}%)</h1><div class="sums"><div><b>⭐ ${G.pts}</b><span>${t('points')}${rec?' — '+t('newRec')+' 🎉':old?` (${t('bestPrev')} ${old})`:''}</span></div><div><b>🔥 ${G.best}</b><span>${t('bestStreak')}</span></div><div><b>✅ ${G.score}</b><span>${t('correct')}</span></div><div><b>❌ ${n-G.score}</b><span>${t('wrongS')}</span></div></div>
- <table class="rt"><colgroup><col class="c1"><col class="c2"><col class="c3"><col><col></colgroup><tr><th>#</th><th></th><th></th><th>${t(m==='cap'||m==='cur'?'thCorr':'thCountry')}</th><th>${t('thYours')}</th></tr>${G.log.map((r,i)=>`<tr class="${r.ok?'g':'b'}"><td>${i+1}</td><td>${r.ok?'✅':'❌'}${r.pts?`<small class="pt">+${r.pts}</small>`:''}</td><td>${flag(r.c)}</td><td><b>${nm(r.c)}</b><small dir="${d2()}">${nm2(r.c)}</small>${m==='cap'||m==='cur'?`<span class="ca">${ansOf(r.c,m)}</span>`:''}</td><td class="yr ${r.ok?'ok':'no'}">${r.w?`<img class="fs" src="flags/${r.w.a}.svg" alt="">`:''}${r.mine?r.mine+(r.why==='fuzzy'?' (≈)':''):'—'}${r.w?`<small>${capOf(r.w)}</small>`:''}</td></tr>`).join('')}</table>
+${mx?`<div class="tys">${MODES.filter(x=>x[0]!=='mix').map(x=>{const L=G.log.filter(r=>r.m===x[0]);return L.length?`<span class="${L.every(r=>r.ok)?'g':''}">${x[1]} ${t('m_'+x[0])} <b>${L.filter(r=>r.ok).length}/${L.length}</b></span>`:''}).join('')}</div>`:''}<table class="rt"><colgroup><col class="c1"><col class="c2"><col class="c3"><col><col></colgroup><tr><th>#</th><th></th><th></th><th>${t(!mx&&(m==='cap'||m==='cur')?'thCorr':'thCountry')}</th><th>${t('thYours')}</th></tr>${G.log.map((r,i)=>`<tr class="${r.ok?'g':'b'}"><td>${i+1}${mx?`<small class="ty">${MODES.find(x=>x[0]===r.m)[1]}</small>`:''}</td><td>${r.ok?'✅':'❌'}${r.pts?`<small class="pt">+${r.pts}</small>`:''}</td><td>${flag(r.c)}</td><td><b>${nm(r.c)}</b><small dir="${d2()}">${nm2(r.c)}</small>${r.m==='cap'||r.m==='cur'?`<span class="ca">${ansOf(r.c,r.m)}</span>`:''}</td><td class="yr ${r.ok?'ok':'no'}">${r.w?`<img class="fs" src="flags/${r.w.a}.svg" alt="">`:''}${r.mine?r.mine+(r.why==='fuzzy'?' (≈)':''):'—'}${r.w?`<small>${capOf(r.w)}</small>`:''}</td></tr>`).join('')}</table>
  <div class="chips" style="justify-content:center"><button class="go" id="ag">${t('again')}</button><button id="qp" style="font-size:22px">${t('qPage')}</button><button id="hm" style="font-size:22px">${t('homeB')}</button></div></div>`;
- $('#ag').onclick=()=>start(G.mode);$('#qp').onclick=quizPage;$('#hm').onclick=home}
+ $('#ag').onclick=()=>start(G.base||G.mode);$('#qp').onclick=quizPage;$('#hm').onclick=home}
 /* ---------- guide ---------- */
 function contOf(q){const n=norm(q);if(n.length<3)return null;const ks=Object.keys(CN),nm=k=>[norm(CN[k]),norm(CNe[k])];
  for(const k of ks)if(nm(k).includes(n))return k;
@@ -513,14 +517,17 @@ const vv=window.visualViewport,rs=document.documentElement.style;
 let fT=0;
 const osLand=()=>typeof window.orientation==='number'?Math.abs(window.orientation)===90:(screen.orientation?screen.orientation.type.startsWith('landscape'):innerWidth>innerHeight);
 let fix=0,fixT=0;
-function chkOrient(){const wide=innerWidth>innerHeight;if(osLand()===wide){fix=0;clearTimeout(fixT);return}
+const typing=()=>/^(INPUT|TEXTAREA)$/.test((document.activeElement||{}).tagName||''),inQuiz=()=>!!(G&&G.qs&&G.i<G.qs.length);
+function chkOrient(){if(typing()){clearTimeout(fixT);return}const wide=innerWidth>innerHeight;if(osLand()===wide){fix=0;clearTimeout(fixT);return}
  /* the OS says landscape (or portrait) but the page still has the old size: nudge the viewport, finally reload once */
  const mv=document.querySelector('meta[name=viewport]');if(mv&&fix<4){fix++;const c0=mv.content;mv.content='width=device-width,initial-scale=1.001,minimum-scale=1,viewport-fit=cover';setTimeout(()=>{mv.content=c0;fit()},90)}
- clearTimeout(fixT);fixT=setTimeout(()=>{if(osLand()!==(innerWidth>innerHeight)){let last=0;try{last=+sessionStorage.wmRl||0}catch(_){}if(Date.now()-last>20000){try{sessionStorage.wmRl=Date.now()}catch(_){}location.reload()}}},2200)}
+ clearTimeout(fixT);fixT=setTimeout(()=>{if(!typing()&&!inQuiz()&&osLand()!==(innerWidth>innerHeight)){let last=0;try{last=+sessionStorage.wmRl||0}catch(_){}if(Date.now()-last>20000){try{sessionStorage.wmRl=Date.now()}catch(_){}location.reload()}}},2200)}
 const fit=()=>{const h=Math.round(vv?vv.height:innerHeight);rs.setProperty('--h',h+'px');scrollTo(0,0);clearTimeout(fT);fT=setTimeout(()=>{fitPanel();const m=window.__onfit;m&&m();chkOrient()},60)};
 if(vv){vv.addEventListener('resize',fit)}addEventListener('resize',fit);
 addEventListener('orientationchange',()=>[50,250,600,1200,2000].forEach(x=>setTimeout(fit,x)));fit();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 ['gesturestart','gesturechange','gestureend'].forEach(e=>document.addEventListener(e,ev=>ev.preventDefault(),{passive:false}));
 window.__wm={D,F,byId,SMALL,MK,openPanel,closePanel,get G(){return G},fuzzy,norm,acc,go(m,id){start(m);G.qs[0]=byId[id];ask()},detail,explore,dir,setLang,home,SK};
-applyLang();home()})();
+const Q0=(()=>{try{return JSON.parse(sessionStorage.wmQ||'null')}catch(_){return null}})();
+applyLang();home();
+try{const q=Q0;if(q&&q.qs&&q.i<q.qs.length&&q.qs.every(i=>byId[i])){G={base:q.base,mode:q.mode,types:q.types,qs:q.qs.map(i=>byId[i]),i:q.i,score:q.score,pts:q.pts,streak:q.streak,best:q.best,found:q.found.map(i=>byId[i]),miss:q.miss.map(i=>byId[i]),log:q.log.map(r=>({...r,c:byId[r.c],w:r.w?byId[r.w]:null}))};ask()}}catch(_){clearQ()}})();
