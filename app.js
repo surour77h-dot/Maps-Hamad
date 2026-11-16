@@ -5,7 +5,7 @@ const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
 const I={
-ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكلها وموقعها وعلمها وعاصمتها',clash:'المعركة',clashS:'ارمِ النرد وشاهد الدول تتصارع على العالم',guide:'دليل الدول',guideS:'معلومات كل دولة وخرائطها',world:'خريطة العالم',worldS:'الكرة الأرضية والخريطة المسطحة',table:'جدول الدول',tableS:'كل الدول في جدول قابل للترتيب',quiz:'الأسئلة',quizS:'اختبر معلوماتك بسبعة أنواع من الأسئلة',ver:'النسخة',langBtn:'English',
+ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكلها وموقعها وعلمها وعاصمتها',memo:'دفتر الحفظ',memoS:'علّم الدول التي حفظتها وراجع الباقي',clash:'المعركة',clashS:'ارمِ النرد وشاهد الدول تتصارع على العالم',guide:'دليل الدول',guideS:'معلومات كل دولة وخرائطها',world:'خريطة العالم',worldS:'الكرة الأرضية والخريطة المسطحة',table:'جدول الدول',tableS:'كل الدول في جدول قابل للترتيب',quiz:'الأسئلة',quizS:'اختبر معلوماتك بسبعة أنواع من الأسئلة',ver:'النسخة',langBtn:'English',
  back:'› رجوع',qTitle:'🎯 الأسئلة',tTime:'⏱️ وقت كل سؤال',sec:' ث',tCount:'🔢 عدد الأسئلة',tConts:'🧭 القارات',how:'طريقة اللعب',
  howT:'اختر الوقت وعدد الأسئلة والقارات، ثم نوع الأسئلة. الإجابة الأسرع تكسب نقاطًا أكثر، والإجابات المتتالية الصحيحة تضيف مكافأة سلسلة. اكتب الإجابة ثم اضغط «تأكيد» (أو Enter)؛ تُقبل الأسماء البديلة والإجابة المقاربة. في «حدّد الدولة» أدِر الكرة الأرضية بإصبعك، كبّر واضغط الدولة ثم «تأكيد».',
  m_mix:'تحدي المزيج',m_en:'الدولة بالإنجليزية',m_ar:'الدولة بالعربية',m_shape:'شكل الخريطة',m_cap:'عاصمة الدولة',m_flag:'علم الدولة',m_cur:'عملة الدولة',m_tap:'حدّد الدولة على الخريطة',
@@ -21,7 +21,7 @@ ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكله
  cnt:'دولة',tbSearch:'ابحث بالاسم أو العاصمة أو الكود أو العملة...',none:'لا توجد نتائج',
  hName:'الدولة',hFlag:'العلم',hCap:'العاصمة',hCode:'كود الدولة',hCur:'العملة',hCo:'القارة',hArea:'المساحة (كم²)',hPop:'عدد السكان',
  dbg:'معلومات الشاشة'},
-en:{title:'World Maps Game',tag:'Learn countries by shape, location, flag and capital',clash:'Clash',clashS:'Roll the dice and watch countries fight for the world',guide:'Country Guide',guideS:'Facts and maps for every country',world:'World Map',worldS:'Globe and flat map',table:'Countries Table',tableS:'All countries in a sortable table',quiz:'Quiz',quizS:'Test yourself with seven question types',ver:'Version',langBtn:'العربية',
+en:{title:'World Maps Game',tag:'Learn countries by shape, location, flag and capital',clash:'Clash',clashS:'Roll the dice and watch countries fight for the world',guide:'Country Guide',guideS:'Facts and maps for every country',world:'World Map',worldS:'Globe and flat map',table:'Countries Table',tableS:'All countries in a sortable table',memo:'Study List',memoS:'Tick the countries you know and review the rest',quiz:'Quiz',quizS:'Test yourself with seven question types',ver:'Version',langBtn:'العربية',
  back:'‹ Back',qTitle:'🎯 Quiz',tTime:'⏱️ Time per question',sec:' s',tCount:'🔢 Number of questions',tConts:'🧭 Continents',how:'How to play',
  howT:'Choose the time, the number of questions and the continents, then a question type. Faster answers earn more points and consecutive correct answers add a streak bonus. Type your answer, then press “Confirm” (or Enter); alternative names and close spellings are accepted. In “Locate the country” spin the globe with your finger, zoom in, tap the country, then “Confirm”.',
  m_mix:'Mixed challenge',m_en:'Country (English)',m_ar:'Country (Arabic)',m_shape:'Map shape',m_cap:'Capital city',m_flag:'Country flag',m_cur:'Currency',m_tap:'Locate the country on the map',
@@ -276,11 +276,12 @@ function mkMap(host,o){recolor();
  function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];ready=true;const z=kz();dAll={};
   el.style.setProperty('--bw',bwOf(z).toFixed(2)+'px');el.style.setProperty('--cw',cwOf(z).toFixed(2)+'px');
   gz.select('.sphere').attr('d',mode!=='ctx'?g({type:'Sphere'}):null);svg.classed('ee',mode==='flat');
-  const mid=lite==='mid'||(!lite&&mode==='flat'&&z<1.8);
+  const kk=mode==='globe'?gv.k:z,tier=mode==='ctx'?0:(kk<(mode==='globe'?4:3)?1:0),mid=lite==='mid'||tier===1,lo=lite===true&&mode!=='ctx'&&kk<2;
+  const VIS=mid||lo?null:visFn(p,mode,mode==='globe'?[-gv.r[0],-gv.r[1]]:null,mode==='globe'?gv.k:1,gR,W,H);
   paths.attr('d',f=>{const l=f.mid||f.lite;let d;
-   if(lite===true){const l2=(gv.k>=2&&f.mid)||f.lite;d=l2?g(l2):null}
-   else if(mid)d=f.mid?g(f.mid):null;
-   else{if(l){const b=g.bounds(l);if(!isFinite(b[0][0])||b[1][0]<-40||b[0][0]>W+40||b[1][1]<-40||b[0][1]>H+40)return null}d=g(f)}
+   if(lo)d=f.lite?g(f.lite):null;
+   else if(mid)d=(f.mid||f.lite)?g(f.mid||f.lite):null;
+   else{if(l&&!VIS){const b=g.bounds(l);if(!isFinite(b[0][0])||b[1][0]<-40||b[0][0]>W+40||b[1][1]<-40||b[0][1]>H+40)return null}d=dCull(g,f,VIS)}
    if(d)ds.push(d);if(f.pri)dAll[f.id]=d||null;return d||null});
   gz.select('.coast').attr('d',mode==='globe'?null:ds.join(''));
   /* thin dark outline over the highlighted countries (keeps small islands readable from afar) */
@@ -405,6 +406,28 @@ function placePanel(e){if(e.dataset.dk&&innerWidth>innerHeight){e.classList.add(
  const w=Math.min(R.w||(vw>900?560:vw-16),vw-12),h=Math.min(R.h||Math.round(vh*(vw>900?.52:.5)),vh-20);
  Object.assign(e.style,{width:w+'px',height:h+'px',left:Math.max(6,Math.min(R.x!=null?R.x:(vw-w)/2,vw-w-6))+'px',top:Math.max(6,Math.min(R.y!=null?R.y:vh-h-10,vh-h-6))+'px'})}
 function fitPanel(){const e=$('#pn');if(e)placePanel(e)}
+
+/* ---- viewport culling: draw only the polygon parts that can be on screen ---- */
+const RPD=Math.PI/180;
+function partsOf(f){if(f._pp)return f._pp;const gm=f.geometry,cs=!gm?[]:gm.type==='Polygon'?[gm.coordinates]:gm.type==='MultiPolygon'?gm.coordinates:[];
+ f._pp=cs.map(co=>{const b=d3.geoBounds({type:'Polygon',coordinates:co}),w=b[0][0],e=b[1][0],cr=w>e||e-w>300,c=[cr?180:(w+e)/2,(b[0][1]+b[1][1])/2],r=cr?180:Math.max(d3.geoDistance(c,[w,b[0][1]]),d3.geoDistance(c,[e,b[1][1]]),d3.geoDistance(c,[w,b[1][1]]),d3.geoDistance(c,[e,b[0][1]]))/RPD;let n=0;co.forEach(r=>n+=r.length);return{co,b,c,r,cr,n}});return f._pp}
+function boxOf(p,W,H){const pts=[];for(let i=0;i<=6;i++)for(let j=0;j<=6;j++){const v=p.invert([W*i/6,H*j/6]);if(!v||!isFinite(v[0])||!isFinite(v[1]))return null;pts.push(v)}
+ let w=1e9,e=-1e9,so=1e9,n=-1e9;pts.forEach(v=>{w=Math.min(w,v[0]);e=Math.max(e,v[0]);so=Math.min(so,v[1]);n=Math.max(n,v[1])});
+ if(e-w>250||e-w<0)return null;const mx=(e-w)*.3+1,my=(n-so)*.3+1;return[w-mx,so-my,e+mx,n+my]}
+function visFn(p,mode,ctr,k,gR,W,H){const box=boxOf(p,W,H);let vis;
+ if(box)vis=q=>q.cr||(q.b[1][0]>=box[0]&&q.b[0][0]<=box[2]&&q.b[1][1]>=box[1]&&q.b[0][1]<=box[3]);
+ else if(mode==='globe'){const half=Math.asin(Math.min(1,Math.hypot(W,H)/2/(gR*k)))/RPD+4;vis=q=>q.cr||d3.geoDistance(q.c,ctr)/RPD-q.r<half}
+ else return null;
+ vis.box=box&&box[2]-box[0]<70&&box[3]-box[1]<60&&box[3]<84&&box[1]>-84?box:null;return vis}
+function clipRing(r,x0,y0,x1,y1){let o=r;const edges=[[0,x0,1],[0,x1,-1],[1,y0,1],[1,y1,-1]];
+ for(const[ax,v,sg]of edges){if(!o.length)return o;const out=[],inn=pt=>sg*(pt[ax]-v)>=0;let a=o[o.length-1];
+  for(const b of o){const ia=inn(a),ib=inn(b);if(ia!==ib){const t=(v-a[ax])/(b[ax]-a[ax]),q=[0,0];q[ax]=v;q[1-ax]=a[1-ax]+t*(b[1-ax]-a[1-ax]);out.push(q)}if(ib)out.push(b);a=b}o=out}
+ return o.length<3?[]:o}
+function dCull(g,f,vis){const ps=partsOf(f);if(!vis||!ps.length)return g(f);const bx=vis.box,out=[];
+ for(const q of ps){if(!vis(q))continue;
+  if(bx&&q.n>400&&!(q.b[0][0]>=bx[0]&&q.b[1][0]<=bx[2]&&q.b[0][1]>=bx[1]&&q.b[1][1]<=bx[3])){const rs=q.co.map(r=>clipRing(r,bx[0],bx[1],bx[2],bx[3])).filter(r=>r.length>2);if(rs.length&&rs[0]===undefined)continue;if(rs.length){out.push(rs.map(r=>r.concat([r[0]])))}}
+  else out.push(q.co)}
+ return out.length?g({type:'MultiPolygon',coordinates:out}):null}
 /* ---------- world location overlay ---------- */
 function worldLoc(c){if(!c||!c.f||$('#wl'))return;const e=document.createElement('div');e.id='wl';e.className='wl';
  e.innerHTML=`<div class="wlb">${flag(c)}<div class="pt2"><b>${nm(c)}</b><span dir="${d2()}">${nm2(c)}</span></div><button class="wlz" data-k="i">＋</button><button class="wlz" data-k="o">－</button><button class="wlz" data-k="r">⟲</button><button class="wlx" aria-label="${t('close')}">✕</button></div><div class="svgw"></div>`;
@@ -444,9 +467,9 @@ function setLang(l){LG=l;try{localStorage.wmLang=l}catch(_){}applyLang()}
 function applyLang(){const h=document.documentElement;h.lang=LG;h.dir=AR()?'rtl':'ltr';document.title=t('title')}
 function home(){clearQ();clearInterval(G.tm);clearTimeout(G.nx);closePanel();applyLang();
  A.innerHTML=`<header class="hd"><svg class="rose" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M32 4 38 32 32 60 26 32Z"/><path d="M4 32 32 26 60 32 32 38Z" class="b"/><circle cx="32" cy="32" r="4"/></svg><div><h1 id="ttl">${t('title')}</h1><p>${t('tag')}</p></div><button class="lgb" id="lg">${t('langBtn')}</button></header>
- <div class="hub"><div class="infos"><button class="hb h1" id="gd"><i>📖</i><b>${t('guide')}</b><small>${t('guideS')}</small></button><button class="hb h2" id="wm"><i>🌐</i><b>${t('world')}</b><small>${t('worldS')}</small></button><button class="hb h3" id="tb"><i>📊</i><b>${t('table')}</b><small>${t('tableS')}</small></button></div>
+ <div class="hub"><div class="infos i4"><button class="hb h1" id="gd"><i>📖</i><b>${t('guide')}</b><small>${t('guideS')}</small></button><button class="hb h2" id="wm"><i>🌐</i><b>${t('world')}</b><small>${t('worldS')}</small></button><button class="hb h3" id="tb"><i>📊</i><b>${t('table')}</b><small>${t('tableS')}</small></button><button class="hb h4" id="mm"><i>📝</i><b>${t('memo')}</b><small>${t('memoS')}</small></button></div>
  <button class="qbig" id="qz"><i>🎯</i><span><b>${t('quiz')}</b><small>${t('quizS')}</small></span></button><button class="qbig cl" id="cl"><i>⚔️</i><span><b>${t('clash')}</b><small>${t('clashS')}</small></span></button><div class="ver">${t('ver')} ${VER}</div></div>`;
- $('#gd').onclick=()=>dir();$('#wm').onclick=explore;$('#qz').onclick=quizPage;$('#cl').onclick=()=>{location.href='clash.html'};$('#tb').onclick=()=>{location.href='countries.html'};
+ $('#gd').onclick=()=>dir();$('#wm').onclick=explore;$('#qz').onclick=quizPage;$('#cl').onclick=()=>{location.href='clash.html'};$('#tb').onclick=()=>{location.href='countries.html'};$('#mm').onclick=()=>{location.href='memorize.html'};
  $('#lg').onclick=()=>{setLang(AR()?'en':'ar');home()};
  const ti=$('#ttl');let lp=0;ti.onpointerdown=()=>{lp=setTimeout(showDbg,800)};ti.onpointerup=ti.onpointerleave=ti.onpointercancel=()=>clearTimeout(lp)}
 function quizPage(){clearQ();clearInterval(G.tm);clearTimeout(G.nx);closePanel();const chip=(k,v,on)=>`<button data-k="${k}" data-v="${v}" class="${on?'on':''}">${k==='conts'?cn(v):v+(k==='time'?t('sec'):'')}</button>`;

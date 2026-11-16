@@ -292,3 +292,6 @@ img[src$="/np.svg"]{background:#fff}
 .wltap{cursor:zoom-in}
 #tb tr{cursor:pointer}
 .wl .map .l.t{stroke:#fff3a0;stroke-width:3px;filter:drop-shadow(0 0 5px #ff3b1f) drop-shadow(0 0 10px #ff3b1f)}
+.infos.i4{grid-template-columns:repeat(4,1fr)}.hb.h4{background:#f0d6c8}
+@media(max-width:600px){.infos.i4{grid-template-columns:repeat(2,1fr)}}
+.wlh{text-align:center;font-size:13px;opacity:.7;margin:4px 0}

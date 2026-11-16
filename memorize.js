@@ -134,7 +134,7 @@ function onTap(e){const td=e.target.closest('td');if(!td)return;const tr=td.pare
 function dlg(html){const d=document.createElement('div');d.className='fb mdlg';d.innerHTML=`<div class="card">${html}</div>`;
  d.onclick=e=>{if(e.target===d)d.remove()};document.body.appendChild(d);return d}
 function bigDlg(c){const d=dlg(`<div class="bigt">${flagImg(c,'bf')}<div><b>${nm(c)}</b><small>${lang==='ar'?c.en:c.ar}</small></div></div>
- <svg viewBox="0 0 480 320" class="mshp big"><path d="${SH[c.id]||''}"/></svg><button class="x">${T[lang].close}</button>`);d.querySelector('.x').onclick=()=>d.remove()}
+ <svg viewBox="0 0 480 320" class="mshp big"><path d="${SH[c.id]||''}"/></svg><button class="x">${T[lang].close}</button>`);d.querySelector('.x').onclick=()=>d.remove();const bs=d.querySelector('.mshp.big');bs.style.cursor='pointer';bs.insertAdjacentHTML('afterend',`<div class="wlh">🌍 ${lang==='ar'?'اضغط على الخريطة لرؤية موقعها في العالم':'Tap the map to see where it is in the world'}</div>`);bs.onclick=()=>{location.href='index.html#wl='+c.id}}
 function expDlg(){const t=T[lang],code=enc(),d=dlg(`<h3>📤 ${t.expT}</h3><p>${t.expP(M.size)}</p><textarea class="code" readonly rows="2">${code}</textarea>
  <div class="row">${navigator.share?`<button class="sh">${t.share}</button>`:''}<button class="cp">${t.copy}</button><button class="x">${t.close}</button></div>`);
  const ta=d.querySelector('.code');ta.onclick=()=>{ta.select();ta.setSelectionRange(0,9999)};
