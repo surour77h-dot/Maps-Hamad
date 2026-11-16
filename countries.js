@@ -46,8 +46,9 @@ function draw(){const t=T[lang];H.lang=lang;H.dir=lang==='ar'?'rtl':'ltr';docume
  A.querySelector('#ti').textContent=t.cnt(rows.length);A.querySelector('#nn').textContent=rows.length?'':t.none;
  A.querySelector('#hr').innerHTML=COLS.map(k=>`<th data-k="${k}" class="${sk===k?'on':''}">${t.h[k]}${t.u[k]?`<small>${t.u[k]}</small>`:''}</th>`).join('');
  A.querySelectorAll('#hr th').forEach(h=>h.onclick=()=>{const k=h.dataset.k;if(sk!==k){sk=k;sd=1}else if(sd>0)sd=-1;else{sk=null;sd=1}draw()});
- A.querySelector('#tb').innerHTML=rows.map(r=>`<tr>${COLS.map(k=>`<td class="c-${k}">${cell[k](r.c,lang)}</td>`).join('')}</tr>`).join('')}
+ A.querySelector('#tb').innerHTML=rows.map(r=>`<tr data-id="${r.c.id}">${COLS.map(k=>`<td class="c-${k}">${cell[k](r.c,lang)}</td>`).join('')}</tr>`).join('')}
 draw();
+A.querySelector('#tb').onclick=ev=>{const tr=ev.target.closest('tr');if(!tr)return;if(tr.dataset.id)location.href='index.html#wl='+tr.dataset.id};
 const vv=window.visualViewport,fit=()=>{H.style.setProperty('--h',Math.round(vv?vv.height:innerHeight)+'px');scrollTo(0,0)};
 if(vv)vv.addEventListener('resize',fit);addEventListener('resize',fit);addEventListener('orientationchange',()=>[50,300,800].forEach(t=>setTimeout(fit,t)));fit();
 ['gesturestart','gesturechange','gestureend'].forEach(e=>document.addEventListener(e,ev=>ev.preventDefault(),{passive:false}));

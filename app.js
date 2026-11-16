@@ -1,11 +1,11 @@
 const CAPLL={AFG:[69.2,34.5],AGO:[13.2,-8.8],ALB:[19.8,41.3],AND:[1.5,42.5],ARE:[54.4,24.5],ARG:[-58.4,-34.6],ARM:[44.5,40.2],ATG:[-61.8,17.1],AUS:[149.1,-35.3],AUT:[16.4,48.2],AZE:[49.9,40.4],BDI:[29.9,-3.4],BEL:[4.35,50.85],BEN:[2.6,6.5],BFA:[-1.5,12.4],BGD:[90.4,23.8],BGR:[23.3,42.7],BHR:[50.6,26.2],BHS:[-77.35,25.05],BIH:[18.4,43.85],BLR:[27.6,53.9],BLZ:[-88.8,17.25],BOL:[-65.26,-19.04],BRA:[-47.9,-15.8],BRB:[-59.6,13.1],BRN:[114.9,4.9],BTN:[89.6,27.5],BWA:[25.9,-24.65],CAF:[18.6,4.4],CAN:[-75.7,45.4],CHE:[7.45,46.95],CHL:[-70.65,-33.45],CHN:[116.4,39.9],CIV:[-5.3,6.8],CMR:[11.5,3.85],COD:[15.3,-4.3],COG:[15.3,-4.25],COL:[-74.1,4.7],COM:[43.25,-11.7],CPV:[-23.5,14.9],CRI:[-84.1,9.9],CUB:[-82.4,23.1],CYP:[33.4,35.2],CZE:[14.4,50.1],DEU:[13.4,52.5],DJI:[43.15,11.6],DMA:[-61.4,15.3],DNK:[12.6,55.7],DOM:[-69.9,18.5],DZA:[3.05,36.75],ECU:[-78.5,-0.2],EGY:[31.2,30.05],ERI:[38.9,15.3],ESP:[-3.7,40.4],EST:[24.75,59.4],ETH:[38.75,9.0],FIN:[24.9,60.2],FJI:[178.4,-18.1],FRA:[2.35,48.85],FSM:[158.15,6.9],GAB:[9.45,0.4],GBR:[-0.1,51.5],GEO:[44.8,41.7],GHA:[-0.2,5.6],GIN:[-13.7,9.5],GMB:[-16.6,13.45],GNB:[-15.6,11.85],GNQ:[8.8,3.75],GRC:[23.7,38.0],GRD:[-61.75,12.05],GTM:[-90.5,14.6],GUY:[-58.15,6.8],HND:[-87.2,14.1],HRV:[16.0,45.8],HTI:[-72.3,18.55],HUN:[19.05,47.5],IDN:[106.8,-6.2],IND:[77.2,28.6],IRL:[-6.25,53.35],IRN:[51.4,35.7],IRQ:[44.4,33.3],ISL:[-21.9,64.15],ISR:[35.2,31.8],ITA:[12.5,41.9],JAM:[-76.8,18.0],JOR:[35.9,31.95],JPN:[139.7,35.7],KAZ:[71.4,51.15],KEN:[36.8,-1.3],KGZ:[74.6,42.9],KHM:[104.9,11.55],KIR:[173.0,1.35],KNA:[-62.7,17.3],KOR:[127.0,37.55],KWT:[47.98,29.37],LAO:[102.6,17.95],LBN:[35.5,33.9],LBR:[-10.8,6.3],LBY:[13.2,32.9],LCA:[-61.0,14.0],LIE:[9.5,47.15],LKA:[79.9,6.9],LSO:[27.5,-29.3],LTU:[25.3,54.7],LUX:[6.13,49.6],LVA:[24.1,56.95],MAR:[-6.85,34.0],MCO:[7.4,43.73],MDA:[28.85,47.0],MDG:[47.5,-18.9],MDV:[73.5,4.2],MEX:[-99.1,19.45],MHL:[171.4,7.1],MKD:[21.45,42.0],MLI:[-8.0,12.65],MLT:[14.5,35.9],MMR:[96.1,19.75],MNE:[19.25,42.45],MNG:[106.9,47.9],MOZ:[32.6,-25.95],MRT:[-15.95,18.1],MUS:[57.5,-20.15],MWI:[33.8,-13.95],MYS:[101.7,3.15],NAM:[17.1,-22.55],NER:[2.1,13.5],NGA:[7.5,9.05],NIC:[-86.25,12.15],NLD:[4.9,52.4],NOR:[10.75,59.9],NPL:[85.3,27.7],NRU:[166.9,-0.55],NZL:[174.8,-41.3],OMN:[58.4,23.6],PAK:[73.05,33.7],PAN:[-79.5,9.0],PER:[-77.05,-12.05],PHL:[121.0,14.6],PLW:[134.6,7.5],PNG:[147.2,-9.45],POL:[21.0,52.25],PRK:[125.75,39.0],PRT:[-9.15,38.7],PRY:[-57.6,-25.3],PSE:[35.2,31.9],QAT:[51.5,25.3],ROU:[26.1,44.4],RUS:[37.6,55.75],RWA:[30.05,-1.95],SAU:[46.7,24.65],SDN:[32.55,15.6],SEN:[-17.45,14.7],SGP:[103.85,1.3],SLB:[159.95,-9.4],SLE:[-13.25,8.5],SLV:[-89.2,13.7],SMR:[12.45,43.93],SOM:[45.35,2.05],SRB:[20.45,44.8],SSD:[31.6,4.85],STP:[6.7,0.3],SUR:[-55.2,5.85],SVK:[17.1,48.15],SVN:[14.5,46.05],SWE:[18.05,59.3],SWZ:[31.2,-26.4],SYC:[55.45,-4.6],SYR:[36.3,33.5],TCD:[15.05,12.1],TGO:[1.2,6.15],THA:[100.5,13.75],TJK:[68.8,38.55],TKM:[58.4,37.95],TLS:[125.6,-8.55],TON:[-175.2,-21.15],TTO:[-61.5,10.65],TUN:[10.2,36.8],TUR:[32.85,39.9],TUV:[179.2,-8.5],TZA:[35.75,-6.15],UGA:[32.6,0.3],UKR:[30.5,50.45],URY:[-56.2,-34.9],USA:[-77.0,38.9],UZB:[69.25,41.3],VAT:[12.45,41.9],VCT:[-61.2,13.15],VEN:[-66.9,10.5],VNM:[105.85,21.0],VUT:[168.3,-17.75],WSM:[-171.75,-13.85],YEM:[44.2,15.35],ZAF:[28.2,-25.75],ZMB:[28.3,-15.4],ZWE:[31.05,-17.8]};
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v21';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v22';
 /* ---------- language (whole app) ---------- */
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
 const I={
-ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكلها وموقعها وعلمها وعاصمتها',clash:'المعركة',clashS:'ارمِ النرد وشاهد الدول تتصارع على العالم',guide:'دليل الدول',guideS:'معلومات كل دولة وخرائطها',world:'خريطة العالم',worldS:'الكرة الأرضية والخريطة المسطحة',table:'جدول الدول',tableS:'كل الدول في جدول قابل للترتيب',memo:'دفتر الحفظ',memoS:'علّم الدول التي حفظتها وراجع الباقي',quiz:'الأسئلة',quizS:'اختبر معلوماتك بسبعة أنواع من الأسئلة',ver:'النسخة',langBtn:'English',
+ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكلها وموقعها وعلمها وعاصمتها',clash:'المعركة',clashS:'ارمِ النرد وشاهد الدول تتصارع على العالم',guide:'دليل الدول',guideS:'معلومات كل دولة وخرائطها',world:'خريطة العالم',worldS:'الكرة الأرضية والخريطة المسطحة',table:'جدول الدول',tableS:'كل الدول في جدول قابل للترتيب',quiz:'الأسئلة',quizS:'اختبر معلوماتك بسبعة أنواع من الأسئلة',ver:'النسخة',langBtn:'English',
  back:'› رجوع',qTitle:'🎯 الأسئلة',tTime:'⏱️ وقت كل سؤال',sec:' ث',tCount:'🔢 عدد الأسئلة',tConts:'🧭 القارات',how:'طريقة اللعب',
  howT:'اختر الوقت وعدد الأسئلة والقارات، ثم نوع الأسئلة. الإجابة الأسرع تكسب نقاطًا أكثر، والإجابات المتتالية الصحيحة تضيف مكافأة سلسلة. اكتب الإجابة ثم اضغط «تأكيد» (أو Enter)؛ تُقبل الأسماء البديلة والإجابة المقاربة. في «حدّد الدولة» أدِر الكرة الأرضية بإصبعك، كبّر واضغط الدولة ثم «تأكيد».',
  m_mix:'تحدي المزيج',m_en:'الدولة بالإنجليزية',m_ar:'الدولة بالعربية',m_shape:'شكل الخريطة',m_cap:'عاصمة الدولة',m_flag:'علم الدولة',m_cur:'عملة الدولة',m_tap:'حدّد الدولة على الخريطة',
@@ -21,7 +21,7 @@ ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكله
  cnt:'دولة',tbSearch:'ابحث بالاسم أو العاصمة أو الكود أو العملة...',none:'لا توجد نتائج',
  hName:'الدولة',hFlag:'العلم',hCap:'العاصمة',hCode:'كود الدولة',hCur:'العملة',hCo:'القارة',hArea:'المساحة (كم²)',hPop:'عدد السكان',
  dbg:'معلومات الشاشة'},
-en:{title:'World Maps Game',tag:'Learn countries by shape, location, flag and capital',clash:'Clash',clashS:'Roll the dice and watch countries fight for the world',guide:'Country Guide',guideS:'Facts and maps for every country',world:'World Map',worldS:'Globe and flat map',table:'Countries Table',tableS:'All countries in a sortable table',memo:'Study List',memoS:'Tick the countries you know and review the rest',quiz:'Quiz',quizS:'Test yourself with seven question types',ver:'Version',langBtn:'العربية',
+en:{title:'World Maps Game',tag:'Learn countries by shape, location, flag and capital',clash:'Clash',clashS:'Roll the dice and watch countries fight for the world',guide:'Country Guide',guideS:'Facts and maps for every country',world:'World Map',worldS:'Globe and flat map',table:'Countries Table',tableS:'All countries in a sortable table',quiz:'Quiz',quizS:'Test yourself with seven question types',ver:'Version',langBtn:'العربية',
  back:'‹ Back',qTitle:'🎯 Quiz',tTime:'⏱️ Time per question',sec:' s',tCount:'🔢 Number of questions',tConts:'🧭 Continents',how:'How to play',
  howT:'Choose the time, the number of questions and the continents, then a question type. Faster answers earn more points and consecutive correct answers add a streak bonus. Type your answer, then press “Confirm” (or Enter); alternative names and close spellings are accepted. In “Locate the country” spin the globe with your finger, zoom in, tap the country, then “Confirm”.',
  m_mix:'Mixed challenge',m_en:'Country (English)',m_ar:'Country (Arabic)',m_shape:'Map shape',m_cap:'Capital city',m_flag:'Country flag',m_cur:'Currency',m_tap:'Locate the country on the map',
@@ -53,6 +53,8 @@ const SEAS=[
 const SLV={1:[0,10],2:[1.5,70],3:[4,1e9],4:[8,1e9]},SFS={1:15,2:12,3:10.5,4:10};
 const SMC=document.createElement('canvas').getContext('2d'),SMW={};
 function sMeasure(txt,bold,ar){const k=(ar?'a':'l')+bold+txt;if(SMW[k]!=null)return SMW[k];SMC.font=(ar?'':'italic ')+(bold?'700 ':'400 ')+'100px '+(ar?'AtlasAr,"Geeza Pro",serif':'AtlasLa,Georgia,serif');return SMW[k]=SMC.measureText(txt).width/100}
+const CMW={};function cMeasure(t,ar){const k=(ar?'a':'l')+t;if(CMW[k]!=null)return CMW[k];SMC.font='700 100px '+(ar?'AtlasAr,"Geeza Pro",serif':'AtlasLn,Georgia,serif');return CMW[k]=SMC.measureText(t).width/100}
+try{Promise.all([document.fonts.load('700 20px AtlasAr'),document.fonts.load('700 20px AtlasLn'),document.fonts.load('400 20px AtlasAr')]).then(()=>{for(const k in CMW)delete CMW[k];for(const k in SMW)delete SMW[k]})}catch(_){}
 /* water names: atlas style. Each name gets ONE fixed place on the map (geographic anchor + tilt + size proportional to the map),
    computed once at a reference scale against the land; afterwards it is only re-projected, so it never jumps, resizes or vanishes while panning/zooming */
 let SBX=[];
@@ -94,10 +96,13 @@ function seaHtml(p,W,H,z,ctr,R){const boxes=[],out=[],ar=AR(),U=p.scale()/z;
   out.push(`<text class="sn sn${lvl}" style="font-size:${fs}px;opacity:${vis.toFixed(2)}${ls?`;letter-spacing:${ls.toFixed(1)}px`:''}" dominant-baseline="central" x="${c1[0].toFixed(1)}" y="${c1[1].toFixed(1)}" transform="rotate(${a.toFixed(2)} ${c1[0].toFixed(1)} ${c1[1].toFixed(1)})">${pl.txt}</text>`)}
  SBX=boxes;return out.join('')}
 /* ---------- extra accepted spellings / names (by ISO3) ---------- */
+const XA2={MNE:'مونتنيقرو,مونتينيقرو,مونتينغرو,مونتنغرو,مونتينجرو,الجبل الأسود',MKD:'مقدونيا الشمالية,شمال مقدونيا,مقدونيا الشماليه,مقدونية الشمالية,مقدونيه الشماليه,جمهورية مقدونيا الشمالية,Macedonia,North Macedonia',CZE:'التشيك,تشيكيا,جمهورية التشيك,تشيك,Czechia,Czech Republic',MMR:'ميانمار,بورما,ميانمار (بورما),Burma',SWZ:'إيسواتيني,سوازيلاند,اسواتيني,Eswatini,Swaziland',TLS:'تيمور الشرقية,تيمور ليشتي,تيمور-ليشتي,East Timor,Timor-Leste',CIV:'ساحل العاج,كوت ديفوار,Ivory Coast',COD:'الكونغو الديمقراطية,جمهورية الكونغو الديمقراطية,الكونغو كينشاسا,زائير',COG:'الكونغو,جمهورية الكونغو,الكونغو برازافيل',CPV:'الرأس الأخضر,جزر الرأس الأخضر,كابو فيردي,Cape Verde',BRN:'بروناي,بروني,بروناي دار السلام',LKA:'سريلانكا,سيلان',SVK:'سلوفاكيا,سلوفاكية',SVN:'سلوفينيا',HRV:'كرواتيا,كروشيا',BIH:'البوسنة والهرسك,البوسنه,بوسنيا,البوسنة',SRB:'صربيا,سيربيا',ALB:'البانيا,ألبانيا',LUX:'لوكسمبورغ,لوكسمبورج,لكسمبورغ,لوكسمبرغ',LIE:'ليختنشتاين,ليختنشتين,لختنشتاين,ليشتنشتاين',SMR:'سان مارينو,سان مارينو',VAT:'الفاتيكان,دولة الفاتيكان,حاضرة الفاتيكان',MDV:'المالديف,جزر المالديف,مالديف',SYC:'سيشل,سيشيل,جزر سيشل',MUS:'موريشيوس,موريشص,جزر موريشيوس',BHS:'جزر البهاما,الباهاما,البهاما',FJI:'فيجي,فيجى,فيدجي,فيجي',PNG:'بابوا غينيا الجديدة,بابوا نيو غينيا,بابوا',SLB:'جزر سليمان,سولومون',MHL:'جزر مارشال,مارشال',FSM:'ميكرونيزيا,ولايات ميكرونيزيا المتحدة',KNA:'سانت كيتس ونيفيس,سانت كيتس,سانت كيتس وناڤيس',VCT:'سانت فنسنت والغرينادين,سانت فينسنت,سان فنسنت',LCA:'سانت لوسيا,سانت لوسيا,سانتا لوسيا',ATG:'أنتيغوا وبربودا,انتيغوا وباربودا,أنتيجوا وبربودا',TTO:'ترينيداد وتوباغو,ترينداد وتوباجو,ترينيداد وتوباجو',GNB:'غينيا بيساو,غينيا-بيساو',GNQ:'غينيا الاستوائية,غينيا الإستوائية',PRK:'كوريا الشمالية,شمال كوريا',KOR:'كوريا الجنوبية,جنوب كوريا,كوريا'};
 const XA={AFG:'افغانستان',ARE:'الامارات,اتحاد الامارات,الإمارات العربية المتحدة',ARM:'ارمينيا',AUT:'اوستريا,النمسا',AZE:'اذربيجان',BIH:'البوسنه,بوسنيا,البوسنة والهرسك',BLR:'روسيا البيضاء,بيلاروس,بيلاروسيا,Belorussia',BRN:'بروناي,بروناي دار السلام',CAF:'افريقيا الوسطى,جمهورية افريقيا الوسطى,Central African Rep',CIV:'ساحل العاج,كوت ديفوار,Cote dIvoire,Ivory Coast',COD:'الكونغو الديمقراطية,الكونغو كينشاسا,زائير,DR Congo,Congo Kinshasa,Democratic Republic of Congo',COG:'الكونغو,الكونغو برازافيل,Congo Brazzaville,Republic of the Congo',CZE:'التشيك,تشيكيا,جمهورية التشيك,Czechia,Czech Republic',DEU:'المانيا,Deutschland',DNK:'الدانمارك,الدنمارك',DOM:'الدومينيكان,جمهورية الدومينيكان,Dominican Rep',ESP:'اسبانيا,Espana',EST:'استونيا',SWZ:'سوازيلاند,اسواتيني,إسواتيني,Eswatini,Swaziland',GBR:'بريطانيا,المملكة المتحدة,UK,Britain,Great Britain,United Kingdom',GEO:'جيورجيا,جورجيا',GNB:'غينيا بيساو,غينيا-بيساو,Guinea Bissau',GNQ:'غينيا الاستوائية,Equatorial Guinea',GUY:'غيانا',IRN:'ايران',KAZ:'قازاخستان,قازاقستان,كازاقستان,كازاخستان,Kazakstan',KGZ:'قرغيزستان,كيرغيزستان,قيرقيزستان,قرقيزستان,كرغيزستان,قرقستان,قيرقستان,Kirgizstan,Kirghizia,Kyrgyz Republic',KNA:'سانت كيتس,سانت كيتس ونيفيس,St Kitts,Saint Kitts and Nevis',LIE:'ليشتنشتاين,ليختنشتاين',LKA:'سريلانكا,سيرلانكا',LUX:'لوكسمبرغ,لوكسمبورغ',MKD:'مقدونيا الشمالية,مقدونيا,North Macedonia,Macedonia',MMR:'بورما,ميانمار,Burma,Myanmar',MNE:'مونتينيغرو,مونتنيغرو,مونتينجرو,مونتنجرو,Montenegro,Crna Gora',NLD:'هولندا,Holland,The Netherlands',OMN:'سلطنة عمان,عمان,Oman',PNG:'بابوا,بابوا غينيا الجديدة,Papua New Guinea',PRK:'كوريا الشمالية,North Korea',KOR:'كوريا الجنوبية,South Korea,Korea',PSE:'فلسطين,Palestine,State of Palestine',PRY:'باراجواي,باراغواي',RUS:'الاتحاد الروسي,Russian Federation',SAU:'المملكة العربية السعودية,السعودية',STP:'ساو تومي,ساو تومي وبرينسيبي,Sao Tome',SSD:'جنوب السودان,South Sudan',SVK:'سلوفاكيا,Slovak Republic',TLS:'تيمور الشرقية,تيمور ليشتي,East Timor,Timor Leste',TTO:'ترينيداد وتوباغو,ترينيداد وتوباجو,Trinidad',TUR:'تركيا,Turkiye,Türkiye',URY:'اوروجواي,اوروغواي',USA:'امريكا,الولايات المتحدة الامريكية,United States of America,America,USA,US',VAT:'الفاتيكان,Vatican City,Holy See',VCT:'سانت فنسنت,سانت فنسنت والغرينادين,St Vincent',LCA:'سانت لوسيا,St Lucia',ATG:'انتيغوا وبربودا,أنتيغوا وباربودا,Antigua',BHS:'جزر البهاما,الباهاما,Bahamas',CPV:'الرأس الاخضر,كابو فيردي,Cape Verde,Cabo Verde',COM:'جزر القمر,القمر',MDV:'المالديف,جزر المالديف,جزر مالديف',MHL:'جزر مارشال',SLB:'جزر سليمان',SYC:'سيشل,سيشيل',TJK:'طاجيكستان,طاجكستان',TKM:'تركمانستان',UZB:'اوزبكستان,أوزبكستان',VNM:'فيتنام,فيتنام',YEM:'اليمن',ZAF:'جنوب افريقيا,South Africa',ZWE:'زيمبابوي,زمبابوي',MRT:'موريتانيا',BFA:'بوركينا فاسو,بوركينافاسو',NER:'النيجر',NGA:'نيجيريا',CHE:'سويسرا,Switzerland',SWE:'السويد',NOR:'النرويج',IRL:'ايرلندا,أيرلندا,ايرلندا',ISL:'ايسلندا,آيسلندا,أيسلندا',PHL:'الفلبين,الفيليبين',IDN:'اندونيسيا,إندونيسيا',MYS:'ماليزيا',MNG:'منغوليا,منغوليا',KHM:'كمبوديا,Cambodia',LAO:'لاوس,Laos',BGD:'بنغلاديش,بنجلاديش',NPL:'نيبال',BTN:'بوتان',IND:'الهند',PAK:'باكستان',TWN:'تايوان',UKR:'اوكرانيا,أوكرانيا',MDA:'مولدوفا',ROU:'رومانيا',BGR:'بلغاريا',SRB:'صربيا',HRV:'كرواتيا',SVN:'سلوفينيا',LVA:'لاتفيا',LTU:'ليتوانيا',MLT:'مالطا',CYP:'قبرص',ETH:'اثيوبيا,إثيوبيا',ERI:'اريتريا,إريتريا',DJI:'جيبوتي',SOM:'الصومال',UGA:'اوغندا,أوغندا',TZA:'تنزانيا',MOZ:'موزمبيق',MDG:'مدغشقر',MWI:'ملاوي',ZMB:'زامبيا',BWA:'بوتسوانا',NAM:'ناميبيا',AGO:'انغولا,أنغولا,أنجولا',GAB:'الغابون,غابون',CMR:'الكاميرون',TCD:'تشاد',GHA:'غانا',TGO:'توغو,توجو',BEN:'بنين',SLE:'سيراليون',LBR:'ليبيريا',GIN:'غينيا',GMB:'غامبيا',SEN:'السنغال',MLI:'مالي',DZA:'الجزائر',TUN:'تونس',LBY:'ليبيا',EGY:'مصر',SDN:'السودان',MAR:'المغرب',HTI:'هايتي',CUB:'كوبا',JAM:'جامايكا',BRB:'بربادوس',GRD:'غرينادا',DMA:'دومينيكا',NIC:'نيكاراغوا,نيكاراجوا',HND:'هندوراس',SLV:'السلفادور',GTM:'غواتيمالا,جواتيمالا',CRI:'كوستاريكا',PAN:'بنما',COL:'كولومبيا',VEN:'فنزويلا',ECU:'الاكوادور,الإكوادور',PER:'بيرو',BOL:'بوليفيا',CHL:'تشيلي,شيلي',ARG:'الارجنتين,الأرجنتين',BRA:'البرازيل',SUR:'سورينام,سورينام',NZL:'نيوزيلندا,نيوزيلاند',FJI:'فيجي,فيجي',WSM:'ساموا',TON:'تونغا,تونجا',VUT:'فانواتو',KIR:'كيريباتي,كريباتي',FSM:'ميكرونيزيا',PLW:'بالاو,بلاو',NRU:'ناورو',TUV:'توفالو'};
 const [D,T,T5,T1]=await Promise.all([fetch('data.json').then(r=>r.json()),fetch('world.json').then(r=>r.json()),fetch('world50.json').then(r=>r.json()),fetch('world110.json').then(r=>r.json())]);
 /* ---------- map data: Natural Earth 1:10m (detail) + 1:50m (settled world views) + 1:110m (light copy while dragging) ---------- */
-const all=topojson.feature(T,T.objects.countries).features,nbs=topojson.neighbors(T.objects.countries.geometries).map(a=>a.slice());
+const all=topojson.feature(T,T.objects.countries).features,nbs=[];
+/* neighbours come from the country data (ISO3 land borders), so map colouring does not depend on shared geometry arcs */
+{const ix={};all.forEach((f,i)=>{if(f.id!=null)ix[f.id]=i});const dn={};D.forEach(c=>dn[c.id]=c);all.forEach(f=>{const c=f.id!=null?D.find(x=>x.n===f.id):null;nbs.push(c?(c.nb||[]).map(k=>dn[k]?ix[dn[k].n]:undefined).filter(x=>x!==undefined):[])})}
 const keyOf=f=>f.id!=null?f.id:'n:'+f.properties.name;
 /* map convention: Western Sahara is drawn as part of Morocco (one merged shape, no inner border) */
 function mergeWS(Tx,feats){const gs=Tx.objects.countries.geometries,iM=gs.findIndex(g=>g.id==='504'&&!(g.properties&&g.properties.p===0)),iS=gs.findIndex(g=>g.id==='732');
@@ -108,8 +113,6 @@ const LM={},MM={},f1=topojson.feature(T1,T1.objects.countries).features,f5=topoj
 mergeWS(T1,f1);mergeWS(T5,f5);
 f1.forEach(f=>{if(!f.hide)LM[keyOf(f)]=f});f5.forEach(f=>{if(!f.hide&&f.properties.p)MM[keyOf(f)]=f});
 all.forEach(f=>{f.pri=!f.hide&&f.id!=null&&!!f.properties.p;const u=!f.hide&&(f.id==null||f.pri);f.lite=u?(LM[keyOf(f)]||null):null;f.mid=u?(MM[keyOf(f)]||null):null});
-/* the 1:10m Vatican polygon is degenerate (zero width): use the 1:50m outline */
-all.forEach(f=>{if(f.id==='336'&&f.mid&&f.mid.geometry)f.geometry=f.mid.geometry});
 /* random graph colouring: neighbours never share a colour; new arrangement on every call */
 function recolor(){const n=all.length,col=new Array(n).fill(-1);
  [...Array(n).keys()].filter(i=>!all[i].hide).map(i=>[nbs[i].length+Math.random()*4,i]).sort((a,b)=>b[0]-a[0]).forEach(([,i])=>{const u=new Set(nbs[i].map(j=>col[j])),av=[0,1,2,3,4,5,6].filter(k=>!u.has(k));col[i]=av.length?av[Math.floor(Math.random()*av.length)]:Math.floor(Math.random()*7)});
@@ -135,9 +138,9 @@ const cn=k=>AR()?CN[k]:CNe[k],cEn=new Intl.DisplayNames('en',{type:'currency'}),
 let S=Object.assign({time:20,count:10,conts:Object.keys(CN),nl:1},JSON.parse(localStorage.wm||'{}'));
 const save=()=>localStorage.wm=JSON.stringify(S);
 /* ---------- text matching ---------- */
-const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ًͯ-ٰٟ]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').replace(/[^\p{L}\p{N}]/gu,'').replace(/^the(?=.{4})/,'').replace(/^ال(?=.{3})/,'');
+const norm=s=>String(s).toLowerCase().normalize('NFKC').normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670\u0640\u200b-\u200f\u202a-\u202e\u2066-\u2069]/g,'').replace(/[أإآٱ]/g,'ا').replace(/[ةہۀھ]/g,'ه').replace(/[ىیئ]/g,'ي').replace(/ک/g,'ك').replace(/ؤ/g,'و').replace(/[^\p{L}\p{N}]/gu,'').replace(/^the(?=.{4})/,'').replace(/^ال(?=.{3})/,'');
 const AL={cz:'Czech Republic',sz:'Swaziland',mm:'Burma',mk:'Macedonia',tl:'East Timor',tr:'Turkiye',ci:'Ivory Coast',cg:'Congo Republic',cd:'DR Congo,DRC',us:'USA,America',gb:'UK,Britain',ae:'UAE',va:'Vatican',kr:'South Korea',kp:'North Korea',cv:'Cape Verde',ps:'Palestinian Territories'};
-const acc=c=>c._a||(c._a=new Set([c.en,c.ar,...c.alt,...(AL[c.a]||'').split(','),...(XA[c.id]||'').split(',')].filter(Boolean).flatMap(x=>{const n=norm(x);return n.startsWith('saint')?[n,'st'+n.slice(5)]:[n]})));
+const acc=c=>c._a||(c._a=new Set([c.en,c.ar,...c.alt,...(AL[c.a]||'').split(','),...(XA[c.id]||'').split(','),...(XA2[c.id]||'').split(',')].filter(Boolean).flatMap(x=>{const n=norm(x);return n.startsWith('saint')?[n,'st'+n.slice(5)]:[n]})));
 function lev(a,b,max){if(Math.abs(a.length-b.length)>max)return max+1;const m=a.length,n=b.length,d=[];for(let i=0;i<=m;i++){d[i]=[i];}for(let j=1;j<=n;j++)d[0][j]=j;
  for(let i=1;i<=m;i++)for(let j=1;j<=n;j++){const c=a[i-1]===b[j-1]?0:1;d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+c);if(i>1&&j>1&&a[i-1]===b[j-2]&&a[i-2]===b[j-1])d[i][j]=Math.min(d[i][j],d[i-2][j-2]+1)}return d[m][n]}
 const tol=n=>n<=4?0:n<=8?1:2;
@@ -167,13 +170,19 @@ function projFor(c,kind,W=900,H=560){
 function near(c,f,R){const b=f.gb||(f.gb=d3.geoBounds(f.mid||f)),w=b[0][0],s=b[0][1],e=b[1][0],n=b[1][1],x=c.ct[0],y=c.ct[1];if(w>e)return true;
  let lx=x;if(x<w||x>e){const dw=Math.abs(((x-w+540)%360)-180),de=Math.abs(((x-e+540)%360)-180);lx=dw<de?w:e}
  return d3.geoDistance(c.ct,[lx,Math.max(s,Math.min(n,y))])*deg<=R*1.9+3}
-function frameHtml(c,p,W,H,cls){const g=d3.geoPath(p),b=g.bounds(c.f);if(!isFinite(b[0][0]))return'';const x0=b[0][0],y0=b[0][1],x1=b[1][0],y1=b[1][1];
- if(x1<-40||x0>W+40||y1<-40||y0>H+40)return'';
- const R=(x,y,w,h)=>`<rect class="fr ${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="9"/>`;
- if(x1-x0>W*.9||y1-y0>H*.9)return(c.cl||[]).map(cl=>{const q=p(cl.ct);if(!q)return'';const r=Math.max(13,p.scale()*cl.rr*rad+7);return R(q[0]-r,q[1]-r,2*r,2*r)}).join('');
- const w=x1-x0,h=y1-y0,cx=(x0+x1)/2,cy=(y0+y1)/2;
- if(Math.max(w,h)<10)return`<circle class="fr ${cls}" cx="${cx}" cy="${cy}" r="17"/>`;
- const ww=Math.max(w+20,32),hh=Math.max(h+20,32);return R(cx-ww/2,cy-hh/2,ww,hh)}
+/* capsule frames: one tight, rotated rounded box per island group (never one big circle) */
+function capsOf(c,p,W,H){const g=d3.geoPath(p),geo=c.f&&c.f.geometry;if(!geo)return[];const polys=geo.type==='Polygon'?[geo.coordinates]:geo.coordinates;let it=[];
+ polys.forEach(pc=>{const b=g.bounds({type:'Polygon',coordinates:pc});if(!isFinite(b[0][0]))return;if(b[1][0]<-80||b[0][0]>W+80||b[1][1]<-80||b[0][1]>H+80)return;it.push({x0:b[0][0],y0:b[0][1],x1:b[1][0],y1:b[1][1]})});
+ if(!it.length)return[];
+ let G=it.map(i=>({m:[i],x0:i.x0,y0:i.y0,x1:i.x1,y1:i.y1}));const gap=(a,b)=>Math.max(0,Math.max(a.x0-b.x1,b.x0-a.x1),Math.max(a.y0-b.y1,b.y0-a.y1));
+ const mer=(i,j)=>{const a=G[i],b=G[j];a.m=a.m.concat(b.m);a.x0=Math.min(a.x0,b.x0);a.y0=Math.min(a.y0,b.y0);a.x1=Math.max(a.x1,b.x1);a.y1=Math.max(a.y1,b.y1);G.splice(j,1)};
+ for(let ch=1;ch;){ch=0;for(let i=0;i<G.length&&!ch;i++)for(let j=i+1;j<G.length;j++)if(gap(G[i],G[j])<=26){mer(i,j);ch=1;break}}
+ while(G.length>6){let bi=0,bj=1,bd=1e9;for(let i=0;i<G.length;i++)for(let j=i+1;j<G.length;j++){const d=gap(G[i],G[j]);if(d<bd){bd=d;bi=i;bj=j}}mer(bi,bj)}
+ return G.map(gr=>{let ang=0;const ms=gr.m;if(ms.length>1){let sx=0,sy=0,sw=0;ms.forEach(m=>{const w=1+Math.max(m.x1-m.x0,m.y1-m.y0);sx+=(m.x0+m.x1)/2*w;sy+=(m.y0+m.y1)/2*w;sw+=w});const mx=sx/sw,my=sy/sw;let a=0,b=0,cc=0;ms.forEach(m=>{const w=1+Math.max(m.x1-m.x0,m.y1-m.y0),dx=(m.x0+m.x1)/2-mx,dy=(m.y0+m.y1)/2-my;a+=w*dx*dx;b+=w*dy*dy;cc+=w*dx*dy});ang=.5*Math.atan2(2*cc,a-b)}
+  const ca=Math.cos(ang),sa=Math.sin(ang);let u0=1e9,u1=-1e9,v0=1e9,v1=-1e9;ms.forEach(m=>[[m.x0,m.y0],[m.x1,m.y0],[m.x0,m.y1],[m.x1,m.y1]].forEach(([x,y])=>{const u=x*ca+y*sa,v=-x*sa+y*ca;u0=Math.min(u0,u);u1=Math.max(u1,u);v0=Math.min(v0,v);v1=Math.max(v1,v)}));
+  const pad=7,w=Math.max(22,u1-u0+2*pad),h=Math.max(22,v1-v0+2*pad),um=(u0+u1)/2,vm=(v0+v1)/2;return{cx:um*ca-vm*sa,cy:um*sa+vm*ca,w,h,a:ang*180/Math.PI}})}
+const capRect=(s,cls,mw=0)=>{const w=Math.max(s.w,mw),h=Math.max(s.h,mw);return`<rect class="${cls}" x="${(s.cx-w/2).toFixed(1)}" y="${(s.cy-h/2).toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="${(Math.min(w,h)/2).toFixed(1)}" transform="rotate(${s.a.toFixed(1)} ${s.cx.toFixed(1)} ${s.cy.toFixed(1)})"/>`};
+function frameHtml(c,p,W,H,cls){return capsOf(c,p,W,H).map(s=>capRect(s,'fr '+cls)).join('')}
 function staticSvg(c,kind,minR=MINR){const p=projFor(c,kind).clipExtent([[0,0],[W,H]]),g=d3.geoPath(p);
  if(kind==='shape')return`<svg viewBox="0 0 ${W} ${H}" class="map shp"><path class="t2" d="${g(c.keepF)}"/></svg>`;
  const R=p._R||60;let s='',t='',tO='';const co=[];
@@ -244,11 +253,19 @@ function mkMap(host,o){recolor();
    if(globe&&d3.geoDistance(ctr,lb.C)>1.3)return;
    const q0=p(lb.C),P1=p(lb.A1),P2=p(lb.A2);if(!q0||!P1||!P2)return;
    if(globe&&Math.hypot(q0[0]-W/2,q0[1]-H/2)>px*.92)return;
-   const L=Math.hypot(P2[0]-P1[0],P2[1]-P1[1]),Lm=Math.max(L,L*lb.T/lb.L),fs=rank<20?16:rank<60?14:12.5,txt=nm(c),w=sMeasure(txt,true,ar)*fs*1.08+4,r=Lm/w,vis=clamp((r-.55)/.4);
-   if(vis<=.02||q0[0]<-w||q0[0]>W+w||q0[1]<-20||q0[1]>H+20)return;
-   const b=[q0[0]-w/2,q0[1]-fs*.7,q0[0]+w/2,q0[1]+fs*.7];if(hit(b))return;boxes.push(b);
-   h+=`<text class="cnm" data-n="${c.n}" style="font-size:${fs}px;opacity:${vis.toFixed(2)}" x="${q0[0].toFixed(1)}" y="${q0[1].toFixed(1)}">${txt}</text>`;
-   if(r>1.5&&CAPLL[c.id])pend.push([c,clamp((r-1.5)/.8)])});
+   /* the name must fit INSIDE the country: measure the real chord of its oriented box, shrink the font or split into two lines */
+   const L=Math.hypot(P2[0]-P1[0],P2[1]-P1[1]),sc=L/Math.max(lb.L,1e-6),T=lb.T*sc,ca=Math.abs(lb.cs)||1e-6,sa=Math.abs(lb.sn)||1e-6;
+   const fitW=Math.min(L/ca,T/sa)*.88,fitH=Math.min(L/sa,T/ca)*.82,base=rank<20?17:rank<60?15:13,txt=nm(c);
+   const m1=cMeasure(txt,ar)*1.04;let lines=[txt],fs=Math.min(fitW/m1,base*(rank<30?1.7:1.3));
+   if(fs<base*.9&&txt.includes(' ')){const w=[];txt.split(' ').forEach(t=>{if(/^[-–—]$/.test(t)&&w.length)w[w.length-1]+=' '+t;else w.push(t)});let bi=1,bd=1e9;for(let i=1;i<w.length;i++){const d=Math.abs(w.slice(0,i).join(' ').length-w.slice(i).join(' ').length);if(d<bd){bd=d;bi=i}}
+    const A=w.slice(0,bi).join(' '),B=w.slice(bi).join(' '),m2=Math.max(cMeasure(A,ar),cMeasure(B,ar))*1.04,f2=Math.min(fitW/m2,base*1.4);if(f2>fs){fs=f2;lines=[A,B]}}
+   fs=Math.min(fs,fitH/(lines.length*1.12));const vis=clamp((fs-8.2)/3);if(vis<=.02)return;
+   const wmax=Math.max(...lines.map(t=>cMeasure(t,ar)))*fs*1.04+4,hh=lines.length*fs*1.12;
+   if(q0[0]<-wmax||q0[0]>W+wmax||q0[1]<-20||q0[1]>H+20)return;
+   const b=[q0[0]-wmax/2,q0[1]-hh/2,q0[0]+wmax/2,q0[1]+hh/2];if(hit(b))return;boxes.push(b);
+   const x=q0[0].toFixed(1),tsp=lines.length===1?txt:lines.map((t,i)=>`<tspan x="${x}" dy="${i===0?(-.56*fs).toFixed(1):(1.12*fs).toFixed(1)}">${t}</tspan>`).join('');
+   h+=`<text class="cnm" data-n="${c.n}" style="font-size:${fs.toFixed(1)}px;opacity:${vis.toFixed(2)}${!ar&&rank<25?`;letter-spacing:${(fs*.1).toFixed(1)}px`:''}" x="${x}" y="${q0[1].toFixed(1)}">${tsp}</text>`;
+   const r=fitW/(cMeasure(txt,ar)*base*1.04);if(r>1.5&&CAPLL[c.id])pend.push([c,clamp((r-1.5)/.8)])});
   /* capitals: small dot + small name, only when the country is large enough on screen */
   for(const [c,vis] of pend){const q=p(CAPLL[c.id]);if(!q||(globe&&(d3.geoDistance(ctr,CAPLL[c.id])>1.3||Math.hypot(q[0]-W/2,q[1]-H/2)>px*.92)))continue;
    if(q[0]<8||q[0]>W-8||q[1]<8||q[1]>H-8)continue;const tx=ar?c.capAr:c.cap;if(!tx)continue;const fs=11.5,w=sMeasure(tx,false,ar)*fs*1.08+4;
@@ -277,8 +294,10 @@ function mkMap(host,o){recolor();
   const dots=hs.filter(d=>d.sz<10),outs=hs.filter(d=>d.sz>=10&&k>=2.2).sort((a,b)=>b.sz-a.sz);
   gz.select('.mhs').selectAll('path').data(outs).join('path').attr('d',d=>d.d).attr('data-n',d=>d.c.n).style('stroke-width',d=>(d.sz<34?30:12)+'px');
   gz.select('.mrs').selectAll('*').remove();gz.select('.mks').selectAll('*').remove();
-  if(o.rings)gz.select('.mrs').selectAll('circle').data(hs.filter(d=>d.sz<70)).join('circle').attr('cx',d=>d.cx).attr('cy',d=>d.cy).attr('r',d=>Math.min(34,Math.max(11,d.sz/2+7))).attr('class',d=>foundN.has(d.c.n)?'good':null);
-  gz.select('.mds').selectAll('g').data(dots).join(e=>{const n=e.append('g');n.append('circle').attr('class','hd').attr('r',17);return n}).attr('transform',d=>`translate(${d.cx},${d.cy})`).attr('data-n',d=>d.c.n).attr('class','md');
+  const caps=new Map();hs.forEach(d=>{if(d.sz<70||d.c.n===o.ringN)caps.set(d.c.n,capsOf(d.c,p,W,H))});
+  if(o.rings)gz.select('.mrs').html([...caps].filter(([n])=>!o.ringN||n===o.ringN).map(([n,L])=>L.map(q=>capRect(q,foundN.has(n)?'good':'')).join('')).join(''));
+  gz.select('.mds').html([...caps].sort((a,b)=>b[1][0]&&a[1][0]?(b[1][0].w*b[1][0].h-a[1][0].w*a[1][0].h):0).map(([n,L])=>L.map(q=>capRect(q,'hz').replace('<rect','<rect data-n="'+n+'"',1)).join('')).join('').replace(/class="hz"/g,'class="hz"'));
+  gz.select('.mds').selectAll('.hz').each(function(){const w=+this.getAttribute('width'),h=+this.getAttribute('height'),mw=Math.max(0,46-Math.min(w,h));if(mw>0){const cx=+this.getAttribute('x')+w/2,cy=+this.getAttribute('y')+h/2,nw=Math.max(w,46),nh=Math.max(h,46);this.setAttribute('x',cx-nw/2);this.setAttribute('y',cy-nh/2);this.setAttribute('width',nw);this.setAttribute('height',nh);this.setAttribute('rx',Math.min(nw,nh)/2)}});
   drawFr(p);
   /* country names + flags (explorer button): biggest first, never overlapping, appear gradually while zooming in */
   /* labels: re-projected on every frame (also while a globe spins) so they stay glued to the map */
@@ -294,8 +313,8 @@ function mkMap(host,o){recolor();
   .on('zoom',e=>{const t=e.transform,r=t.k/tr.k;gz.attr('transform',`translate(${t.x-tr.x*r},${t.y-tr.y*r}) scale(${r})`)})
   .on('end',e=>{const t=e.transform;if(t.k===tr.k&&t.x===tr.x&&t.y===tr.y)return;tr=t;gz.attr('transform',null);render()});
  const useZoom=()=>svg.call(zoom).on('dblclick.zoom',null);
- function pickAt(t){const q=s=>t&&t.closest&&t.closest(s);let n=null,m=q('.cl')||q('.mds g')||q('.mhs path');if(m)n=m.getAttribute('data-n');else{const l=q('path.l');n=l&&l.getAttribute('data-n')}const c=n&&byNc[n];if(c&&o.pick)o.pick(c)}
- svg.on('click',ev=>{if(mode!=='globe')pickAt(ev.target)});
+ function pickAt(t,x,y){const q=s=>t&&t.closest&&t.closest(s);let n=null,m=q('.hz')||q('.cl')||q('.mds g')||q('.mhs path');if(m&&m.classList&&m.classList.contains('hz')&&x!=null){let best=1e18;document.elementsFromPoint(x,y).filter(e=>e.classList&&e.classList.contains('hz')).forEach(e=>{const r=e.getBoundingClientRect(),dd=(x-(r.left+r.width/2))**2+(y-(r.top+r.height/2))**2;if(dd<best){best=dd;m=e}})}if(m)n=m.getAttribute('data-n');else{const l=q('path.l');n=l&&l.getAttribute('data-n')}const c=n&&byNc[n];if(c&&o.pick)o.pick(c)}
+ svg.on('click',ev=>{if(mode!=='globe')pickAt(ev.target,ev.clientX,ev.clientY)});
  /* ---- 3D globe: drag to rotate (with inertia), pinch / wheel / buttons to zoom, tap to pick ---- */
  const stopAnim=()=>{if(anim)cancelAnimationFrame(anim);anim=0};
  const rotBy=(dx,dy)=>{const f=deg/(gR*gv.k);gv.r=[gv.r[0]+dx*f,Math.max(-90,Math.min(90,gv.r[1]-dy*f))]};
@@ -315,7 +334,7 @@ function mkMap(host,o){recolor();
   P.set(e.pointerId,nx)});
  const up=e=>{if(mode!=='globe'||!P.has(e.pointerId))return;P.delete(e.pointerId);
   if(P.size>0){v=[0,0];return}
-  if(moved<8&&e.type==='pointerup'&&e.timeStamp-t0e<800){pickAt(document.elementFromPoint(e.clientX,e.clientY));return}
+  if(moved<8&&e.type==='pointerup'&&e.timeStamp-t0e<800){pickAt(document.elementFromPoint(e.clientX,e.clientY),e.clientX,e.clientY);return}
   if(Math.hypot(v[0],v[1])>.08&&e.timeStamp-lastE<90){let last=performance.now();
    const step=now=>{const dt=Math.min(40,now-last);last=now;rotBy(v[0]*dt,v[1]*dt);const d=Math.pow(.5,dt/260);v=[v[0]*d,v[1]*d];render(true);
     if(Math.hypot(v[0],v[1])>.02)anim=requestAnimationFrame(step);else{anim=0;render(false)}};anim=requestAnimationFrame(step)}
@@ -386,6 +405,17 @@ function placePanel(e){if(e.dataset.dk&&innerWidth>innerHeight){e.classList.add(
  const w=Math.min(R.w||(vw>900?560:vw-16),vw-12),h=Math.min(R.h||Math.round(vh*(vw>900?.52:.5)),vh-20);
  Object.assign(e.style,{width:w+'px',height:h+'px',left:Math.max(6,Math.min(R.x!=null?R.x:(vw-w)/2,vw-w-6))+'px',top:Math.max(6,Math.min(R.y!=null?R.y:vh-h-10,vh-h-6))+'px'})}
 function fitPanel(){const e=$('#pn');if(e)placePanel(e)}
+/* ---------- world location overlay ---------- */
+function worldLoc(c){if(!c||!c.f||$('#wl'))return;const e=document.createElement('div');e.id='wl';e.className='wl';
+ e.innerHTML=`<div class="wlb">${flag(c)}<div class="pt2"><b>${nm(c)}</b><span dir="${d2()}">${nm2(c)}</span></div><button class="wlz" data-k="i">＋</button><button class="wlz" data-k="o">－</button><button class="wlz" data-k="r">⟲</button><button class="wlx" aria-label="${t('close')}">✕</button></div><div class="svgw"></div>`;
+ document.body.appendChild(e);const cl=()=>e.remove();e.querySelector('.wlx').onclick=cl;
+ const h=e.querySelector('.svgw');let mv;
+ requestAnimationFrame(()=>{mv=mkMap(h,{kind:'world',marks:true,names:true,lvl:Math.max(1,S.nl||0),rings:true,ringN:c.n});mv.setSel(c.n,'t');
+  e.querySelectorAll('.wlz').forEach(b=>b.onclick=()=>{const k=b.dataset.k;k==='i'?mv.by(1.7):k==='o'?mv.by(1/1.7):mv.reset();})});
+ let d=null;h.addEventListener('pointerdown',ev=>{d=[ev.clientX,ev.clientY]});h.addEventListener('pointerup',ev=>{if(d&&Math.hypot(ev.clientX-d[0],ev.clientY-d[1])<6&&!ev.target.closest('button')&&!ev.target.closest('path.cn,.cn'))cl();d=null})}
+const locTap=(host,c)=>{if(!host||!c||!c.f)return;host.classList.add('wltap');let d=null;
+ host.addEventListener('pointerdown',ev=>{d=[ev.clientX,ev.clientY,Date.now()]});
+ host.addEventListener('pointerup',ev=>{if(d&&Math.hypot(ev.clientX-d[0],ev.clientY-d[1])<7&&Date.now()-d[2]<600&&!ev.target.closest('button')){ev.stopPropagation();worldLoc(c)}d=null})};
 function openPanel(c,o={}){let e=$('#pn');const fresh=!e;
  if(fresh){e=document.createElement('div');e.id='pn';if(o.dock)e.dataset.dk='1';document.body.appendChild(e)}
  if(fresh)placePanel(e);
@@ -396,7 +426,7 @@ function openPanel(c,o={}){let e=$('#pn');const fresh=!e;
  e.querySelector('.pclose').onclick=closePanel;
  e.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{const n=byId[b.dataset.id];if(o.go)o.go(n);else openPanel(n,o)});
  /* country location map: one finger scrolls the panel, two fingers move / zoom the map */
- const lh=e.querySelector('.loc .svgw');if(lh&&c.f){const pm=mkMap(lh,{kind:'ctx',c,names:true,lvl:0,touch2:true});nmCycle(e.querySelector('.pzn'),pm,0);pm.setSel(c.n,'t');e.querySelector('.pzi').onclick=()=>pm.by(1.7);e.querySelector('.pzo').onclick=()=>pm.by(1/1.7);e.querySelector('.pzr').onclick=()=>pm.reset()}
+ const lh=e.querySelector('.loc .svgw');if(lh&&c.f){const pm=mkMap(lh,{kind:'ctx',c,names:true,lvl:0,touch2:true});nmCycle(e.querySelector('.pzn'),pm,0);pm.setSel(c.n,'t');locTap(lh,c);e.querySelector('.pzi').onclick=()=>pm.by(1.7);e.querySelector('.pzo').onclick=()=>pm.by(1/1.7);e.querySelector('.pzr').onclick=()=>pm.reset()}
  getFx(c).then(d=>{const x=$('#pfx');if(!x||$('#pn')!==e)return;x.innerHTML=d?`<div class="fxc"><h4>${t('fxInd')}</h4><p>${d.ind}</p></div><div class="fxc"><h4>${t('fxName')}</h4><p>${d.name}</p></div><div class="fxc"><h4>${t('fxFam')}</h4><ul>${d.info.map(i=>`<li>${i}</li>`).join('')}</ul></div>`:''});
  const sv=()=>{S[pk()]={x:parseFloat(e.style.left),y:parseFloat(e.style.top),w:parseFloat(e.style.width),h:parseFloat(e.style.height)};save()};
  const drag=(h,fn)=>{h.onpointerdown=ev=>{if(e.classList.contains('dock')||ev.target.closest('button'))return;ev.preventDefault();h.setPointerCapture(ev.pointerId);const sx=ev.clientX,sy=ev.clientY,r=e.getBoundingClientRect();
@@ -414,9 +444,9 @@ function setLang(l){LG=l;try{localStorage.wmLang=l}catch(_){}applyLang()}
 function applyLang(){const h=document.documentElement;h.lang=LG;h.dir=AR()?'rtl':'ltr';document.title=t('title')}
 function home(){clearQ();clearInterval(G.tm);clearTimeout(G.nx);closePanel();applyLang();
  A.innerHTML=`<header class="hd"><svg class="rose" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M32 4 38 32 32 60 26 32Z"/><path d="M4 32 32 26 60 32 32 38Z" class="b"/><circle cx="32" cy="32" r="4"/></svg><div><h1 id="ttl">${t('title')}</h1><p>${t('tag')}</p></div><button class="lgb" id="lg">${t('langBtn')}</button></header>
- <div class="hub"><div class="infos i4"><button class="hb h1" id="gd"><i>📖</i><b>${t('guide')}</b><small>${t('guideS')}</small></button><button class="hb h2" id="wm"><i>🌐</i><b>${t('world')}</b><small>${t('worldS')}</small></button><button class="hb h3" id="tb"><i>📊</i><b>${t('table')}</b><small>${t('tableS')}</small></button><button class="hb h4" id="mm"><i>📝</i><b>${t('memo')}</b><small>${t('memoS')}</small></button></div>
+ <div class="hub"><div class="infos"><button class="hb h1" id="gd"><i>📖</i><b>${t('guide')}</b><small>${t('guideS')}</small></button><button class="hb h2" id="wm"><i>🌐</i><b>${t('world')}</b><small>${t('worldS')}</small></button><button class="hb h3" id="tb"><i>📊</i><b>${t('table')}</b><small>${t('tableS')}</small></button></div>
  <button class="qbig" id="qz"><i>🎯</i><span><b>${t('quiz')}</b><small>${t('quizS')}</small></span></button><button class="qbig cl" id="cl"><i>⚔️</i><span><b>${t('clash')}</b><small>${t('clashS')}</small></span></button><div class="ver">${t('ver')} ${VER}</div></div>`;
- $('#gd').onclick=()=>dir();$('#wm').onclick=explore;$('#qz').onclick=quizPage;$('#cl').onclick=()=>{location.href='clash.html'};$('#tb').onclick=()=>{location.href='countries.html'};$('#mm').onclick=()=>{location.href='memorize.html'};
+ $('#gd').onclick=()=>dir();$('#wm').onclick=explore;$('#qz').onclick=quizPage;$('#cl').onclick=()=>{location.href='clash.html'};$('#tb').onclick=()=>{location.href='countries.html'};
  $('#lg').onclick=()=>{setLang(AR()?'en':'ar');home()};
  const ti=$('#ttl');let lp=0;ti.onpointerdown=()=>{lp=setTimeout(showDbg,800)};ti.onpointerup=ti.onpointerleave=ti.onpointercancel=()=>clearTimeout(lp)}
 function quizPage(){clearQ();clearInterval(G.tm);clearTimeout(G.nx);closePanel();const chip=(k,v,on)=>`<button data-k="${k}" data-v="${v}" class="${on?'on':''}">${k==='conts'?cn(v):v+(k==='time'?t('sec'):'')}</button>`;
@@ -450,7 +480,7 @@ function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();saveQ();i
  if($('.tqf')){$('.tqf').onclick=()=>{const o=document.createElement('div');o.className='flz';o.innerHTML=`<img src="flags/${c.a}.svg" alt=""><b>${nm(c)} · ${nm2(c)}</b>`;o.onclick=()=>o.remove();document.body.appendChild(o)}}
  if(m==='tap'){const mv=G.mv=mkMap($('#mb .svgw'),{kind:'world',marks:true,rings:true,found:G.found,pick:cc=>{if(G.lock)return;G.pick=cc;mv.setSel(cc.n,'sel');$('#go').disabled=false}});wireBtns(A,mv,false);
   if(S.conts.length<6)mv.focus(D.filter(x=>S.conts.includes(x.co)&&x.f),0)}
- else if($('#mb')){const mv=G.mv=mkMap($('#mb .svgw'),{kind:'ctx',c,ring:true});mv.setSel(c.n,'t');wireBtns(A,mv,true)}
+ else if($('#mb')){const mv=G.mv=mkMap($('#mb .svgw'),{kind:'ctx',c,ring:true});mv.setSel(c.n,'t');locTap($('#mb .svgw'),c);wireBtns(A,mv,true)}
  /* typed answers are only judged when the player confirms (button / Enter) or when time runs out */
  const typed=()=>[...A.querySelectorAll('.in input')].map(e=>e.value).filter(x=>x.trim());
  const judge=()=>{const vs=typed();if(!vs.length)return null;const hit=vs.find(v=>acc(c).has(norm(v)));if(hit)return{why:'',v:hit};const fz=vs.find(v=>fuzzy(c,v));return fz?{why:'fuzzy',v:fz}:null};
@@ -500,7 +530,7 @@ function detail(c){let e=$('#dt');if(!e){e=document.createElement('div');e.id='d
  ${c.f?`<div class="dmap" style="${SMALL.has(c.id)?'grid-column:1/-1':''}">${mapBox(1)}</div>${SMALL.has(c.id)?'':`<div class="dshape">${staticSvg(c,'shape',0)}</div>`}`:''}
  <div id="fx" style="grid-column:1/-1"></div></div>`;
  $('#cl').onclick=()=>e.remove();showFx(c);e.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{detail(byId[b.dataset.id]);e.scrollTop=0});
- if(c.f){const mv=mkMap(e.querySelector('#mb .svgw'),{kind:'ctx',c,ring:true,names:true,lvl:0});mv.setSel(c.n,'t');wireBtns(e,mv,true);nmCycle(e.querySelector('#nmb'),mv,0)}}
+ if(c.f){const mv=mkMap(e.querySelector('#mb .svgw'),{kind:'ctx',c,ring:true,names:true,lvl:0});mv.setSel(c.n,'t');locTap(e.querySelector('#mb .svgw'),c);wireBtns(e,mv,true);nmCycle(e.querySelector('#nmb'),mv,0)}}
 /* ---------- world explorer ---------- */
 function explore(){clearInterval(G.tm);closePanel();A.innerHTML=`<div class="bar2"><button id="bk">${t('back')}</button><input id="q" placeholder="${t('exPh')}"><div class="seg"><button id="nmb" class="${S.nl?'on':''}" title="${t('namesTip')}">🏷️<i class="nlv">${'•'.repeat(S.nl)}</i></button><button id="mf" style="display:none">🗺️</button><button id="zi">＋</button><button id="zo">－</button><button id="zr">⟲</button></div></div><div class="mapbox ex" id="mb"><div class="svgw"></div></div>`;
  $('#bk').onclick=()=>{closePanel();home()};let mv;
@@ -527,7 +557,9 @@ if(vv){vv.addEventListener('resize',fit)}addEventListener('resize',fit);
 addEventListener('orientationchange',()=>[50,250,600,1200,2000].forEach(x=>setTimeout(fit,x)));fit();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 ['gesturestart','gesturechange','gestureend'].forEach(e=>document.addEventListener(e,ev=>ev.preventDefault(),{passive:false}));
-window.__wm={D,F,byId,SMALL,MK,openPanel,closePanel,get G(){return G},fuzzy,norm,acc,go(m,id){start(m);G.qs[0]=byId[id];ask()},detail,explore,dir,setLang,home,SK};
+window.__wm={worldLoc,D,F,byId,SMALL,MK,openPanel,closePanel,get G(){return G},fuzzy,norm,acc,go(m,id){start(m);G.qs[0]=byId[id];ask()},detail,explore,dir,setLang,home,SK};
 const Q0=(()=>{try{return JSON.parse(sessionStorage.wmQ||'null')}catch(_){return null}})();
 applyLang();home();
-try{const q=Q0;if(q&&q.qs&&q.i<q.qs.length&&q.qs.every(i=>byId[i])){G={base:q.base,mode:q.mode,types:q.types,qs:q.qs.map(i=>byId[i]),i:q.i,score:q.score,pts:q.pts,streak:q.streak,best:q.best,found:q.found.map(i=>byId[i]),miss:q.miss.map(i=>byId[i]),log:q.log.map(r=>({...r,c:byId[r.c],w:r.w?byId[r.w]:null}))};ask()}}catch(_){clearQ()}})();
+try{const q=Q0;if(q&&q.qs&&q.i<q.qs.length&&q.qs.every(i=>byId[i])){G={base:q.base,mode:q.mode,types:q.types,qs:q.qs.map(i=>byId[i]),i:q.i,score:q.score,pts:q.pts,streak:q.streak,best:q.best,found:q.found.map(i=>byId[i]),miss:q.miss.map(i=>byId[i]),log:q.log.map(r=>({...r,c:byId[r.c],w:r.w?byId[r.w]:null}))};ask()}}catch(_){clearQ()}
+try{const m=/#wl=(\w+)/.exec(location.hash);if(m&&byId[m[1]]&&!Q0){history.replaceState(null,'',location.pathname);explore();let n=0;const iv=setInterval(()=>{const c=byId[m[1]];if(c&&c.f&&$('#mb .svgw svg')||++n>80){clearInterval(iv);if(c&&c.f)worldLoc(c)}},250)}}catch(_){}
+})();

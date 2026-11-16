@@ -36,11 +36,12 @@ const z=svg.append('g').attr('id','z');
 const grat=z.append('path').attr('class','grat');
 const landF=topojson.feature(T,T.objects.land);
 const rip=[0,1,2].map(i=>z.append('path').attr('class','rip r'+i));
-const cs=z.append('g').attr('id','cs');
+const xs=z.append('g').attr('id','xs'),cs=z.append('g').attr('id','cs');
+const exF=feats.filter(f=>!C.some(c=>c.n===String(f.id).padStart(3,'0')));const xp=xs.selectAll('path').data(exF).join('path').attr('class','cn xx');
 const radG=z.append('g').attr('class','rad');
 const paths={};
 ids.forEach(i=>{paths[i]=cs.append('path').attr('class','cn').datum(i)});
-function fit(){W=st.clientWidth;H=st.clientHeight;svg.attr('viewBox',`0 0 ${W} ${H}`);proj=d3.geoEqualEarth().fitExtent([[4,H*.1],[W-4,H*.9]],{type:'Sphere'});path=d3.geoPath(proj);grat.attr('d',path(d3.geoGraticule().step([30,30])()));rip.forEach(r=>r.attr('d',path(landF)));defs.selectAll('*').remove();ids.forEach(i=>{paths[i].attr('d',path(fById[by[i].n]));const bb=path.bounds(mainF[i]),w=Math.max(1,bb[1][0]-bb[0][0]),h=Math.max(1,bb[1][1]-bb[0][1]);const p=defs.append('pattern').attr('id','p-'+i).attr('patternUnits','userSpaceOnUse').attr('x',bb[0][0]).attr('y',bb[0][1]).attr('width',w).attr('height',h);p.append('image').attr('id','pi-'+i).attr('x',0).attr('y',0).attr('width',w).attr('height',h).attr('preserveAspectRatio','none');paths[i].attr('fill','url(#p-'+i+')')})}
+function fit(){W=st.clientWidth;H=st.clientHeight;svg.attr('viewBox',`0 0 ${W} ${H}`);proj=d3.geoEqualEarth().fitExtent([[4,H*.1],[W-4,H*.9]],{type:'Sphere'});path=d3.geoPath(proj);grat.attr('d',path(d3.geoGraticule().step([30,30])()));rip.forEach(r=>r.attr('d',path(landF)));xp.attr('d',f=>path(f));defs.selectAll('*').remove();ids.forEach(i=>{paths[i].attr('d',path(fById[by[i].n]));const bb=path.bounds(mainF[i]),w=Math.max(1,bb[1][0]-bb[0][0]),h=Math.max(1,bb[1][1]-bb[0][1]);const p=defs.append('pattern').attr('id','p-'+i).attr('patternUnits','userSpaceOnUse').attr('x',bb[0][0]).attr('y',bb[0][1]).attr('width',w).attr('height',h);p.append('image').attr('id','pi-'+i).attr('x',0).attr('y',0).attr('width',w).attr('height',h).attr('preserveAspectRatio','none');paths[i].attr('fill','url(#p-'+i+')')})}
 const paint=i=>{const e=svg.select('#pi-'+i);if(!e.empty())e.attr('href',flag(owner[i]))};
 /* camera */
 let cur=null;const tf=v=>{const k=W/v[2];return `translate(${W/2-v[0]*k},${H/2-v[1]*k}) scale(${k})`};
