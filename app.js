@@ -1,6 +1,6 @@
 const CAPLL={AFG:[69.2,34.5],AGO:[13.2,-8.8],ALB:[19.8,41.3],AND:[1.5,42.5],ARE:[54.4,24.5],ARG:[-58.4,-34.6],ARM:[44.5,40.2],ATG:[-61.8,17.1],AUS:[149.1,-35.3],AUT:[16.4,48.2],AZE:[49.9,40.4],BDI:[29.9,-3.4],BEL:[4.35,50.85],BEN:[2.6,6.5],BFA:[-1.5,12.4],BGD:[90.4,23.8],BGR:[23.3,42.7],BHR:[50.6,26.2],BHS:[-77.35,25.05],BIH:[18.4,43.85],BLR:[27.6,53.9],BLZ:[-88.8,17.25],BOL:[-65.26,-19.04],BRA:[-47.9,-15.8],BRB:[-59.6,13.1],BRN:[114.9,4.9],BTN:[89.6,27.5],BWA:[25.9,-24.65],CAF:[18.6,4.4],CAN:[-75.7,45.4],CHE:[7.45,46.95],CHL:[-70.65,-33.45],CHN:[116.4,39.9],CIV:[-5.3,6.8],CMR:[11.5,3.85],COD:[15.3,-4.3],COG:[15.3,-4.25],COL:[-74.1,4.7],COM:[43.25,-11.7],CPV:[-23.5,14.9],CRI:[-84.1,9.9],CUB:[-82.4,23.1],CYP:[33.4,35.2],CZE:[14.4,50.1],DEU:[13.4,52.5],DJI:[43.15,11.6],DMA:[-61.4,15.3],DNK:[12.6,55.7],DOM:[-69.9,18.5],DZA:[3.05,36.75],ECU:[-78.5,-0.2],EGY:[31.2,30.05],ERI:[38.9,15.3],ESP:[-3.7,40.4],EST:[24.75,59.4],ETH:[38.75,9.0],FIN:[24.9,60.2],FJI:[178.4,-18.1],FRA:[2.35,48.85],FSM:[158.15,6.9],GAB:[9.45,0.4],GBR:[-0.1,51.5],GEO:[44.8,41.7],GHA:[-0.2,5.6],GIN:[-13.7,9.5],GMB:[-16.6,13.45],GNB:[-15.6,11.85],GNQ:[8.8,3.75],GRC:[23.7,38.0],GRD:[-61.75,12.05],GTM:[-90.5,14.6],GUY:[-58.15,6.8],HND:[-87.2,14.1],HRV:[16.0,45.8],HTI:[-72.3,18.55],HUN:[19.05,47.5],IDN:[106.8,-6.2],IND:[77.2,28.6],IRL:[-6.25,53.35],IRN:[51.4,35.7],IRQ:[44.4,33.3],ISL:[-21.9,64.15],ISR:[35.2,31.8],ITA:[12.5,41.9],JAM:[-76.8,18.0],JOR:[35.9,31.95],JPN:[139.7,35.7],KAZ:[71.4,51.15],KEN:[36.8,-1.3],KGZ:[74.6,42.9],KHM:[104.9,11.55],KIR:[173.0,1.35],KNA:[-62.7,17.3],KOR:[127.0,37.55],KWT:[47.98,29.37],LAO:[102.6,17.95],LBN:[35.5,33.9],LBR:[-10.8,6.3],LBY:[13.2,32.9],LCA:[-61.0,14.0],LIE:[9.5,47.15],LKA:[79.9,6.9],LSO:[27.5,-29.3],LTU:[25.3,54.7],LUX:[6.13,49.6],LVA:[24.1,56.95],MAR:[-6.85,34.0],MCO:[7.4,43.73],MDA:[28.85,47.0],MDG:[47.5,-18.9],MDV:[73.5,4.2],MEX:[-99.1,19.45],MHL:[171.4,7.1],MKD:[21.45,42.0],MLI:[-8.0,12.65],MLT:[14.5,35.9],MMR:[96.1,19.75],MNE:[19.25,42.45],MNG:[106.9,47.9],MOZ:[32.6,-25.95],MRT:[-15.95,18.1],MUS:[57.5,-20.15],MWI:[33.8,-13.95],MYS:[101.7,3.15],NAM:[17.1,-22.55],NER:[2.1,13.5],NGA:[7.5,9.05],NIC:[-86.25,12.15],NLD:[4.9,52.4],NOR:[10.75,59.9],NPL:[85.3,27.7],NRU:[166.9,-0.55],NZL:[174.8,-41.3],OMN:[58.4,23.6],PAK:[73.05,33.7],PAN:[-79.5,9.0],PER:[-77.05,-12.05],PHL:[121.0,14.6],PLW:[134.6,7.5],PNG:[147.2,-9.45],POL:[21.0,52.25],PRK:[125.75,39.0],PRT:[-9.15,38.7],PRY:[-57.6,-25.3],PSE:[35.2,31.9],QAT:[51.5,25.3],ROU:[26.1,44.4],RUS:[37.6,55.75],RWA:[30.05,-1.95],SAU:[46.7,24.65],SDN:[32.55,15.6],SEN:[-17.45,14.7],SGP:[103.85,1.3],SLB:[159.95,-9.4],SLE:[-13.25,8.5],SLV:[-89.2,13.7],SMR:[12.45,43.93],SOM:[45.35,2.05],SRB:[20.45,44.8],SSD:[31.6,4.85],STP:[6.7,0.3],SUR:[-55.2,5.85],SVK:[17.1,48.15],SVN:[14.5,46.05],SWE:[18.05,59.3],SWZ:[31.2,-26.4],SYC:[55.45,-4.6],SYR:[36.3,33.5],TCD:[15.05,12.1],TGO:[1.2,6.15],THA:[100.5,13.75],TJK:[68.8,38.55],TKM:[58.4,37.95],TLS:[125.6,-8.55],TON:[-175.2,-21.15],TTO:[-61.5,10.65],TUN:[10.2,36.8],TUR:[32.85,39.9],TUV:[179.2,-8.5],TZA:[35.75,-6.15],UGA:[32.6,0.3],UKR:[30.5,50.45],URY:[-56.2,-34.9],USA:[-77.0,38.9],UZB:[69.25,41.3],VAT:[12.45,41.9],VCT:[-61.2,13.15],VEN:[-66.9,10.5],VNM:[105.85,21.0],VUT:[168.3,-17.75],WSM:[-171.75,-13.85],YEM:[44.2,15.35],ZAF:[28.2,-25.75],ZMB:[28.3,-15.4],ZWE:[31.05,-17.8]};
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v22';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v23';
 /* ---------- language (whole app) ---------- */
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
@@ -8,7 +8,7 @@ const I={
 ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكلها وموقعها وعلمها وعاصمتها',memo:'دفتر الحفظ',memoS:'علّم الدول التي حفظتها وراجع الباقي',clash:'المعركة',clashS:'ارمِ النرد وشاهد الدول تتصارع على العالم',guide:'دليل الدول',guideS:'معلومات كل دولة وخرائطها',world:'خريطة العالم',worldS:'الكرة الأرضية والخريطة المسطحة',table:'جدول الدول',tableS:'كل الدول في جدول قابل للترتيب',quiz:'الأسئلة',quizS:'اختبر معلوماتك بسبعة أنواع من الأسئلة',ver:'النسخة',langBtn:'English',
  back:'› رجوع',qTitle:'🎯 الأسئلة',tTime:'⏱️ وقت كل سؤال',sec:' ث',tCount:'🔢 عدد الأسئلة',tConts:'🧭 القارات',how:'طريقة اللعب',
  howT:'اختر الوقت وعدد الأسئلة والقارات، ثم نوع الأسئلة. الإجابة الأسرع تكسب نقاطًا أكثر، والإجابات المتتالية الصحيحة تضيف مكافأة سلسلة. اكتب الإجابة ثم اضغط «تأكيد» (أو Enter)؛ تُقبل الأسماء البديلة والإجابة المقاربة. في «حدّد الدولة» أدِر الكرة الأرضية بإصبعك، كبّر واضغط الدولة ثم «تأكيد».',
- m_mix:'تحدي المزيج',m_en:'الدولة بالإنجليزية',m_ar:'الدولة بالعربية',m_shape:'شكل الخريطة',m_cap:'عاصمة الدولة',m_flag:'علم الدولة',m_cur:'عملة الدولة',m_tap:'حدّد الدولة على الخريطة',
+ mixH:'اختر أنواع الأسئلة التي تريدها',mixAll:'اختر الكل',mixNone:'امسح الكل',mixGo:'ابدأ',mixMin:'اختر نوعين على الأقل',m_mix:'تحدي المزيج',m_en:'الدولة بالإنجليزية',m_ar:'الدولة بالعربية',m_shape:'شكل الخريطة',m_cap:'عاصمة الدولة',m_flag:'علم الدولة',m_cur:'عملة الدولة',m_tap:'حدّد الدولة على الخريطة',
  locate:'حدّد على الخريطة',phEn:'Country name in English',phAr:'اسم الدولة بالعربية',phEn2:'English',phAr2:'عربي',confirm:'تأكيد',skip:'تخطي',quitQ:'إنهاء اللعبة؟',
  ok:'✅ إجابة صحيحة',okFz:'✅ إجابة مقبولة',okLate:'✅ إجابة صحيحة عند انتهاء الوقت',timeUp:'⏰ انتهى الوقت',skipped:'⏭️ تم التخطي',wrong:'❌ إجابة خاطئة',pts:'نقطة',streak:'سلسلة',
  fzNote:x=>`قُبلت إجابتك «${x}» رغم اختلاف بسيط عن الاسم الصحيح`,yours:'إجابتك',picked:'اخترت',cont:'اضغط للمتابعة',capL:'العاصمة',curL:'العملة',corr:l=>`${l} الصحيحة:`,
@@ -24,7 +24,7 @@ ar:{title:'لعبة خرائط العالم',tag:'اعرف الدول بشكله
 en:{title:'World Maps Game',tag:'Learn countries by shape, location, flag and capital',clash:'Clash',clashS:'Roll the dice and watch countries fight for the world',guide:'Country Guide',guideS:'Facts and maps for every country',world:'World Map',worldS:'Globe and flat map',table:'Countries Table',tableS:'All countries in a sortable table',memo:'Study List',memoS:'Tick the countries you know and review the rest',quiz:'Quiz',quizS:'Test yourself with seven question types',ver:'Version',langBtn:'العربية',
  back:'‹ Back',qTitle:'🎯 Quiz',tTime:'⏱️ Time per question',sec:' s',tCount:'🔢 Number of questions',tConts:'🧭 Continents',how:'How to play',
  howT:'Choose the time, the number of questions and the continents, then a question type. Faster answers earn more points and consecutive correct answers add a streak bonus. Type your answer, then press “Confirm” (or Enter); alternative names and close spellings are accepted. In “Locate the country” spin the globe with your finger, zoom in, tap the country, then “Confirm”.',
- m_mix:'Mixed challenge',m_en:'Country (English)',m_ar:'Country (Arabic)',m_shape:'Map shape',m_cap:'Capital city',m_flag:'Country flag',m_cur:'Currency',m_tap:'Locate the country on the map',
+ mixH:'Choose the question types you want',mixAll:'Select all',mixNone:'Clear all',mixGo:'Start',mixMin:'Pick at least two types',m_mix:'Mixed challenge',m_en:'Country (English)',m_ar:'Country (Arabic)',m_shape:'Map shape',m_cap:'Capital city',m_flag:'Country flag',m_cur:'Currency',m_tap:'Locate the country on the map',
  locate:'Locate on the map',phEn:'Country name in English',phAr:'Country name in Arabic',phEn2:'English',phAr2:'Arabic',confirm:'Confirm',skip:'Skip',quitQ:'End the game?',
  ok:'✅ Correct',okFz:'✅ Accepted answer',okLate:'✅ Correct when time ran out',timeUp:'⏰ Time is up',skipped:'⏭️ Skipped',wrong:'❌ Wrong answer',pts:'pts',streak:'streak',
  fzNote:x=>`Your answer “${x}” was accepted despite a small spelling difference`,yours:'Your answer',picked:'You picked',cont:'Tap to continue',capL:'capital',curL:'currency',corr:l=>`Correct ${l}:`,
@@ -59,16 +59,16 @@ try{Promise.all([document.fonts.load('700 20px AtlasAr'),document.fonts.load('70
    computed once at a reference scale against the land; afterwards it is only re-projected, so it never jumps, resizes or vanishes while panning/zooming */
 let SBX=[];
 const FSN={1:17,2:13,3:11.5,4:10.5},S1=141.3,AN_ALL=[0,-12,12,-24,24,-36,36,-48,48],DIRS8=[[1,0],[-1,0],[0,1],[0,-1],[.7,.7],[-.7,.7],[.7,-.7],[-.7,-.7]];
-function seaPlace(s,ar,U){const key=(ar?'a':'e')+Math.round(U/12);s.pl=s.pl||{};if(s.pl[key]!==undefined)return s.pl[key];s.pl[key]=null;
+function seaPlace(s,ar,Uin){const U=280,key=(ar?'a':'e');s.pl=s.pl||{};if(s.pl[key]!==undefined)return s.pl[key];s.pl[key]=null;
  const lvl=s[4],lo=SLV[lvl][0],zr=Math.max(lo,1),Sr=U*zr,Wm=900,Hm=560,sc=.5,mw=Math.round(Wm*sc),mh=Math.round(Hm*sc);
  const pr=d3.geoEqualEarth().rotate([-s[3],0]).center([0,s[2]]).scale(Sr).translate([Wm/2,Hm/2]).clipExtent([[-20,-20],[Wm+20,Hm+20]]);
  const cv=document.createElement('canvas');cv.width=mw;cv.height=mh;const cx2=cv.getContext('2d',{willReadFrequently:true});cx2.setTransform(sc,0,0,sc,0,0);
  const gp=d3.geoPath(pr,cx2);cx2.beginPath();F.forEach(f=>{const l=zr>=8?f:(zr>=4?(f.mid||f.lite):(f.lite||f.mid));if(l)gp(l)});cx2.fillStyle='#000';cx2.fill();
  const d=cx2.getImageData(0,0,mw,mh).data,land=(x,y)=>{const xi=Math.round(x*sc),yi=Math.round(y*sc);if(xi<0||yi<0||xi>=mw||yi>=mh)return true;return d[(yi*mw+xi)*4+3]>30};
  const txt=ar?s[0]:s[1],bold=lvl<=2,w100=sMeasure(txt,bold,ar)+(!ar&&lvl===1?txt.length*.35:0),base=SFS[lvl]+(lvl===1&&ar?3:0),
-  SZ={1:[1.9,1.5,1.2,1],2:[1.6,1.3,1.1,1],3:[1.35,1.15,1],4:[1.15,1]}[lvl];
- for(const m of SZ){const fs=Math.round(base*m*10)/10,w=w100*fs*1.12,h=fs*1.15,rmax=(lvl<=2?3.2:2.2)*h;
-  const offs=[[0,0]];for(const r of [.6,1.2,2,3.2]){if(r*h>rmax)break;DIRS8.forEach(dd=>offs.push([dd[0]*r*h*1.6,dd[1]*r*h]))}
+  SZ=[7,5.6,4.5,3.6,2.9,2.3,1.9,1.55,1.3,1.1,.92,.78,.65];
+ for(const m of SZ){const fs=Math.round(base*m*10)/10,w=w100*fs*1.12,h=fs*1.15,rmax=(lvl<=2?3.2:2.2)*Math.min(h,base*2.2);
+  const offs=[[0,0]],mo=({1:14,2:5,3:2,4:.8})[lvl]*Sr*rad;for(const r of [.6,1.2,2,3.2]){if(r*h>rmax||r*h*1.6>mo)break;DIRS8.forEach(dd=>offs.push([dd[0]*r*h*1.6,dd[1]*r*h]))}
   for(const [ox,oy] of offs){const cx=Wm/2+ox,cy=Hm/2+oy;
    for(const a of AN_ALL){const ca=Math.cos(a*rad),sa=Math.sin(a*rad),hw=w/2,hh=h/2,ex=Math.abs(hw*ca)+Math.abs(hh*sa),ey=Math.abs(hw*sa)+Math.abs(hh*ca);
     if(cx-ex<6||cx+ex>Wm-6||cy-ey<6||cy+ey>Hm-6)continue;
@@ -85,15 +85,16 @@ function seaHtml(p,W,H,z,ctr,R){const boxes=[],out=[],ar=AR(),U=p.scale()/z;
   const pl=seaPlace(s,ar,U);if(!pl)continue;
   const c1=p(pl.c),c2=p(pl.a2);if(!c1||!c2)continue;
   const dx=c2[0]-c1[0],dy=c2[1]-c1[1],ratio=Math.hypot(dx,dy)/12*pl.U/U,ze=ratio*pl.zr;
-  const fs=FSN[lvl],ls=ar?0:(lvl<=2?fs*.18:fs*.08),wtx=sMeasure(pl.txt,lvl<=2,ar)*fs*1.1+ls*pl.txt.length,lo2=Math.max(lo,.6);
-  const vis=Math.min(1,(ze-lo2)/(lo2*.3+.15),(hi-ze)/(hi*.15));if(vis<=.02)continue;
+  /* size follows the water body itself: the name was fitted to the open water at a reference scale and now scales with the map */
+  const fs=Math.min(pl.fs*Math.hypot(dx,dy)/12*.8,lvl===1?30:lvl===2?32:24),ls=ar?0:(lvl<=2?fs*.18:fs*.08),wtx=sMeasure(pl.txt,lvl<=2,ar)*fs*1.1+ls*pl.txt.length;
+  const vis=Math.min(1,(fs-7.4)/2.2,(hi-ze)/(hi*.15));if(vis<=.02)continue;
   if(R&&Math.hypot(c1[0]-W/2,c1[1]-H/2)>R*.93)continue;
   let a=Math.atan2(dy,dx)/rad;if(a>90)a-=180;if(a<-90)a+=180;
   const ca=Math.cos(a*rad),sa=Math.sin(a*rad),hw=wtx/2,hh=fs*.65,ex=Math.abs(hw*ca)+Math.abs(hh*sa),ey=Math.abs(hw*sa)+Math.abs(hh*ca),
    bx=[c1[0]-ex,c1[1]-ey,c1[0]+ex,c1[1]+ey];
   if(boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1]))continue;boxes.push(bx);
   if(bx[2]<0||bx[0]>W||bx[3]<0||bx[1]>H)continue;
-  out.push(`<text class="sn sn${lvl}" style="font-size:${fs}px;opacity:${vis.toFixed(2)}${ls?`;letter-spacing:${ls.toFixed(1)}px`:''}" dominant-baseline="central" x="${c1[0].toFixed(1)}" y="${c1[1].toFixed(1)}" transform="rotate(${a.toFixed(2)} ${c1[0].toFixed(1)} ${c1[1].toFixed(1)})">${pl.txt}</text>`)}
+  out.push(`<text class="sn sn${lvl}" style="font-size:${fs.toFixed(1)}px;opacity:${vis.toFixed(2)}${ls?`;letter-spacing:${ls.toFixed(1)}px`:''}" dominant-baseline="central" x="${c1[0].toFixed(1)}" y="${c1[1].toFixed(1)}" transform="rotate(${a.toFixed(2)} ${c1[0].toFixed(1)} ${c1[1].toFixed(1)})">${pl.txt}</text>`)}
  SBX=boxes;return out.join('')}
 /* ---------- extra accepted spellings / names (by ISO3) ---------- */
 const XA2={MNE:'مونتنيقرو,مونتينيقرو,مونتينغرو,مونتنغرو,مونتينجرو,الجبل الأسود',MKD:'مقدونيا الشمالية,شمال مقدونيا,مقدونيا الشماليه,مقدونية الشمالية,مقدونيه الشماليه,جمهورية مقدونيا الشمالية,Macedonia,North Macedonia',CZE:'التشيك,تشيكيا,جمهورية التشيك,تشيك,Czechia,Czech Republic',MMR:'ميانمار,بورما,ميانمار (بورما),Burma',SWZ:'إيسواتيني,سوازيلاند,اسواتيني,Eswatini,Swaziland',TLS:'تيمور الشرقية,تيمور ليشتي,تيمور-ليشتي,East Timor,Timor-Leste',CIV:'ساحل العاج,كوت ديفوار,Ivory Coast',COD:'الكونغو الديمقراطية,جمهورية الكونغو الديمقراطية,الكونغو كينشاسا,زائير',COG:'الكونغو,جمهورية الكونغو,الكونغو برازافيل',CPV:'الرأس الأخضر,جزر الرأس الأخضر,كابو فيردي,Cape Verde',BRN:'بروناي,بروني,بروناي دار السلام',LKA:'سريلانكا,سيلان',SVK:'سلوفاكيا,سلوفاكية',SVN:'سلوفينيا',HRV:'كرواتيا,كروشيا',BIH:'البوسنة والهرسك,البوسنه,بوسنيا,البوسنة',SRB:'صربيا,سيربيا',ALB:'البانيا,ألبانيا',LUX:'لوكسمبورغ,لوكسمبورج,لكسمبورغ,لوكسمبرغ',LIE:'ليختنشتاين,ليختنشتين,لختنشتاين,ليشتنشتاين',SMR:'سان مارينو,سان مارينو',VAT:'الفاتيكان,دولة الفاتيكان,حاضرة الفاتيكان',MDV:'المالديف,جزر المالديف,مالديف',SYC:'سيشل,سيشيل,جزر سيشل',MUS:'موريشيوس,موريشص,جزر موريشيوس',BHS:'جزر البهاما,الباهاما,البهاما',FJI:'فيجي,فيجى,فيدجي,فيجي',PNG:'بابوا غينيا الجديدة,بابوا نيو غينيا,بابوا',SLB:'جزر سليمان,سولومون',MHL:'جزر مارشال,مارشال',FSM:'ميكرونيزيا,ولايات ميكرونيزيا المتحدة',KNA:'سانت كيتس ونيفيس,سانت كيتس,سانت كيتس وناڤيس',VCT:'سانت فنسنت والغرينادين,سانت فينسنت,سان فنسنت',LCA:'سانت لوسيا,سانت لوسيا,سانتا لوسيا',ATG:'أنتيغوا وبربودا,انتيغوا وباربودا,أنتيجوا وبربودا',TTO:'ترينيداد وتوباغو,ترينداد وتوباجو,ترينيداد وتوباجو',GNB:'غينيا بيساو,غينيا-بيساو',GNQ:'غينيا الاستوائية,غينيا الإستوائية',PRK:'كوريا الشمالية,شمال كوريا',KOR:'كوريا الجنوبية,جنوب كوريا,كوريا'};
@@ -247,31 +248,47 @@ function mkMap(host,o){recolor();
    if(miss<=4){lb.f[key]=f;break}}
   if(!lb.f[key]&&Math.min(lb.L,lb.T*1.6)/4.37>=14)lb.f[key]=.3;
   return lb.f[key]}
+ /* widest horizontal box (aspect of the name) that lies inside the country itself; tries a few centres, cached */
+ function lbFit(c,lb,key,m,nl,rot){const F0=lb.ft=lb.ft||{};if(F0[key]!==undefined)return F0[key];F0[key]=null;const g=c.f.mid||c.f.lite||c.f,asp=nl*1.18/m,ca=Math.abs(lb.cs)||1e-6,sa=Math.abs(lb.sn)||1e-6,ax=rot?lb.cs:1,ay=rot?lb.sn:0,w0=rot?Math.min(lb.L,lb.T/asp*1.6):Math.min(lb.L/ca,lb.T/sa,lb.T/asp*1.6);
+  const inC=(x,y)=>{const q=RP.invert([x,y]);return !!q&&d3.geoContains(g,q)},cands=[];
+  for(const t of [0,-.14,.14,-.28,.28])for(const u of [0,-.2,.2,-.36,.36]){const x=lb.cx+lb.cs*t*lb.L-lb.sn*u*lb.T,y=lb.cy+lb.sn*t*lb.L+lb.cs*u*lb.T;if(inC(x,y))cands.push([x,y])}
+  if(!cands.length)return null;
+  for(const f of [1,.88,.77,.67,.58,.5,.43,.36,.3,.25,.2,.16,.12,.09,.065,.045]){const w=w0*f,hh=w*asp/2;
+   for(const [x,y] of cands){let miss=0;for(const a of [-.5,-.25,0,.25,.5]){for(const v of [-hh,hh])if(!inC(x+a*w*ax-v*ay,y+a*w*ay+v*ax)&&++miss>1)break;if(miss>1)break}
+    if(miss<=1&&inC(x-w/2*ax,y-w/2*ay)&&inC(x+w/2*ax,y+w/2*ay))return F0[key]={w,x,y,rot:!!rot}}}
+  return null}
  function ctryHtml(p,ctr,px,z){const boxes=SBX.slice(),ar=AR(),globe=px>0;let h='',ch='';const pend=[];
   const hit=b=>boxes.some(o=>b[0]<o[2]+2&&b[2]>o[0]-2&&b[1]<o[3]+2&&b[3]>o[1]-2),clamp=v=>Math.max(0,Math.min(1,v));
   DS.forEach((c,rank)=>{if(!c.f)return;const lb=ctLayout(c);if(!lb)return;
    if(globe&&d3.geoDistance(ctr,lb.C)>1.3)return;
-   const q0=p(lb.C),P1=p(lb.A1),P2=p(lb.A2);if(!q0||!P1||!P2)return;
-   if(globe&&Math.hypot(q0[0]-W/2,q0[1]-H/2)>px*.92)return;
-   /* the name must fit INSIDE the country: measure the real chord of its oriented box, shrink the font or split into two lines */
-   const L=Math.hypot(P2[0]-P1[0],P2[1]-P1[1]),sc=L/Math.max(lb.L,1e-6),T=lb.T*sc,ca=Math.abs(lb.cs)||1e-6,sa=Math.abs(lb.sn)||1e-6;
-   const fitW=Math.min(L/ca,T/sa)*.88,fitH=Math.min(L/sa,T/ca)*.82,base=rank<20?17:rank<60?15:13,txt=nm(c);
-   const m1=cMeasure(txt,ar)*1.04;let lines=[txt],fs=Math.min(fitW/m1,base*(rank<30?1.7:1.3));
-   if(fs<base*.9&&txt.includes(' ')){const w=[];txt.split(' ').forEach(t=>{if(/^[-–—]$/.test(t)&&w.length)w[w.length-1]+=' '+t;else w.push(t)});let bi=1,bd=1e9;for(let i=1;i<w.length;i++){const d=Math.abs(w.slice(0,i).join(' ').length-w.slice(i).join(' ').length);if(d<bd){bd=d;bi=i}}
-    const A=w.slice(0,bi).join(' '),B=w.slice(bi).join(' '),m2=Math.max(cMeasure(A,ar),cMeasure(B,ar))*1.04,f2=Math.min(fitW/m2,base*1.4);if(f2>fs){fs=f2;lines=[A,B]}}
-   fs=Math.min(fs,fitH/(lines.length*1.12));const vis=clamp((fs-8.2)/3);if(vis<=.02)return;
+   const P1=p(lb.A1),P2=p(lb.A2),qc=p(lb.C);if(!qc||!P1||!P2)return;
+   if(globe&&Math.hypot(qc[0]-W/2,qc[1]-H/2)>px*.92)return;
+   /* the name spans ~78% of the widest box that lies INSIDE the country's own borders (measured once per country) */
+   const sc=Math.hypot(P2[0]-P1[0],P2[1]-P1[1])/Math.max(lb.L,1e-6),Ls=Math.max(lb.L,lb.T)*sc,txt=nm(c),base=rank<20?17:rank<60?15:13,big=rank<7,cap=big?base*1.7:Math.min(W,H)*.12;
+   if(Ls<1.2&&c.n!==o.ringN)return;
+   const tiny=(c.area||0)<500,m1=cMeasure(txt,ar)*1.04,f1=tiny?null:lbFit(c,lb,'1'+txt,m1,1);let lines=[txt],fit=f1,raw=f1?f1.w*sc*.78/m1:0;
+   if(!tiny&&Math.abs(lb.deg)>10&&Math.abs(lb.deg)<=50&&raw<cap){const fr=lbFit(c,lb,'r'+txt,m1,1,true),rr=fr?fr.w*sc*.78/m1:0;if(rr>raw*1.2){raw=rr;fit=fr}}
+   if(!tiny&&txt.includes(' ')&&raw<cap){const w=[];txt.split(' ').forEach(t=>{if(/^[-–—]$/.test(t)&&w.length)w[w.length-1]+=' '+t;else w.push(t)});let bi=1,bd=1e9;for(let i=1;i<w.length;i++){const d=Math.abs(w.slice(0,i).join(' ').length-w.slice(i).join(' ').length);if(d<bd){bd=d;bi=i}}
+    if(w.length>1){const A=w.slice(0,bi).join(' '),B=w.slice(bi).join(' '),m2=Math.max(cMeasure(A,ar),cMeasure(B,ar))*1.04,f2=lbFit(c,lb,'2'+txt,m2,2),r2=f2?f2.w*sc*.78/m2:0;if(r2>raw*1.12){raw=r2;fit=f2;lines=[A,B]}}}
+   let ang=0;if(fit&&fit.rot){ang=Math.atan2(P2[1]-P1[1],P2[0]-P1[0])/rad;if(ang>90)ang-=180;if(ang<-90)ang+=180}
+   const fs=Math.min(raw,cap),vis=clamp((fs-6.6)/2.2);
+   if(vis<=.02||!fit){/* very small countries (Vatican, Andorra…): small name BESIDE the country */
+    if(!(tiny||!fit)||(Ls<2.5&&z<5&&c.n!==o.ringN))return;const fo=9.5,wt=m1*fo+4,d=lb.od||[1,0],rg=c.n===o.ringN?10:0,ox=d[0]*(Ls/2+wt/2+5+rg),oy=d[1]*(Ls/2+fo*.6+5+rg),cx=qc[0]+ox,cy=qc[1]+oy;
+    if(cx<wt/2||cx>W-wt/2||cy<8||cy>H-8)return;const bb=[cx-wt/2,cy-fo*.6,cx+wt/2,cy+fo*.6];if(hit(bb))return;boxes.push(bb);
+    h+=`<text class="cnm cno" data-n="${c.n}" style="font-size:${fo}px" x="${cx.toFixed(1)}" y="${cy.toFixed(1)}">${txt}</text>`;return}
+   const q0=p(RP.invert([fit.x,fit.y]));if(!q0)return;
    const wmax=Math.max(...lines.map(t=>cMeasure(t,ar)))*fs*1.04+4,hh=lines.length*fs*1.12;
-   if(q0[0]<-wmax||q0[0]>W+wmax||q0[1]<-20||q0[1]>H+20)return;
-   const b=[q0[0]-wmax/2,q0[1]-hh/2,q0[0]+wmax/2,q0[1]+hh/2];if(hit(b))return;boxes.push(b);
+   if(q0[0]<-wmax||q0[0]>W+wmax||q0[1]<-hh||q0[1]>H+hh)return;
+   const cA=Math.abs(Math.cos(ang*rad)),sA=Math.abs(Math.sin(ang*rad)),ex=(wmax*cA+hh*sA)/2,ey=(wmax*sA+hh*cA)/2,b=[q0[0]-ex,q0[1]-ey,q0[0]+ex,q0[1]+ey];if(hit(b))return;boxes.push(b);
    const x=q0[0].toFixed(1),tsp=lines.length===1?txt:lines.map((t,i)=>`<tspan x="${x}" dy="${i===0?(-.56*fs).toFixed(1):(1.12*fs).toFixed(1)}">${t}</tspan>`).join('');
-   h+=`<text class="cnm" data-n="${c.n}" style="font-size:${fs.toFixed(1)}px;opacity:${vis.toFixed(2)}${!ar&&rank<25?`;letter-spacing:${(fs*.1).toFixed(1)}px`:''}" x="${x}" y="${q0[1].toFixed(1)}">${tsp}</text>`;
-   const r=fitW/(cMeasure(txt,ar)*base*1.04);if(r>1.5&&CAPLL[c.id])pend.push([c,clamp((r-1.5)/.8)])});
+   h+=`<text class="cnm" data-n="${c.n}" style="font-size:${fs.toFixed(1)}px;opacity:${vis.toFixed(2)}${!ar&&rank<25?`;letter-spacing:${(fs*.06).toFixed(1)}px`:''}" x="${x}" y="${q0[1].toFixed(1)}"${ang?` transform="rotate(${ang.toFixed(1)} ${x} ${q0[1].toFixed(1)})"`:''}>${tsp}</text>`;
+   const r=raw/base;if(r>1.5&&CAPLL[c.id])pend.push([c,clamp((r-1.5)/.8)])});
   /* capitals: small dot + small name, only when the country is large enough on screen */
   for(const [c,vis] of pend){const q=p(CAPLL[c.id]);if(!q||(globe&&(d3.geoDistance(ctr,CAPLL[c.id])>1.3||Math.hypot(q[0]-W/2,q[1]-H/2)>px*.92)))continue;
    if(q[0]<8||q[0]>W-8||q[1]<8||q[1]>H-8)continue;const tx=ar?c.capAr:c.cap;if(!tx)continue;const fs=11.5,w=sMeasure(tx,false,ar)*fs*1.08+4;
-   let put=null;for(const [dx,anc] of [[6,'start'],[-6,'end']]){const bx=anc==='start'?[q[0]+dx-1,q[1]-fs*.65,q[0]+dx+w,q[1]+fs*.65]:[q[0]+dx-w,q[1]-fs*.65,q[0]+dx+1,q[1]+fs*.65];if(!hit(bx)){put=[dx,anc,bx];break}}
+   let put=null;for(const [dx,anc] of [[8,'start'],[-8,'end']]){const bx=anc==='start'?[q[0]+dx-1,q[1]-fs*.65,q[0]+dx+w,q[1]+fs*.65]:[q[0]+dx-w,q[1]-fs*.65,q[0]+dx+1,q[1]+fs*.65];if(!hit(bx)){put=[dx,anc,bx];break}}
    if(!put)continue;boxes.push(put[2]);
-   ch+=`<g style="opacity:${vis.toFixed(2)}"><circle class="cpd" cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="2.6"/><text class="cpt" x="${(q[0]+put[0]).toFixed(1)}" y="${q[1].toFixed(1)}" text-anchor="${put[1]}">${tx}</text></g>`}
+   ch+=`<g style="opacity:${vis.toFixed(2)}"><path class="cpd" transform="translate(${q[0].toFixed(1)} ${q[1].toFixed(1)})" d="M0-5L1.3-1.7 4.8-1.5 2.1.7 3 4.1 0 2.2-3 4.1-2.1.7-4.8-1.5-1.3-1.7Z"/><text class="cpt" x="${(q[0]+put[0]).toFixed(1)}" y="${q[1].toFixed(1)}" text-anchor="${put[1]}">${tx}</text></g>`}
   return h+ch}
  function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];ready=true;const z=kz();dAll={};
   el.style.setProperty('--bw',bwOf(z).toFixed(2)+'px');el.style.setProperty('--cw',cwOf(z).toFixed(2)+'px');
@@ -348,16 +365,16 @@ function mkMap(host,o){recolor();
   if(ready){drawFr(proj());drawSo()}}
  (o.found||[]).forEach(c=>setSel(c.n,'good',true));
  function bbox(c){if(c.mk){const q=p0(c.cl[0].ct),s=p0.scale()*Math.max(...c.cl.map(x=>x.rr))*rad+2;return[[q[0]-s,q[1]-s],[q[0]+s,q[1]+s]]}return d3.geoPath(p0).bounds(c.keepF)}
- function focusGlobe(L,dur){let ctr,th;
+ function focusGlobe(L,dur,fz=1){let ctr,th;
   if(L.length===1){const c=L[0];ctr=c.ct;th=c.mk?Math.max(c.rr*1.6,.9):Math.max(c.rr*1.25,.5)}
   else{ctr=d3.geoCentroid({type:'GeometryCollection',geometries:L.map(c=>({type:'Point',coordinates:c.ct}))});th=Math.max(...L.map(c=>d3.geoDistance(ctr,c.ct)*deg+c.rr))*1.1}
-  th=Math.min(th,85);lastC=L[0];const k=Math.max(1,Math.min(3000,.82*(Math.min(W,H-inset)/2)/Math.sin(th*rad)/gR)),ps=Math.asin(Math.min(.9,(inset/2)/(gR*k)))*deg;
+  if(fz>1)th=Math.max(th*fz,3.2);th=Math.min(th,85);lastC=L[0];const k=Math.max(1,Math.min(3000,.82*(Math.min(W,H-inset)/2)/Math.sin(th*rad)/gR)),ps=Math.asin(Math.min(.9,(inset/2)/(gR*k)))*deg;
   animTo([-ctr[0],-ctr[1]+ps],k,dur)}
- function focus(list,dur=700){const L=[].concat(list).filter(c=>c&&c.f);if(!L.length)return;if(mode==='globe')return focusGlobe(L,dur);
+ function focus(list,dur=700,fz=1){const L=[].concat(list).filter(c=>c&&c.f);if(!L.length)return;if(mode==='globe')return focusGlobe(L,dur,fz);
   let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;lastC=L[0];
   L.forEach(c=>{const b=bbox(c);x0=Math.min(x0,b[0][0]);y0=Math.min(y0,b[0][1]);x1=Math.max(x1,b[1][0]);y1=Math.max(y1,b[1][1])});
   if(!isFinite(x0))return;const w=Math.max(x1-x0,1e-3),h=Math.max(y1-y0,1e-3),f=L.length===1&&L[0].mk?.22:.8;
-  const k=Math.max(1,Math.min(5000,f*W/w,f*(H-inset)/h)),T=d3.zoomIdentity.translate(W/2-k*(x0+x1)/2,(H-inset)/2-k*(y0+y1)/2).scale(k);
+  let k=Math.max(1,Math.min(5000,f*W/w,f*(H-inset)/h));if(fz>1)k=Math.max(1,Math.min(k/fz*(L[0].mk?1.6:1),W/(fz*8)));const T=d3.zoomIdentity.translate(W/2-k*(x0+x1)/2,(H-inset)/2-k*(y0+y1)/2).scale(k);
   (dur?svg.transition().duration(dur):svg).call(zoom.transform,T)}
  function setMode(m){stopAnim();clearTimeout(idle);mode=m;svg.classed('globe',m==='globe');svg.on('.zoom',null);gz.attr('transform',null);
   if(m==='globe'){gv.k=1;gv.r=lastC&&lastC.ct?[-lastC.ct[0],-lastC.ct[1]]:GL0.slice();render(false)}
@@ -433,8 +450,8 @@ function worldLoc(c){if(!c||!c.f||$('#wl'))return;const e=document.createElement
  e.innerHTML=`<div class="wlb">${flag(c)}<div class="pt2"><b>${nm(c)}</b><span dir="${d2()}">${nm2(c)}</span></div><button class="wlz" data-k="i">＋</button><button class="wlz" data-k="o">－</button><button class="wlz" data-k="r">⟲</button><button class="wlx" aria-label="${t('close')}">✕</button></div><div class="svgw"></div>`;
  document.body.appendChild(e);const cl=()=>e.remove();e.querySelector('.wlx').onclick=cl;
  const h=e.querySelector('.svgw');let mv;
- requestAnimationFrame(()=>{mv=mkMap(h,{kind:'world',marks:true,names:true,lvl:Math.max(1,S.nl||0),rings:true,ringN:c.n});mv.setSel(c.n,'t');
-  e.querySelectorAll('.wlz').forEach(b=>b.onclick=()=>{const k=b.dataset.k;k==='i'?mv.by(1.7):k==='o'?mv.by(1/1.7):mv.reset();})});
+ requestAnimationFrame(()=>{mv=mkMap(h,{kind:'world',marks:true,names:true,lvl:Math.max(1,S.nl||0),rings:true,ringN:c.n});mv.setSel(c.n,'t');try{mv.focus(c,0,1.5)}catch(_){}
+  e.querySelectorAll('.wlz').forEach(b=>b.onclick=()=>{const k=b.dataset.k;k==='i'?mv.by(1.7):k==='o'?mv.by(1/1.7):mv.focus(c,500,1.5)})});
  let d=null;h.addEventListener('pointerdown',ev=>{d=[ev.clientX,ev.clientY]});h.addEventListener('pointerup',ev=>{if(d&&Math.hypot(ev.clientX-d[0],ev.clientY-d[1])<6&&!ev.target.closest('button')&&!ev.target.closest('path.cn,.cn'))cl();d=null})}
 const locTap=(host,c)=>{if(!host||!c||!c.f)return;host.classList.add('wltap');let d=null;
  host.addEventListener('pointerdown',ev=>{d=[ev.clientX,ev.clientY,Date.now()]});
@@ -484,8 +501,16 @@ function quizPage(){clearQ();clearInterval(G.tm);clearTimeout(G.nx);closePanel()
   if(k==='conts'){S.conts=S.conts.includes(v)?S.conts.filter(x=>x!==v):[...S.conts,v];if(!S.conts.length)S.conts=[v]}else S[k]=v;save();quizPage()});
  A.querySelectorAll('.modes [data-m]').forEach(b=>b.onclick=()=>start(b.dataset.m))}
 /* ---------- game ---------- */
-function start(m){const mix=m==='mix';const mp=!mix&&['en','ar','shape'].includes(m);let pool=D.filter(c=>S.conts.includes(c.co)&&c.f);
- G={base:mix?'mix':null,mode:m,qs:pick(pool,Math.min(S.count,pool.length),mp?c=>Math.min(1,Math.max(.1,Math.sqrt(c.sr)/.02)):()=>1),i:0,score:0,miss:[],log:[],pts:0,streak:0,best:0,found:[]};if(mix){const T=['en','ar','shape','cap','flag','cur','tap'],ty=[];for(let i=0;i<G.qs.length;i++){let x;do{x=T[Math.floor(Math.random()*T.length)]}while(ty.length>1&&ty[ty.length-1]===x&&ty[ty.length-2]===x||ty.length&&ty[ty.length-1]===x&&Math.random()<.6);ty.push(x)}G.types=ty;G.mode=ty[0]}ask()}
+const MIXT=['en','ar','shape','cap','flag','cur','tap'];
+function mixDlg(){const cur=new Set((S.mixT&&S.mixT.length>1?S.mixT:MIXT).filter(x=>MIXT.includes(x))),d=document.createElement('div');d.className='fb mixd';
+ const draw=()=>{d.innerHTML=`<div class="card"><div class="st">🎲 ${t('m_mix')}</div><small>${t('mixH')}</small><div class="mxl">${MIXT.map(k=>`<button data-k="${k}" class="${cur.has(k)?'on':''}"><i>${cur.has(k)?'✓':''}</i>${MODES.find(x=>x[0]===k)[1]} ${t('m_'+k)}</button>`).join('')}</div>
+  <div class="mxa"><button data-a="all">${t('mixAll')}</button><button data-a="none">${t('mixNone')}</button></div><div class="mxa"><button class="go" data-a="go" ${cur.size<2?'disabled':''}>${t('mixGo')}</button><button data-a="x">${t('close')}</button></div>${cur.size<2?`<small class="mxw">${t('mixMin')}</small>`:''}</div>`};
+ draw();d.onclick=e=>{if(e.target===d){d.remove();return}const b=e.target.closest('button');if(!b)return;const k=b.dataset.k,a=b.dataset.a;
+  if(k){cur.has(k)?cur.delete(k):cur.add(k);draw()}else if(a==='all'){MIXT.forEach(x=>cur.add(x));draw()}else if(a==='none'){cur.clear();draw()}else if(a==='x')d.remove();
+  else if(a==='go'&&cur.size>1){S.mixT=MIXT.filter(x=>cur.has(x));save();d.remove();start('mix',true)}};
+ document.body.appendChild(d)}
+function start(m,go){if(m==='mix'&&!go)return mixDlg();const mix=m==='mix';const mp=!mix&&['en','ar','shape'].includes(m);let pool=D.filter(c=>S.conts.includes(c.co)&&c.f);
+ G={base:mix?'mix':null,mode:m,qs:pick(pool,Math.min(S.count,pool.length),mp?c=>Math.min(1,Math.max(.1,Math.sqrt(c.sr)/.02)):()=>1),i:0,score:0,miss:[],log:[],pts:0,streak:0,best:0,found:[]};if(mix){const T=(S.mixT&&S.mixT.length>1?S.mixT:MIXT).filter(x=>MIXT.includes(x)),ty=[];for(let i=0;i<G.qs.length;i++){let x;do{x=T[Math.floor(Math.random()*T.length)]}while(ty.length>1&&ty[ty.length-1]===x&&ty[ty.length-2]===x||ty.length&&T.length>2&&ty[ty.length-1]===x&&Math.random()<.6);ty.push(x)}G.types=ty;G.mode=ty[0]}ask()}
 function saveQ(){try{sessionStorage.wmQ=JSON.stringify({base:G.base,mode:G.mode,types:G.types,qs:G.qs.map(c=>c.id),i:G.i,score:G.score,pts:G.pts,streak:G.streak,best:G.best,found:G.found.map(c=>c.id),miss:G.miss.map(c=>c.id),log:G.log.map(r=>({m:r.m,c:r.c.id,ok:r.ok,mine:r.mine,why:r.why,pts:r.pts,w:r.w?r.w.id:null}))})}catch(_){}}
 function clearQ(){try{sessionStorage.removeItem('wmQ')}catch(_){}}
 function ask(){clearInterval(G.tm);if(G.i>=G.qs.length)return result();saveQ();if(G.base==='mix')G.mode=G.types[G.i];const c=G.c=G.qs[G.i],m=G.mode;G.lock=false;G.sel=null;G.last='';G.pick=null;G.mv=null;
@@ -580,7 +605,7 @@ if(vv){vv.addEventListener('resize',fit)}addEventListener('resize',fit);
 addEventListener('orientationchange',()=>[50,250,600,1200,2000].forEach(x=>setTimeout(fit,x)));fit();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 ['gesturestart','gesturechange','gestureend'].forEach(e=>document.addEventListener(e,ev=>ev.preventDefault(),{passive:false}));
-window.__wm={worldLoc,D,F,byId,SMALL,MK,openPanel,closePanel,get G(){return G},fuzzy,norm,acc,go(m,id){start(m);G.qs[0]=byId[id];ask()},detail,explore,dir,setLang,home,SK};
+window.__wm={worldLoc,D,F,byId,SMALL,MK,openPanel,closePanel,get G(){return G},fuzzy,norm,acc,go(m,id){start(m,true);G.qs[0]=byId[id];ask()},detail,explore,dir,setLang,home,SK};
 const Q0=(()=>{try{return JSON.parse(sessionStorage.wmQ||'null')}catch(_){return null}})();
 applyLang();home();
 try{const q=Q0;if(q&&q.qs&&q.i<q.qs.length&&q.qs.every(i=>byId[i])){G={base:q.base,mode:q.mode,types:q.types,qs:q.qs.map(i=>byId[i]),i:q.i,score:q.score,pts:q.pts,streak:q.streak,best:q.best,found:q.found.map(i=>byId[i]),miss:q.miss.map(i=>byId[i]),log:q.log.map(r=>({...r,c:byId[r.c],w:r.w?byId[r.w]:null}))};ask()}}catch(_){clearQ()}
