@@ -355,3 +355,6 @@ table.ct.mtb{--w1:46px;--w2:120px;min-width:980px;table-layout:auto}
 .mixd .mxl button.on i{background:var(--ok);color:#fff}
 .mixd .mxa{display:flex;gap:8px;width:100%}.mixd .mxa button{flex:1;font:inherit;font-weight:700;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:12px;padding:8px}
 .mixd .mxa .go{background:var(--ink);color:var(--paper2)}.mixd .mxa .go:disabled{opacity:.4}.mixd .mxw{color:var(--bad)}
+.wl .wlbk{position:absolute;top:66px;inset-inline-start:10px;padding:9px 16px;border-radius:12px;border:2px solid #2d2113;background:#fbf5e6;color:#2d2113;font:700 16px system-ui,sans-serif;box-shadow:0 3px 0 #2d2113;z-index:3}
+#tb tr.flash td{animation:rowflash 1.6s ease}
+@keyframes rowflash{0%,60%{background:#ffe08a}100%{background:inherit}}

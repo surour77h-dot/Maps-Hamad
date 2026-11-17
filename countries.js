@@ -48,7 +48,12 @@ function draw(){const t=T[lang];H.lang=lang;H.dir=lang==='ar'?'rtl':'ltr';docume
  A.querySelectorAll('#hr th').forEach(h=>h.onclick=()=>{const k=h.dataset.k;if(sk!==k){sk=k;sd=1}else if(sd>0)sd=-1;else{sk=null;sd=1}draw()});
  A.querySelector('#tb').innerHTML=rows.map(r=>`<tr data-id="${r.c.id}">${COLS.map(k=>`<td class="c-${k}">${cell[k](r.c,lang)}</td>`).join('')}</tr>`).join('')}
 draw();
-A.querySelector('#tb').onclick=ev=>{const tr=ev.target.closest('tr');if(!tr)return;if(tr.dataset.id)location.href='index.html#wl='+tr.dataset.id};
+A.querySelector('#tb').onclick=ev=>{const tr=ev.target.closest('tr');if(!tr||!tr.dataset.id)return;const w=A.querySelector('.tbw');
+ try{sessionStorage.wmBack=JSON.stringify({p:'countries.html',id:tr.dataset.id,q,sk,sd,top:w.scrollTop,left:w.scrollLeft})}catch(_){}
+ location.href='index.html#wl='+tr.dataset.id};
+/* back from the world-location view: same search, sort, scroll position, and the row flashes */
+try{const b=JSON.parse(sessionStorage.wmBack||'null');if(b&&b.p==='countries.html'){sessionStorage.removeItem('wmBack');q=b.q||'';sk=b.sk||null;sd=b.sd||1;A.querySelector('#q').value=q;draw();
+ const w=A.querySelector('.tbw');requestAnimationFrame(()=>{w.scrollTop=b.top||0;w.scrollLeft=b.left||0;const tr=A.querySelector(`#tb tr[data-id="${b.id}"]`);if(tr){tr.classList.add('flash');setTimeout(()=>tr.classList.remove('flash'),1600)}})}}catch(_){}
 const vv=window.visualViewport,fit=()=>{H.style.setProperty('--h',Math.round(vv?vv.height:innerHeight)+'px');scrollTo(0,0)};
 if(vv)vv.addEventListener('resize',fit);addEventListener('resize',fit);addEventListener('orientationchange',()=>[50,300,800].forEach(t=>setTimeout(fit,t)));fit();
 ['gesturestart','gesturechange','gestureend'].forEach(e=>document.addEventListener(e,ev=>ev.preventDefault(),{passive:false}));

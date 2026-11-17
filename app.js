@@ -1,6 +1,6 @@
 const CAPLL={AFG:[69.2,34.5],AGO:[13.2,-8.8],ALB:[19.8,41.3],AND:[1.5,42.5],ARE:[54.4,24.5],ARG:[-58.4,-34.6],ARM:[44.5,40.2],ATG:[-61.8,17.1],AUS:[149.1,-35.3],AUT:[16.4,48.2],AZE:[49.9,40.4],BDI:[29.9,-3.4],BEL:[4.35,50.85],BEN:[2.6,6.5],BFA:[-1.5,12.4],BGD:[90.4,23.8],BGR:[23.3,42.7],BHR:[50.6,26.2],BHS:[-77.35,25.05],BIH:[18.4,43.85],BLR:[27.6,53.9],BLZ:[-88.8,17.25],BOL:[-65.26,-19.04],BRA:[-47.9,-15.8],BRB:[-59.6,13.1],BRN:[114.9,4.9],BTN:[89.6,27.5],BWA:[25.9,-24.65],CAF:[18.6,4.4],CAN:[-75.7,45.4],CHE:[7.45,46.95],CHL:[-70.65,-33.45],CHN:[116.4,39.9],CIV:[-5.3,6.8],CMR:[11.5,3.85],COD:[15.3,-4.3],COG:[15.3,-4.25],COL:[-74.1,4.7],COM:[43.25,-11.7],CPV:[-23.5,14.9],CRI:[-84.1,9.9],CUB:[-82.4,23.1],CYP:[33.4,35.2],CZE:[14.4,50.1],DEU:[13.4,52.5],DJI:[43.15,11.6],DMA:[-61.4,15.3],DNK:[12.6,55.7],DOM:[-69.9,18.5],DZA:[3.05,36.75],ECU:[-78.5,-0.2],EGY:[31.2,30.05],ERI:[38.9,15.3],ESP:[-3.7,40.4],EST:[24.75,59.4],ETH:[38.75,9.0],FIN:[24.9,60.2],FJI:[178.4,-18.1],FRA:[2.35,48.85],FSM:[158.15,6.9],GAB:[9.45,0.4],GBR:[-0.1,51.5],GEO:[44.8,41.7],GHA:[-0.2,5.6],GIN:[-13.7,9.5],GMB:[-16.6,13.45],GNB:[-15.6,11.85],GNQ:[8.8,3.75],GRC:[23.7,38.0],GRD:[-61.75,12.05],GTM:[-90.5,14.6],GUY:[-58.15,6.8],HND:[-87.2,14.1],HRV:[16.0,45.8],HTI:[-72.3,18.55],HUN:[19.05,47.5],IDN:[106.8,-6.2],IND:[77.2,28.6],IRL:[-6.25,53.35],IRN:[51.4,35.7],IRQ:[44.4,33.3],ISL:[-21.9,64.15],ISR:[35.2,31.8],ITA:[12.5,41.9],JAM:[-76.8,18.0],JOR:[35.9,31.95],JPN:[139.7,35.7],KAZ:[71.4,51.15],KEN:[36.8,-1.3],KGZ:[74.6,42.9],KHM:[104.9,11.55],KIR:[173.0,1.35],KNA:[-62.7,17.3],KOR:[127.0,37.55],KWT:[47.98,29.37],LAO:[102.6,17.95],LBN:[35.5,33.9],LBR:[-10.8,6.3],LBY:[13.2,32.9],LCA:[-61.0,14.0],LIE:[9.5,47.15],LKA:[79.9,6.9],LSO:[27.5,-29.3],LTU:[25.3,54.7],LUX:[6.13,49.6],LVA:[24.1,56.95],MAR:[-6.85,34.0],MCO:[7.4,43.73],MDA:[28.85,47.0],MDG:[47.5,-18.9],MDV:[73.5,4.2],MEX:[-99.1,19.45],MHL:[171.4,7.1],MKD:[21.45,42.0],MLI:[-8.0,12.65],MLT:[14.5,35.9],MMR:[96.1,19.75],MNE:[19.25,42.45],MNG:[106.9,47.9],MOZ:[32.6,-25.95],MRT:[-15.95,18.1],MUS:[57.5,-20.15],MWI:[33.8,-13.95],MYS:[101.7,3.15],NAM:[17.1,-22.55],NER:[2.1,13.5],NGA:[7.5,9.05],NIC:[-86.25,12.15],NLD:[4.9,52.4],NOR:[10.75,59.9],NPL:[85.3,27.7],NRU:[166.9,-0.55],NZL:[174.8,-41.3],OMN:[58.4,23.6],PAK:[73.05,33.7],PAN:[-79.5,9.0],PER:[-77.05,-12.05],PHL:[121.0,14.6],PLW:[134.6,7.5],PNG:[147.2,-9.45],POL:[21.0,52.25],PRK:[125.75,39.0],PRT:[-9.15,38.7],PRY:[-57.6,-25.3],PSE:[35.2,31.9],QAT:[51.5,25.3],ROU:[26.1,44.4],RUS:[37.6,55.75],RWA:[30.05,-1.95],SAU:[46.7,24.65],SDN:[32.55,15.6],SEN:[-17.45,14.7],SGP:[103.85,1.3],SLB:[159.95,-9.4],SLE:[-13.25,8.5],SLV:[-89.2,13.7],SMR:[12.45,43.93],SOM:[45.35,2.05],SRB:[20.45,44.8],SSD:[31.6,4.85],STP:[6.7,0.3],SUR:[-55.2,5.85],SVK:[17.1,48.15],SVN:[14.5,46.05],SWE:[18.05,59.3],SWZ:[31.2,-26.4],SYC:[55.45,-4.6],SYR:[36.3,33.5],TCD:[15.05,12.1],TGO:[1.2,6.15],THA:[100.5,13.75],TJK:[68.8,38.55],TKM:[58.4,37.95],TLS:[125.6,-8.55],TON:[-175.2,-21.15],TTO:[-61.5,10.65],TUN:[10.2,36.8],TUR:[32.85,39.9],TUV:[179.2,-8.5],TZA:[35.75,-6.15],UGA:[32.6,0.3],UKR:[30.5,50.45],URY:[-56.2,-34.9],USA:[-77.0,38.9],UZB:[69.25,41.3],VAT:[12.45,41.9],VCT:[-61.2,13.15],VEN:[-66.9,10.5],VNM:[105.85,21.0],VUT:[168.3,-17.75],WSM:[-171.75,-13.85],YEM:[44.2,15.35],ZAF:[28.2,-25.75],ZMB:[28.3,-15.4],ZWE:[31.05,-17.8]};
 (async()=>{
-const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v23';
+const $=s=>document.querySelector(s),A=$('#app'),W=900,H=560,rad=Math.PI/180,deg=180/Math.PI,VER='v24';
 /* ---------- language (whole app) ---------- */
 let LG='ar';try{LG=localStorage.wmLang==='en'?'en':'ar'}catch(_){}
 const AR=()=>LG==='ar';
@@ -63,7 +63,10 @@ function seaPlace(s,ar,Uin){const U=280,key=(ar?'a':'e');s.pl=s.pl||{};if(s.pl[k
  const lvl=s[4],lo=SLV[lvl][0],zr=Math.max(lo,1),Sr=U*zr,Wm=900,Hm=560,sc=.5,mw=Math.round(Wm*sc),mh=Math.round(Hm*sc);
  const pr=d3.geoEqualEarth().rotate([-s[3],0]).center([0,s[2]]).scale(Sr).translate([Wm/2,Hm/2]).clipExtent([[-20,-20],[Wm+20,Hm+20]]);
  const cv=document.createElement('canvas');cv.width=mw;cv.height=mh;const cx2=cv.getContext('2d',{willReadFrequently:true});cx2.setTransform(sc,0,0,sc,0,0);
- const gp=d3.geoPath(pr,cx2);cx2.beginPath();F.forEach(f=>{const l=zr>=8?f:(zr>=4?(f.mid||f.lite):(f.lite||f.mid));if(l)gp(l)});cx2.fillStyle='#000';cx2.fill();
+ const gp=d3.geoPath(pr,cx2),dl=Math.min(180,(Wm/2/Sr)/rad*1.6+1),dt=Math.min(90,(Hm/2/Sr)/rad*1.6+1);cx2.beginPath();
+ F.forEach(f=>{const l=zr>=4?(f.mid||f.lite):(f.lite||f.mid);if(!l)return;const b=l._gb||(l._gb=d3.geoBounds(l));
+  if(b[0][0]<=b[1][0]&&dl<180){const lo=s[3],la=s[2];let x0=b[0][0],x1=b[1][0];if(lo-dl<-180||lo+dl>180){}else if(x1<lo-dl||x0>lo+dl)return;if(b[1][1]<la-dt||b[0][1]>la+dt)return}
+  gp(l)});cx2.fillStyle='#000';cx2.fill();
  const d=cx2.getImageData(0,0,mw,mh).data,land=(x,y)=>{const xi=Math.round(x*sc),yi=Math.round(y*sc);if(xi<0||yi<0||xi>=mw||yi>=mh)return true;return d[(yi*mw+xi)*4+3]>30};
  const txt=ar?s[0]:s[1],bold=lvl<=2,w100=sMeasure(txt,bold,ar)+(!ar&&lvl===1?txt.length*.35:0),base=SFS[lvl]+(lvl===1&&ar?3:0),
   SZ=[7,5.6,4.5,3.6,2.9,2.3,1.9,1.55,1.3,1.1,.92,.78,.65];
@@ -78,7 +81,9 @@ function seaPlace(s,ar,Uin){const U=280,key=(ar?'a':'e');s.pl=s.pl||{};if(s.pl[k
     const c=pr.invert([cx,cy]),a2=pr.invert([cx+12*ca,cy+12*sa]);if(!c||!a2)continue;
     return s.pl[key]={c,a2,fs,wr:w,hr:h,zr,txt,U}}}}
  return null}
-function seaHtml(p,W,H,z,ctr,R){const boxes=[],out=[],ar=AR(),U=p.scale()/z;
+/* pre-place the water names in the background so the first pan never stalls on them */
+let SWARM=null;function seaWarm(){const ar=AR(),k=ar?'a':'e';if(SWARM===k)return;SWARM=k;let i=0;const step=()=>{if(SWARM!==k)return;const t=performance.now();while(i<SEAS.length&&performance.now()-t<12){seaPlace(SEAS[i++],ar,0)}if(i<SEAS.length)setTimeout(step,30)};setTimeout(step,600)}
+function seaHtml(p,W,H,z,ctr,R){seaWarm();const boxes=[],out=[],ar=AR(),U=p.scale()/z;
  for(const s of SEAS){const lvl=s[4],[lo,hi]=SLV[lvl];if(z<lo*.4||z>hi*2.5)continue;
   if(ctr&&d3.geoDistance(ctr,[s[3],s[2]])>1.25)continue;
   const q=p([s[3],s[2]]);if(!q||q[0]<-W*.6||q[0]>W*1.6||q[1]<-H*.6||q[1]>H*1.6)continue;
@@ -99,7 +104,12 @@ function seaHtml(p,W,H,z,ctr,R){const boxes=[],out=[],ar=AR(),U=p.scale()/z;
 /* ---------- extra accepted spellings / names (by ISO3) ---------- */
 const XA2={MNE:'مونتنيقرو,مونتينيقرو,مونتينغرو,مونتنغرو,مونتينجرو,الجبل الأسود',MKD:'مقدونيا الشمالية,شمال مقدونيا,مقدونيا الشماليه,مقدونية الشمالية,مقدونيه الشماليه,جمهورية مقدونيا الشمالية,Macedonia,North Macedonia',CZE:'التشيك,تشيكيا,جمهورية التشيك,تشيك,Czechia,Czech Republic',MMR:'ميانمار,بورما,ميانمار (بورما),Burma',SWZ:'إيسواتيني,سوازيلاند,اسواتيني,Eswatini,Swaziland',TLS:'تيمور الشرقية,تيمور ليشتي,تيمور-ليشتي,East Timor,Timor-Leste',CIV:'ساحل العاج,كوت ديفوار,Ivory Coast',COD:'الكونغو الديمقراطية,جمهورية الكونغو الديمقراطية,الكونغو كينشاسا,زائير',COG:'الكونغو,جمهورية الكونغو,الكونغو برازافيل',CPV:'الرأس الأخضر,جزر الرأس الأخضر,كابو فيردي,Cape Verde',BRN:'بروناي,بروني,بروناي دار السلام',LKA:'سريلانكا,سيلان',SVK:'سلوفاكيا,سلوفاكية',SVN:'سلوفينيا',HRV:'كرواتيا,كروشيا',BIH:'البوسنة والهرسك,البوسنه,بوسنيا,البوسنة',SRB:'صربيا,سيربيا',ALB:'البانيا,ألبانيا',LUX:'لوكسمبورغ,لوكسمبورج,لكسمبورغ,لوكسمبرغ',LIE:'ليختنشتاين,ليختنشتين,لختنشتاين,ليشتنشتاين',SMR:'سان مارينو,سان مارينو',VAT:'الفاتيكان,دولة الفاتيكان,حاضرة الفاتيكان',MDV:'المالديف,جزر المالديف,مالديف',SYC:'سيشل,سيشيل,جزر سيشل',MUS:'موريشيوس,موريشص,جزر موريشيوس',BHS:'جزر البهاما,الباهاما,البهاما',FJI:'فيجي,فيجى,فيدجي,فيجي',PNG:'بابوا غينيا الجديدة,بابوا نيو غينيا,بابوا',SLB:'جزر سليمان,سولومون',MHL:'جزر مارشال,مارشال',FSM:'ميكرونيزيا,ولايات ميكرونيزيا المتحدة',KNA:'سانت كيتس ونيفيس,سانت كيتس,سانت كيتس وناڤيس',VCT:'سانت فنسنت والغرينادين,سانت فينسنت,سان فنسنت',LCA:'سانت لوسيا,سانت لوسيا,سانتا لوسيا',ATG:'أنتيغوا وبربودا,انتيغوا وباربودا,أنتيجوا وبربودا',TTO:'ترينيداد وتوباغو,ترينداد وتوباجو,ترينيداد وتوباجو',GNB:'غينيا بيساو,غينيا-بيساو',GNQ:'غينيا الاستوائية,غينيا الإستوائية',PRK:'كوريا الشمالية,شمال كوريا',KOR:'كوريا الجنوبية,جنوب كوريا,كوريا'};
 const XA={AFG:'افغانستان',ARE:'الامارات,اتحاد الامارات,الإمارات العربية المتحدة',ARM:'ارمينيا',AUT:'اوستريا,النمسا',AZE:'اذربيجان',BIH:'البوسنه,بوسنيا,البوسنة والهرسك',BLR:'روسيا البيضاء,بيلاروس,بيلاروسيا,Belorussia',BRN:'بروناي,بروناي دار السلام',CAF:'افريقيا الوسطى,جمهورية افريقيا الوسطى,Central African Rep',CIV:'ساحل العاج,كوت ديفوار,Cote dIvoire,Ivory Coast',COD:'الكونغو الديمقراطية,الكونغو كينشاسا,زائير,DR Congo,Congo Kinshasa,Democratic Republic of Congo',COG:'الكونغو,الكونغو برازافيل,Congo Brazzaville,Republic of the Congo',CZE:'التشيك,تشيكيا,جمهورية التشيك,Czechia,Czech Republic',DEU:'المانيا,Deutschland',DNK:'الدانمارك,الدنمارك',DOM:'الدومينيكان,جمهورية الدومينيكان,Dominican Rep',ESP:'اسبانيا,Espana',EST:'استونيا',SWZ:'سوازيلاند,اسواتيني,إسواتيني,Eswatini,Swaziland',GBR:'بريطانيا,المملكة المتحدة,UK,Britain,Great Britain,United Kingdom',GEO:'جيورجيا,جورجيا',GNB:'غينيا بيساو,غينيا-بيساو,Guinea Bissau',GNQ:'غينيا الاستوائية,Equatorial Guinea',GUY:'غيانا',IRN:'ايران',KAZ:'قازاخستان,قازاقستان,كازاقستان,كازاخستان,Kazakstan',KGZ:'قرغيزستان,كيرغيزستان,قيرقيزستان,قرقيزستان,كرغيزستان,قرقستان,قيرقستان,Kirgizstan,Kirghizia,Kyrgyz Republic',KNA:'سانت كيتس,سانت كيتس ونيفيس,St Kitts,Saint Kitts and Nevis',LIE:'ليشتنشتاين,ليختنشتاين',LKA:'سريلانكا,سيرلانكا',LUX:'لوكسمبرغ,لوكسمبورغ',MKD:'مقدونيا الشمالية,مقدونيا,North Macedonia,Macedonia',MMR:'بورما,ميانمار,Burma,Myanmar',MNE:'مونتينيغرو,مونتنيغرو,مونتينجرو,مونتنجرو,Montenegro,Crna Gora',NLD:'هولندا,Holland,The Netherlands',OMN:'سلطنة عمان,عمان,Oman',PNG:'بابوا,بابوا غينيا الجديدة,Papua New Guinea',PRK:'كوريا الشمالية,North Korea',KOR:'كوريا الجنوبية,South Korea,Korea',PSE:'فلسطين,Palestine,State of Palestine',PRY:'باراجواي,باراغواي',RUS:'الاتحاد الروسي,Russian Federation',SAU:'المملكة العربية السعودية,السعودية',STP:'ساو تومي,ساو تومي وبرينسيبي,Sao Tome',SSD:'جنوب السودان,South Sudan',SVK:'سلوفاكيا,Slovak Republic',TLS:'تيمور الشرقية,تيمور ليشتي,East Timor,Timor Leste',TTO:'ترينيداد وتوباغو,ترينيداد وتوباجو,Trinidad',TUR:'تركيا,Turkiye,Türkiye',URY:'اوروجواي,اوروغواي',USA:'امريكا,الولايات المتحدة الامريكية,United States of America,America,USA,US',VAT:'الفاتيكان,Vatican City,Holy See',VCT:'سانت فنسنت,سانت فنسنت والغرينادين,St Vincent',LCA:'سانت لوسيا,St Lucia',ATG:'انتيغوا وبربودا,أنتيغوا وباربودا,Antigua',BHS:'جزر البهاما,الباهاما,Bahamas',CPV:'الرأس الاخضر,كابو فيردي,Cape Verde,Cabo Verde',COM:'جزر القمر,القمر',MDV:'المالديف,جزر المالديف,جزر مالديف',MHL:'جزر مارشال',SLB:'جزر سليمان',SYC:'سيشل,سيشيل',TJK:'طاجيكستان,طاجكستان',TKM:'تركمانستان',UZB:'اوزبكستان,أوزبكستان',VNM:'فيتنام,فيتنام',YEM:'اليمن',ZAF:'جنوب افريقيا,South Africa',ZWE:'زيمبابوي,زمبابوي',MRT:'موريتانيا',BFA:'بوركينا فاسو,بوركينافاسو',NER:'النيجر',NGA:'نيجيريا',CHE:'سويسرا,Switzerland',SWE:'السويد',NOR:'النرويج',IRL:'ايرلندا,أيرلندا,ايرلندا',ISL:'ايسلندا,آيسلندا,أيسلندا',PHL:'الفلبين,الفيليبين',IDN:'اندونيسيا,إندونيسيا',MYS:'ماليزيا',MNG:'منغوليا,منغوليا',KHM:'كمبوديا,Cambodia',LAO:'لاوس,Laos',BGD:'بنغلاديش,بنجلاديش',NPL:'نيبال',BTN:'بوتان',IND:'الهند',PAK:'باكستان',TWN:'تايوان',UKR:'اوكرانيا,أوكرانيا',MDA:'مولدوفا',ROU:'رومانيا',BGR:'بلغاريا',SRB:'صربيا',HRV:'كرواتيا',SVN:'سلوفينيا',LVA:'لاتفيا',LTU:'ليتوانيا',MLT:'مالطا',CYP:'قبرص',ETH:'اثيوبيا,إثيوبيا',ERI:'اريتريا,إريتريا',DJI:'جيبوتي',SOM:'الصومال',UGA:'اوغندا,أوغندا',TZA:'تنزانيا',MOZ:'موزمبيق',MDG:'مدغشقر',MWI:'ملاوي',ZMB:'زامبيا',BWA:'بوتسوانا',NAM:'ناميبيا',AGO:'انغولا,أنغولا,أنجولا',GAB:'الغابون,غابون',CMR:'الكاميرون',TCD:'تشاد',GHA:'غانا',TGO:'توغو,توجو',BEN:'بنين',SLE:'سيراليون',LBR:'ليبيريا',GIN:'غينيا',GMB:'غامبيا',SEN:'السنغال',MLI:'مالي',DZA:'الجزائر',TUN:'تونس',LBY:'ليبيا',EGY:'مصر',SDN:'السودان',MAR:'المغرب',HTI:'هايتي',CUB:'كوبا',JAM:'جامايكا',BRB:'بربادوس',GRD:'غرينادا',DMA:'دومينيكا',NIC:'نيكاراغوا,نيكاراجوا',HND:'هندوراس',SLV:'السلفادور',GTM:'غواتيمالا,جواتيمالا',CRI:'كوستاريكا',PAN:'بنما',COL:'كولومبيا',VEN:'فنزويلا',ECU:'الاكوادور,الإكوادور',PER:'بيرو',BOL:'بوليفيا',CHL:'تشيلي,شيلي',ARG:'الارجنتين,الأرجنتين',BRA:'البرازيل',SUR:'سورينام,سورينام',NZL:'نيوزيلندا,نيوزيلاند',FJI:'فيجي,فيجي',WSM:'ساموا',TON:'تونغا,تونجا',VUT:'فانواتو',KIR:'كيريباتي,كريباتي',FSM:'ميكرونيزيا',PLW:'بالاو,بلاو',NRU:'ناورو',TUV:'توفالو'};
-const [D,T,T5,T1]=await Promise.all([fetch('data.json').then(r=>r.json()),fetch('world.json').then(r=>r.json()),fetch('world50.json').then(r=>r.json()),fetch('world110.json').then(r=>r.json())]);
+const [D,T,T5,T1,SPL,LBL]=await Promise.all([fetch('data.json').then(r=>r.json()),fetch('world.json').then(r=>r.json()),fetch('world50.json').then(r=>r.json()),fetch('world110.json').then(r=>r.json()),fetch('seas.json').then(r=>r.json()).catch(()=>null),fetch('labels.json').then(r=>r.json()).catch(()=>null)]);
+/* country-name layouts fitted inside each border (precomputed: the fitting is slow on phones) */
+if(LBL)D.forEach(c=>{if(LBL[c.id]!==undefined)c.lb=LBL[c.id]});
+if(SPL)SEAS.forEach((s,i)=>{const q=SPL[i];if(q&&SEAS.length===SPL.length)s.pl={a:q[0]&&Object.assign({txt:s[0]},q[0]),e:q[1]&&Object.assign({txt:s[1]},q[1])}});
+/* background warm-up of the culling indexes so the first deep zoom never stalls */
+setTimeout(()=>{const q=[];F.forEach(f=>{q.push(()=>fq(f));if(f.mid)q.push(()=>partsOf(f.mid))});F.forEach(f=>q.push(()=>partsOf(f)));let i=0;const st=()=>{const t=performance.now();while(i<q.length&&performance.now()-t<8)q[i++]();if(i<q.length)setTimeout(st,16)};st()},2500);
 /* ---------- map data: Natural Earth 1:10m (detail) + 1:50m (settled world views) + 1:110m (light copy while dragging) ---------- */
 const all=topojson.feature(T,T.objects.countries).features,nbs=[];
 /* neighbours come from the country data (ISO3 land borders), so map colouring does not depend on shared geometry arcs */
@@ -114,6 +124,13 @@ const LM={},MM={},f1=topojson.feature(T1,T1.objects.countries).features,f5=topoj
 mergeWS(T1,f1);mergeWS(T5,f5);
 f1.forEach(f=>{if(!f.hide)LM[keyOf(f)]=f});f5.forEach(f=>{if(!f.hide&&f.properties.p)MM[keyOf(f)]=f});
 all.forEach(f=>{f.pri=!f.hide&&f.id!=null&&!!f.properties.p;const u=!f.hide&&(f.id==null||f.pri);f.lite=u?(LM[keyOf(f)]||null):null;f.mid=u?(MM[keyOf(f)]||null):null});
+/* ultra-light level for whole-world views (globe/flat at low zoom): Douglas-Peucker on the lite shapes, ~0.1° */
+{const dp=(r,e)=>{const n=r.length;if(n<5)return r;const k=new Uint8Array(n);k[0]=k[n-1]=1;let fi=0,fd=0;for(let i=1;i<n;i++){const d=Math.hypot(r[i][0]-r[0][0],r[i][1]-r[0][1]);if(d>fd){fd=d;fi=i}}k[fi]=1;const st=[[0,fi],[fi,n-1]];
+  while(st.length){const[a,b]=st.pop();const[x1,y1]=r[a],[x2,y2]=r[b],dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1e-9;let mi=-1,md=0;for(let i=a+1;i<b;i++){const d=Math.abs(dy*(r[i][0]-x1)-dx*(r[i][1]-y1))/L;if(d>md){md=d;mi=i}}if(md>e){k[mi]=1;st.push([a,mi],[mi,b])}}
+  const o=r.filter((_,i)=>k[i]);return o.length>=4?o:null};
+ const sp=(cs,e)=>cs.map(poly=>{const o=[];for(let i=0;i<poly.length;i++){const q=dp(poly[i],e);if(q)o.push(q);else if(i===0)return null}return o}).filter(Boolean);
+ all.forEach(f=>{const l=f.lite;if(!l||!l.geometry){f.ul=null;return}const g=l.geometry,cs=g.type==='Polygon'?[g.coordinates]:g.type==='MultiPolygon'?g.coordinates:null;if(!cs){f.ul=l;return}
+  let o=sp(cs,.1);if(!o.length)o=sp(cs.slice(0,1),.03);f.ul=o.length?{type:'Feature',geometry:{type:'MultiPolygon',coordinates:o}}:l})}
 /* random graph colouring: neighbours never share a colour; new arrangement on every call */
 function recolor(){const n=all.length,col=new Array(n).fill(-1);
  [...Array(n).keys()].filter(i=>!all[i].hide).map(i=>[nbs[i].length+Math.random()*4,i]).sort((a,b)=>b[0]-a[0]).forEach(([,i])=>{const u=new Set(nbs[i].map(j=>col[j])),av=[0,1,2,3,4,5,6].filter(k=>!u.has(k));col[i]=av.length?av[Math.floor(Math.random()*av.length)]:Math.floor(Math.random()*7)});
@@ -162,7 +179,7 @@ function worldEE(W,H){return d3.geoEqualEarth().fitExtent([[6,6],[W-6,H-6]],{typ
 function projFor(c,kind,W=900,H=560){
  if(kind==='world')return worldEE(W,H);
  const p=d3.geoAzimuthalEqualArea().rotate([-c.ct[0],-c.ct[1]]);
- if(kind==='shape')return p.fitExtent([[18,18],[W-18,H-18]],c.keepF);
+ if(kind==='shape')return p.fitExtent([[18,18],[W-18,H-18]],shF(c));
  p.fitExtent([[W*.12,H*.12],[W*.88,H*.88]],c.keepF);
  const cap=Math.min(W,H)/(12*rad),sc=p.scale();
  if(sc>cap){const bb=d3.geoPath(p).bounds(c.keepF),cx=(bb[0][0]+bb[1][0])/2,cy=(bb[0][1]+bb[1][1])/2,tt=p.translate(),ux=(cx-tt[0])/sc,uy=(cy-tt[1])/sc;p.scale(cap).translate([W/2-cap*ux,H/2-cap*uy])}
@@ -184,8 +201,12 @@ function capsOf(c,p,W,H){const g=d3.geoPath(p),geo=c.f&&c.f.geometry;if(!geo)ret
   const pad=7,w=Math.max(22,u1-u0+2*pad),h=Math.max(22,v1-v0+2*pad),um=(u0+u1)/2,vm=(v0+v1)/2;return{cx:um*ca-vm*sa,cy:um*sa+vm*ca,w,h,a:ang*180/Math.PI}})}
 const capRect=(s,cls,mw=0)=>{const w=Math.max(s.w,mw),h=Math.max(s.h,mw);return`<rect class="${cls}" x="${(s.cx-w/2).toFixed(1)}" y="${(s.cy-h/2).toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="${(Math.min(w,h)/2).toFixed(1)}" transform="rotate(${s.a.toFixed(1)} ${s.cx.toFixed(1)} ${s.cy.toFixed(1)})"/>`};
 function frameHtml(c,p,W,H,cls){return capsOf(c,p,W,H).map(s=>capRect(s,'fr '+cls)).join('')}
+/* shape view: the country's main parts plus every island of it that lies close by (remote territories stay out) */
+function shF(c){if(c._shF)return c._shF;const g=c.f&&c.f.geometry;if(!g)return c._shF=c.keepF;const cs=g.type==='Polygon'?[g.coordinates]:g.coordinates,lim=Math.max((c.rr||3)*1.35,1.2),gs=[];
+ cs.forEach(co=>{const pg={type:'Polygon',coordinates:co},b=d3.geoBounds(pg),m=[(b[0][0]+b[1][0])/2,(b[0][1]+b[1][1])/2];if(d3.geoDistance(m,c.ct)*deg<=lim)gs.push(pg)});
+ return c._shF=gs.length?{type:'Feature',geometry:{type:'GeometryCollection',geometries:gs}}:c.keepF}
 function staticSvg(c,kind,minR=MINR){const p=projFor(c,kind).clipExtent([[0,0],[W,H]]),g=d3.geoPath(p);
- if(kind==='shape')return`<svg viewBox="0 0 ${W} ${H}" class="map shp"><path class="t2" d="${g(c.keepF)}"/></svg>`;
+ if(kind==='shape')return`<svg viewBox="0 0 ${W} ${H}" class="map shp"><path class="t2" d="${g(shF(c))}"/></svg>`;
  const R=p._R||60;let s='',t='',tO='';const co=[];
  F.forEach(f=>{const tg=f.pri&&f.id===c.n;if(!tg&&!near(c,f,R))return;const d=g(f);if(!d)return;co.push(d);if(tg){t=`<path class="l ${minR&&c.mk?'sel':'t'}" d="${d}"/>`;tO=`<path class="so" d="${d}"/>`}else s+=`<path class="l c${f.col%7}" d="${d}"/>`});
  return`<svg viewBox="0 0 ${W} ${H}" class="map"><path class="coast" d="${co.join('')}"/><g class="land">${s}${t}</g>${tO}${minR&&c.mk?frameHtml(c,p,W,H,'t'):''}</svg>`}
@@ -280,8 +301,10 @@ function mkMap(host,o){recolor();
    const wmax=Math.max(...lines.map(t=>cMeasure(t,ar)))*fs*1.04+4,hh=lines.length*fs*1.12;
    if(q0[0]<-wmax||q0[0]>W+wmax||q0[1]<-hh||q0[1]>H+hh)return;
    const cA=Math.abs(Math.cos(ang*rad)),sA=Math.abs(Math.sin(ang*rad)),ex=(wmax*cA+hh*sA)/2,ey=(wmax*sA+hh*cA)/2,b=[q0[0]-ex,q0[1]-ey,q0[0]+ex,q0[1]+ey];if(hit(b))return;boxes.push(b);
-   const x=q0[0].toFixed(1),tsp=lines.length===1?txt:lines.map((t,i)=>`<tspan x="${x}" dy="${i===0?(-.56*fs).toFixed(1):(1.12*fs).toFixed(1)}">${t}</tspan>`).join('');
-   h+=`<text class="cnm" data-n="${c.n}" style="font-size:${fs.toFixed(1)}px;opacity:${vis.toFixed(2)}${!ar&&rank<25?`;letter-spacing:${(fs*.06).toFixed(1)}px`:''}" x="${x}" y="${q0[1].toFixed(1)}"${ang?` transform="rotate(${ang.toFixed(1)} ${x} ${q0[1].toFixed(1)})"`:''}>${tsp}</text>`;
+   const x=q0[0].toFixed(1),y0=q0[1],st=`font-size:${fs.toFixed(1)}px;opacity:${vis.toFixed(2)}${!ar&&rank<25?`;letter-spacing:${(fs*.06).toFixed(1)}px`:''}`,tr=ang?` transform="rotate(${ang.toFixed(1)} ${x} ${y0.toFixed(1)})"`:'';
+   /* each line is its own <text>: keeps line order right in RTL (WebKit reorders tspans of one bidi run) */
+   h+=lines.length===1?`<text class="cnm" data-n="${c.n}" style="${st}" x="${x}" y="${y0.toFixed(1)}"${tr}>${txt}</text>`
+    :`<g${tr}>${lines.map((t,i)=>`<text class="cnm" data-n="${c.n}" style="${st}" x="${x}" y="${(y0+(i-(lines.length-1)/2)*1.12*fs).toFixed(1)}">${t}</text>`).join('')}</g>`;
    const r=raw/base;if(r>1.5&&CAPLL[c.id])pend.push([c,clamp((r-1.5)/.8)])});
   /* capitals: small dot + small name, only when the country is large enough on screen */
   for(const [c,vis] of pend){const q=p(CAPLL[c.id]);if(!q||(globe&&(d3.geoDistance(ctr,CAPLL[c.id])>1.3||Math.hypot(q[0]-W/2,q[1]-H/2)>px*.92)))continue;
@@ -290,15 +313,16 @@ function mkMap(host,o){recolor();
    if(!put)continue;boxes.push(put[2]);
    ch+=`<g style="opacity:${vis.toFixed(2)}"><path class="cpd" transform="translate(${q[0].toFixed(1)} ${q[1].toFixed(1)})" d="M0-5L1.3-1.7 4.8-1.5 2.1.7 3 4.1 0 2.2-3 4.1-2.1.7-4.8-1.5-1.3-1.7Z"/><text class="cpt" x="${(q[0]+put[0]).toFixed(1)}" y="${q[1].toFixed(1)}" text-anchor="${put[1]}">${tx}</text></g>`}
   return h+ch}
- function render(lite){const p=proj(),g=d3.geoPath(p),ds=[];ready=true;const z=kz();dAll={};
+ function render(lite){const p=proj(),g=d3.geoPath(p).digits(1),ds=[];ready=true;const z=kz();dAll={};
   el.style.setProperty('--bw',bwOf(z).toFixed(2)+'px');el.style.setProperty('--cw',cwOf(z).toFixed(2)+'px');
   gz.select('.sphere').attr('d',mode!=='ctx'?g({type:'Sphere'}):null);svg.classed('ee',mode==='flat');
-  const kk=mode==='globe'?gv.k:z,tier=mode==='ctx'?0:(kk<(mode==='globe'?4:3)?1:0),mid=lite==='mid'||tier===1,lo=lite===true&&mode!=='ctx'&&kk<2;
-  const VIS=mid||lo?null:visFn(p,mode,mode==='globe'?[-gv.r[0],-gv.r[1]]:null,mode==='globe'?gv.k:1,gR,W,H);
-  paths.attr('d',f=>{const l=f.mid||f.lite;let d;
-   if(lo)d=f.lite?g(f.lite):null;
-   else if(mid)d=(f.mid||f.lite)?g(f.mid||f.lite):null;
-   else{if(l&&!VIS){const b=g.bounds(l);if(!isFinite(b[0][0])||b[1][0]<-40||b[0][0]>W+40||b[1][1]<-40||b[0][1]>H+40)return null}d=dCull(g,f,VIS)}
+  /* one geometry level per scale, used both while moving and at rest (no visible jump): lite → mid → detail (only the visible parts) */
+  const S=mode==='globe'?gR*gv.k:p.scale(),tier=mode==='ctx'?(lite==='mid'?1:2):S<330?-1:S<520?0:S<1300?1:2;
+  const VIS=tier<=0?null:visFn(p,mode,mode==='globe'?[-gv.r[0],-gv.r[1]]:null,mode==='globe'?gv.k:1,gR,W,H);
+  const geo=f=>tier===-1?(f.ul||f.lite||f.mid||f):tier===0?(f.lite||f.mid||f):tier===1?(f.mid||f.lite||f):f;
+  paths.attr('d',f=>{let d;const gf=geo(f);
+   if(tier<=0)d=g(gf);
+   else{if(!VIS&&f.lite){const b=g.bounds(f.lite);if(!isFinite(b[0][0])||b[1][0]<-40||b[0][0]>W+40||b[1][1]<-40||b[0][1]>H+40)return null}d=dCull(g,gf,VIS,f)}
    if(d)ds.push(d);if(f.pri)dAll[f.id]=d||null;return d||null});
   gz.select('.coast').attr('d',mode==='globe'?null:ds.join(''));
   /* thin dark outline over the highlighted countries (keeps small islands readable from afar) */
@@ -308,7 +332,7 @@ function mkMap(host,o){recolor();
   gz.select('.sl').html(o.lines&&mode!=='ctx'&&(full||mode==='globe')?SL.map(([c,ln])=>{const d=g(ln);return d?`<path class="${c}" d="${d}"/>`:''}).join(''):'');
   const ctr=mode==='globe'?[-gv.r[0],-gv.r[1]]:null;
   /* small countries: no visible markers (invisible hit areas keep them tappable); a selected one gets a red frame */
-  const hs=[];if(o.marks&&full)MK.forEach(c=>{const d=g(c.f);if(!d)return;const b=g.bounds(c.f);hs.push({c,d,sz:Math.max(b[1][0]-b[0][0],b[1][1]-b[0][1]),cx:(b[0][0]+b[1][0])/2,cy:(b[0][1]+b[1][1])/2})});
+  const hs=[];if(o.marks&&full)MK.forEach(c=>{const d=g(geo(c.f));if(!d)return;const b=g.bounds(geo(c.f));hs.push({c,d,sz:Math.max(b[1][0]-b[0][0],b[1][1]-b[0][1]),cx:(b[0][0]+b[1][0])/2,cy:(b[0][1]+b[1][1])/2})});
   const dots=hs.filter(d=>d.sz<10),outs=hs.filter(d=>d.sz>=10&&k>=2.2).sort((a,b)=>b.sz-a.sz);
   gz.select('.mhs').selectAll('path').data(outs).join('path').attr('d',d=>d.d).attr('data-n',d=>d.c.n).style('stroke-width',d=>(d.sz<34?30:12)+'px');
   gz.select('.mrs').selectAll('*').remove();gz.select('.mks').selectAll('*').remove();
@@ -385,7 +409,11 @@ function mkMap(host,o){recolor();
   if(mode==='globe'){render(false)}else{base();svg.call(zoom.transform,d3.zoomIdentity);render(false)}
   o.onresize&&o.onresize()}
  let rt=0;if(window.ResizeObserver)new ResizeObserver(()=>{clearTimeout(rt);rt=setTimeout(resize,120)}).observe(host);
- const api={setSel,focus,onmode:null,resize,mode:()=>mode,inset:v=>{inset=v},setLevel(n){nlv=n;render(false)},redraw:()=>render(false),
+ const warmLabels=()=>{const ar=AR();DS.forEach(c=>{if(!c.f)return;const lb=ctLayout(c);if(!lb)return;const txt=nm(c),m1=cMeasure(txt,ar)*1.04;
+  if((c.area||0)<500)return;lbFit(c,lb,'1'+txt,m1,1);if(Math.abs(lb.deg)>10&&Math.abs(lb.deg)<=50)lbFit(c,lb,'r'+txt,m1,1,true);
+  if(txt.includes(' ')){const w=[];txt.split(' ').forEach(t=>{if(/^[-–—]$/.test(t)&&w.length)w[w.length-1]+=' '+t;else w.push(t)});let bi=1,bd=1e9;for(let i=1;i<w.length;i++){const d=Math.abs(w.slice(0,i).join(' ').length-w.slice(i).join(' ').length);if(d<bd){bd=d;bi=i}}
+   if(w.length>1){const A=w.slice(0,bi).join(' '),B=w.slice(bi).join(' ');lbFit(c,lb,'2'+txt,Math.max(cMeasure(A,ar),cMeasure(B,ar))*1.04,2)}}})};
+ const api={warmLabels,setSel,focus,onmode:null,resize,mode:()=>mode,inset:v=>{inset=v},setLevel(n){nlv=n;render(false)},redraw:()=>render(false),
   by:f=>mode==='globe'?animTo(gv.r,Math.max(1,Math.min(3000,gv.k*f)),250):svg.transition().duration(250).call(zoom.scaleBy,f),
   reset:()=>mode==='globe'?animTo(GL0,1,600):svg.transition().duration(300).call(zoom.transform,d3.zoomIdentity),
   world(on){setMode(on?(S.flat?'flat':'globe'):'ctx')},
@@ -440,15 +468,18 @@ function clipRing(r,x0,y0,x1,y1){let o=r;const edges=[[0,x0,1],[0,x1,-1],[1,y0,1
  for(const[ax,v,sg]of edges){if(!o.length)return o;const out=[],inn=pt=>sg*(pt[ax]-v)>=0;let a=o[o.length-1];
   for(const b of o){const ia=inn(a),ib=inn(b);if(ia!==ib){const t=(v-a[ax])/(b[ax]-a[ax]),q=[0,0];q[ax]=v;q[1-ax]=a[1-ax]+t*(b[1-ax]-a[1-ax]);out.push(q)}if(ib)out.push(b);a=b}o=out}
  return o.length<3?[]:o}
-function dCull(g,f,vis){const ps=partsOf(f);if(!vis||!ps.length)return g(f);const bx=vis.box,out=[];
+function fq(f){if(f._fq)return f._fq;const src=f.ul||f.lite||f.mid;if(!src)return f._fq=null;const b=d3.geoBounds(src),w=b[0][0],e=b[1][0],cr=w>e||e-w>300,c=[cr?180:(w+e)/2,(b[0][1]+b[1][1])/2];
+ const r=cr?180:Math.max(d3.geoDistance(c,[w,b[0][1]]),d3.geoDistance(c,[e,b[1][1]]),d3.geoDistance(c,[w,b[1][1]]),d3.geoDistance(c,[e,b[0][1]]))/RPD+.3;
+ return f._fq={b:[[b[0][0]-.3,b[0][1]-.3],[b[1][0]+.3,b[1][1]+.3]],c,r,cr}}
+function dCull(g,f,vis,pf){const o=pf||f;if(vis&&o.ul!==undefined){const q=fq(o);if(q&&!vis(q))return null}const ps=partsOf(f);if(!vis||!ps.length)return g(f);const bx=vis.box,out=[];
  for(const q of ps){if(!vis(q))continue;
   if(bx&&q.n>400&&!(q.b[0][0]>=bx[0]&&q.b[1][0]<=bx[2]&&q.b[0][1]>=bx[1]&&q.b[1][1]<=bx[3])){const rs=q.co.map(r=>clipRing(r,bx[0],bx[1],bx[2],bx[3])).filter(r=>r.length>2);if(rs.length&&rs[0]===undefined)continue;if(rs.length){out.push(rs.map(r=>r.concat([r[0]])))}}
   else out.push(q.co)}
  return out.length?g({type:'MultiPolygon',coordinates:out}):null}
 /* ---------- world location overlay ---------- */
-function worldLoc(c){if(!c||!c.f||$('#wl'))return;const e=document.createElement('div');e.id='wl';e.className='wl';
- e.innerHTML=`<div class="wlb">${flag(c)}<div class="pt2"><b>${nm(c)}</b><span dir="${d2()}">${nm2(c)}</span></div><button class="wlz" data-k="i">＋</button><button class="wlz" data-k="o">－</button><button class="wlz" data-k="r">⟲</button><button class="wlx" aria-label="${t('close')}">✕</button></div><div class="svgw"></div>`;
- document.body.appendChild(e);const cl=()=>e.remove();e.querySelector('.wlx').onclick=cl;
+function worldLoc(c,BK){if(!c||!c.f||$('#wl'))return;const e=document.createElement('div');e.id='wl';e.className='wl';
+ e.innerHTML=`<div class="wlb">${flag(c)}<div class="pt2"><b>${nm(c)}</b><span dir="${d2()}">${nm2(c)}</span></div><button class="wlz" data-k="i">＋</button><button class="wlz" data-k="o">－</button><button class="wlz" data-k="r">⟲</button><button class="wlx" aria-label="${t('close')}">✕</button></div>${BK?`<button class="wlbk">‹ ${BK.p==='memorize.html'?(AR()?'رجوع لدفتر الحفظ':'Back to the study list'):(AR()?'رجوع لجدول الدول':'Back to the table')}</button>`:''}<div class="svgw"></div>`;
+ document.body.appendChild(e);const cl=()=>{if(BK){location.href=BK.p;return}e.remove();if(/^#wl=/.test(location.hash))try{history.replaceState(null,'',location.pathname)}catch(_){}};if(BK)e.querySelector('.wlbk').onclick=cl;e.querySelector('.wlx').onclick=cl;
  const h=e.querySelector('.svgw');let mv;
  requestAnimationFrame(()=>{mv=mkMap(h,{kind:'world',marks:true,names:true,lvl:Math.max(1,S.nl||0),rings:true,ringN:c.n});mv.setSel(c.n,'t');try{mv.focus(c,0,1.5)}catch(_){}
   e.querySelectorAll('.wlz').forEach(b=>b.onclick=()=>{const k=b.dataset.k;k==='i'?mv.by(1.7):k==='o'?mv.by(1/1.7):mv.focus(c,500,1.5)})});
@@ -605,9 +636,9 @@ if(vv){vv.addEventListener('resize',fit)}addEventListener('resize',fit);
 addEventListener('orientationchange',()=>[50,250,600,1200,2000].forEach(x=>setTimeout(fit,x)));fit();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 ['gesturestart','gesturechange','gestureend'].forEach(e=>document.addEventListener(e,ev=>ev.preventDefault(),{passive:false}));
-window.__wm={worldLoc,D,F,byId,SMALL,MK,openPanel,closePanel,get G(){return G},fuzzy,norm,acc,go(m,id){start(m,true);G.qs[0]=byId[id];ask()},detail,explore,dir,setLang,home,SK};
+window.__wm={shF,SEAS,seaPlace,worldLoc,D,F,byId,SMALL,MK,openPanel,closePanel,get G(){return G},fuzzy,norm,acc,go(m,id){start(m,true);G.qs[0]=byId[id];ask()},detail,explore,dir,setLang,home,SK};
 const Q0=(()=>{try{return JSON.parse(sessionStorage.wmQ||'null')}catch(_){return null}})();
 applyLang();home();
 try{const q=Q0;if(q&&q.qs&&q.i<q.qs.length&&q.qs.every(i=>byId[i])){G={base:q.base,mode:q.mode,types:q.types,qs:q.qs.map(i=>byId[i]),i:q.i,score:q.score,pts:q.pts,streak:q.streak,best:q.best,found:q.found.map(i=>byId[i]),miss:q.miss.map(i=>byId[i]),log:q.log.map(r=>({...r,c:byId[r.c],w:r.w?byId[r.w]:null}))};ask()}}catch(_){clearQ()}
-try{const m=/#wl=(\w+)/.exec(location.hash);if(m&&byId[m[1]]&&!Q0){history.replaceState(null,'',location.pathname);explore();let n=0;const iv=setInterval(()=>{const c=byId[m[1]];if(c&&c.f&&$('#mb .svgw svg')||++n>80){clearInterval(iv);if(c&&c.f)worldLoc(c)}},250)}}catch(_){}
+try{const m=/#wl=(\w+)/.exec(location.hash);if(m&&byId[m[1]]&&!Q0){explore();let n=0;const iv=setInterval(()=>{const c=byId[m[1]];if(c&&c.f&&$('#mb .svgw svg')||++n>80){clearInterval(iv);if(c&&c.f){let bk=null;try{const b=JSON.parse(sessionStorage.wmBack||'null');if(b&&b.id===c.id&&/^(memorize|countries)\.html$/.test(b.p))bk=b}catch(_){}worldLoc(c,bk)}}},250)}}catch(_){}
 })();
